@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Thu, 05 May 2016 07:09:45 +0000
+Source: derpconf
+Binary: python-derpconf
+Architecture: source
+Version: 0.7.3-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-derpconf - Python module to abstract loading configuration files for your ap
+Changes:
+ derpconf (0.7.3-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ c46fc227ca9869f969df258651d119676b756a2a 1121 derpconf_0.7.3-1~bpo8+1.dsc
+ 712c87141ebadfe8f1706971f0c00d2cddf028b0 2672 derpconf_0.7.3-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ c236b429f36732f0c7760b99d3aa0d5d81c866e74d46e333ccdaf55fdd10a830 1121 derpconf_0.7.3-1~bpo8+1.dsc
+ fbbc6642d4a1c43429cb9116b99aae39a43cf8f9ccf97b6a0126d9247e099b86 2672 derpconf_0.7.3-1~bpo8+1.debian.tar.xz
+Files:
+ f30544b1c88466bf66847132cd2c68fc 1121 python optional derpconf_0.7.3-1~bpo8+1.dsc
+ 2bd36f9878052cb9b3e914367b420825 2672 python optional derpconf_0.7.3-1~bpo8+1.debian.tar.xz

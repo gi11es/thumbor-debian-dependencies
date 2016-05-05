@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Thu, 05 May 2016 07:02:48 +0000
+Source: pyvows
+Binary: python-pyvows
+Architecture: source
+Version: 2.0.6-2~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-pyvows - Asynchronous BDD for Python
+Changes:
+ pyvows (2.0.6-2~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 4629d0f19c7b22a223b0de5d97e56a0fbf48bff3 1132 pyvows_2.0.6-2~bpo8+1.dsc
+ 4a6ba322288c703e9fca5e117153ba04500cc991 2672 pyvows_2.0.6-2~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ ff5e21392b2b066187032b340b7ae43fd3dd2a87caa773e57c28bb2f66399a82 1132 pyvows_2.0.6-2~bpo8+1.dsc
+ 9542ec70c78970c2185c9ba2811c3afd544b98142d2ffd05d664f76b51c743c3 2672 pyvows_2.0.6-2~bpo8+1.debian.tar.xz
+Files:
+ 69be50d3e9e98829ff4131d258e4c420 1132 python optional pyvows_2.0.6-2~bpo8+1.dsc
+ 27a81348a5ff33b04eca7e61bdf4a7bd 2672 python optional pyvows_2.0.6-2~bpo8+1.debian.tar.xz

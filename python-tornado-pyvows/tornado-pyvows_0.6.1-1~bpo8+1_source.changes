@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Wed, 11 May 2016 19:29:49 +0000
+Source: tornado-pyvows
+Binary: python-tornado-pyvows
+Architecture: source
+Version: 0.6.1-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-tornado-pyvows - Extensions to test Tornado apps under pyvows
+Changes:
+ tornado-pyvows (0.6.1-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ ad11f90c808d08cd8dc94a9860ecb70203aa2874 1215 tornado-pyvows_0.6.1-1~bpo8+1.dsc
+ b27999b5a3edad9ca3b4b079bf1c7433fa0021f1 1924 tornado-pyvows_0.6.1-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ d21055450f73e6feb8ec4154609e1acd66915214151caa05b2cb2167152347cb 1215 tornado-pyvows_0.6.1-1~bpo8+1.dsc
+ 323f307e5c9c21734c14572333e24af4791369da5501f71b79a90607512909ae 1924 tornado-pyvows_0.6.1-1~bpo8+1.debian.tar.xz
+Files:
+ 59e014783bdc1b1c60654e2c18d6926d 1215 python optional tornado-pyvows_0.6.1-1~bpo8+1.dsc
+ 50e57b295bfe1218b721b2a81ebca1a3 1924 python optional tornado-pyvows_0.6.1-1~bpo8+1.debian.tar.xz

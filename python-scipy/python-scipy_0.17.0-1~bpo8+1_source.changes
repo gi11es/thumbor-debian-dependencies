@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Wed, 11 May 2016 19:48:47 +0000
+Source: python-scipy
+Binary: python-scipy python3-scipy python-scipy-dbg python3-scipy-dbg python-scipy-doc
+Architecture: source
+Version: 0.17.0-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-scipy - scientific tools for Python
+ python-scipy-dbg - scientific tools for Python - debugging symbols
+ python-scipy-doc - scientific library for Python - documentation
+ python3-scipy - scientific tools for Python 3
+ python3-scipy-dbg - scientific tools for Python 3 - debugging symbols
+Changes:
+ python-scipy (0.17.0-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 5685f8216c519eba959cb28a19a8049c63872ff2 2066 python-scipy_0.17.0-1~bpo8+1.dsc
+ f0d319b905c027925f63567178baf12c984854f8 17216 python-scipy_0.17.0-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ 3bf25c51200c8a1a4e352283cb8690c1bfef3935db3ffc3e8d300ec10e2429b6 2066 python-scipy_0.17.0-1~bpo8+1.dsc
+ 812017ee34e43936ce8a336b0796234046a47fa383d9f29d9a908015a402047c 17216 python-scipy_0.17.0-1~bpo8+1.debian.tar.xz
+Files:
+ 8201fdfdd3055ce02ba7e3530e27e65f 2066 python extra python-scipy_0.17.0-1~bpo8+1.dsc
+ d4480496dd74cab8ece6b93ce4a78f5c 17216 python extra python-scipy_0.17.0-1~bpo8+1.debian.tar.xz

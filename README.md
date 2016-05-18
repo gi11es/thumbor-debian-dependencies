@@ -1,3 +1,7 @@
 # thumbor-debian-backports
 
-Debian packages backported to jessie-backports for the purpose of packaging Thumbor to Debian Jessie
+The name of the repo is misleading now, as it doesn't just include backports. There are:
+
+- Backports from stretch to jessie-backports
+- Upstream version updates (python-statsd)
+- Brand new packages for sid, which once accepted/uploaded will be moved to stretch and backported to jessie-backports

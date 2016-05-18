@@ -1,6 +1,6 @@
-# thumbor-debian-backports
+# thumbor-debian-dependencies
 
-The name of the repo is misleading now, as it doesn't just include backports. There are:
+This repo contains:
 
 - Backports from stretch to jessie-backports
 - Upstream version updates (python-statsd)

@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Wed, 18 May 2016 15:54:30 +0000
+Source: python-pytest-timeout
+Binary: python-pytest-timeout python3-pytest-timeout
+Architecture: source
+Version: 1.0.0-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: gustavo panizzo <gfa@zumbi.com.ar>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-pytest-timeout - Pytest plugin to abort hanging tests - Python 2.X
+ python3-pytest-timeout - Pytest plugin to abort hanging tests - Python 3.X
+Changes:
+ python-pytest-timeout (1.0.0-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 28dd5f4d465c1542593c00774e2faa84c0e29ccf 1335 python-pytest-timeout_1.0.0-1~bpo8+1.dsc
+ 8a6dff8a15b9f4d03aaa390080f8faa4272adba1 10960 python-pytest-timeout_1.0.0-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ 6c3ca10d23fb3170e381b29fb8f03149ae8174820cb053d3833e9d013e4861ce 1335 python-pytest-timeout_1.0.0-1~bpo8+1.dsc
+ 5fbf963e9a26eaf3e401ba8f429b472e0a823f02a5ed79d8b6f5d4c39198bd56 10960 python-pytest-timeout_1.0.0-1~bpo8+1.debian.tar.xz
+Files:
+ 01a4e2222346fc0851a876b6642667a1 1335 python optional python-pytest-timeout_1.0.0-1~bpo8+1.dsc
+ 7c0455287738a2a8f6ea85f267744772 10960 python optional python-pytest-timeout_1.0.0-1~bpo8+1.debian.tar.xz

@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 18 May 2016 16:16:36 +0000
+Source: pyres
+Binary: python-pyres
+Architecture: source
+Version: 1.5-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-pyres - Python module to provide a Resque-like job queue
+Changes:
+ pyres (1.5-1) UNRELEASED; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1:
+ 9fc27c133703295cafefd408ec6e64b3fa291ecb 1043 pyres_1.5-1.dsc
+ e7e3973b3d05869d3878e933f74c95f596c134ae 269001 pyres_1.5.orig.tar.gz
+ 888eea04a8036f7a36efc9774e33b73c987dc6a5 2188 pyres_1.5-1.debian.tar.xz
+Checksums-Sha256:
+ a10f52d991af6d13773eec9e74d65caf8fb468e68f40615a9dfbd61eeed8d122 1043 pyres_1.5-1.dsc
+ 417ae7890bb7f860728b48f5dee199712cc675e0e6335febdb8e69696d863391 269001 pyres_1.5.orig.tar.gz
+ a72ae58f53b0de41d51ef9fef0aa75f91828db4178f831d0b5636e8b03d65cbe 2188 pyres_1.5-1.debian.tar.xz
+Files:
+ de014d7c5fdc02125d110846799865d7 1043 python optional pyres_1.5-1.dsc
+ 7437d6661cc4a47cdb9b4dde9cafc165 269001 python optional pyres_1.5.orig.tar.gz
+ 9a28f59c78da5e405a4685e1cf46c7f8 2188 python optional pyres_1.5-1.debian.tar.xz

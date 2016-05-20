@@ -12,10 +12,10 @@ Description:
  python-statsd - Python client for the statsd daemon (Python 2)
  python3-statsd - Python client for the statsd daemon (Python 3)
 Changes:
- python-statsd (3.2.1-2) unstable; urgency=medium
+ python-statsd (3.2.1-1.1) unstable; urgency=medium
  .
-   * New upstream release
-    + fix assert_called_once() calls
+   * Non-maintainer upload.
+    + fix assert_called_once() calls (Closes: #808056)
 Checksums-Sha1:
  17634067d71c23ff433f8e412089e61c45015309 1348 python-statsd_3.2.1-2.dsc
  a6b82af3956de1939c0e4e9a74840116ea049093 3336 python-statsd_3.2.1-2.debian.tar.xz

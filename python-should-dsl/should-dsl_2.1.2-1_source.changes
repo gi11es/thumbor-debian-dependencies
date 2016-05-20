@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 19 May 2016 17:03:26 +0000
+Source: should-dsl
+Binary: python-should-dsl
+Architecture: source
+Version: 2.1.2-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-should-dsl - Python module to improve readability for should-style expectation
+Changes:
+ should-dsl (2.1.2-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 39efc2da032914cc27bee83cddbe55c5a113264f 1025 should-dsl_2.1.2-1.dsc
+ 39230af03bf0cada0358cc39a74d163a7264c0a4 93665 should-dsl_2.1.2.orig.tar.gz
+ 9d026462184e5979ad891e7310806b1ab764d51d 2104 should-dsl_2.1.2-1.debian.tar.xz
+Checksums-Sha256:
+ 1077a58356c050df390d78d90ecfd36ba6c42ec95f51297e4f8b035c5a0bab8a 1025 should-dsl_2.1.2-1.dsc
+ 3d49ebf641663ab95b768df62d980bf44f773a0b12544f3a60c736b0ecf5388e 93665 should-dsl_2.1.2.orig.tar.gz
+ 2581757a6831e133fc447dbae1f797421a8d86f0f5bbd8c42912a5f124ec8555 2104 should-dsl_2.1.2-1.debian.tar.xz
+Files:
+ bff16cb85c9e8d49dc16180ff9b137ce 1025 python optional should-dsl_2.1.2-1.dsc
+ 3a22cda72f19a0e3692fffb6a2cdd835 93665 python optional should-dsl_2.1.2.orig.tar.gz
+ cddd17c1d398c845d9dd1e7b6022c92d 2104 python optional should-dsl_2.1.2-1.debian.tar.xz

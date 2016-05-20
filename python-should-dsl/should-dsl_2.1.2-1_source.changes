@@ -15,14 +15,14 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 39efc2da032914cc27bee83cddbe55c5a113264f 1025 should-dsl_2.1.2-1.dsc
+ 9db93c407a5eb4fb495e7c675aa60824718c0c31 1025 should-dsl_2.1.2-1.dsc
  39230af03bf0cada0358cc39a74d163a7264c0a4 93665 should-dsl_2.1.2.orig.tar.gz
- 9d026462184e5979ad891e7310806b1ab764d51d 2104 should-dsl_2.1.2-1.debian.tar.xz
+ b50460a87c4afc48454763b8e37f70af6f198b01 2104 should-dsl_2.1.2-1.debian.tar.xz
 Checksums-Sha256:
- 1077a58356c050df390d78d90ecfd36ba6c42ec95f51297e4f8b035c5a0bab8a 1025 should-dsl_2.1.2-1.dsc
+ 0e01b935bbf556b85b8d6e41f91524cee38cdcc7114419a4f648ac7ddc35b6cb 1025 should-dsl_2.1.2-1.dsc
  3d49ebf641663ab95b768df62d980bf44f773a0b12544f3a60c736b0ecf5388e 93665 should-dsl_2.1.2.orig.tar.gz
- 2581757a6831e133fc447dbae1f797421a8d86f0f5bbd8c42912a5f124ec8555 2104 should-dsl_2.1.2-1.debian.tar.xz
+ 8214aa49e6aeb035bee92ca16796251834a286cb9b7a609ff8991171f4694ebb 2104 should-dsl_2.1.2-1.debian.tar.xz
 Files:
- bff16cb85c9e8d49dc16180ff9b137ce 1025 python optional should-dsl_2.1.2-1.dsc
+ f2755d7e42aade21ae32583a9c381585 1025 python optional should-dsl_2.1.2-1.dsc
  3a22cda72f19a0e3692fffb6a2cdd835 93665 python optional should-dsl_2.1.2.orig.tar.gz
- cddd17c1d398c845d9dd1e7b6022c92d 2104 python optional should-dsl_2.1.2-1.debian.tar.xz
+ d7d4284618e2879d38819b3210bd0eeb 2104 python optional should-dsl_2.1.2-1.debian.tar.xz

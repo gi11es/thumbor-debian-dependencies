@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Thu, 05 May 2016 12:23:40 +0000
+Source: python-statsd
+Binary: python-statsd python3-statsd
+Architecture: source
+Version: 3.2.1-1.1
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-statsd - Python client for the statsd daemon (Python 2)
+ python3-statsd - Python client for the statsd daemon (Python 3)
+Closes: 808056
+Changes:
+ python-statsd (3.2.1-1.1) unstable; urgency=medium
+ .
+   * Non-maintainer upload.
+    + fix assert_called_once() calls (Closes: #808056)
+Checksums-Sha1:
+ 5db550c2ef40de3b5ae8412f4e5cbc55c1fe007c 1356 python-statsd_3.2.1-1.1.dsc
+ e03b2500eedd216bdde3b20feb45959fd90df97c 3364 python-statsd_3.2.1-1.1.debian.tar.xz
+Checksums-Sha256:
+ 98e07d4da3c6837f1988d04b599d55ecfcb985ed0d11dbbe67808c75c9fc726f 1356 python-statsd_3.2.1-1.1.dsc
+ f29bf9e47dc4979fcc99c006028fd773db8cc1792366e19318e3bb1f029b9e18 3364 python-statsd_3.2.1-1.1.debian.tar.xz
+Files:
+ aaba4d468cbe65d8dc8ee1d9d4b23269 1356 python optional python-statsd_3.2.1-1.1.dsc
+ 4786c896ad938d10083a79561d3984cf 3364 python optional python-statsd_3.2.1-1.1.debian.tar.xz

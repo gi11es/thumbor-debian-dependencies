@@ -2,7 +2,7 @@ Format: 3.0 (quilt)
 Source: python-statsd
 Binary: python-statsd, python3-statsd
 Architecture: all
-Version: 3.2.1-2
+Version: 3.2.1-1.1
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Uploaders: Antoine Musso <hashar@free.fr>, Paul Belanger <paul.belanger@polybeacon.com>
 Homepage: https://github.com/jsocol/pystatsd/
@@ -15,10 +15,10 @@ Package-List:
  python3-statsd deb python optional arch=all
 Checksums-Sha1:
  124cdac49cd4e081558041fbfaf3c807521423d8 22766 python-statsd_3.2.1.orig.tar.gz
- a6b82af3956de1939c0e4e9a74840116ea049093 3336 python-statsd_3.2.1-2.debian.tar.xz
+ e03b2500eedd216bdde3b20feb45959fd90df97c 3364 python-statsd_3.2.1-1.1.debian.tar.xz
 Checksums-Sha256:
  3a82a504d7dc24966283077f337b9e07fff1d1a148c25506570c1d4edd92a182 22766 python-statsd_3.2.1.orig.tar.gz
- 25763f879fbcec34bbd739230e820be548b30d2c50d583a048870865c6f0c083 3336 python-statsd_3.2.1-2.debian.tar.xz
+ f29bf9e47dc4979fcc99c006028fd773db8cc1792366e19318e3bb1f029b9e18 3364 python-statsd_3.2.1-1.1.debian.tar.xz
 Files:
  14bea6b3690a38f33f29372866748e42 22766 python-statsd_3.2.1.orig.tar.gz
- 0ddcbb3d1506287c6cb87cd433a88573 3336 python-statsd_3.2.1-2.debian.tar.xz
+ 4786c896ad938d10083a79561d3984cf 3364 python-statsd_3.2.1-1.1.debian.tar.xz

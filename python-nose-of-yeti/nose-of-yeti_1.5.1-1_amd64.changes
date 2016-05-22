@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Thu, 19 May 2016 17:03:26 +0000
+Source: nose-of-yeti
+Binary: python-nose-of-yeti
+Architecture: all
+Version: 1.5.1-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-nose-of-yeti - Python module to provide a BDD DSL for python tests
+Changes:
+ nose-of-yeti (1.5.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 5e2d23e1645aa0715dbf6e51de268577ddb3fe3b 25758 python-nose-of-yeti_1.5.1-1_all.deb
+Checksums-Sha256:
+ 181859af636af5d3ecf3bcfaabdc470d1f161aab1db7019b4ca382362e7d68b1 25758 python-nose-of-yeti_1.5.1-1_all.deb
+Files:
+ 1edc8ea45e91d721c9f939d13abd51f1 25758 python optional python-nose-of-yeti_1.5.1-1_all.deb

@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Thu, 19 May 2016 17:03:26 +0000
+Source: should-dsl
+Binary: python-should-dsl
+Architecture: all
+Version: 2.1.2-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-should-dsl - Python module to improve readability for should-style expectation
+Changes:
+ should-dsl (2.1.2-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 8fee33492f4215f5940550be5b1184eda83f87d4 9350 python-should-dsl_2.1.2-1_all.deb
+Checksums-Sha256:
+ edf4da74224c2909cf362cd2bcefbcc998b7f471abb73e2c2586bf9dcf13c3e6 9350 python-should-dsl_2.1.2-1_all.deb
+Files:
+ 09f1239f2b097be85a43aa3eb8ae82cd 9350 python optional python-should-dsl_2.1.2-1_all.deb

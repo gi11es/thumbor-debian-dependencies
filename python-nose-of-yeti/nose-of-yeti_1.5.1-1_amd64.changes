@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: nose-of-yeti
 Binary: python-nose-of-yeti
-Architecture: all
+Architecture: source all
 Version: 1.5.1-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -15,8 +15,17 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 5e2d23e1645aa0715dbf6e51de268577ddb3fe3b 25758 python-nose-of-yeti_1.5.1-1_all.deb
+ 3bfc98c14ac2ba3e30916d5f28e531e4a571dd9f 1110 nose-of-yeti_1.5.1-1.dsc
+ c050c4bce7ca96926c09ea86f4c6042a9241e4fd 26040 nose-of-yeti_1.5.1.orig.tar.gz
+ 8383f58a57d68d80da15a0b63208d9f1e0079eb5 21104 nose-of-yeti_1.5.1-1.debian.tar.xz
+ dc6bff3394f52ef135199534d2d43e71eb19bcbe 25252 python-nose-of-yeti_1.5.1-1_all.deb
 Checksums-Sha256:
- 181859af636af5d3ecf3bcfaabdc470d1f161aab1db7019b4ca382362e7d68b1 25758 python-nose-of-yeti_1.5.1-1_all.deb
+ 4ee4a72a09c4414de88fb9403b02c91981b4f2f3d778f785e0c10814cbd5d45a 1110 nose-of-yeti_1.5.1-1.dsc
+ 07307e34d210c524aa2edc3f865c4b6b1be8702ad44ce09cd5685e9992cde955 26040 nose-of-yeti_1.5.1.orig.tar.gz
+ e8523e3e5b4f219d746a997ddcf454af3a3f9e5f11272364fd173f4c189aab52 21104 nose-of-yeti_1.5.1-1.debian.tar.xz
+ f093a6b604d9427e991606be38b1115c2ca3efdc4c365096e7c8fc15cc935371 25252 python-nose-of-yeti_1.5.1-1_all.deb
 Files:
- 1edc8ea45e91d721c9f939d13abd51f1 25758 python optional python-nose-of-yeti_1.5.1-1_all.deb
+ 6fd8711777987b7ea7326f8e1f0f11cc 1110 python optional nose-of-yeti_1.5.1-1.dsc
+ 9f96ed1c9ad0e3d3af368df30e4a1006 26040 python optional nose-of-yeti_1.5.1.orig.tar.gz
+ 61cbc7d54328407bd2c5111d3a1c9477 21104 python optional nose-of-yeti_1.5.1-1.debian.tar.xz
+ ce38ace267e6d3887fc06ec64f60991a 25252 python optional python-nose-of-yeti_1.5.1-1_all.deb

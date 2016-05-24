@@ -1,0 +1,44 @@
+Format: 1.8
+Date: Tue, 24 May 2016 08:38:23 +0000
+Source: pandas
+Binary: python-pandas python3-pandas python-pandas-doc python-pandas-lib python3-pandas-lib
+Architecture: source all amd64
+Version: 0.18.0+git114-g6c692ae-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: NeuroDebian Team <team@neuro.debian.net>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-pandas - data structures for "relational" or "labeled" data
+ python-pandas-doc - documentation and examples for pandas
+ python-pandas-lib - low-level implementations and bindings for pandas
+ python3-pandas - data structures for "relational" or "labeled" data - Python 3
+ python3-pandas-lib - low-level implementations and bindings for pandas - Python 3
+Changes:
+ pandas (0.18.0+git114-g6c692ae-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 46babd7d39a474127200d87f8d50627ea411f3a2 2336 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.dsc
+ 72bad361ef3a820a16c5c3f8ce0d02150e681798 2184176 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.debian.tar.xz
+ 5b7c01c30a024fb80a8447811478517a4f04eea3 1762602 python-pandas_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ 57a22f8f4ad43d698cc1d694d792e2077fe927cd 1759272 python3-pandas_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ be4537223fb93c2c336a88758980c3470ab69e6e 10895828 python-pandas-doc_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ 97360a486ff512ff82923917f15d0cbdaf0fcdb5 1669914 python-pandas-lib_0.18.0+git114-g6c692ae-1~bpo8+1_amd64.deb
+ fd530bc0af6e2e52e46d734244171e695a69c07a 1627384 python3-pandas-lib_0.18.0+git114-g6c692ae-1~bpo8+1_amd64.deb
+Checksums-Sha256:
+ e886c0e573b640aef4cbc72294abda33211e1febb679741249b84b3bdc03088b 2336 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.dsc
+ 33f16434e8c1f92e557dc5014cfd84c8f5a235fefab7b37ac2457fcfa0f93d47 2184176 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.debian.tar.xz
+ 59feebd71fa393a2f458542696939fe1bf64920e593f7fcd3fcc8f79fc881688 1762602 python-pandas_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ 70546ad5b67046880496ad7864c1f972aac74a8b5adcc06191effd6796e03e8d 1759272 python3-pandas_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ 027bf7a0f1053c9a2135f29fb984e918c7a7cff25a546188b894990e27cb258c 10895828 python-pandas-doc_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ 3d01bcdfc851d6f61a6b053f8795d51a5ece4804053343d16fa48a4ff7a5f64f 1669914 python-pandas-lib_0.18.0+git114-g6c692ae-1~bpo8+1_amd64.deb
+ 7601be8928276593888377321b430b0361008a27e0a3df21bdbe1c87f202ae02 1627384 python3-pandas-lib_0.18.0+git114-g6c692ae-1~bpo8+1_amd64.deb
+Files:
+ 013324fb0e8f90aa21521809a9496d80 2336 python optional pandas_0.18.0+git114-g6c692ae-1~bpo8+1.dsc
+ 02e3ea01af874c6ff2b6d4d71ddea353 2184176 python optional pandas_0.18.0+git114-g6c692ae-1~bpo8+1.debian.tar.xz
+ 23847ebe8ced0dc1b2574c5c88cce8a9 1762602 python optional python-pandas_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ 46b1489c8a51cbf9eed7fefe9dc11ca1 1759272 python optional python3-pandas_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ e912f74f3824c79ca036b51270f11a05 10895828 doc optional python-pandas-doc_0.18.0+git114-g6c692ae-1~bpo8+1_all.deb
+ ba3e543a797f59a880258a11d4906e1b 1669914 python optional python-pandas-lib_0.18.0+git114-g6c692ae-1~bpo8+1_amd64.deb
+ 29a72fb65442943bff38e8beb8dc97cb 1627384 python optional python3-pandas-lib_0.18.0+git114-g6c692ae-1~bpo8+1_amd64.deb

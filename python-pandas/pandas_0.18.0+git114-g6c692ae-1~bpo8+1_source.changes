@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Tue, 24 May 2016 08:38:23 +0000
+Source: pandas
+Binary: python-pandas python3-pandas python-pandas-doc python-pandas-lib python3-pandas-lib
+Architecture: source
+Version: 0.18.0+git114-g6c692ae-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: NeuroDebian Team <team@neuro.debian.net>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-pandas - data structures for "relational" or "labeled" data
+ python-pandas-doc - documentation and examples for pandas
+ python-pandas-lib - low-level implementations and bindings for pandas
+ python3-pandas - data structures for "relational" or "labeled" data - Python 3
+ python3-pandas-lib - low-level implementations and bindings for pandas - Python 3
+Changes:
+ pandas (0.18.0+git114-g6c692ae-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 46babd7d39a474127200d87f8d50627ea411f3a2 2336 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.dsc
+ 72bad361ef3a820a16c5c3f8ce0d02150e681798 2184176 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ e886c0e573b640aef4cbc72294abda33211e1febb679741249b84b3bdc03088b 2336 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.dsc
+ 33f16434e8c1f92e557dc5014cfd84c8f5a235fefab7b37ac2457fcfa0f93d47 2184176 pandas_0.18.0+git114-g6c692ae-1~bpo8+1.debian.tar.xz
+Files:
+ 013324fb0e8f90aa21521809a9496d80 2336 python optional pandas_0.18.0+git114-g6c692ae-1~bpo8+1.dsc
+ 02e3ea01af874c6ff2b6d4d71ddea353 2184176 python optional pandas_0.18.0+git114-g6c692ae-1~bpo8+1.debian.tar.xz

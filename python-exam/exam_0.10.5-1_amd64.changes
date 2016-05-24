@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Thu, 19 May 2016 17:03:26 +0000
+Source: exam
+Binary: python-exam
+Architecture: source all
+Version: 0.10.5-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-exam - Python module to help write better tests
+Changes:
+ exam (0.10.5-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 96136ffbfa6735b421c46a4f3927851568b4e459 1010 exam_0.10.5-1.dsc
+ 96fed3aedf8f71a760126804947fd8788085cb6d 15945 exam_0.10.5.orig.tar.gz
+ 0a6f309139c3b8a57318efb4298136129032f58f 2808 exam_0.10.5-1.debian.tar.xz
+ 1571273a945d01897e10bc69eca26fd6f4ef627b 13248 python-exam_0.10.5-1_all.deb
+Checksums-Sha256:
+ 6dfef703e3eceb38f063de7fb3582d93bd1ac2075b0d8f3e6dd5b621e2b89e5a 1010 exam_0.10.5-1.dsc
+ 16ec06d61f72fc2c5511ea0a84fc4bfc09bac3e6341a72c848c7606be0222dca 15945 exam_0.10.5.orig.tar.gz
+ f4bbcafd2a8f289cd001f4970371851a62b1b7b48551db2797cdc7907e3c4707 2808 exam_0.10.5-1.debian.tar.xz
+ c10e3e7844ce3c53e40a9f82bf446027ecb1cea3b8fc27e12f6110aefa5b1b08 13248 python-exam_0.10.5-1_all.deb
+Files:
+ ff945ac3b09a716475d3d07d722df1ff 1010 python optional exam_0.10.5-1.dsc
+ a886e4bd77fe5dfcd9eccb736ef5a5e0 15945 python optional exam_0.10.5.orig.tar.gz
+ 2a2f12a4c05e34354be949fa38723225 2808 python optional exam_0.10.5-1.debian.tar.xz
+ 90f92a422ec7bd94eb5500cb45f09dea 13248 python optional python-exam_0.10.5-1_all.deb

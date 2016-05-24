@@ -15,17 +15,17 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- a45b96ea895d3ef73b7056e756fe5a095badca48 965 toolz_0.7.4-1.dsc
+ 68705850acb5045611ae8f3b7cb619fddf2e9264 980 toolz_0.7.4-1.dsc
  9ac9cab3e9d0a724b3c2e28b6b01a924056cb6a1 55708 toolz_0.7.4.orig.tar.gz
- af8137a17b3fa3defc548d6ccc7cc27ebf98b605 2240 toolz_0.7.4-1.debian.tar.xz
- e6ca174ff98fb8299f20d70ae929e5d977e7084a 30024 python-toolz_0.7.4-1_all.deb
+ d4754bf94628622e00775ac6b06aedba3570e197 2256 toolz_0.7.4-1.debian.tar.xz
+ 11417dd669462acbbf2df873a887816293a5b3ad 30020 python-toolz_0.7.4-1_all.deb
 Checksums-Sha256:
- a5f87adafbe798738a4a0c4d2329017b9dfb0c313b3a1f0967d30b0180c6944b 965 toolz_0.7.4-1.dsc
+ 8339ea5567aa806e80bfb1daac8813bb0c6cd94092ef70bdc3384a3234bbadb8 980 toolz_0.7.4-1.dsc
  0eb37474e1f01251eeb11c33f5be42985734b1682370d124494af847c4aa5a19 55708 toolz_0.7.4.orig.tar.gz
- ca31c908eb0aea17c72c48ebb529112463a40c88355b0059d155cf49521cb0e5 2240 toolz_0.7.4-1.debian.tar.xz
- 3e1277849be0b88cff49f1f018a765b2e7f1666a471df2c7e0609c2d9654f27f 30024 python-toolz_0.7.4-1_all.deb
+ 01061977fe13b2be8aa39bdecd13c62e4255b20d1b3b483d8fc7dcc72a94fb99 2256 toolz_0.7.4-1.debian.tar.xz
+ 0bfcb07a9c38cf131dbb53f148ae97879d99bd9cf1af180546dc4f337175a7d5 30020 python-toolz_0.7.4-1_all.deb
 Files:
- f4b6460cf75e36e33e4648696a8bbf27 965 python optional toolz_0.7.4-1.dsc
+ 8ec211b4ee7ff80812ec2c2c3a50ddcd 980 python optional toolz_0.7.4-1.dsc
  48988a618c92209b644a352b8b3d8dbe 55708 python optional toolz_0.7.4.orig.tar.gz
- b27c0210c9c9a9f82d35d233403d23db 2240 python optional toolz_0.7.4-1.debian.tar.xz
- b4d253b37fe293b1b4d98c22b47e2243 30024 python optional python-toolz_0.7.4-1_all.deb
+ d00311a5d239b619b8429476df28964b 2256 python optional toolz_0.7.4-1.debian.tar.xz
+ c73e4ed8bd6d4e8c2749e4ec326199bc 30020 python optional python-toolz_0.7.4-1_all.deb

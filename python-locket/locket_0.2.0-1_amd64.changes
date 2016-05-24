@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Thu, 19 May 2016 17:03:26 +0000
+Source: locket
+Binary: python-locket
+Architecture: source all
+Version: 0.2.0-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-locket - Python module to provide a lock that can be used by multiple proc
+Changes:
+ locket (0.2.0-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ a236301e38141c5b10f688876b3fb4d87225ebac 1047 locket_0.2.0-1.dsc
+ af0a18bf474bc71900a6109f1ac27a18ecf42ff6 5541 locket_0.2.0.orig.tar.gz
+ d9e70816a8e9b546ba3b894dc6292ab0b3edca55 2280 locket_0.2.0-1.debian.tar.xz
+ 11407f8e6eac4a91537d935fce44f9c58226a0ae 4652 python-locket_0.2.0-1_all.deb
+Checksums-Sha256:
+ 1c2e96387f7eb0753cf5903dc6ff95b4429c28853c5e7c0796e6b3ba0af83e73 1047 locket_0.2.0-1.dsc
+ 6a0706306dfc6f6af5dfd54993fa8a10f79e69a6bbb748e7bc75432f637fb383 5541 locket_0.2.0.orig.tar.gz
+ e38803f0703db45b84fcbb8e5459fa9abe8edca4dcc33c2d8325e39aa4a7cd54 2280 locket_0.2.0-1.debian.tar.xz
+ 2c25f698fa98de397ac746c45a87cfa1011794e0e67c60d099f0a86a7820438c 4652 python-locket_0.2.0-1_all.deb
+Files:
+ 8c858346e7112ca95cd14ed6674362a8 1047 python optional locket_0.2.0-1.dsc
+ 681b30d34a60cc8bd99584c755e07707 5541 python optional locket_0.2.0.orig.tar.gz
+ 5e898d3b43cd1593986de43ac4bf3983 2280 python optional locket_0.2.0-1.debian.tar.xz
+ 5198e385c0265b330e56452c624d897c 4652 python optional python-locket_0.2.0-1_all.deb

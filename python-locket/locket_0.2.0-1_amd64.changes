@@ -16,20 +16,20 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 6144c1f48d760babcde628782fc2e4c3611be4a7 1108 locket_0.2.0-1.dsc
+ 72136e34306b8ce6fbd86355ba6ebd507a7b73c8 1172 locket_0.2.0-1.dsc
  af0a18bf474bc71900a6109f1ac27a18ecf42ff6 5541 locket_0.2.0.orig.tar.gz
- 28d763402fb9ca5570ecb858398d2bb26c8c7a14 2324 locket_0.2.0-1.debian.tar.xz
- 3a82088f69485b05f02c36f6762af8291177e103 2824 python-locket_0.2.0-1_all.deb
- ca16152aa51c74b4bbac46ea9278ff99fe6fec15 2210 python3-locket_0.2.0-1_all.deb
+ 8076954466b1bb5c45322d7edaa85fea691e5c91 2348 locket_0.2.0-1.debian.tar.xz
+ ea34af8a13ee421ad3769ad4372aebff0a03fa8c 2816 python-locket_0.2.0-1_all.deb
+ f1001705a5bc43210e34d8a0ce9ebeb1fff1d6b2 2208 python3-locket_0.2.0-1_all.deb
 Checksums-Sha256:
- 5a80122fee2bf865f1708515913b3daf0504b514c22cd5ad5a7e984ff13618b5 1108 locket_0.2.0-1.dsc
+ 5b307084f63cc6a05aba4b6678ceba391818e59b6ec204e593632cd570302c99 1172 locket_0.2.0-1.dsc
  6a0706306dfc6f6af5dfd54993fa8a10f79e69a6bbb748e7bc75432f637fb383 5541 locket_0.2.0.orig.tar.gz
- 45759e141600aec31490b081dbb8716f147f9ed5e7a95fe1eb801ffb83456381 2324 locket_0.2.0-1.debian.tar.xz
- 95163e1e8d9d5e203622d865369cff9ad73f7be58494c485299bdeea0c22b96c 2824 python-locket_0.2.0-1_all.deb
- 5ab057f33b677710f5b0b67c982d4e2f86b773efd6db14d7c09637c849a04b00 2210 python3-locket_0.2.0-1_all.deb
+ 2c3c9728fda07af1f9a3b232ee993d2d327298bbf6f357344cc42a4949f604e8 2348 locket_0.2.0-1.debian.tar.xz
+ 3679e8f01aaccfe954fa7c5e1f6ae88faf184e61f4bc7669099a79b2c62b18f9 2816 python-locket_0.2.0-1_all.deb
+ 2b27ff58176b6769d3c8992823bd3563c03525beba389da51144e72d958dfcf3 2208 python3-locket_0.2.0-1_all.deb
 Files:
- 969fb8bbf8583a0ba5e822c18ca2fbc7 1108 python optional locket_0.2.0-1.dsc
+ 21c40d616b3c44ae75e55ac444890647 1172 python optional locket_0.2.0-1.dsc
  681b30d34a60cc8bd99584c755e07707 5541 python optional locket_0.2.0.orig.tar.gz
- 4a179d7db130cb4af6a4f32a3215bfae 2324 python optional locket_0.2.0-1.debian.tar.xz
- 29c9133a76fc9b8eaaa12681dfaf1c9e 2824 python optional python-locket_0.2.0-1_all.deb
- 79e437e947b67c760d93f148f6aad260 2210 python optional python3-locket_0.2.0-1_all.deb
+ 5c6a87850be7de0ad9c7018c66e06e60 2348 python optional locket_0.2.0-1.debian.tar.xz
+ a6cf8d7d89712efa773e9ac502bc7ded 2816 python optional python-locket_0.2.0-1_all.deb
+ 7233a3ab873712b04ed96f2a4edc1dce 2208 python optional python3-locket_0.2.0-1_all.deb

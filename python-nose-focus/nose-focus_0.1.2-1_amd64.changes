@@ -1,7 +1,7 @@
 Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: nose-focus
-Binary: python-nose-focus
+Binary: python-nose-focus python3-nose-focus
 Architecture: source all
 Version: 0.1.2-1
 Distribution: UNRELEASED
@@ -10,22 +10,26 @@ Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-nose-focus - Python module to provide a Decorator and plugin to make nose focu
+ python3-nose-focus - Python module to provide a Decorator and plugin to make nose focu
 Changes:
  nose-focus (0.1.2-1) UNRELEASED; urgency=medium
  .
    * Initial release.
 Checksums-Sha1:
- d80ff05f0f697c1500bf5a154ecbdaea63bdf971 1097 nose-focus_0.1.2-1.dsc
+ 9a6a5bf6d75a1cad589a5a0bed62ea554ea8e71f 1254 nose-focus_0.1.2-1.dsc
  6bf93ce5ddfb4d93f5d8b09bb4af6ca194f2480f 4325 nose-focus_0.1.2.orig.tar.gz
- a570c5f6f2c3be8fa14dee2380f9af3a919bb4a6 1780 nose-focus_0.1.2-1.debian.tar.xz
- dfcb97e1aeaa51ef8136ee84d324404ba1737a17 5794 python-nose-focus_0.1.2-1_all.deb
+ ac15e4d9054beecada260ffdb39fef3e660b5dcb 1608 nose-focus_0.1.2-1.debian.tar.xz
+ 097a760c95767400a83596a52e4f789a823377c3 5824 python-nose-focus_0.1.2-1_all.deb
+ 55ef8c8d0bc6bb2ef8caab7a662776358aec2027 4902 python3-nose-focus_0.1.2-1_all.deb
 Checksums-Sha256:
- 086a2233663fb1a5038ba69a87acd8c55742bb8e267c10c8e62581348e7c896d 1097 nose-focus_0.1.2-1.dsc
+ bd04652deb5346b7bf62a439d5a9ccd03bcabd4ab2e8758fca36efce930ebf3d 1254 nose-focus_0.1.2-1.dsc
  095d86807e17cf93efe97da602150e9e3f409add948da3aa654b4a0a7f7c618a 4325 nose-focus_0.1.2.orig.tar.gz
- 337cdef644f352e6f40e50bd37ee43e705aeba4687ab0928d3b2c76c098ce7d0 1780 nose-focus_0.1.2-1.debian.tar.xz
- 5cdd0faddc0837db0277de3144ac7e59d9f59f791bc0a9ccb3b7d9f8d4fd10d4 5794 python-nose-focus_0.1.2-1_all.deb
+ 5db14d8b63b4431be3740a4dd70b24ab81affb1e512f821bf8edff6150c4f3f7 1608 nose-focus_0.1.2-1.debian.tar.xz
+ 8fbbd4d6ecfce5e8d1bb24466c6a1f38f5480bfa96c278694a50f3f73500ddec 5824 python-nose-focus_0.1.2-1_all.deb
+ 7612e5de02c5a8b592ab72a32de330f089029e65e9c782390d7e93db36647b47 4902 python3-nose-focus_0.1.2-1_all.deb
 Files:
- 9e060dba6a697175a794e0ab9d5ecc5b 1097 python optional nose-focus_0.1.2-1.dsc
+ df5195f8d9f7cc6a795cfcba317873b8 1254 python optional nose-focus_0.1.2-1.dsc
  0e11e3280135472434736f65f1a38173 4325 python optional nose-focus_0.1.2.orig.tar.gz
- 8bed297644d5d2e28df6109ccad7150c 1780 python optional nose-focus_0.1.2-1.debian.tar.xz
- 24c5c35937c8e7ea70d50744bac432d0 5794 python optional python-nose-focus_0.1.2-1_all.deb
+ 3ff2fdd5125d8e88950a66bcf50d6d48 1608 python optional nose-focus_0.1.2-1.debian.tar.xz
+ 653dafc6c148fc7ac04381106e0d359b 5824 python optional python-nose-focus_0.1.2-1_all.deb
+ 63602785d983560c4d8b2a05808013a1 4902 python optional python3-nose-focus_0.1.2-1_all.deb

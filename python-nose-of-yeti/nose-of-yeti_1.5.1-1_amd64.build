@@ -1,0 +1,154 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package nose-of-yeti
+dpkg-buildpackage: source version 1.5.1-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build nose-of-yeti-1.5.1
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_clean -O--buildsystem=python_distutils
+running clean
+'build/lib.linux-x86_64-2.7' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+   debian/rules override_dh_clean
+make[1]: Entering directory '/home/gilles/nose-of-yeti/nose-of-yeti-1.5.1'
+rm -rf noseOfYeti.egg-info
+dh_clean
+make[1]: Leaving directory '/home/gilles/nose-of-yeti/nose-of-yeti-1.5.1'
+ debian/rules build
+dh build --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_configure -O--buildsystem=python_distutils
+   dh_auto_build -O--buildsystem=python_distutils
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/noseOfYeti
+copying noseOfYeti/__init__.py -> build/lib.linux-x86_64-2.7/noseOfYeti
+creating build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/helpers.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/complex_tokeniser_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/__init__.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/matchers.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/test_chooser_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/nesting_tokeniser_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/imports_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/support_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/spec_codec_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/config_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/translation_tokeniser_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/config_util_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+copying noseOfYeti/specs/general_tokeniser_test.py -> build/lib.linux-x86_64-2.7/noseOfYeti/specs
+creating build/lib.linux-x86_64-2.7/noseOfYeti/plugins
+copying noseOfYeti/plugins/__init__.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins
+copying noseOfYeti/plugins/sphinx.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins
+copying noseOfYeti/plugins/pylinter.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins
+copying noseOfYeti/plugins/nosetests.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins
+creating build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/tracker.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/__init__.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/tokens.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/imports.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/tokeniser.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/support.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/containers.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/spec_codec.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+copying noseOfYeti/tokeniser/config.py -> build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser
+creating build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support
+copying noseOfYeti/plugins/support/__init__.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support
+copying noseOfYeti/plugins/support/spec_options.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support
+copying noseOfYeti/plugins/support/test_chooser.py -> build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support
+   debian/rules override_dh_auto_test
+make[1]: Entering directory '/home/gilles/nose-of-yeti/nose-of-yeti-1.5.1'
+chmod u+x ./test.sh
+rm ./noseOfYeti/specs/spec_codec_test.py
+./test.sh
+.......................................................................................
+----------------------------------------------------------------------
+Ran 87 tests in 0.504s
+
+OK
+make[1]: Leaving directory '/home/gilles/nose-of-yeti/nose-of-yeti-1.5.1'
+ fakeroot debian/rules binary
+dh binary --with python2 --buildsystem=python_distutils
+   dh_testroot -O--buildsystem=python_distutils
+   dh_prep -O--buildsystem=python_distutils
+   dh_auto_install -O--buildsystem=python_distutils
+running install
+running build
+running build_py
+running install_lib
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti
+copying build/lib.linux-x86_64-2.7/noseOfYeti/__init__.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/__init__.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/sphinx.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/pylinter.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins/support
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support/__init__.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins/support
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support/spec_options.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins/support
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/support/test_chooser.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins/support
+copying build/lib.linux-x86_64-2.7/noseOfYeti/plugins/nosetests.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/plugins
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/helpers.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/complex_tokeniser_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/__init__.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/matchers.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/test_chooser_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/nesting_tokeniser_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/imports_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/support_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/spec_codec_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/config_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/translation_tokeniser_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/config_util_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+copying build/lib.linux-x86_64-2.7/noseOfYeti/specs/general_tokeniser_test.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/specs
+creating /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/tracker.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/__init__.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/tokens.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/imports.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/tokeniser.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/support.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/containers.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/spec_codec.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+copying build/lib.linux-x86_64-2.7/noseOfYeti/tokeniser/config.py -> /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti/tokeniser
+running install_egg_info
+running egg_info
+creating noseOfYeti.egg-info
+writing requirements to noseOfYeti.egg-info/requires.txt
+writing noseOfYeti.egg-info/PKG-INFO
+writing top-level names to noseOfYeti.egg-info/top_level.txt
+writing dependency_links to noseOfYeti.egg-info/dependency_links.txt
+writing entry points to noseOfYeti.egg-info/entry_points.txt
+writing manifest file 'noseOfYeti.egg-info/SOURCES.txt'
+reading manifest file 'noseOfYeti.egg-info/SOURCES.txt'
+writing manifest file 'noseOfYeti.egg-info/SOURCES.txt'
+Copying noseOfYeti.egg-info to /home/gilles/nose-of-yeti/nose-of-yeti-1.5.1/debian/python-nose-of-yeti/usr/lib/python2.7/dist-packages/noseOfYeti-1.5.1.egg-info
+running install_scripts
+   dh_installdocs -O--buildsystem=python_distutils
+   dh_installchangelogs -O--buildsystem=python_distutils
+   dh_python2 -O--buildsystem=python_distutils
+   dh_perl -O--buildsystem=python_distutils
+   dh_link -O--buildsystem=python_distutils
+   dh_compress -O--buildsystem=python_distutils
+   dh_fixperms -O--buildsystem=python_distutils
+   dh_installdeb -O--buildsystem=python_distutils
+   dh_gencontrol -O--buildsystem=python_distutils
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package python-nose-of-yeti: unused substitution variable ${python:Versions}
+   dh_md5sums -O--buildsystem=python_distutils
+   dh_builddeb -O--buildsystem=python_distutils
+dpkg-deb: building package `python-nose-of-yeti' in `../python-nose-of-yeti_1.5.1-1_all.deb'.
+ dpkg-genchanges -b >../nose-of-yeti_1.5.1-1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build nose-of-yeti-1.5.1
+dpkg-buildpackage: binary-only upload (no source included)

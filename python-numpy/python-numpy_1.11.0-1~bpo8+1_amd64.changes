@@ -1,0 +1,44 @@
+Format: 1.8
+Date: Tue, 24 May 2016 23:24:41 +0000
+Source: python-numpy
+Binary: python-numpy python-numpy-dbg python3-numpy python3-numpy-dbg python-numpy-doc
+Architecture: source amd64 all
+Version: 1:1.11.0-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-numpy - Numerical Python adds a fast array facility to the Python languag
+ python-numpy-dbg - Fast array facility to the Python language (debug extension)
+ python-numpy-doc - NumPy documentation
+ python3-numpy - Fast array facility to the Python 3 language
+ python3-numpy-dbg - Fast array facility to the Python 3 language (debug extension)
+Changes:
+ python-numpy (1:1.11.0-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 0c95f3d7d7ceb2dba76902d111bd4dff85ae1f51 1820 python-numpy_1.11.0-1~bpo8+1.dsc
+ e1db2a301f7f53733c069ca5be552ac832552e10 140360 python-numpy_1.11.0-1~bpo8+1.debian.tar.xz
+ 100b5912b95b5f8ebe89e7a9b5b96bdea2a529c2 1783404 python-numpy_1.11.0-1~bpo8+1_amd64.deb
+ 70eed94f7e8becc94709794cfc66eabee10d47f1 3541856 python-numpy-dbg_1.11.0-1~bpo8+1_amd64.deb
+ eceb7cdcba56af9981ef7334e81e272f466fe550 1786202 python3-numpy_1.11.0-1~bpo8+1_amd64.deb
+ 9e32ecc607af7cbd754933b4681062fafdca4286 4410180 python3-numpy-dbg_1.11.0-1~bpo8+1_amd64.deb
+ d1be51aa9bd999f0e9982cfc85ed051617ee1e01 4870122 python-numpy-doc_1.11.0-1~bpo8+1_all.deb
+Checksums-Sha256:
+ ac7766869c3f8d4174d791daada8c19cc5635100f03ada79504dbd83b942d831 1820 python-numpy_1.11.0-1~bpo8+1.dsc
+ 5b44589554b6266ccc2ab002fbaceb1528502bc59db011d1510333d203cf5de0 140360 python-numpy_1.11.0-1~bpo8+1.debian.tar.xz
+ 9d4a63b01591c8accc2c48c75783ae142ab9101842d0544bae927bb6e0f50d49 1783404 python-numpy_1.11.0-1~bpo8+1_amd64.deb
+ 02d872b184f140026fea3d4d2b8de3d64c9f118ab6667232ab5d42084f3feffe 3541856 python-numpy-dbg_1.11.0-1~bpo8+1_amd64.deb
+ 7a240e4599bfadc477fa215cef22fe80d1a88cf1fc396f801538e30d0f9c975c 1786202 python3-numpy_1.11.0-1~bpo8+1_amd64.deb
+ f7cfe0c424e423a5e00f665fb44f351a9b99168b01541f899126ae8b297ad43b 4410180 python3-numpy-dbg_1.11.0-1~bpo8+1_amd64.deb
+ 46f3b6ff9f32bf95ee8f1199e153b747598a2c9ea4624c5e98f41199503034a8 4870122 python-numpy-doc_1.11.0-1~bpo8+1_all.deb
+Files:
+ c3e5878c32eef89b1e1d3f2a408b6e0e 1820 python optional python-numpy_1.11.0-1~bpo8+1.dsc
+ cb55bed9b91e17e81c38fe20b081f3c6 140360 python optional python-numpy_1.11.0-1~bpo8+1.debian.tar.xz
+ 9be24796e895d308a2497aff25c3a712 1783404 python optional python-numpy_1.11.0-1~bpo8+1_amd64.deb
+ 5ef2d84abdf7eb87e0f97c66def8c0ef 3541856 debug extra python-numpy-dbg_1.11.0-1~bpo8+1_amd64.deb
+ 3521f7f70e6138de0795103cf3e6ab38 1786202 python optional python3-numpy_1.11.0-1~bpo8+1_amd64.deb
+ 8c9e7c0994d6e0449fbae3869413b031 4410180 debug extra python3-numpy-dbg_1.11.0-1~bpo8+1_amd64.deb
+ dac7cb3874c9ca80861bee51da0ded8e 4870122 doc optional python-numpy-doc_1.11.0-1~bpo8+1_all.deb

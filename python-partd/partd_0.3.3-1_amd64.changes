@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Thu, 19 May 2016 17:03:26 +0000
+Source: partd
+Binary: python-partd
+Architecture: source all
+Version: 0.3.3-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-partd - Python module to provide a key-value byte store with appendable v
+Changes:
+ partd (0.3.3-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ c2f17e549a486347f4334b8bb31416b0596a1f3a 1025 partd_0.3.3-1.dsc
+ 76ce0d111b35582294804b64c75ba8c3c0587269 43472 partd_0.3.3.orig.tar.gz
+ 43960fcd3f0f3d9a6a142a34acfc30b0557d5c2d 2280 partd_0.3.3-1.debian.tar.xz
+ 6b9a2f254933bc7220e527802ce37d30a197a6a1 13694 python-partd_0.3.3-1_all.deb
+Checksums-Sha256:
+ f6d001d3e1d0816c816a0948a7fe1fcc35f69123e10911697e0ea3ea5c6fe310 1025 partd_0.3.3-1.dsc
+ 56995ace121f80b1a18d6bff940ec8e9986156f173e50888cbf66b98ff7a3d6f 43472 partd_0.3.3.orig.tar.gz
+ 139228ff7af79837aaf2f9ff24f4899137a3b6ba9df6202fd59529871713ac16 2280 partd_0.3.3-1.debian.tar.xz
+ 142bf923865de185c012115c470b196f2139527488ba81586e9deae2dc5d8c3d 13694 python-partd_0.3.3-1_all.deb
+Files:
+ 09de08c2a1915ce09bf7c860469dda49 1025 python optional partd_0.3.3-1.dsc
+ babe2d326c411d992633fcfabb131aac 43472 python optional partd_0.3.3.orig.tar.gz
+ 7f4a59942bd1dd0140661e3931166bb0 2280 python optional partd_0.3.3-1.debian.tar.xz
+ 65cfff8dd72a1ccdfda17575517f9e09 13694 python optional python-partd_0.3.3-1_all.deb

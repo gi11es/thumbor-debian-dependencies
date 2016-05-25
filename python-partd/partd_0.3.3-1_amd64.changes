@@ -1,7 +1,7 @@
 Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: partd
-Binary: python-partd
+Binary: python-partd python3-partd
 Architecture: source all
 Version: 0.3.3-1
 Distribution: UNRELEASED
@@ -10,22 +10,26 @@ Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-partd - Python module to provide a key-value byte store with appendable v
+ python3-partd - Python module to provide a key-value byte store with appendable v
 Changes:
  partd (0.3.3-1) UNRELEASED; urgency=medium
  .
    * Initial release.
 Checksums-Sha1:
- 9a346766ca7a520277250597c32667945b33c59b 1040 partd_0.3.3-1.dsc
+ dd796ba84eb12bdf14c4406e68969d5ee396d04d 1197 partd_0.3.3-1.dsc
  76ce0d111b35582294804b64c75ba8c3c0587269 43472 partd_0.3.3.orig.tar.gz
- c4fc3657a511a7c4fc02ff88f53ddb427224b170 2288 partd_0.3.3-1.debian.tar.xz
- c412c83e507b861322b85e08ea81098a3928fb3d 13700 python-partd_0.3.3-1_all.deb
+ 14d670fa0154522b67fd2372781e9294adec715d 2132 partd_0.3.3-1.debian.tar.xz
+ 73333ec0f9b8a3a62982db6a5d126dd92398a66a 14818 python-partd_0.3.3-1_all.deb
+ 68f4c97e0380152cb9720941b574417a75324f9c 13494 python3-partd_0.3.3-1_all.deb
 Checksums-Sha256:
- 743f6b9f2213c84f7a963bfe3f98b99024b2fc5f172202c0bc25016586393a3e 1040 partd_0.3.3-1.dsc
+ 14bfdfea39e9977fac383519aa9ea9d2d7b8f8facf5f5f8e530ec53394c1a282 1197 partd_0.3.3-1.dsc
  56995ace121f80b1a18d6bff940ec8e9986156f173e50888cbf66b98ff7a3d6f 43472 partd_0.3.3.orig.tar.gz
- 2a81859b06d822b42448424fe8c40dd3ad20846270013b80a9b0dded6c960b98 2288 partd_0.3.3-1.debian.tar.xz
- 1b42c299c2b60e6fbc1ff3a987e39f07eb068e0a5b23079580fd4e55460e4c1b 13700 python-partd_0.3.3-1_all.deb
+ 0a97b83cf43185453b14def7fb7785086b477abb1501c11eeddca0d0eea28963 2132 partd_0.3.3-1.debian.tar.xz
+ ab6196cb35019f428f5b8c4dbc0146794df7c2ca0d10c745d0082399647dd2af 14818 python-partd_0.3.3-1_all.deb
+ fe37a33b8581fe3ce489a9d937494723448fb6dc063b50004d857667d875d382 13494 python3-partd_0.3.3-1_all.deb
 Files:
- 69339aa5586c3eb5bcd4f8ecd9d7f6b1 1040 python optional partd_0.3.3-1.dsc
+ 421b3f54cc1958747bfcf912897bb554 1197 python optional partd_0.3.3-1.dsc
  babe2d326c411d992633fcfabb131aac 43472 python optional partd_0.3.3.orig.tar.gz
- 1ea60f4efa4df5a3ab9a681221dc92ca 2288 python optional partd_0.3.3-1.debian.tar.xz
- 69f72ac58629a8920c4c2d21bafc6233 13700 python optional python-partd_0.3.3-1_all.deb
+ 66b4a15cf16c1ff85b53d3a86d9f7d13 2132 python optional partd_0.3.3-1.debian.tar.xz
+ 740e5f7fcb194450a63612aa85dfc4f5 14818 python optional python-partd_0.3.3-1_all.deb
+ 186b79e4592ede1cfc6d9e37973e4095 13494 python optional python3-partd_0.3.3-1_all.deb

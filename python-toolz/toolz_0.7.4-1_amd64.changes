@@ -1,7 +1,7 @@
 Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: toolz
-Binary: python-toolz
+Binary: python-toolz python3-toolz
 Architecture: source all
 Version: 0.7.4-1
 Distribution: UNRELEASED
@@ -10,22 +10,26 @@ Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-toolz - Python module to provide a set of utility functions for iterators
+ python3-toolz - Python module to provide a set of utility functions for iterators
 Changes:
  toolz (0.7.4-1) UNRELEASED; urgency=medium
  .
    * Initial release.
 Checksums-Sha1:
- 68705850acb5045611ae8f3b7cb619fddf2e9264 980 toolz_0.7.4-1.dsc
+ 6eac4debde038b59d6bf36e02cbe054cf897ad43 1039 toolz_0.7.4-1.dsc
  9ac9cab3e9d0a724b3c2e28b6b01a924056cb6a1 55708 toolz_0.7.4.orig.tar.gz
- d4754bf94628622e00775ac6b06aedba3570e197 2256 toolz_0.7.4-1.debian.tar.xz
- 11417dd669462acbbf2df873a887816293a5b3ad 30020 python-toolz_0.7.4-1_all.deb
+ 8a3843b004fbec9ee4ec2ff5b509ecf085113aff 2308 toolz_0.7.4-1.debian.tar.xz
+ a5b9aa3b4e38d367ac0e3f4b7fd305000487cbf3 3950 python-toolz_0.7.4-1_all.deb
+ b36871e89bf77828634b06aeb89b6e05b9454c63 2178 python3-toolz_0.7.4-1_all.deb
 Checksums-Sha256:
- 8339ea5567aa806e80bfb1daac8813bb0c6cd94092ef70bdc3384a3234bbadb8 980 toolz_0.7.4-1.dsc
+ 70ba95720d2db7b3173a59f86d75b4d01a60477879dda73c8d18248e9f015537 1039 toolz_0.7.4-1.dsc
  0eb37474e1f01251eeb11c33f5be42985734b1682370d124494af847c4aa5a19 55708 toolz_0.7.4.orig.tar.gz
- 01061977fe13b2be8aa39bdecd13c62e4255b20d1b3b483d8fc7dcc72a94fb99 2256 toolz_0.7.4-1.debian.tar.xz
- 0bfcb07a9c38cf131dbb53f148ae97879d99bd9cf1af180546dc4f337175a7d5 30020 python-toolz_0.7.4-1_all.deb
+ f737c974bd304825f4fd30b50c06100ae37a5b596eac5382ee88142cd9bd63e6 2308 toolz_0.7.4-1.debian.tar.xz
+ fab9759fe91b0e5f6955872b858d9bc2459ecf850a39cf002eaf8ed8b6e7d3fc 3950 python-toolz_0.7.4-1_all.deb
+ 1b85a0624c0d6f4dd42765c2ef8d72ee1fc63c9708089a9511c4a8571643e026 2178 python3-toolz_0.7.4-1_all.deb
 Files:
- 8ec211b4ee7ff80812ec2c2c3a50ddcd 980 python optional toolz_0.7.4-1.dsc
+ 33d8f58b74b1374ac325358a6405bb8c 1039 python optional toolz_0.7.4-1.dsc
  48988a618c92209b644a352b8b3d8dbe 55708 python optional toolz_0.7.4.orig.tar.gz
- d00311a5d239b619b8429476df28964b 2256 python optional toolz_0.7.4-1.debian.tar.xz
- c73e4ed8bd6d4e8c2749e4ec326199bc 30020 python optional python-toolz_0.7.4-1_all.deb
+ 0667e9fa518715f02b4786d1c5857acd 2308 python optional toolz_0.7.4-1.debian.tar.xz
+ 3768ad6044c94a4902d11531c024cca7 3950 python optional python-toolz_0.7.4-1_all.deb
+ 9b4226b54f98d74752159c37affbacae 2178 python optional python3-toolz_0.7.4-1_all.deb

@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Wed, 04 May 2016 21:19:15 +0000
+Source: yanc
+Binary: python-nose-yanc
+Architecture: all
+Version: 0.3.3-2~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-nose-yanc - Color output plugin for nose
+Changes:
+ yanc (0.3.3-2~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 8ed50ef24f650499c32218cea2c36bcd7da8b47f 5702 python-nose-yanc_0.3.3-2~bpo8+1_all.deb
+Checksums-Sha256:
+ d4b4e9a95f939ed0708286c2d15f6796d8b07128ebc5b9dc7fc0fc00a17b4312 5702 python-nose-yanc_0.3.3-2~bpo8+1_all.deb
+Files:
+ 39559a91bf98a0a24df199dfc67074cb 5702 python optional python-nose-yanc_0.3.3-2~bpo8+1_all.deb

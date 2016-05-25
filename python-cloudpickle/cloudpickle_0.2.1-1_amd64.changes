@@ -1,7 +1,7 @@
 Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: cloudpickle
-Binary: python-cloudpickle
+Binary: python-cloudpickle python3-cloudpickle
 Architecture: source all
 Version: 0.2.1-1
 Distribution: UNRELEASED
@@ -10,22 +10,26 @@ Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-cloudpickle - Python module to make it possible to serialize Python constructs
+ python3-cloudpickle - Python module to make it possible to serialize Python constructs
 Changes:
  cloudpickle (0.2.1-1) UNRELEASED; urgency=medium
  .
    * Initial release.
 Checksums-Sha1:
- 39b45e563417ac739d0c89f1b5ccb5cedcc104f1 1090 cloudpickle_0.2.1-1.dsc
+ 6eff797366da2ed49b43d984abc780ff34003b78 1161 cloudpickle_0.2.1-1.dsc
  34240d08fb786dee04bb273b7553cef809d68ae7 15356 cloudpickle_0.2.1.orig.tar.gz
- 7572b76888c5d86f3f69e09c66f0fe13303bd399 2324 cloudpickle_0.2.1-1.debian.tar.xz
- 632fe7c171180d83973704465269d66bff186b18 11194 python-cloudpickle_0.2.1-1_all.deb
+ 8178ade8bee4a853eb8c9e4a30028b5f805415d5 2364 cloudpickle_0.2.1-1.debian.tar.xz
+ 45fb9222822ee284709cbc599e6ee3775ba3e50d 3308 python-cloudpickle_0.2.1-1_all.deb
+ 924b0daeeef9c9ff6899d05e224f8d123a4c449e 2212 python3-cloudpickle_0.2.1-1_all.deb
 Checksums-Sha256:
- cb6b14430741572ef8372d9058c245394af816c4b73a9ac69a8844a989e051eb 1090 cloudpickle_0.2.1-1.dsc
+ 0777c86b2020e8bfb84c4106ad71d10a3568e2f1a5a782f1ff3cab70a3b27958 1161 cloudpickle_0.2.1-1.dsc
  74a6a12d78f639eba1f2ba5ff3ae2168257dcb9358520902afd4d32b5ed297f1 15356 cloudpickle_0.2.1.orig.tar.gz
- f74d998fe59beaacfeae145ccfffa998d2d18dfe75b04aff80d9c5680108892a 2324 cloudpickle_0.2.1-1.debian.tar.xz
- c1fa2d6c902abd7a2451ad53ce98b129ddbcb3b523f4a4f6d44445a9d46841bd 11194 python-cloudpickle_0.2.1-1_all.deb
+ 21ceccf9a1ab28bf5bdd3c4b0d9ac9f31db118f5ac80c9eda55400bcad1dacc1 2364 cloudpickle_0.2.1-1.debian.tar.xz
+ 4e5e673df3d0b1cac474fcc889049ffff35f94c419368de5e7b00ffc842af674 3308 python-cloudpickle_0.2.1-1_all.deb
+ ed39fe221fcd069571deecc6c88d535a1fb87d26639d0cd801e60282eba4cf8a 2212 python3-cloudpickle_0.2.1-1_all.deb
 Files:
- 8075114e359b588c9f479a1be3fb2770 1090 python optional cloudpickle_0.2.1-1.dsc
+ eb7b6e390e90869185472542596fef1b 1161 python optional cloudpickle_0.2.1-1.dsc
  d307b9f6f6510c6df96b95eebe52a18c 15356 python optional cloudpickle_0.2.1.orig.tar.gz
- 2dcd98489b586f045cc5416a25acdddb 2324 python optional cloudpickle_0.2.1-1.debian.tar.xz
- aab96986eece071a6bdd65a1f4e2f7de 11194 python optional python-cloudpickle_0.2.1-1_all.deb
+ 172fb1ff7f0d85e6765f984641b392ad 2364 python optional cloudpickle_0.2.1-1.debian.tar.xz
+ d6308f569d310794bc14f20ec0da8191 3308 python optional python-cloudpickle_0.2.1-1_all.deb
+ 350afdc251594069f1a33552350ea36e 2212 python optional python3-cloudpickle_0.2.1-1_all.deb

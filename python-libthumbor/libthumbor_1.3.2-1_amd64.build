@@ -1,0 +1,203 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package libthumbor
+dpkg-buildpackage: source version 1.3.2-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build libthumbor-1.3.2
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_clean -O--buildsystem=python_distutils
+running clean
+'build/lib.linux-x86_64-2.7' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+   debian/rules override_dh_clean
+make[1]: Entering directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+rm -rf libthumbor.egg-info
+dh_clean
+make[1]: Leaving directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+ debian/rules build
+dh build --with python2 --buildsystem=python_distutils
+   dh_testdir -O--buildsystem=python_distutils
+   dh_auto_configure -O--buildsystem=python_distutils
+   dh_auto_build -O--buildsystem=python_distutils
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/libthumbor
+copying libthumbor/__init__.py -> build/lib.linux-x86_64-2.7/libthumbor
+copying libthumbor/url.py -> build/lib.linux-x86_64-2.7/libthumbor
+copying libthumbor/crypto.py -> build/lib.linux-x86_64-2.7/libthumbor
+creating build/lib.linux-x86_64-2.7/libthumbor/django
+copying libthumbor/django/urls.py -> build/lib.linux-x86_64-2.7/libthumbor/django
+copying libthumbor/django/__init__.py -> build/lib.linux-x86_64-2.7/libthumbor/django
+copying libthumbor/django/views.py -> build/lib.linux-x86_64-2.7/libthumbor/django
+creating build/lib.linux-x86_64-2.7/libthumbor/url_signers
+copying libthumbor/url_signers/__init__.py -> build/lib.linux-x86_64-2.7/libthumbor/url_signers
+copying libthumbor/url_signers/base64_hmac_sha1.py -> build/lib.linux-x86_64-2.7/libthumbor/url_signers
+running egg_info
+creating libthumbor.egg-info
+writing requirements to libthumbor.egg-info/requires.txt
+writing libthumbor.egg-info/PKG-INFO
+writing top-level names to libthumbor.egg-info/top_level.txt
+writing dependency_links to libthumbor.egg-info/dependency_links.txt
+writing manifest file 'libthumbor.egg-info/SOURCES.txt'
+reading manifest file 'libthumbor.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'build'
+writing manifest file 'libthumbor.egg-info/SOURCES.txt'
+   debian/rules override_dh_auto_test
+make[1]: Entering directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+/usr/bin/make test
+make[2]: Entering directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+test_can_create_signer (url_signers.test_base64_hmac_sha1_signer.Base64HmacSha1UrlSignerTestCase) ... [32mok[0m
+test_can_sign_url (url_signers.test_base64_hmac_sha1_signer.Base64HmacSha1UrlSignerTestCase) ... [32mok[0m
+test_can_create_signer (url_signers.test_base_url_signer.BaseSignerTestCase) ... [32mok[0m
+test_can_create_unicode_signer (url_signers.test_base_url_signer.BaseSignerTestCase) ... [32mok[0m
+test_can_validate_url (url_signers.test_base_url_signer.BaseSignerTestCase) ... [32mok[0m
+test_has_abstract_method (url_signers.test_base_url_signer.BaseSignerTestCase) ... [32mok[0m
+test_should_not_get_an_unsafe_url_when_unsafe_is_false (test_cryptourl.GenerateWithUnsafeTestCase) ... [32mok[0m
+test_should_pass_unsafe_to_generate_and_get_an_unsafe_url (test_cryptourl.GenerateWithUnsafeTestCase) ... [32mok[0m
+test_generated_url_1 (test_cryptourl.NewFormatUrl) ... [32mok[0m
+test_generated_url_2 (test_cryptourl.NewFormatUrl) ... [32mok[0m
+test_generated_url_3 (test_cryptourl.NewFormatUrl) ... [32mok[0m
+test_generated_url_4 (test_cryptourl.NewFormatUrl) ... [32mok[0m
+test_generated_url_1 (test_cryptourl.NewFormatUrlWithUnicodeKey) ... [32mok[0m
+test_generated_url_2 (test_cryptourl.NewFormatUrlWithUnicodeKey) ... [32mok[0m
+test_generated_url_3 (test_cryptourl.NewFormatUrlWithUnicodeKey) ... [32mok[0m
+test_generated_url_4 (test_cryptourl.NewFormatUrlWithUnicodeKey) ... [32mok[0m
+test_libthumbor.test_usage_new_format ... [32mok[0m
+test_libthumbor.test_thumbor_can_decrypt_lib_thumbor_generated_url_new_format ... [32mok[0m
+test_can_generate_url (test_url.UrlTestCase) ... [32mok[0m
+test_can_generate_url_with_custom_trim (test_url.UrlTestCase) ... [32mok[0m
+test_can_generate_url_with_defaults (test_url.UrlTestCase) ... [32mok[0m
+test_can_generate_url_with_fitin (test_url.UrlTestCase) ... [32mok[0m
+test_can_get_regex (test_url.UrlTestCase) ... [32mok[0m
+test_can_get_regex_without_unsafe (test_url.UrlTestCase) ... [32mok[0m
+test_parsing_complete_url (test_url.UrlTestCase) ... [32mok[0m
+test_parsing_invalid_url (test_url.UrlTestCase) ... [32mok[0m
+test_should_return_a_valid_unsafe_url_with_no_params (test_url_composer.UnsafeUrlTestCase) ... [32mok[0m
+test_should_return_an_unsafe_url_with_crop_and_smart (test_url_composer.UnsafeUrlTestCase) ... [32mok[0m
+test_should_return_an_unsafe_url_with_width_and_height (test_url_composer.UnsafeUrlTestCase) ... [32mok[0m
+test_no_options_specified ... [32mok[0m
+test_url_raises_if_no_url ... [32mok[0m
+test_url_width_height_1 ... [32mok[0m
+test_url_width_height_2 ... [32mok[0m
+test_url_width_height_3 ... [32mok[0m
+test_url_width_height_4 ... [32mok[0m
+test_url_width_height_5 ... [32mok[0m
+test_url_width_height_6 ... [32mok[0m
+test_url_width_height_7 ... [32mok[0m
+test_url_width_height_8 ... [32mok[0m
+test_smart_url ... [32mok[0m
+test_fit_in_url ... [32mok[0m
+test_adaptive_fit_in_url ... [32mok[0m
+test_url_composer.test_fit_in_fails_if_no_width_supplied ... [32mok[0m
+test_url_composer.test_full_fit_in_fails_if_no_width_supplied ... [32mok[0m
+test_url_composer.test_adaptive_fit_in_fails_if_no_width_supplied ... [32mok[0m
+test_url_composer.test_adaptive_full_fit_in_fails_if_no_width_supplied ... [32mok[0m
+test_full_fit_in_url ... [32mok[0m
+test_adaptive_full_fit_in_url ... [32mok[0m
+test_flip_1 ... [32mok[0m
+test_flip_2 ... [32mok[0m
+test_flop_1 ... [32mok[0m
+test_flop_2 ... [32mok[0m
+test_flip_flop ... [32mok[0m
+test_flip_flop2 ... [32mok[0m
+test_horizontal_alignment ... [32mok[0m
+test_horizontal_alignment2 ... [32mok[0m
+test_vertical_alignment ... [32mok[0m
+test_vertical_alignment2 ... [32mok[0m
+test_both_alignments ... [32mok[0m
+test_proper_haligns ... [32mok[0m
+test_proper_haligns ... [32mok[0m
+test_proper_meta ... [32mok[0m
+test_url_composer.test_trim_standard ... [32mok[0m
+test_url_composer.test_trim_pixel_and_tolerance ... [32mok[0m
+test_url_composer.test_trim_pixel_only ... [32mok[0m
+test_url_composer.test_trim_tolerance_only ... [32mok[0m
+test_manual_crop_1 ... [32mok[0m
+test_manual_crop_2 ... [32mok[0m
+test_smart_after_alignments ... [32mok[0m
+
+[34m----------------------------------------------------------------------[0m
+Ran 69 tests in 0.403s
+
+[32mOK[0m
+make[3]: Entering directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+Name                                      Stmts   Miss Branch BrMiss  Cover   Missing
+-------------------------------------------------------------------------------------
+libthumbor/__init__                          10      0      0      0   100%   
+libthumbor/crypto                            26      1      6      1    94%   49
+libthumbor/django/__init__                    0      0      0      0   100%   
+libthumbor/django/urls                        3      3      0      0     0%   1-6
+libthumbor/django/views                      40     40     10     10     0%   11-80
+libthumbor/url                              174      0     86      0   100%   
+libthumbor/url_signers/__init__              10      0      2      0   100%   
+libthumbor/url_signers/base64_hmac_sha1       8      0      0      0   100%   
+-------------------------------------------------------------------------------------
+TOTAL                                       271     44    104     11    85%   
+make[3]: Leaving directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+make[3]: Entering directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+make[3]: Leaving directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+make[2]: Leaving directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+make[1]: Leaving directory '/home/gilles/libthumbor/libthumbor-1.3.2'
+ fakeroot debian/rules binary
+dh binary --with python2 --buildsystem=python_distutils
+   dh_testroot -O--buildsystem=python_distutils
+   dh_prep -O--buildsystem=python_distutils
+   dh_auto_install -O--buildsystem=python_distutils
+running install
+running build
+running build_py
+running egg_info
+writing requirements to libthumbor.egg-info/requires.txt
+writing libthumbor.egg-info/PKG-INFO
+writing top-level names to libthumbor.egg-info/top_level.txt
+writing dependency_links to libthumbor.egg-info/dependency_links.txt
+reading manifest file 'libthumbor.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'build'
+writing manifest file 'libthumbor.egg-info/SOURCES.txt'
+running install_lib
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/django
+copying build/lib.linux-x86_64-2.7/libthumbor/django/urls.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/django
+copying build/lib.linux-x86_64-2.7/libthumbor/django/__init__.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/django
+copying build/lib.linux-x86_64-2.7/libthumbor/django/views.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/django
+copying build/lib.linux-x86_64-2.7/libthumbor/__init__.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor
+copying build/lib.linux-x86_64-2.7/libthumbor/url.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor
+copying build/lib.linux-x86_64-2.7/libthumbor/crypto.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor
+creating /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/url_signers
+copying build/lib.linux-x86_64-2.7/libthumbor/url_signers/__init__.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/url_signers
+copying build/lib.linux-x86_64-2.7/libthumbor/url_signers/base64_hmac_sha1.py -> /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor/url_signers
+running install_egg_info
+Copying libthumbor.egg-info to /home/gilles/libthumbor/libthumbor-1.3.2/debian/python-libthumbor/usr/lib/python2.7/dist-packages/libthumbor-1.3.2.egg-info
+running install_scripts
+   dh_installdocs -O--buildsystem=python_distutils
+   dh_installchangelogs -O--buildsystem=python_distutils
+   dh_python2 -O--buildsystem=python_distutils
+   dh_perl -O--buildsystem=python_distutils
+   dh_link -O--buildsystem=python_distutils
+   dh_compress -O--buildsystem=python_distutils
+   dh_fixperms -O--buildsystem=python_distutils
+   dh_installdeb -O--buildsystem=python_distutils
+   dh_gencontrol -O--buildsystem=python_distutils
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package python-libthumbor: unused substitution variable ${python:Versions}
+   dh_md5sums -O--buildsystem=python_distutils
+   dh_builddeb -O--buildsystem=python_distutils
+dpkg-deb: building package `python-libthumbor' in `../python-libthumbor_1.3.2-1_all.deb'.
+ dpkg-genchanges -b >../libthumbor_1.3.2-1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build libthumbor-1.3.2
+dpkg-buildpackage: binary-only upload (no source included)

@@ -14,10 +14,10 @@ Package-List:
  python3-locket deb python optional arch=all
 Checksums-Sha1:
  af0a18bf474bc71900a6109f1ac27a18ecf42ff6 5541 locket_0.2.0.orig.tar.gz
- 8076954466b1bb5c45322d7edaa85fea691e5c91 2348 locket_0.2.0-1.debian.tar.xz
+ 833dee1058784fdbab0e4659a2f7f2039c933036 2060 locket_0.2.0-1.debian.tar.xz
 Checksums-Sha256:
  6a0706306dfc6f6af5dfd54993fa8a10f79e69a6bbb748e7bc75432f637fb383 5541 locket_0.2.0.orig.tar.gz
- 2c3c9728fda07af1f9a3b232ee993d2d327298bbf6f357344cc42a4949f604e8 2348 locket_0.2.0-1.debian.tar.xz
+ 54332e68030ad0c38ae14b75a07faeca6e4da249600a7f09677de2c90eea9be0 2060 locket_0.2.0-1.debian.tar.xz
 Files:
  681b30d34a60cc8bd99584c755e07707 5541 locket_0.2.0.orig.tar.gz
- 5c6a87850be7de0ad9c7018c66e06e60 2348 locket_0.2.0-1.debian.tar.xz
+ cd7babc7cfde4a001480ee8882fe8478 2060 locket_0.2.0-1.debian.tar.xz

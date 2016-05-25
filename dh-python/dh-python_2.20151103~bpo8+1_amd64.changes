@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 25 May 2016 23:35:46 +0000
+Source: dh-python
+Binary: dh-python
+Architecture: source all
+Version: 2.20151103~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.orgs>
+Description:
+ dh-python  - Debian helper tools for packaging Python libraries and applicatio
+Changes:
+ dh-python (2.20151103~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 553c1692948fd0e21b79305a9e06420169b3a016 864 dh-python_2.20151103~bpo8+1.dsc
+ e4fae6884b74b043a3398aaffee86831b0d16ec1 79892 dh-python_2.20151103~bpo8+1.tar.xz
+ 01136f9be35a0dc88b475242cc210ace8ad4ca8f 77370 dh-python_2.20151103~bpo8+1_all.deb
+Checksums-Sha256:
+ f984cc6913b4eb621dc9a19e19a06c1f8d3fdd36d7231bd33e1454e4e139447a 864 dh-python_2.20151103~bpo8+1.dsc
+ 32b9abf6b083090b018341db09439016e6fe6edabfeb8f0295dfab3221144be5 79892 dh-python_2.20151103~bpo8+1.tar.xz
+ fa508fc09226c230b897147cfba115bee477c4930d5c39f985fb1302e3eaf5e0 77370 dh-python_2.20151103~bpo8+1_all.deb
+Files:
+ 785c0e507a029d0ae1d5dae68582e451 864 python optional dh-python_2.20151103~bpo8+1.dsc
+ 1e2005dda536f46c5e298098fe4ea1f9 79892 python optional dh-python_2.20151103~bpo8+1.tar.xz
+ 1980a5af4abaad60ffb340501e335520 77370 python optional dh-python_2.20151103~bpo8+1_all.deb

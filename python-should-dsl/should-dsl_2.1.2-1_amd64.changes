@@ -1,8 +1,8 @@
 Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: should-dsl
-Binary: python-should-dsl
-Architecture: all
+Binary: python-should-dsl python3-should-dsl
+Architecture: source all
 Version: 2.1.2-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -10,13 +10,26 @@ Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-should-dsl - Python module to improve readability for should-style expectation
+ python3-should-dsl - Python module to improve readability for should-style expectation
 Changes:
  should-dsl (2.1.2-1) UNRELEASED; urgency=medium
  .
    * Initial release.
 Checksums-Sha1:
- 8fee33492f4215f5940550be5b1184eda83f87d4 9350 python-should-dsl_2.1.2-1_all.deb
+ 0ff9b3fad5b0ab6690c81880c09e2add3d586431 1103 should-dsl_2.1.2-1.dsc
+ 39230af03bf0cada0358cc39a74d163a7264c0a4 93665 should-dsl_2.1.2.orig.tar.gz
+ de93a40d1da8c316c61b406ffc9337f1cdff6d52 2420 should-dsl_2.1.2-1.debian.tar.xz
+ f93f2b1299259be8ca4f81e824a3e2c7bab09ef4 2602 python-should-dsl_2.1.2-1_all.deb
+ 6a897d119bd549623d9d59725b227d7818808fbf 2010 python3-should-dsl_2.1.2-1_all.deb
 Checksums-Sha256:
- edf4da74224c2909cf362cd2bcefbcc998b7f471abb73e2c2586bf9dcf13c3e6 9350 python-should-dsl_2.1.2-1_all.deb
+ 2482ff1f688e178219831a4edcb4de57d2fd897148f41d7802967c5bf29cd747 1103 should-dsl_2.1.2-1.dsc
+ 3d49ebf641663ab95b768df62d980bf44f773a0b12544f3a60c736b0ecf5388e 93665 should-dsl_2.1.2.orig.tar.gz
+ 022ebc2f53227e56b4aa41248e76cbf772d38d6345d7cf5d3273fd1193047cf0 2420 should-dsl_2.1.2-1.debian.tar.xz
+ 49b49411e92400a21e98eed55096d25bf1cbc185f7d36f289bca66bae4f47c62 2602 python-should-dsl_2.1.2-1_all.deb
+ 8b49479469dba503f45f803dbeefb73b5b7efc8c4bee00a3e56ec10ae3658ec8 2010 python3-should-dsl_2.1.2-1_all.deb
 Files:
- 09f1239f2b097be85a43aa3eb8ae82cd 9350 python optional python-should-dsl_2.1.2-1_all.deb
+ 4b5165d4cab026ae7d1ca2175d6fec08 1103 python optional should-dsl_2.1.2-1.dsc
+ 3a22cda72f19a0e3692fffb6a2cdd835 93665 python optional should-dsl_2.1.2.orig.tar.gz
+ e0d1383a7f01b334a760603086fb4804 2420 python optional should-dsl_2.1.2-1.debian.tar.xz
+ 868b38dce2f58babf9e9360472e386b4 2602 python optional python-should-dsl_2.1.2-1_all.deb
+ fe85c9714258097a2e268d4428dfbb2c 2010 python optional python3-should-dsl_2.1.2-1_all.deb

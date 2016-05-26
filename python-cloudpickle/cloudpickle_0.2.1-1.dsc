@@ -14,10 +14,10 @@ Package-List:
  python3-cloudpickle deb python optional arch=all
 Checksums-Sha1:
  34240d08fb786dee04bb273b7553cef809d68ae7 15356 cloudpickle_0.2.1.orig.tar.gz
- 70bd79e872a1b0461f8a9d1c9e88ce2cdda85d3c 2080 cloudpickle_0.2.1-1.debian.tar.xz
+ 47b78a9a1b4c302d3099e5e96a732e1502b06911 2084 cloudpickle_0.2.1-1.debian.tar.xz
 Checksums-Sha256:
  74a6a12d78f639eba1f2ba5ff3ae2168257dcb9358520902afd4d32b5ed297f1 15356 cloudpickle_0.2.1.orig.tar.gz
- c4f6ebf64f9e4ffa542ee8db5f10937b5df48e81f0504a90fa42e4734552d586 2080 cloudpickle_0.2.1-1.debian.tar.xz
+ 9d857551b2a18c3cb8e28daf8a64eeb7d9c7ea6bd071702a4f06712cd8657030 2084 cloudpickle_0.2.1-1.debian.tar.xz
 Files:
  d307b9f6f6510c6df96b95eebe52a18c 15356 cloudpickle_0.2.1.orig.tar.gz
- 91fc8134bc7154c8532c82ba4f3d79d1 2080 cloudpickle_0.2.1-1.debian.tar.xz
+ 23c068c8f34f4f921c6151d28e24e020 2084 cloudpickle_0.2.1-1.debian.tar.xz

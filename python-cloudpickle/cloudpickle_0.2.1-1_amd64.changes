@@ -16,11 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 620a29bdb8801b0b745d3744141aac3a5dbc644d 3528 python-cloudpickle_0.2.1-1_all.deb
- bdc59c34627e7a162b372190693228e01ebcd5b0 2398 python3-cloudpickle_0.2.1-1_all.deb
+ 87953a9dd8c48709aca34af47b49f6b2ef677912 11380 python-cloudpickle_0.2.1-1_all.deb
+ 7e4c3d4d527b3db45b1d8b70f9aa46bd44702790 11214 python3-cloudpickle_0.2.1-1_all.deb
 Checksums-Sha256:
- 5bab920c0e4389407f253ea5734844080b32db9d7730da4a7c76e63bd2773830 3528 python-cloudpickle_0.2.1-1_all.deb
- 62c11b5529d160673f89290a80abd849c357211c0ea489c39ced8d16f591dee6 2398 python3-cloudpickle_0.2.1-1_all.deb
+ f951af02c3917acc881f55fe6ba8870490b8dd597f20974acb5a20713e3de1fa 11380 python-cloudpickle_0.2.1-1_all.deb
+ 3702fef727f7bb1e6e7568f1d9e32467ace254e4bdb6e72daf5e452cd03e5a95 11214 python3-cloudpickle_0.2.1-1_all.deb
 Files:
- 7fb52368f5a58f5eb32f0ab0a89abd38 3528 python optional python-cloudpickle_0.2.1-1_all.deb
- e058e97bf738fd96d8ac348735158b91 2398 python optional python3-cloudpickle_0.2.1-1_all.deb
+ 0c2e3ffcfc5122d17c65637b64b363cd 11380 python optional python-cloudpickle_0.2.1-1_all.deb
+ e748a1046c8872355962206cb36d10a8 11214 python optional python3-cloudpickle_0.2.1-1_all.deb

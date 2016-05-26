@@ -1,0 +1,24 @@
+Format: 1.8
+Date: Mon, 26 Jan 2015 00:51:07 -0200
+Source: yanc
+Binary: python-nose-yanc
+Architecture: all
+Version: 0.3.3-2
+Distribution: unstable
+Urgency: low
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Marcelo Jorge Vieira <metal@debian.org>
+Description:
+ python-nose-yanc - Color output plugin for nose
+Changes:
+ yanc (0.3.3-2) unstable; urgency=low
+ .
+   * Improving rules
+     + Replaced 'override_dh_auto_build' with 'override_dh_auto_test'
+   * Added README.Debian
+Checksums-Sha1:
+ efd3f366b02dcd9626dfa5558070d3e5cccb7ca9 5504 python-nose-yanc_0.3.3-2_all.deb
+Checksums-Sha256:
+ 72a1aca4b33328766f70b957c2d6ce5da5a2370c1ea767376fd9068334f51aac 5504 python-nose-yanc_0.3.3-2_all.deb
+Files:
+ 31de52b52b7ef8cd2f9bdaa5fee68ac1 5504 python optional python-nose-yanc_0.3.3-2_all.deb

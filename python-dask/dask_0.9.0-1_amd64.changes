@@ -1,7 +1,7 @@
 Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: dask
-Binary: python-dask
+Binary: python-dask python3-dask
 Architecture: source all
 Version: 0.9.0-1
 Distribution: UNRELEASED
@@ -10,22 +10,26 @@ Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-dask - Python module providing a flexible parallel computing library for
+ python3-dask - Python module providing a flexible parallel computing library for
 Changes:
  dask (0.9.0-1) UNRELEASED; urgency=medium
  .
    * Initial release.
 Checksums-Sha1:
- fcea5bb790b9cb3b69ee041e11afac1975ff4845 1060 dask_0.9.0-1.dsc
+ 6cfc2612d745816c1b5f39ef1f5ee3d2314ee859 1241 dask_0.9.0-1.dsc
  d78f0600ee9c3bf127fc28f4cce92fdaced17b14 1922021 dask_0.9.0.orig.tar.gz
- 56c490abad658d5c025e766f0da0ca307075571e 2268 dask_0.9.0-1.debian.tar.xz
- 76ae74c64c004dbd1dcb5f8c12aff9d989aa7297 145806 python-dask_0.9.0-1_all.deb
+ da9dfdef94640b3c7f55add89af1c51764d0c661 2140 dask_0.9.0-1.debian.tar.xz
+ 1fd69e8fffa6963cbbf3688a081c949bcc05e3c3 145796 python-dask_0.9.0-1_all.deb
+ 28f8284ecfa03f05fb5fae91f859f2f69a86f4a9 145694 python3-dask_0.9.0-1_all.deb
 Checksums-Sha256:
- a3c17b6b9ae03ee690dc0fcc6e161e62f6a11771948ec2785207f7b4deb6663f 1060 dask_0.9.0-1.dsc
+ d4b7cdd90240357b9a61ab94a4409e5e381a837e83b0b76bae10145fc41ed265 1241 dask_0.9.0-1.dsc
  0f8cf2d4f275f01a221d5143031afdad49f73b7e78dc601a8d8d1d642d0b39d2 1922021 dask_0.9.0.orig.tar.gz
- b6b675f145b417c3e993a054f5e1209f32320ce467115a61b252b67cf7f1367d 2268 dask_0.9.0-1.debian.tar.xz
- b8683a8ee42329d9ac318129d79e0e049933cef2efaa90531efa68c7001a1a1f 145806 python-dask_0.9.0-1_all.deb
+ 89f87d7f37f3310db31034823ac82fc10a2552212b49dea706f062af46d58c2e 2140 dask_0.9.0-1.debian.tar.xz
+ 18d980006a1ef1d3ebbefdcb1c96aa582e042ecc5df4b1c0a3f57b35ebdc18e6 145796 python-dask_0.9.0-1_all.deb
+ 4280f5a0c2f78b2da883e2d973735a4e1f209d0204b912a7c261a90845b962af 145694 python3-dask_0.9.0-1_all.deb
 Files:
- 28a463326a5be126fddbb4e714733853 1060 python optional dask_0.9.0-1.dsc
+ 62c269c1a6f2fb5a1652a10dfaf0abbf 1241 python optional dask_0.9.0-1.dsc
  ac210dc53d8f4b5fdcef4813253d1a87 1922021 python optional dask_0.9.0.orig.tar.gz
- 29e10655e7875a83fa93b69e93518503 2268 python optional dask_0.9.0-1.debian.tar.xz
- febec6bf00d691f58327ec3b44fb9ba0 145806 python optional python-dask_0.9.0-1_all.deb
+ 65b92d4413d056d5a86676981bde31b5 2140 python optional dask_0.9.0-1.debian.tar.xz
+ 45e98ac4e1d06ed7b56d2b1a411c432f 145796 python optional python-dask_0.9.0-1_all.deb
+ 524e8016ceaa7918ec6ed655b135fcaa 145694 python optional python3-dask_0.9.0-1_all.deb

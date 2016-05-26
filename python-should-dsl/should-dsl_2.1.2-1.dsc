@@ -14,10 +14,10 @@ Package-List:
  python3-should-dsl deb python optional arch=all
 Checksums-Sha1:
  39230af03bf0cada0358cc39a74d163a7264c0a4 93665 should-dsl_2.1.2.orig.tar.gz
- ba89f09742612bb3876997ef31d6fb80a6d711eb 9484 should-dsl_2.1.2-1.debian.tar.xz
+ 87fd2e519e59eadd8edac8137f94f105b0fa8123 9428 should-dsl_2.1.2-1.debian.tar.xz
 Checksums-Sha256:
  3d49ebf641663ab95b768df62d980bf44f773a0b12544f3a60c736b0ecf5388e 93665 should-dsl_2.1.2.orig.tar.gz
- 0837bf6d28b50a1ad9c83e2fbccd01c3ff34d876e96c55a1dfe93221c6967955 9484 should-dsl_2.1.2-1.debian.tar.xz
+ 966056cdddb6cadef0b61f57b143ac5523027c4902d8189aaf2fac6cbcd237ca 9428 should-dsl_2.1.2-1.debian.tar.xz
 Files:
  3a22cda72f19a0e3692fffb6a2cdd835 93665 should-dsl_2.1.2.orig.tar.gz
- 5588eaf043f51a066f1066ffc8886122 9484 should-dsl_2.1.2-1.debian.tar.xz
+ d7ad6491f61669a30c6548150ee4ddf8 9428 should-dsl_2.1.2-1.debian.tar.xz

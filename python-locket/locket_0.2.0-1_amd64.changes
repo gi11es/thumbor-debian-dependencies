@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: locket
 Binary: python-locket python3-locket
-Architecture: source all
+Architecture: all
 Version: 0.2.0-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -16,20 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- bd56a7455152028be9e827233efd2696caa1f4a3 1172 locket_0.2.0-1.dsc
- af0a18bf474bc71900a6109f1ac27a18ecf42ff6 5541 locket_0.2.0.orig.tar.gz
- dea64015289fb041042797092fc8ced950d86015 2088 locket_0.2.0-1.debian.tar.xz
- 5e896f1496261a00299c800ae1a8c9868ff8e160 4662 python-locket_0.2.0-1_all.deb
- ab5b293347802c14b9a3af7cea290f372f2c4e7b 4572 python3-locket_0.2.0-1_all.deb
+ 50dc6161bfeac33f5cb293268dd76f4c6a43449a 4564 python-locket_0.2.0-1_all.deb
+ a205d83da4ad1774760ac326e49326471aa574fa 4470 python3-locket_0.2.0-1_all.deb
 Checksums-Sha256:
- d4ec056394b1d560e9286eeead1f09e16111bbf556acbe385869cae9003bc21b 1172 locket_0.2.0-1.dsc
- 6a0706306dfc6f6af5dfd54993fa8a10f79e69a6bbb748e7bc75432f637fb383 5541 locket_0.2.0.orig.tar.gz
- 45951bf35edbc710910f0925d09d6e5c1d1960b1206c715c33be889f176c2766 2088 locket_0.2.0-1.debian.tar.xz
- 57dee04b7f76098971cc8bd77173c1bcc2af8b9f601007ed9e009fe858dad2ad 4662 python-locket_0.2.0-1_all.deb
- 62011644d5a48d92a6a8b8ab11cf9c4977d25b0a378534f4a61374bed54c06d0 4572 python3-locket_0.2.0-1_all.deb
+ d9b8554bc42c9bd55c7cb2c30bf5abf62520892746ba30855a84414539eb5e52 4564 python-locket_0.2.0-1_all.deb
+ 2625cbeab1082e70f4d7f1650526a812750d68988c82c977cf311d80475b5e82 4470 python3-locket_0.2.0-1_all.deb
 Files:
- 2dd5a262f05c5d60c9c94c38ec427659 1172 python optional locket_0.2.0-1.dsc
- 681b30d34a60cc8bd99584c755e07707 5541 python optional locket_0.2.0.orig.tar.gz
- 2081fa65e1859d44fc9500af24562c34 2088 python optional locket_0.2.0-1.debian.tar.xz
- 49228048050e626b3a0ff71f85fb28d3 4662 python optional python-locket_0.2.0-1_all.deb
- 4adf0876b8e9635f4e84c91358dc42e3 4572 python optional python3-locket_0.2.0-1_all.deb
+ 2310d6473aa34537ad6c50f1568aee89 4564 python optional python-locket_0.2.0-1_all.deb
+ 4471a95cff790eb3dc9566f2bd0585da 4470 python optional python3-locket_0.2.0-1_all.deb

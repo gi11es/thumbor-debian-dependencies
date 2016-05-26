@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: exam
 Binary: python-exam python3-exam
-Architecture: source all
+Architecture: all
 Version: 0.10.5-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -16,20 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- e0f16d646e5cf60e359ff964f3124fc8a103d6b6 1136 exam_0.10.5-1.dsc
- 96fed3aedf8f71a760126804947fd8788085cb6d 15945 exam_0.10.5.orig.tar.gz
- da88f8b6d778451ea09cc7b72117406947bc9d37 2884 exam_0.10.5-1.debian.tar.xz
- 65f09942d9d32a9e208c754942614c7c8d8b51a8 13188 python-exam_0.10.5-1_all.deb
- ff2d347e9a21d428af502faef1a6cd86f4d79ec6 7336 python3-exam_0.10.5-1_all.deb
+ d16ec79cc66ff0ffdf6af564cf94fec9af3b00b7 13066 python-exam_0.10.5-1_all.deb
+ 50749ebfe9fd285904c827e2cac709ca110b4d18 7238 python3-exam_0.10.5-1_all.deb
 Checksums-Sha256:
- 17157128cecd0eccc377a9499b29cc92c8d19a3b5ae5cff398d3930e027a012f 1136 exam_0.10.5-1.dsc
- 16ec06d61f72fc2c5511ea0a84fc4bfc09bac3e6341a72c848c7606be0222dca 15945 exam_0.10.5.orig.tar.gz
- 112b5aa926fa7e897e07be135f572725270ad96992303fe04ada90c0f81a1041 2884 exam_0.10.5-1.debian.tar.xz
- 4e32796df0cc05279fda8b93f0cc87cfd07951b975e633c45f819a5fead4b0c0 13188 python-exam_0.10.5-1_all.deb
- 231c0b42c1bdd53fc699b98d5d84d00679a42beed1db0f0206fb0960d04a9827 7336 python3-exam_0.10.5-1_all.deb
+ f96cd762cec59451499a71da11922de89ae798fb9e34011073f08e034e43ea04 13066 python-exam_0.10.5-1_all.deb
+ bea120b835757a472d2bf7f7d3d6c630e19aa6f562fc9cf3d51da4e5b3c484a2 7238 python3-exam_0.10.5-1_all.deb
 Files:
- ce6e771c40c71f6fcfd956c1f0b8b8ef 1136 python optional exam_0.10.5-1.dsc
- a886e4bd77fe5dfcd9eccb736ef5a5e0 15945 python optional exam_0.10.5.orig.tar.gz
- c7bcbf10bd0947162ade6ce4ff2b0dd5 2884 python optional exam_0.10.5-1.debian.tar.xz
- e2c1c556414b3b0b5766bd2e82c3e019 13188 python optional python-exam_0.10.5-1_all.deb
- 29140c2b798bd6e4bb92a2b63d63e945 7336 python optional python3-exam_0.10.5-1_all.deb
+ f197b47df1cfa972fc84233306d615af 13066 python optional python-exam_0.10.5-1_all.deb
+ 1c6d1d93333f5578e2d6b402de3e9e83 7238 python optional python3-exam_0.10.5-1_all.deb

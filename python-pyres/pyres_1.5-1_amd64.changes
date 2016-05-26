@@ -2,7 +2,7 @@ Format: 1.8
 Date: Wed, 18 May 2016 16:16:36 +0000
 Source: pyres
 Binary: python-pyres python3-pyres
-Architecture: source all
+Architecture: all
 Version: 1.5-1
 Distribution: UNRELEASED
 Urgency: low
@@ -16,20 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 1b04469e92c7fa790cad784edb0f078600f4d6f7 1184 pyres_1.5-1.dsc
- e7e3973b3d05869d3878e933f74c95f596c134ae 269001 pyres_1.5.orig.tar.gz
- 25651fe150759cee7d1477fc246963a4870e81e4 2096 pyres_1.5-1.debian.tar.xz
- 159d50cd0ca3a4d4b617c3b31faa8c5818fa2973 19390 python-pyres_1.5-1_all.deb
- 9cb5a6cf1c4c6b19550391ebdb9f36874bd17a9b 18680 python3-pyres_1.5-1_all.deb
+ 60039dd49d4a00a720b6ada57145436bd745a885 20598 python-pyres_1.5-1_all.deb
+ 9ab53a0e88fefe632395eb86a10d5d103d529835 19894 python3-pyres_1.5-1_all.deb
 Checksums-Sha256:
- e647a759c9c3773bb59a66dbb19e41db03552355b4d4aa36e3d92432249bfc88 1184 pyres_1.5-1.dsc
- 417ae7890bb7f860728b48f5dee199712cc675e0e6335febdb8e69696d863391 269001 pyres_1.5.orig.tar.gz
- 90603a7789327055ae4005001d8eca0d11bc47364962d780a504912a1192cca7 2096 pyres_1.5-1.debian.tar.xz
- 7932d4c63832f0d6c476da2e9124dacaadf9696e342d5ce48f91c65ebf7686a9 19390 python-pyres_1.5-1_all.deb
- e4150ecd3dd2b06dba0d2fe580c95f2233cb1632de35f00c5ba141441811db11 18680 python3-pyres_1.5-1_all.deb
+ 49ec458a76652812b7ba0a52adc0ae6b95c52d9b7da91cfd9c3b5c7754b9f112 20598 python-pyres_1.5-1_all.deb
+ 4c01c28cce4e5b5034d200bcb73f9a7da7a0c5e1c6763ebebb190735335382ea 19894 python3-pyres_1.5-1_all.deb
 Files:
- 91b7c9f285de3faab24ae5a7fbccfeca 1184 python optional pyres_1.5-1.dsc
- 7437d6661cc4a47cdb9b4dde9cafc165 269001 python optional pyres_1.5.orig.tar.gz
- e224b3422ea98b8a40cf6b0077a9dfd3 2096 python optional pyres_1.5-1.debian.tar.xz
- 8c7dbe0297088c6f155e66d93e90e604 19390 python optional python-pyres_1.5-1_all.deb
- a957c245de463fd3327eb5e90296d3af 18680 python optional python3-pyres_1.5-1_all.deb
+ bd07add00b4f595f789d29b415e8478a 20598 python optional python-pyres_1.5-1_all.deb
+ 44ca684aa9922a6c9a9c70ac1b98c242 19894 python optional python3-pyres_1.5-1_all.deb

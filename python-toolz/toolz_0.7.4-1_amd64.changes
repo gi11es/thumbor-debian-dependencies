@@ -16,11 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- ac1d5987667f5ec77a4ba8d81899d35a48527442 3876 python-toolz_0.7.4-1_all.deb
- c2c6a63cb16fa0af62eb92783a175e60e08b561d 2112 python3-toolz_0.7.4-1_all.deb
+ 9556d46964dfafd4b5734ffeee0719f69a8ce222 29908 python-toolz_0.7.4-1_all.deb
+ 2e738ac1d9778fe1571778d37ab9aca74b1c837c 28198 python3-toolz_0.7.4-1_all.deb
 Checksums-Sha256:
- 31ad29a6e4eec05c3537ec991d9b5d641c9d23578beb33b28b46854b95cfc19d 3876 python-toolz_0.7.4-1_all.deb
- fb3bf2da52b310200c42bf7dfece74b6d2a8e759c7e7f4396f618c468580cd63 2112 python3-toolz_0.7.4-1_all.deb
+ c1d67190a21142ea8b879259ce08a1e9c1e6e5eb102845803e3e2b8bc636b809 29908 python-toolz_0.7.4-1_all.deb
+ 6529777753a6343f0a03840d803eed59def555521fb55d283fa9daec3c831da5 28198 python3-toolz_0.7.4-1_all.deb
 Files:
- f716a124b80850e6c4c255e938d90ab8 3876 python optional python-toolz_0.7.4-1_all.deb
- dc1b263310d23d0e983bd982faf53e25 2112 python optional python3-toolz_0.7.4-1_all.deb
+ dd8609ca6b611e523c70aa9e97b5fe9c 29908 python optional python-toolz_0.7.4-1_all.deb
+ 28858dae34fe7ebc857309b691ca34f4 28198 python optional python3-toolz_0.7.4-1_all.deb

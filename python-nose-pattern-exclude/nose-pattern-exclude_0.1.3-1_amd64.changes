@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: nose-pattern-exclude
 Binary: python-nose-pattern-exclude python3-nose-pattern-exclude
-Architecture: source all
+Architecture: all
 Version: 0.1.3-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -16,20 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 0c2d863dc3e5b4de0c9ae7f0bbd808d47031abba 1264 nose-pattern-exclude_0.1.3-1.dsc
- ad9f652d807c9816f80c2ad3fc7e4829dfcf200b 1932 nose-pattern-exclude_0.1.3.orig.tar.gz
- 21535b9ee37352189afa4e2630837bd72d1f0cc5 2024 nose-pattern-exclude_0.1.3-1.debian.tar.xz
- 3bbf064685e09d918eb758c01a16cc4299ee6808 3982 python-nose-pattern-exclude_0.1.3-1_all.deb
- f1826f6b60ba45a86cc40bc045f0167a3f02ddae 3918 python3-nose-pattern-exclude_0.1.3-1_all.deb
+ f149bc731bdd226aef3951245189a466fe186296 3902 python-nose-pattern-exclude_0.1.3-1_all.deb
+ f75db63fd1208643fc243e9707214aa3a14d8ef7 3852 python3-nose-pattern-exclude_0.1.3-1_all.deb
 Checksums-Sha256:
- 704170305e83bf2e2256b363882f203b2e430cd768014fa383c048546833dfe8 1264 nose-pattern-exclude_0.1.3-1.dsc
- 31d8a8fc16f22627c636372ed7ca46f8dcd2ad0e1c777569a74d6f4551efff2a 1932 nose-pattern-exclude_0.1.3.orig.tar.gz
- 8669b83952922ee27995f06d7d45e65df23fb034275d5008a3541849af2803c5 2024 nose-pattern-exclude_0.1.3-1.debian.tar.xz
- bcba30b51a35e8ce20bbb29122331fda0110c1460010578dbaceb3d6ca685e41 3982 python-nose-pattern-exclude_0.1.3-1_all.deb
- 0dee6546f124cba3f2af7c3c12c36de63f76f5d21ba0aa3c21018e4d9fd8633b 3918 python3-nose-pattern-exclude_0.1.3-1_all.deb
+ e51fb9999baaa67b424a3adad4764176c3160e95746809e59eab78845e165fb1 3902 python-nose-pattern-exclude_0.1.3-1_all.deb
+ 8c964f368bec3396d16750c7a4c0bc64ca140d1f3055226748cfc94508548f67 3852 python3-nose-pattern-exclude_0.1.3-1_all.deb
 Files:
- 3dbcf8e30ebb3ce98bef224188d4d163 1264 python optional nose-pattern-exclude_0.1.3-1.dsc
- 44ea03b4452d5978b8366d264c2096cf 1932 python optional nose-pattern-exclude_0.1.3.orig.tar.gz
- f1055968d53a978cfcd8763647c48cbd 2024 python optional nose-pattern-exclude_0.1.3-1.debian.tar.xz
- c6dc6cd0992e4c538b7d48d9e388b998 3982 python optional python-nose-pattern-exclude_0.1.3-1_all.deb
- 3642e57f192d082a09a6a77f7904295b 3918 python optional python3-nose-pattern-exclude_0.1.3-1_all.deb
+ f7ecd8fee82ac51e74b990806767f2dc 3902 python optional python-nose-pattern-exclude_0.1.3-1_all.deb
+ 2f052c4a9e0096a6f79222f44b780920 3852 python optional python3-nose-pattern-exclude_0.1.3-1_all.deb

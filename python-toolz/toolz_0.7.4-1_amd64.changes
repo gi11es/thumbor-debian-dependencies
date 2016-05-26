@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: toolz
 Binary: python-toolz python3-toolz
-Architecture: source all
+Architecture: all
 Version: 0.7.4-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -16,20 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 55f0601f82e379b0f64fda7cf295c6cca551e922 1064 toolz_0.7.4-1.dsc
- 9ac9cab3e9d0a724b3c2e28b6b01a924056cb6a1 55708 toolz_0.7.4.orig.tar.gz
- ed739af6151868a09bb0b2e711e5ca5622262c6f 2044 toolz_0.7.4-1.debian.tar.xz
- f995c6c8e9977f8b46f88d6725197854c084caf5 30048 python-toolz_0.7.4-1_all.deb
- b15d6fdc942d3a4b2c94bad9628f1d38f14af1cc 28348 python3-toolz_0.7.4-1_all.deb
+ ac1d5987667f5ec77a4ba8d81899d35a48527442 3876 python-toolz_0.7.4-1_all.deb
+ c2c6a63cb16fa0af62eb92783a175e60e08b561d 2112 python3-toolz_0.7.4-1_all.deb
 Checksums-Sha256:
- f3becb486865993d8446daaafbad90399d3fc64c9108e04bdfa2f98ebad635f6 1064 toolz_0.7.4-1.dsc
- 0eb37474e1f01251eeb11c33f5be42985734b1682370d124494af847c4aa5a19 55708 toolz_0.7.4.orig.tar.gz
- 0e1746b8b37cab5647e2a86903793bd3b412131ab04c6d455f4bfd35d81f9454 2044 toolz_0.7.4-1.debian.tar.xz
- 3dcad2bcb028f0d45ae0c9e2997236045feb844aac2a7fbba5a24b3243e3c7f5 30048 python-toolz_0.7.4-1_all.deb
- a9e0536bbcf797cb2bbf1f21da31a2cef5c5d8babc2230f5b1c7848cd52614f1 28348 python3-toolz_0.7.4-1_all.deb
+ 31ad29a6e4eec05c3537ec991d9b5d641c9d23578beb33b28b46854b95cfc19d 3876 python-toolz_0.7.4-1_all.deb
+ fb3bf2da52b310200c42bf7dfece74b6d2a8e759c7e7f4396f618c468580cd63 2112 python3-toolz_0.7.4-1_all.deb
 Files:
- 0183d92280fa2c30a0bc2cc0ea27074c 1064 python optional toolz_0.7.4-1.dsc
- 48988a618c92209b644a352b8b3d8dbe 55708 python optional toolz_0.7.4.orig.tar.gz
- 697cfba5b3d61b1f4b20947f75ad01ea 2044 python optional toolz_0.7.4-1.debian.tar.xz
- ea4d20a605d6b000de7dca92d6e2bb39 30048 python optional python-toolz_0.7.4-1_all.deb
- 1b09574e3aca08c4c66dd49cc1833eba 28348 python optional python3-toolz_0.7.4-1_all.deb
+ f716a124b80850e6c4c255e938d90ab8 3876 python optional python-toolz_0.7.4-1_all.deb
+ dc1b263310d23d0e983bd982faf53e25 2112 python optional python3-toolz_0.7.4-1_all.deb

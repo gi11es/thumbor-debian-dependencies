@@ -14,10 +14,10 @@ Package-List:
  python3-toolz deb python optional arch=all
 Checksums-Sha1:
  9ac9cab3e9d0a724b3c2e28b6b01a924056cb6a1 55708 toolz_0.7.4.orig.tar.gz
- ed739af6151868a09bb0b2e711e5ca5622262c6f 2044 toolz_0.7.4-1.debian.tar.xz
+ 751dfc891dbe57db06334a2453608c57261b12d8 1992 toolz_0.7.4-1.debian.tar.xz
 Checksums-Sha256:
  0eb37474e1f01251eeb11c33f5be42985734b1682370d124494af847c4aa5a19 55708 toolz_0.7.4.orig.tar.gz
- 0e1746b8b37cab5647e2a86903793bd3b412131ab04c6d455f4bfd35d81f9454 2044 toolz_0.7.4-1.debian.tar.xz
+ a8caa844cabcfd65437115792d44757a9b2eab7ece3e1de89c7895ee328f3d4c 1992 toolz_0.7.4-1.debian.tar.xz
 Files:
  48988a618c92209b644a352b8b3d8dbe 55708 toolz_0.7.4.orig.tar.gz
- 697cfba5b3d61b1f4b20947f75ad01ea 2044 toolz_0.7.4-1.debian.tar.xz
+ 30b5ceb10f34c4665e7f4dcc4be3549b 1992 toolz_0.7.4-1.debian.tar.xz

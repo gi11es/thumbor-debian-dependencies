@@ -2,7 +2,7 @@ Format: 1.8
 Date: Wed, 25 May 2016 18:57:09 +0000
 Source: preggy
 Binary: python-preggy python3-preggy
-Architecture: source all
+Architecture: all
 Version: 1.1.3-2
 Distribution: UNRELEASED
 Urgency: medium
@@ -24,17 +24,11 @@ Changes:
     - added python3
     - switched to pybuild
 Checksums-Sha1:
- 45ab5c9c3419c8b9f6be2f5c7d3627a57d2e4ceb 1219 preggy_1.1.3-2.dsc
- ef39bc50f6f850a67b1be8c68011191c16797d3d 2168 preggy_1.1.3-2.debian.tar.xz
- d492987e7ed8a8d6f6e8274248e633054b4de584 14928 python-preggy_1.1.3-2_all.deb
- a81609caacae8d82ac6513bdc4e4c86c27d13b01 12668 python3-preggy_1.1.3-2_all.deb
+ 944814bbd9b254b3ae7a7121acfad79e0f68fe4d 14834 python-preggy_1.1.3-2_all.deb
+ 82720677d226088e35b4fe2045b00ec666f6bfc7 12578 python3-preggy_1.1.3-2_all.deb
 Checksums-Sha256:
- f75382a9cb498313d8f1e7ad874b0a805cbb00ce04aba0fa75e41c73f9330a47 1219 preggy_1.1.3-2.dsc
- c5397b106a88e55a8e2fe2396a88f664e91542f0c14d74ce153f499a6f77646c 2168 preggy_1.1.3-2.debian.tar.xz
- 1a23a381cdaed0d9c7b29b6a1c9c977757b9fea9246c6b3b781a51f8e81abb1e 14928 python-preggy_1.1.3-2_all.deb
- bbebe86b99ea738a1ead9b4ab9fcb9a21aaa01a9eabfcf730666810277aca68b 12668 python3-preggy_1.1.3-2_all.deb
+ 492c6d737cbe6d87bae104bafaa304ce7c9552467a4d678103180b6c0669d2ca 14834 python-preggy_1.1.3-2_all.deb
+ 28f5c3a449149ff87b0f38998f9da8c40aadf5df7177ecf497dbf56737dbdaf9 12578 python3-preggy_1.1.3-2_all.deb
 Files:
- 12b267f65540493a466642311200658c 1219 python optional preggy_1.1.3-2.dsc
- 89257757e7fee08a1833fd7cd31834ab 2168 python optional preggy_1.1.3-2.debian.tar.xz
- c5870e1adbcc3a66dce1b040ef69f031 14928 python optional python-preggy_1.1.3-2_all.deb
- ca5635c975a01f2f434458f4fa1da585 12668 python optional python3-preggy_1.1.3-2_all.deb
+ dac963ab1934f3a83f9315c178f3f38b 14834 python optional python-preggy_1.1.3-2_all.deb
+ 9b8efa435fe416cd402d74bb165673db 12578 python optional python3-preggy_1.1.3-2_all.deb

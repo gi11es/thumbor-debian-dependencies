@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: dask
 Binary: python-dask python3-dask
-Architecture: source all
+Architecture: all
 Version: 0.9.0-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -16,20 +16,11 @@ Changes:
  .
    * Initial release.
 Checksums-Sha1:
- 6cfc2612d745816c1b5f39ef1f5ee3d2314ee859 1241 dask_0.9.0-1.dsc
- d78f0600ee9c3bf127fc28f4cce92fdaced17b14 1922021 dask_0.9.0.orig.tar.gz
- da9dfdef94640b3c7f55add89af1c51764d0c661 2140 dask_0.9.0-1.debian.tar.xz
- 1fd69e8fffa6963cbbf3688a081c949bcc05e3c3 145796 python-dask_0.9.0-1_all.deb
- 28f8284ecfa03f05fb5fae91f859f2f69a86f4a9 145694 python3-dask_0.9.0-1_all.deb
+ 75bdf87ed547eb2778ed0519ba303e6a8f545a4d 145496 python-dask_0.9.0-1_all.deb
+ 3fe9fac45c7a9da3e8725bb66ff4e8fca68f091f 145422 python3-dask_0.9.0-1_all.deb
 Checksums-Sha256:
- d4b7cdd90240357b9a61ab94a4409e5e381a837e83b0b76bae10145fc41ed265 1241 dask_0.9.0-1.dsc
- 0f8cf2d4f275f01a221d5143031afdad49f73b7e78dc601a8d8d1d642d0b39d2 1922021 dask_0.9.0.orig.tar.gz
- 89f87d7f37f3310db31034823ac82fc10a2552212b49dea706f062af46d58c2e 2140 dask_0.9.0-1.debian.tar.xz
- 18d980006a1ef1d3ebbefdcb1c96aa582e042ecc5df4b1c0a3f57b35ebdc18e6 145796 python-dask_0.9.0-1_all.deb
- 4280f5a0c2f78b2da883e2d973735a4e1f209d0204b912a7c261a90845b962af 145694 python3-dask_0.9.0-1_all.deb
+ dfb64f776468a50f5eac70ec4e508686a22d9c67259d55b0ac0d262075a129f4 145496 python-dask_0.9.0-1_all.deb
+ cffe963c100cd7079f1cbf1e61056a202f18464e31929ef2169bef9e79eb9e11 145422 python3-dask_0.9.0-1_all.deb
 Files:
- 62c269c1a6f2fb5a1652a10dfaf0abbf 1241 python optional dask_0.9.0-1.dsc
- ac210dc53d8f4b5fdcef4813253d1a87 1922021 python optional dask_0.9.0.orig.tar.gz
- 65b92d4413d056d5a86676981bde31b5 2140 python optional dask_0.9.0-1.debian.tar.xz
- 45e98ac4e1d06ed7b56d2b1a411c432f 145796 python optional python-dask_0.9.0-1_all.deb
- 524e8016ceaa7918ec6ed655b135fcaa 145694 python optional python3-dask_0.9.0-1_all.deb
+ ff031aa839b79e1cfb73211873f0387c 145496 python optional python-dask_0.9.0-1_all.deb
+ 652fab133b548ad1bfc21f06d909a462 145422 python optional python3-dask_0.9.0-1_all.deb

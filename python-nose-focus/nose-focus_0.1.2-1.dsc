@@ -14,10 +14,10 @@ Package-List:
  python3-nose-focus deb python optional arch=all
 Checksums-Sha1:
  6bf93ce5ddfb4d93f5d8b09bb4af6ca194f2480f 4325 nose-focus_0.1.2.orig.tar.gz
- ac15e4d9054beecada260ffdb39fef3e660b5dcb 1608 nose-focus_0.1.2-1.debian.tar.xz
+ 7fa53dee23dd93d3f59ff02023add6cb3942aafd 1556 nose-focus_0.1.2-1.debian.tar.xz
 Checksums-Sha256:
  095d86807e17cf93efe97da602150e9e3f409add948da3aa654b4a0a7f7c618a 4325 nose-focus_0.1.2.orig.tar.gz
- 5db14d8b63b4431be3740a4dd70b24ab81affb1e512f821bf8edff6150c4f3f7 1608 nose-focus_0.1.2-1.debian.tar.xz
+ ba8f282f6a8d793895b2c38accdce07fb8d3e335fe7f5816c5add730cdb4fd19 1556 nose-focus_0.1.2-1.debian.tar.xz
 Files:
  0e11e3280135472434736f65f1a38173 4325 nose-focus_0.1.2.orig.tar.gz
- 3ff2fdd5125d8e88950a66bcf50d6d48 1608 nose-focus_0.1.2-1.debian.tar.xz
+ 9954e01190df12c7db4bb798a96a94ef 1556 nose-focus_0.1.2-1.debian.tar.xz

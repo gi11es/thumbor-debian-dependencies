@@ -1,0 +1,65 @@
+From a415b0d734f274e606fca1669ac4b495b478c2be Mon Sep 17 00:00:00 2001
+From: Julian Taylor <jtaylor.debian@googlemail.com>
+Date: Mon, 12 Oct 2015 15:17:24 -0700
+Subject: cap the decimal precision
+
+ np.finfo returns 75 or nonconvergence RuntimeError on ppc
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=702169
+
+Patch-Name: cap-ld-precision.patch
+---
+ scipy/linalg/tests/test_basic.py       | 14 ++++++++++++--
+ scipy/signal/tests/test_signaltools.py | 10 +++++++++-
+ 2 files changed, 21 insertions(+), 3 deletions(-)
+
+diff --git a/scipy/linalg/tests/test_basic.py b/scipy/linalg/tests/test_basic.py
+index 0cf14be..443b332 100644
+--- a/scipy/linalg/tests/test_basic.py
++++ b/scipy/linalg/tests/test_basic.py
+@@ -1116,13 +1116,23 @@ class TestVectorNorms(object):
+     def test_types(self):
+         for dtype in np.typecodes['AllFloat']:
+             x = np.array([1,2,3], dtype=dtype)
+-            tol = max(1e-15, np.finfo(dtype).eps.real * 20)
++            # does not converge on ppc for float128
++            try:
++                eps = np.finfo(dtype).eps.real
++            except RuntimeError:
++                eps = 1e-19
++            tol = max(1e-15, eps * 20)
+             assert_allclose(norm(x), np.sqrt(14), rtol=tol)
+             assert_allclose(norm(x, 2), np.sqrt(14), rtol=tol)
+ 
+         for dtype in np.typecodes['Complex']:
+             x = np.array([1j,2j,3j], dtype=dtype)
+-            tol = max(1e-15, np.finfo(dtype).eps.real * 20)
++            # does not converge on ppc for float128
++            try:
++                eps = np.finfo(dtype).eps.real
++            except RuntimeError:
++                eps = 1e-19
++            tol = max(1e-15, eps * 20)
+             assert_allclose(norm(x), np.sqrt(14), rtol=tol)
+             assert_allclose(norm(x, 2), np.sqrt(14), rtol=tol)
+ 
+diff --git a/scipy/signal/tests/test_signaltools.py b/scipy/signal/tests/test_signaltools.py
+index 3d5437c..c2bab46 100644
+--- a/scipy/signal/tests/test_signaltools.py
++++ b/scipy/signal/tests/test_signaltools.py
+@@ -1113,7 +1113,15 @@ class TestCorrelate2d(TestCase):
+ # name will be TestCorrelateComplex###, where ### is the number of bits.
+ for datatype in [np.csingle, np.cdouble, np.clongdouble]:
+     cls = _get_testcorrelate_class(datatype, _TestCorrelateComplex)
+-    cls.decimal = int(2 * np.finfo(datatype).precision / 3)
++    # will either return a too large value for longdouble
++    # or nonconvergence RuntimeError see #702169
++    try:
++        cls.decimal = int(2 * np.finfo(datatype).precision / 3)
++        if cls.decimal > 25:
++            cls.decimal = 14
++    except RuntimeError:
++          cls.decimal = 14
++
+     globals()[cls.__name__] = cls
+ 
+ 

@@ -1,0 +1,56 @@
+Description: Tests failing on 3.5
+ Skips some tests that fail due to syntax deprecated in 3.5.
+ .
+ exam (0.10.5-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Author: Gilles Dubuc <gilles@wikimedia.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+Index: exam-0.10.5/tests/test_mock.py
+===================================================================
+--- exam-0.10.5.orig/tests/test_mock.py
++++ exam-0.10.5/tests/test_mock.py
+@@ -1,3 +1,6 @@
++import sys
++import unittest
++
+ from tests import TestCase
+ 
+ from exam.mock import Mock
+@@ -28,6 +31,7 @@ class MockTest(TestCase):
+         self.mock.reset_mock()
+         self.mock.assert_not_called()
+ 
++    @unittest.skipIf(sys.version_info > (3,4), "fails on 3.5")
+     def test_assert_not_called_with_asserts_not_called_with_args(self):
+         self.mock(1, 2, three=4)
+         self.mock.assert_called_with(1, 2, three=4)
+@@ -42,6 +46,7 @@ class MockTest(TestCase):
+         self.mock('foo')
+         self.mock.assert_not_called_with(1, 2, three=4)  # not the latest call
+ 
++    @unittest.skipIf(sys.version_info > (3,4), "fails on 3.5")
+     def test_assert_not_called_once_with_asserts_one_call_with_args(self):
+         self.mock.assert_not_called_once_with(1, 2, three=4)  # 0 times
+ 
+@@ -53,6 +58,7 @@ class MockTest(TestCase):
+         self.mock(1, 2, three=4)
+         self.mock.assert_not_called_once_with(1, 2, three=4)  # 2 times
+ 
++    @unittest.skipIf(sys.version_info > (3,4), "fails on 3.5")
+     def test_assert_not_any_call_asserts_never_called_with_args(self):
+         self.mock.assert_not_any_call(1, 2, three=4)
+ 

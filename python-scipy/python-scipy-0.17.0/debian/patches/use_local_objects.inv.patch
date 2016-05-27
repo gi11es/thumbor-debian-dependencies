@@ -1,0 +1,29 @@
+From cb812fea95b5d963515156f175ccf2cdb5d9d2da Mon Sep 17 00:00:00 2001
+From: SVN-Git Migration <python-modules-team@lists.alioth.debian.org>
+Date: Mon, 12 Oct 2015 15:17:19 -0700
+Subject: Use a local copy of object.inv from doc.python.org and scipy.org,
+ instead of downloading them each time from the internet.
+
+Caveat: We use the objects.inv of the stable version, not the development version
+Last-Update: 2015-08-23
+
+Patch-Name: use_local_objects.inv.patch
+---
+ doc/source/conf.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/doc/source/conf.py b/doc/source/conf.py
+index 6e575a2..854f056 100644
+--- a/doc/source/conf.py
++++ b/doc/source/conf.py
+@@ -217,8 +217,8 @@ latex_use_modindex = False
+ # Intersphinx configuration
+ # -----------------------------------------------------------------------------
+ intersphinx_mapping = {
+-        'http://docs.python.org/dev': None,
+-        'http://docs.scipy.org/doc/numpy': None,
++        'http://docs.python.org/dev': '/usr/share/doc/python-doc/html/objects.inv',
++        'http://docs.scipy.org/doc/numpy': '/usr/share/doc/python-numpy-doc/html/objects.inv',
+ }
+ 
+ 

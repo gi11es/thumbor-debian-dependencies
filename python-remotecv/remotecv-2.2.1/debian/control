@@ -1,0 +1,27 @@
+Source: remotecv
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-coverage,
+               python-mock,
+               python-nose,
+               python-nose-focus,
+               python-opencv,
+               python-pil (>= 3.0),
+	       python-preggy,
+               python-pyres (>= 1.2),
+               python-setuptools
+X-Python-Version: >= 2.6
+Homepage: https://github.com/thumbor/remotecv
+Vcs-Git: git://github.com/thumbor/remotecv.git
+Vcs-Browser: https://github.com/thumbor/remotecv
+
+Package: python-remotecv
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-pyres (>= 1.2), python-pil (>= 3.0), python-opencv
+Description: Python module providing an OpenCV server for facial and feature recognition
+ OpenCV server for facial and feature recognition.

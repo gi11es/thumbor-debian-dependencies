@@ -1,0 +1,11 @@
+# see git-dpm(1) from git-dpm package
+a415b0d734f274e606fca1669ac4b495b478c2be
+a415b0d734f274e606fca1669ac4b495b478c2be
+bdf1efd32e145d25a3b2cd9d966e9a4e284e9f3b
+bdf1efd32e145d25a3b2cd9d966e9a4e284e9f3b
+python-scipy_0.17.0.orig.tar.gz
+d785d7e0becde9047dcf384e3119cff3a2c34667
+12397929
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"

@@ -1,0 +1,50 @@
+python-spur (0.3.17-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Tue, 24 May 2016 11:22:37 +0000
+
+python-spur (0.3.17-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - Standards-Version 3.9.8 - no changes
+  * debian/rules:
+    - Define PYBUILD_NAME
+    - Override dh_clean.
+  * Deleted .install files since this happens automatically with pybuild
+    when PYBUILD_NAME is set.
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Fri, 13 May 2016 20:07:46 +0200
+
+python-spur (0.3.15-2) unstable; urgency=medium
+
+  * debian/patches/0001-Fix-character-that-s-causing-build-trouble.patch
+    - Fixes invalid character in README.rst which causes build trouble.
+  * debian/control:
+    - Ran "cme fix dpkg-control"
+    - Standards version changed to 3.9.7 - no necessary changes
+    - Vcs-Git now using https
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Sun, 21 Feb 2016 11:47:58 +0100
+
+python-spur (0.3.15-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Sun, 03 Jan 2016 11:34:21 +0100
+
+python-spur (0.3.14-2) unstable; urgency=medium
+
+  * debian/control: add python-paramiko and python3-paramiko to
+    build-dependencies
+    - Fixes FTBFS (test suite problem) (Closes: #802158)
+  * Converted to git-dpm patch management
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Sun, 18 Oct 2015 10:27:41 +0200
+
+python-spur (0.3.14-1) unstable; urgency=low
+
+  * Initial release (Closes: #784026)
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Mon, 25 May 2015 12:46:51 +0200

@@ -1,0 +1,2483 @@
+Description: Upstream 1.5.1 master changes
+ The master on github doesn't have a proper MANIFEST.in and thus
+ the package on pypi misses some files. Mainly documentation
+ and the test runner. In order to get tests running in the package
+ build this patch seemed appropriate.
+ .
+ nose-of-yeti (1.5.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Author: Gilles Dubuc <gilles@wikimedia.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: upstream
+Last-Update: 2014-06-01
+
+Index: nose-of-yeti-1.5.1/docs/Makefile
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/Makefile
+@@ -0,0 +1,130 @@
++# Makefile for Sphinx documentation
++#
++
++# You can set these variables from the command line.
++SPHINXOPTS    =
++SPHINXBUILD   = sphinx-build
++PAPER         =
++BUILDDIR      = _build
++
++# Internal variables.
++PAPEROPT_a4     = -D latex_paper_size=a4
++PAPEROPT_letter = -D latex_paper_size=letter
++ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
++
++.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest
++
++help:
++	@echo "Please use \`make <target>' where <target> is one of"
++	@echo "  html       to make standalone HTML files"
++	@echo "  dirhtml    to make HTML files named index.html in directories"
++	@echo "  singlehtml to make a single large HTML file"
++	@echo "  pickle     to make pickle files"
++	@echo "  json       to make JSON files"
++	@echo "  htmlhelp   to make HTML files and a HTML help project"
++	@echo "  qthelp     to make HTML files and a qthelp project"
++	@echo "  devhelp    to make HTML files and a Devhelp project"
++	@echo "  epub       to make an epub"
++	@echo "  latex      to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
++	@echo "  latexpdf   to make LaTeX files and run them through pdflatex"
++	@echo "  text       to make text files"
++	@echo "  man        to make manual pages"
++	@echo "  changes    to make an overview of all changed/added/deprecated items"
++	@echo "  linkcheck  to check all external links for integrity"
++	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
++
++clean:
++	-rm -rf $(BUILDDIR)/*
++
++html:
++	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
++	@echo
++	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
++
++dirhtml:
++	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
++	@echo
++	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
++
++singlehtml:
++	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
++	@echo
++	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
++
++pickle:
++	$(SPHINXBUILD) -b pickle $(ALLSPHINXOPTS) $(BUILDDIR)/pickle
++	@echo
++	@echo "Build finished; now you can process the pickle files."
++
++json:
++	$(SPHINXBUILD) -b json $(ALLSPHINXOPTS) $(BUILDDIR)/json
++	@echo
++	@echo "Build finished; now you can process the JSON files."
++
++htmlhelp:
++	$(SPHINXBUILD) -b htmlhelp $(ALLSPHINXOPTS) $(BUILDDIR)/htmlhelp
++	@echo
++	@echo "Build finished; now you can run HTML Help Workshop with the" \
++	      ".hhp project file in $(BUILDDIR)/htmlhelp."
++
++qthelp:
++	$(SPHINXBUILD) -b qthelp $(ALLSPHINXOPTS) $(BUILDDIR)/qthelp
++	@echo
++	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
++	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
++	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/NoseOfYeti.qhcp"
++	@echo "To view the help file:"
++	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/NoseOfYeti.qhc"
++
++devhelp:
++	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
++	@echo
++	@echo "Build finished."
++	@echo "To view the help file:"
++	@echo "# mkdir -p $$HOME/.local/share/devhelp/NoseOfYeti"
++	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/NoseOfYeti"
++	@echo "# devhelp"
++
++epub:
++	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub
++	@echo
++	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
++
++latex:
++	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
++	@echo
++	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
++	@echo "Run \`make' in that directory to run these through (pdf)latex" \
++	      "(use \`make latexpdf' here to do that automatically)."
++
++latexpdf:
++	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
++	@echo "Running LaTeX files through pdflatex..."
++	make -C $(BUILDDIR)/latex all-pdf
++	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."
++
++text:
++	$(SPHINXBUILD) -b text $(ALLSPHINXOPTS) $(BUILDDIR)/text
++	@echo
++	@echo "Build finished. The text files are in $(BUILDDIR)/text."
++
++man:
++	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man
++	@echo
++	@echo "Build finished. The manual pages are in $(BUILDDIR)/man."
++
++changes:
++	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
++	@echo
++	@echo "The overview file is in $(BUILDDIR)/changes."
++
++linkcheck:
++	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
++	@echo
++	@echo "Link check complete; look for any errors in the above output " \
++	      "or in $(BUILDDIR)/linkcheck/output.txt."
++
++doctest:
++	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
++	@echo "Testing of doctests in the sources finished, look at the " \
++	      "results in $(BUILDDIR)/doctest/output.txt."
+Index: nose-of-yeti-1.5.1/docs/_ext/nav.py
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_ext/nav.py
+@@ -0,0 +1,20 @@
++import os
++
++def moreContext(app, pagename, templatename, context, doctree):
++    def p(url):
++        parts = pagename.split('/')[:-1]
++        if len(parts) == 0:
++            return url[1:]
++        return os.path.relpath(url, '/%s' % '/'.join(parts))
++
++    context['toplinks'] = [
++          ('Overview', p('/index.html')    , pagename=='index')
++        , ('Examples', p('/examples.html') , pagename=='examples')
++        , ('Usage',    p('/usage.html')    , pagename=='usage')
++        , ('Features', p('/features.html') , pagename=='features')
++        , ('Dev',      p('/dev/index.html'), pagename.startswith('dev'))
++        ]
++
++def setup(app):
++    app.connect("html-page-context", moreContext)
++
+Index: nose-of-yeti-1.5.1/docs/_ext/options.py
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_ext/options.py
+@@ -0,0 +1,33 @@
++from sphinx.util.compat import Directive
++from docutils import nodes
++
++from noseOfYeti.plugins.support.spec_options import spec_options
++
++class SpecOptionsDirective(Directive):
++    has_content = True
++
++    def run(self):
++        # Create bullet list
++        bullet = nodes.bullet_list()
++
++        # Determine what to put in the list
++        # sort items alphabetically and by length
++        items = [(name, options['help']) for name, options in spec_options.items()]
++        items.sort()
++        items.sort(cmp=lambda a, b: len(a[0]) - len(b[0]))
++
++        # Put items in the list
++        for name, options in items:
++            item = nodes.emphasis()
++            item += nodes.Text(name)
++            item += nodes.Text(": %s" % options)
++
++            list_item = nodes.list_item()
++            list_item += item
++            bullet.append(list_item)
++
++        return [bullet]
++
++def setup(app):
++    app.add_directive('spec_options', SpecOptionsDirective)
++
+Index: nose-of-yeti-1.5.1/docs/_ext/show_tests.py
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_ext/show_tests.py
+@@ -0,0 +1,193 @@
++from docutils.nodes import fully_normalize_name as normalize_name
++from sphinx.directives.code import LiteralInclude
++from sphinx.util.compat import Directive
++from pinocchio.spec import testName
++from docutils import nodes
++import inspect
++import os
++
++class ShowTestsDirective(Directive):
++    """Directive for outputting all the specs found in noseOfYeti/specs"""
++    has_content = True
++
++    def run(self):
++        """For each file in noseOfYeti/specs, output nodes to represent each spec file"""
++        env = self.env = self.state.document.settings.env
++        specdir = os.path.join(env.srcdir, '../noseOfYeti/specs')
++        files = [f for f in os.listdir(specdir) if f.endswith('_test.py')]
++        tokens = []
++        for f in files:
++            name = str(f[:-3])
++            module = getattr(__import__('noseOfYeti.specs', globals(), locals(), [name], -1), name)
++
++            section = nodes.section()
++            name = normalize_name(f)
++            section['names'].append(name)
++            section['ids'].append(name)
++
++            header = nodes.title()
++            header += nodes.Text(f)
++            section.append(header)
++
++            section.extend(self.nodes_for_module(module))
++            tokens.append(section)
++
++        return tokens
++
++    def nodes_for_module(self, module):
++        """
++            Determine nodes for a module/class
++            Taking into account nested modules
++        """
++        info = {}
++        nodes = []
++        tests = []
++        groups = []
++        support = []
++
++        for name in dir(module):
++            if name.startswith("Test"):
++                item = getattr(module, name)
++                info[name] = (name, item, [])
++                if hasattr(item, '__childof__'):
++                    spr = item.__childof__.__name__
++                else:
++                    spr = inspect.getmro(item)[1].__name__
++
++                if spr in info:
++                    info[spr][2].append((info[name]))
++                else:
++                    groups.append(name)
++
++            elif name.startswith("test_"):
++                tests.append(name)
++
++            elif name in ('setUp', 'tearDown'):
++                support.append(name)
++
++        for name in support:
++            item = getattr(module, name)
++            if callable(item):
++                nodes.extend(self.nodes_for_support(name, item))
++
++        tests.sort()
++        tests.sort(cmp = lambda a, b: len(a) - len(b))
++        for name in tests:
++            item = getattr(module, name)
++            if callable(item):
++                nodes.extend(self.nodes_for_test(name, item))
++
++        for name in groups:
++            _, item, children = info[name]
++            if isinstance(item, object):
++                nodes.extend(self.nodes_for_class(name, item, children))
++
++        return nodes
++
++    def nodes_for_class(self, name, item, children):
++        """
++            Determine nodes for a class
++            @param name: name of the class
++            @param item: The class itself
++            @param children: A list of (name, item, children) for all logicallynested classes
++        """
++        container = nodes.container(classes=["nose_kls"])
++        para = nodes.paragraph(classes=["kls_title"])
++        name = testName(item)
++        para += nodes.Text(name)
++        container.append(para)
++        subnodes = self.nodes_for_module(item)
++        if not subnodes and not children:
++            # Probably not a test class
++            return []
++
++        container.extend(subnodes)
++        for child in children:
++            container.extend(self.nodes_for_class(*child))
++
++        return [container]
++
++    def nodes_for_support(self, name, item):
++        """
++            Determine nodes for a setup/teardown function
++            @param name: name of the function
++            @param item: The function itself
++        """
++        container = nodes.container(classes=["has_info", "nose_support"])
++
++        para = nodes.paragraph(classes=["kls_support"])
++        para.extend(self.nodes_for_arrow())
++        para += nodes.Text(name)
++
++        container.append(para)
++        container.append(self.include_source(item))
++
++        return [container]
++
++    def nodes_for_test(self, name, item):
++        """
++            Determine nodes for a single test function
++            @param name: name of the function
++            @param item: The function itself
++        """
++        container = nodes.container(classes=["has_info", "nose_test"])
++
++        para = nodes.paragraph()
++        para.extend(self.nodes_for_arrow())
++
++        name = testName(item)
++        para += nodes.Text(name)
++
++        container.append(para)
++        container.append(self.include_source(item))
++
++        return [container]
++
++    def nodes_for_arrow(self):
++        """Create inline for an arrow"""
++        arrow = nodes.inline(classes=["arrow", "arrow-closed"])
++        return [arrow]
++
++    def include_source(self, item):
++        """Return nodes representing the original source code of the item"""
++        func = item
++        if hasattr(item, 'im_func'):
++            func = item.im_func
++
++        try:
++            func.func_code
++        except:
++            from pdb import set_trace; set_trace()
++        code = func.func_code
++        filename = code.co_filename
++
++        first_line = code.co_firstlineno
++        num_lines = inspect.getsource(item).strip().count('\n')
++        last_line = first_line + num_lines
++
++        info = nodes.container(classes=["hidden_info"])
++        info.extend(self.literalinclude('/%s' % filename, first_line, last_line))
++        return info
++
++
++    def literalinclude(self, filename, first_line, last_line):
++        """Use literalinclude directive to return nodes for a literalinclude of specified lines in some file"""
++        lines = "%s-%s" % (first_line, last_line)
++        lineno = 0
++        options = dict(lines=lines)
++        content = ":lines: %s" % lines
++        arguments = [filename]
++        block_text = ""
++        content_offset = 0
++
++        directive_instance = LiteralInclude('literalinclude'
++            , arguments, options, content, lineno
++            , content_offset, block_text, self.state, self.state.state_machine
++            )
++
++        return directive_instance.run()
++
++def setup(app):
++    """Setup the show_tests directive"""
++    app.add_directive('show_tests', ShowTestsDirective)
++
+Index: nose-of-yeti-1.5.1/docs/_theme/nature/layout.html
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_theme/nature/layout.html
+@@ -0,0 +1,76 @@
++{% extends "basic/layout.html" %}
++{%- block extrahead %}
++  <script type="text/javascript">
++    $(function($) {
++      $(".has_info").click(function() {
++          var $el = $(this);
++          $(".hidden_info", $el).toggle();
++          $(".arrow", $el).toggleClass("arrow-open").toggleClass("arrow-closed");
++      });
++      
++      $(".has_info").click(function() {
++          return false;
++      });
++    })
++  </script>
++{% endblock %}
++{%- block header %}
++    <div id="header">
++        <div class="inner">
++            <p id="site_title">
++                <a href="/">NoseOfYeti: RSpec inspired dsl for nosetests.</a>
++            </p>
++            <ul class="menu">
++            {%- for name, link, selected in toplinks %}
++                <li><a href="{{link}}" {%- if selected %}class="selected"{% endif %}>{{name}}</a></li>
++            {% endfor %}
++                <li>
++                    {%- include "searchbox.html" %}
++                </li>
++            </ul>
++        </div>
++    </div>
++{% endblock %}
++{%- block document %}
++    <div class="documentwrapper">
++    {%- if display_toc %}
++      <div class="bodywrapper">
++    {%- endif %}
++        <div class="body">
++          {% block body %} {% endblock %}
++        </div>
++    {%- if display_toc %}
++      </div>
++    {%- endif %}
++    <div class="sphinxsidebar">
++        {%- if display_toc %}
++          <h3>Table Of Contents</h3>
++          {{ toc }}
++          <hr/>
++          <p style="padding:0;line-height: 0.5em;text-align: right;padding-right: 5px;"><a href="#top">#Top</a></p>
++        {%- endif %}
++    </div>
++    </div>
++    <!-- GitHub Ribbon -->
++    <a href="http://github.com/delfick/nose-of-yeti"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
++{%- endblock %}
++
++{%- block relbar1 %}{% endblock %}
++{%- block relbar2 %}{% endblock %}
++{%- block relbaritems %}{% endblock %}
++{%- block sidebar2 %}{% endblock %}
++
++{%- block footer %}
++    <div class="footer">
++    {%- if last_updated or show_sphinx %}
++      <p>
++          {%- if last_updated %}
++            {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
++          {%- endif %}
++          {%- if show_sphinx %}
++            {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
++          {%- endif %}
++      </p>
++    {%- endif %}
++    </div>
++{%- endblock %}
+Index: nose-of-yeti-1.5.1/docs/_theme/nature/searchbox.html
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_theme/nature/searchbox.html
+@@ -0,0 +1,18 @@
++{#
++    basic/searchbox.html
++    ~~~~~~~~~~~~~~~~~~~~
++
++    Sphinx sidebar template: quick search box.
++
++    :copyright: Copyright 2007-2010 by the Sphinx team, see AUTHORS.
++    :license: BSD, see LICENSE for details.
++#}
++{%- if pagename != "search" %}
++    <form class="search" id="searchbox" action="{{ pathto('search') }}" method="get">
++      <input type="text" name="q" size="18" />
++      <input type="submit" value="{{ _('Search') }}" />
++      <input type="hidden" name="check_keywords" value="yes" />
++      <input type="hidden" name="area" value="default" />
++    </form>
++    <script type="text/javascript">$('#searchbox').show(0);</script>
++{%- endif %}
+Index: nose-of-yeti-1.5.1/docs/_theme/nature/static/nature.css_t
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_theme/nature/static/nature.css_t
+@@ -0,0 +1,396 @@
++/*
++ * nature.css_t
++ * ~~~~~~~~~~~~
++ *
++ * Sphinx stylesheet -- nature theme.
++ *
++ * :copyright: Copyright 2007-2010 by the Sphinx team, see AUTHORS.
++ * :license: BSD, see LICENSE for details.
++ *
++ */
++ 
++@import url("basic.css");
++
++/* -- tests       ----------------------------------------------------------- */
++
++.nose_test {
++    position: relative;
++    left: 35px;
++    cursor:pointer;
++}
++
++.nose_kls .nose_kls, .nose_support {
++    position: relative;
++    left: 35px;
++}
++
++.nose_kls .nose_support {
++    cursor:pointer;
++}
++
++.nose_kls p.kls_title, p.kls_support {
++    font-weight: bold;
++}
++
++.hidden_info {
++    display:none;
++}
++
++/* -- arrows      ----------------------------------------------------------- */
++/* with thanks to http://hedgerwow.appspot.com/demo/arrows */
++
++.arrow {
++  /*
++   * In Internet Explorer, The"border-style: dashed" will never be
++   * rendered unless "(width * 5) >= border-width" is true.
++   * Since "width" is set to "0", the "dashed-border" remains
++   * invisible to the user, which renders the border just like how
++   * "border-color: transparent" renders.
++   */
++  border-style: dashed;
++  border-color: transparent;
++  border-width: 0.53em;
++  display: -moz-inline-box;
++  display: inline-block;
++  /* Use font-size to control the size of the arrow. */
++  font-size: 0.8em;
++  height: 0;
++  line-height: 0;
++  position: relative;
++  vertical-align: middle;
++  width: 0;
++  margin-right:10px;
++}
++                    
++.arrow-open {
++  border-top-width: 1em;
++  border-top-style: solid;
++  border-top-color: #666;
++  top: 0.25em;
++  margin-right: 16px;
++}
++
++.arrow-closed {
++  border-left-width: 1em;
++  border-left-style: solid;
++  border-left-color: #666;
++  left: 0.25em;
++}
++ 
++/* -- page layout ----------------------------------------------------------- */
++ 
++html {
++	font-family: Arial, sans-serif;
++	font-size: 76%; 
++	height: 100%;
++	width: 100%;
++}
++body {
++	margin: 0; 
++	padding: 0;
++	color: #111;
++	background-color: #fff;
++	height: 100%;
++	width: 100%;
++}
++div.header {
++	width: 100%;
++	color: #111;
++	background-color: #fff;
++}
++.inner, .footer {
++	width: 960px;
++	margin: 0 auto;
++	position: relative;
++}
++div.header .inner {
++	height: auto !important;
++	height: 180px;
++	min-height: 180px;
++}
++p#site_title {
++	color: #111;
++	font-size: 2.7em;
++	line-height: 1em;
++	margin: 0;
++	padding: 1em 0;
++}
++p#site_title a {
++	color: #111;
++	font-weight: bold;
++	text-decoration: none;
++}
++ul.menu {
++	display: inline;
++	height: 25px;
++	font-size: 1.6em;
++	color: #fff;
++    background-color: #6BA81E;
++	margin: 0;
++	padding: 5px 10px;
++}
++ul.menu li {
++	display: inline;
++	color: #fff;
++}
++ul.menu a {
++	color: #fff;
++	padding: 10px;
++	text-decoration: none;
++}
++ul.menu a.selected {
++	background-color: #000;
++}
++ul.menu a:hover {
++	color: #000;
++	background-color: #ccc;
++}
++form#searchbox {
++	display:inline;
++	margin: 0;
++	position: relative;
++	bottom: 0.15em;
++}
++
++div.documentwrapper {
++	width: 960px;
++	margin: 0 auto;
++	position: relative;
++}
++
++div.bodywrapper {
++    margin: 0 0 0 230px;
++}
++
++hr {
++    border: 1px solid #B1B4B6;
++}
++ 
++div.document {
++    margin-top: 10px;
++}
++ 
++div.body {
++    background-color: #ffffff;
++    color: #3E4349;
++    padding: 0 0 30px 30px;
++    font-size: 1.3em;
++}
++ 
++div.footer {
++    color: #555;
++    background-color: #eee;
++    width: 100%;
++    padding: 13px 0;
++    text-align: center;
++}
++ 
++div.footer a {
++    color: #444;
++    text-decoration: underline;
++}
++ 
++div.related {
++    background-color: #6BA81E;
++    line-height: 32px;
++    color: #fff;
++    text-shadow: 0px 1px 0 #444;
++    font-size: 0.9em;
++}
++ 
++div.related a {
++    color: #E2F3CC;
++}
++ 
++div.sphinxsidebar {
++    font-size: 1.1em;
++    line-height: 1.5em;
++    margin: 0;
++    position:fixed;
++    left: 1;
++    top: 152px;
++    width: 240px;
++    float: none;
++    background-color: #eee;
++}
++ 
++div.sphinxsidebar h3,
++div.sphinxsidebar h4 {
++    font-family: Arial, sans-serif;
++    color: #222;
++    font-size: 1.2em;
++    font-weight: normal;
++    margin: 0;
++    padding: 5px 10px;
++    background-color: #ddd;
++    text-shadow: 1px 1px 0 white
++}
++
++div.sphinxsidebar h4{
++    font-size: 1.1em;
++}
++ 
++div.sphinxsidebar h3 a {
++    color: #444;
++}
++ 
++ 
++div.sphinxsidebar p {
++    color: #888;
++    padding: 5px 20px;
++}
++ 
++div.sphinxsidebar p.topless {
++}
++ 
++div.sphinxsidebar ul {
++    margin: 10px 20px;
++    padding: 0;
++    color: #000;
++}
++ 
++div.sphinxsidebar a {
++    color: #444;
++}
++ 
++div.sphinxsidebar input {
++    border: 1px solid #ccc;
++    font-family: sans-serif;
++    font-size: 1em;
++}
++
++div.sphinxsidebar input[type=text]{
++    margin-left: 20px;
++}
++ 
++/* -- body styles ----------------------------------------------------------- */
++ 
++a {
++    color: #005B81;
++    text-decoration: none;
++}
++ 
++a:hover {
++    color: #E32E00;
++    text-decoration: underline;
++}
++ 
++div.body h1,
++div.body h2,
++div.body h3,
++div.body h4,
++div.body h5,
++div.body h6 {
++    font-family: Arial, sans-serif;
++    background-color: #BED4EB;
++    font-weight: normal;
++    color: #212224;
++    margin: 30px 0px 10px 0px;
++    padding: 5px 0 5px 10px;
++    text-shadow: 0px 1px 0 white
++}
++ 
++div.body h1 { border-top: 20px solid white; margin-top: 0; font-size: 200%; }
++div.body h2 { font-size: 150%; background-color: #C8D5E3; }
++div.body h3 { font-size: 120%; background-color: #D8DEE3; }
++div.body h4 { font-size: 100%; background-color: #eeeeee; margin-top: 20px;}
++div.body h5 { font-size: 100%; background-color: #eeeeee; margin-top: 20px;}
++div.body h6 { font-size: 100%; background-color: #eeeeee; margin-top: 20px;}
++ 
++a.headerlink {
++    color: #c60f0f;
++    font-size: 0.8em;
++    padding: 0 4px 0 4px;
++    text-decoration: none;
++}
++ 
++a.headerlink:hover {
++    background-color: #c60f0f;
++    color: white;
++}
++ 
++div.body p, div.body dd, div.body li {
++    line-height: 1.5em;
++}
++ 
++div.admonition p.admonition-title + p {
++    display: inline;
++}
++
++div.highlight{
++    background-color: white;
++}
++
++div.note {
++    background-color: #FCFFDD;
++	margin-left: 3em !important;
++    border: 1px solid #F5F5A1 !important;
++}
++div.note p.admonition-title {
++	position: absolute;
++	left: -3em;
++}
++ 
++div.seealso {
++    background-color: #ffc;
++    border: 1px solid #ff6;
++}
++ 
++div.topic {
++    background-color: #eee;
++}
++ 
++div.warning {
++    background-color: #ffe4e4;
++    border: 1px solid #f66;
++}
++
++div.admonition {
++	padding: .3em .8em;
++	margin: 1em 0;
++	border:1px solid #94da3a;
++	position: relative;
++}
++
++p:target, dl:target dt, dl:target h3, span:target+dt, span:target+h3 {
++    background-color : #FBE54E;
++}
++
++pre {
++    padding: 10px;
++    background-color: White;
++    color: #222;
++    line-height: 1.2em;
++    border: 1px solid #C6C9CB;
++    font-size: 1.1em;
++    margin: 1.5em 0 1.5em 0;
++    -webkit-box-shadow: 1px 1px 1px #d8d8d8;
++    -moz-box-shadow: 1px 1px 1px #d8d8d8;
++}
++ 
++tt {
++    background-color: #ecf0f3;
++    color: #222;
++    /* padding: 1px 2px; */
++    font-size: 1.1em;
++    font-family: monospace;
++}
++
++a tt {
++    color: #005B81;
++}
++
++a tt:hover {
++    color: #E32E00;
++    text-decoration: underline;
++}
++
++.viewcode-back {
++    font-family: Arial, sans-serif;
++}
++
++div.viewcode-block:target {
++    background-color: #f4debf;
++    border-top: 1px solid #ac9;
++    border-bottom: 1px solid #ac9;
++}
+\ No newline at end of file
+Index: nose-of-yeti-1.5.1/docs/_theme/nature/static/searchtools.js
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_theme/nature/static/searchtools.js
+@@ -0,0 +1,526 @@
++/*
++ * searchtools.js
++ * ~~~~~~~~~~~~~~
++ *
++ * Sphinx JavaScript utilties for the full-text search.
++ *
++ * :copyright: Copyright 2007-2010 by the Sphinx team, see AUTHORS.
++ * :license: BSD, see LICENSE for details.
++ *
++ */
++
++/**
++ * helper function to return a node containing the
++ * search summary for a given text. keywords is a list
++ * of stemmed words, hlwords is the list of normal, unstemmed
++ * words. the first one is used to find the occurance, the
++ * latter for highlighting it.
++ */
++
++jQuery.makeSearchSummary = function(text, keywords, hlwords) {
++  var textLower = text.toLowerCase();
++  var start = 0;
++  $.each(keywords, function() {
++    var i = textLower.indexOf(this.toLowerCase());
++    if (i > -1)
++      start = i;
++  });
++  start = Math.max(start - 120, 0);
++  var excerpt = ((start > 0) ? '...' : '') +
++  $.trim(text.substr(start, 240)) +
++  ((start + 240 - text.length) ? '....' : '');
++  excerpt = excerpt.replace(/\.\.\s_?.*::?/g, '');
++  excerpt = excerpt.replace(/[-=+*]{2,}/g, '');
++  excerpt = excerpt.replace(/`_?/g, "'");
++  excerpt = excerpt.replace(/\s?<.*?(>|\.\.)/g, '');
++  excerpt = excerpt.replace(/:(maxdepth|ref|doc|metho|api|term):/g, '');
++  var rv = $('<div class="context"></div>').text(excerpt);
++  $.each(hlwords, function() {
++    rv = rv.highlightText(this, 'highlighted');
++  });
++  return rv;
++}
++
++/**
++ * Porter Stemmer
++ */
++var PorterStemmer = function() {
++
++  var step2list = {
++    ational: 'ate',
++    tional: 'tion',
++    enci: 'ence',
++    anci: 'ance',
++    izer: 'ize',
++    bli: 'ble',
++    alli: 'al',
++    entli: 'ent',
++    eli: 'e',
++    ousli: 'ous',
++    ization: 'ize',
++    ation: 'ate',
++    ator: 'ate',
++    alism: 'al',
++    iveness: 'ive',
++    fulness: 'ful',
++    ousness: 'ous',
++    aliti: 'al',
++    iviti: 'ive',
++    biliti: 'ble',
++    logi: 'log'
++  };
++
++  var step3list = {
++    icate: 'ic',
++    ative: '',
++    alize: 'al',
++    iciti: 'ic',
++    ical: 'ic',
++    ful: '',
++    ness: ''
++  };
++
++  var c = "[^aeiou]";          // consonant
++  var v = "[aeiouy]";          // vowel
++  var C = c + "[^aeiouy]*";    // consonant sequence
++  var V = v + "[aeiou]*";      // vowel sequence
++
++  var mgr0 = "^(" + C + ")?" + V + C;                      // [C]VC... is m>0
++  var meq1 = "^(" + C + ")?" + V + C + "(" + V + ")?$";    // [C]VC[V] is m=1
++  var mgr1 = "^(" + C + ")?" + V + C + V + C;              // [C]VCVC... is m>1
++  var s_v   = "^(" + C + ")?" + v;                         // vowel in stem
++
++  this.stemWord = function (w) {
++    var stem;
++    var suffix;
++    var firstch;
++    var origword = w;
++
++    if (w.length < 3)
++      return w;
++
++    var re;
++    var re2;
++    var re3;
++    var re4;
++
++    firstch = w.substr(0,1);
++    if (firstch == "y")
++      w = firstch.toUpperCase() + w.substr(1);
++
++    // Step 1a
++    re = /^(.+?)(ss|i)es$/;
++    re2 = /^(.+?)([^s])s$/;
++
++    if (re.test(w))
++      w = w.replace(re,"$1$2");
++    else if (re2.test(w))
++      w = w.replace(re2,"$1$2");
++
++    // Step 1b
++    re = /^(.+?)eed$/;
++    re2 = /^(.+?)(ed|ing)$/;
++    if (re.test(w)) {
++      var fp = re.exec(w);
++      re = new RegExp(mgr0);
++      if (re.test(fp[1])) {
++        re = /.$/;
++        w = w.replace(re,"");
++      }
++    }
++    else if (re2.test(w)) {
++      var fp = re2.exec(w);
++      stem = fp[1];
++      re2 = new RegExp(s_v);
++      if (re2.test(stem)) {
++        w = stem;
++        re2 = /(at|bl|iz)$/;
++        re3 = new RegExp("([^aeiouylsz])\\1$");
++        re4 = new RegExp("^" + C + v + "[^aeiouwxy]$");
++        if (re2.test(w))
++          w = w + "e";
++        else if (re3.test(w)) {
++          re = /.$/;
++          w = w.replace(re,"");
++        }
++        else if (re4.test(w))
++          w = w + "e";
++      }
++    }
++
++    // Step 1c
++    re = /^(.+?)y$/;
++    if (re.test(w)) {
++      var fp = re.exec(w);
++      stem = fp[1];
++      re = new RegExp(s_v);
++      if (re.test(stem))
++        w = stem + "i";
++    }
++
++    // Step 2
++    re = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/;
++    if (re.test(w)) {
++      var fp = re.exec(w);
++      stem = fp[1];
++      suffix = fp[2];
++      re = new RegExp(mgr0);
++      if (re.test(stem))
++        w = stem + step2list[suffix];
++    }
++
++    // Step 3
++    re = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/;
++    if (re.test(w)) {
++      var fp = re.exec(w);
++      stem = fp[1];
++      suffix = fp[2];
++      re = new RegExp(mgr0);
++      if (re.test(stem))
++        w = stem + step3list[suffix];
++    }
++
++    // Step 4
++    re = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
++    re2 = /^(.+?)(s|t)(ion)$/;
++    if (re.test(w)) {
++      var fp = re.exec(w);
++      stem = fp[1];
++      re = new RegExp(mgr1);
++      if (re.test(stem))
++        w = stem;
++    }
++    else if (re2.test(w)) {
++      var fp = re2.exec(w);
++      stem = fp[1] + fp[2];
++      re2 = new RegExp(mgr1);
++      if (re2.test(stem))
++        w = stem;
++    }
++
++    // Step 5
++    re = /^(.+?)e$/;
++    if (re.test(w)) {
++      var fp = re.exec(w);
++      stem = fp[1];
++      re = new RegExp(mgr1);
++      re2 = new RegExp(meq1);
++      re3 = new RegExp("^" + C + v + "[^aeiouwxy]$");
++      if (re.test(stem) || (re2.test(stem) && !(re3.test(stem))))
++        w = stem;
++    }
++    re = /ll$/;
++    re2 = new RegExp(mgr1);
++    if (re.test(w) && re2.test(w)) {
++      re = /.$/;
++      w = w.replace(re,"");
++    }
++
++    // and turn initial Y back to y
++    if (firstch == "y")
++      w = firstch.toLowerCase() + w.substr(1);
++    return w;
++  }
++}
++
++
++/**
++ * Search Module
++ */
++var Search = {
++
++  _index : null,
++  _queued_query : null,
++  _pulse_status : -1,
++
++  init : function() {
++      var params = $.getQueryParameters();
++      if (params.q) {
++          var query = params.q[0];
++          $('input[name="q"]')[0].value = query;
++          this.performSearch(query);
++      }
++  },
++
++  loadIndex : function(url) {
++    $.ajax({type: "GET", url: url, data: null, success: null,
++            dataType: "script", cache: true});
++  },
++
++  setIndex : function(index) {
++    var q;
++    this._index = index;
++    if ((q = this._queued_query) !== null) {
++      this._queued_query = null;
++      Search.query(q);
++    }
++  },
++
++  hasIndex : function() {
++      return this._index !== null;
++  },
++
++  deferQuery : function(query) {
++      this._queued_query = query;
++  },
++
++  stopPulse : function() {
++      this._pulse_status = 0;
++  },
++
++  startPulse : function() {
++    if (this._pulse_status >= 0)
++        return;
++    function pulse() {
++      Search._pulse_status = (Search._pulse_status + 1) % 4;
++      var dotString = '';
++      for (var i = 0; i < Search._pulse_status; i++)
++        dotString += '.';
++      Search.dots.text(dotString);
++      if (Search._pulse_status > -1)
++        window.setTimeout(pulse, 500);
++    };
++    pulse();
++  },
++
++  /**
++   * perform a search for something
++   */
++  performSearch : function(query) {
++    // create the required interface elements
++    this.out = $('#search-results');
++    this.title = $('<h2>' + _('Searching') + '</h2>').appendTo(this.out);
++    this.dots = $('<span></span>').appendTo(this.title);
++    this.status = $('<p style="display: none"></p>').appendTo(this.out);
++    this.output = $('<ul class="search"/>').appendTo(this.out);
++
++    $('#search-progress').text(_('Preparing search...'));
++    this.startPulse();
++
++    // index already loaded, the browser was quick!
++    if (this.hasIndex())
++      this.query(query);
++    else
++      this.deferQuery(query);
++  },
++
++  query : function(query) {
++    var stopwords = ['and', 'then', 'into', 'it', 'as', 'are', 'in',
++                     'if', 'for', 'no', 'there', 'their', 'was', 'is',
++                     'be', 'to', 'that', 'but', 'they', 'not', 'such',
++                     'with', 'by', 'a', 'on', 'these', 'of', 'will',
++                     'this', 'near', 'the', 'or', 'at'];
++
++    // stem the searchterms and add them to the correct list
++    var stemmer = new PorterStemmer();
++    var searchterms = [];
++    var excluded = [];
++    var hlterms = [];
++    var tmp = query.split(/\s+/);
++    var object = (tmp.length == 1) ? tmp[0].toLowerCase() : null;
++    for (var i = 0; i < tmp.length; i++) {
++      if ($u.indexOf(stopwords, tmp[i]) != -1 || tmp[i].match(/^\d+$/) ||
++          tmp[i] == "") {
++        // skip this "word"
++        continue;
++      }
++      // stem the word
++      var word = stemmer.stemWord(tmp[i]).toLowerCase();
++      // select the correct list
++      if (word[0] == '-') {
++        var toAppend = excluded;
++        word = word.substr(1);
++      }
++      else {
++        var toAppend = searchterms;
++        hlterms.push(tmp[i].toLowerCase());
++      }
++      // only add if not already in the list
++      if (!$.contains(toAppend, word))
++        toAppend.push(word);
++    };
++    var highlightstring = '?highlight=' + $.urlencode(hlterms.join(" "));
++
++    // console.debug('SEARCH: searching for:');
++    // console.info('required: ', searchterms);
++    // console.info('excluded: ', excluded);
++
++    // prepare search
++    var filenames = this._index.filenames;
++    var titles = this._index.titles;
++    var terms = this._index.terms;
++    var objects = this._index.objects;
++    var objtypes = this._index.objtypes;
++    var objnames = this._index.objnames;
++    var fileMap = {};
++    var files = null;
++    // different result priorities
++    var importantResults = [];
++    var objectResults = [];
++    var regularResults = [];
++    var unimportantResults = [];
++    $('#search-progress').empty();
++
++    // lookup as object
++    if (object != null) {
++      for (var prefix in objects) {
++        for (var name in objects[prefix]) {
++          var fullname = (prefix ? prefix + '.' : '') + name;
++          if (fullname.toLowerCase().indexOf(object) > -1) {
++            match = objects[prefix][name];
++            descr = objnames[match[1]] + _(', in ') + titles[match[0]];
++            // XXX the generated anchors are not generally correct
++            // XXX there may be custom prefixes
++            result = [filenames[match[0]], fullname, '#'+fullname, descr];
++            switch (match[2]) {
++            case 1: objectResults.push(result); break;
++            case 0: importantResults.push(result); break;
++            case 2: unimportantResults.push(result); break;
++            }
++          }
++        }
++      }
++    }
++
++    // sort results descending
++    objectResults.sort(function(a, b) {
++      return (a[1] > b[1]) ? -1 : ((a[1] < b[1]) ? 1 : 0);
++    });
++
++    importantResults.sort(function(a, b) {
++      return (a[1] > b[1]) ? -1 : ((a[1] < b[1]) ? 1 : 0);
++    });
++
++    unimportantResults.sort(function(a, b) {
++      return (a[1] > b[1]) ? -1 : ((a[1] < b[1]) ? 1 : 0);
++    });
++
++
++    // perform the search on the required terms
++    for (var i = 0; i < searchterms.length; i++) {
++      var word = searchterms[i];
++      // no match but word was a required one
++      if ((files = terms[word]) == null)
++        break;
++      if (files.length == undefined) {
++        files = [files];
++      }
++      // create the mapping
++      for (var j = 0; j < files.length; j++) {
++        var file = files[j];
++        if (file in fileMap)
++          fileMap[file].push(word);
++        else
++          fileMap[file] = [word];
++      }
++    }
++
++    // now check if the files don't contain excluded terms
++    for (var file in fileMap) {
++      var valid = true;
++
++      // check if all requirements are matched
++      if (fileMap[file].length != searchterms.length)
++        continue;
++
++      // ensure that none of the excluded terms is in the
++      // search result.
++      for (var i = 0; i < excluded.length; i++) {
++        if (terms[excluded[i]] == file ||
++            $.contains(terms[excluded[i]] || [], file)) {
++          valid = false;
++          break;
++        }
++      }
++
++      // if we have still a valid result we can add it
++      // to the result list
++      if (valid)
++        regularResults.push([filenames[file], titles[file], '', null]);
++    }
++
++    // delete unused variables in order to not waste
++    // memory until list is retrieved completely
++    delete filenames, titles, terms;
++
++    // now sort the regular results descending by title
++    regularResults.sort(function(a, b) {
++      var left = a[1].toLowerCase();
++      var right = b[1].toLowerCase();
++      return (left > right) ? -1 : ((left < right) ? 1 : 0);
++    });
++
++    // combine all results
++    var results = unimportantResults.concat(regularResults)
++      .concat(objectResults).concat(importantResults);
++
++    // print the results
++    var resultCount = results.length;
++    function displayNextItem() {
++      // results left, load the summary and display it
++      if (results.length) {
++        var item = results.pop();
++        var listItem = $('<li style="display:none"></li>');
++        if (DOCUMENTATION_OPTIONS.FILE_SUFFIX == '') {
++          // dirhtml builder
++          var dirname = item[0] + '/';
++          if (dirname.match(/\/index\/$/)) {
++            dirname = dirname.substring(0, dirname.length-6);
++          } else if (dirname == 'index/') {
++            dirname = '';
++          }
++          listItem.append($('<a/>').attr('href',
++            DOCUMENTATION_OPTIONS.URL_ROOT + dirname +
++            highlightstring + item[2]).html(item[1]));
++        } else {
++          // normal html builders
++          listItem.append($('<a/>').attr('href',
++            item[0] + DOCUMENTATION_OPTIONS.FILE_SUFFIX +
++            highlightstring + item[2]).html(item[1]));
++        }
++        if (item[3]) {
++          item[3] = item[3].replace('api,', 'module,');
++          item[3] = item[3].replace('prop,', 'property,');
++          item[3] = item[3].replace('metho,', 'method,');
++          listItem.append($('<span> (' + item[3] + ')</span>'));
++          Search.output.append(listItem);
++          listItem.slideDown(5, function() {
++            displayNextItem();
++          });
++        } else if (DOCUMENTATION_OPTIONS.HAS_SOURCE) {
++          $.get(DOCUMENTATION_OPTIONS.URL_ROOT + '_sources/' +
++                item[0] + '.txt', function(data) {
++            if (data != '') {
++              listItem.append($.makeSearchSummary(data, searchterms, hlterms));
++              Search.output.append(listItem);
++            }
++            listItem.slideDown(5, function() {
++              displayNextItem();
++            });
++          });
++        } else {
++          // no source available, just display title
++          Search.output.append(listItem);
++          listItem.slideDown(5, function() {
++            displayNextItem();
++          });
++        }
++      }
++      // search finished, update title and status message
++      else {
++        Search.stopPulse();
++        Search.title.text(_('Search Results'));
++        if (!resultCount)
++          Search.status.text(_('Your search did not match any documents. Please make sure that all words are spelled correctly and that you\'ve selected enough categories.'));
++        else
++            Search.status.text(_('Search finished, found %s page(s) matching the search query.').replace('%s', resultCount));
++        Search.status.fadeIn(500);
++      }
++    }
++    displayNextItem();
++  }
++}
++
++$(document).ready(function() {
++  Search.init();
++});
+Index: nose-of-yeti-1.5.1/docs/_theme/nature/theme.conf
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/_theme/nature/theme.conf
+@@ -0,0 +1,4 @@
++[theme]
++inherit = basic
++stylesheet = nature.css
++pygments_style = tango
+Index: nose-of-yeti-1.5.1/docs/conf.py
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/conf.py
+@@ -0,0 +1,217 @@
++# -*- coding: utf-8 -*-
++#
++# NoseOfYeti documentation build configuration file, created by
++# sphinx-quickstart on Fri Mar  9 21:25:00 2012.
++#
++# This file is execfile()d with the current directory set to its containing dir.
++#
++# Note that not all possible configuration values are present in this
++# autogenerated file.
++#
++# All configuration values have a default; values that are commented out
++# serve to show the default.
++
++import sys, os
++
++# If extensions (or modules to document with autodoc) are in another directory,
++# add these directories to sys.path here. If the directory is relative to the
++# documentation root, use os.path.abspath to make it absolute, like shown here.
++sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "_ext")))
++
++# -- General configuration -----------------------------------------------------
++
++# If your documentation needs a minimal Sphinx version, state it here.
++#needs_sphinx = '1.0'
++
++# Add any Sphinx extension module names here, as strings. They can be extensions
++# coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
++extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode', 'nav', 'options', 'show_tests']
++
++# Add any paths that contain templates here, relative to this directory.
++templates_path = ['_templates']
++
++# The suffix of source filenames.
++source_suffix = '.rst'
++
++# The encoding of source files.
++#source_encoding = 'utf-8-sig'
++
++# The master toctree document.
++master_doc = 'index'
++
++# General information about the project.
++project = u'NoseOfYeti'
++copyright = u'2012, Stephen Moore'
++
++# The version info for the project you're documenting, acts as replacement for
++# |version| and |release|, also used in various other places throughout the
++# built documents.
++#
++# The short X.Y version.
++version = '1.1'
++# The full version, including alpha/beta/rc tags.
++release = '1.1'
++
++# The language for content autogenerated by Sphinx. Refer to documentation
++# for a list of supported languages.
++#language = None
++
++# There are two options for replacing |today|: either, you set today to some
++# non-false value, then it is used:
++#today = ''
++# Else, today_fmt is used as the format for a strftime call.
++#today_fmt = '%B %d, %Y'
++
++# List of patterns, relative to source directory, that match files and
++# directories to ignore when looking for source files.
++exclude_patterns = ['_build']
++
++# The reST default role (used for this markup: `text`) to use for all documents.
++#default_role = None
++
++# If true, '()' will be appended to :func: etc. cross-reference text.
++#add_function_parentheses = True
++
++# If true, the current module name will be prepended to all description
++# unit titles (such as .. function::).
++#add_module_names = True
++
++# If true, sectionauthor and moduleauthor directives will be shown in the
++# output. They are ignored by default.
++#show_authors = False
++
++# The name of the Pygments (syntax highlighting) style to use.
++pygments_style = 'pastie'
++
++# A list of ignored prefixes for module index sorting.
++#modindex_common_prefix = []
++
++
++# -- Options for HTML output ---------------------------------------------------
++
++# The theme to use for HTML and HTML Help pages.  See the documentation for
++# a list of builtin themes.
++html_theme = 'nature'
++
++# Theme options are theme-specific and customize the look and feel of a theme
++# further.  For a list of options available for each theme, see the
++# documentation.
++#html_theme_options = {}
++
++# Add any paths that contain custom themes here, relative to this directory.
++html_theme_path = ['_theme']
++
++# The name for this set of Sphinx documents.  If None, it defaults to
++# "<project> v<release> documentation".
++#html_title = None
++
++# A shorter title for the navigation bar.  Default is the same as html_title.
++#html_short_title = None
++
++# The name of an image file (relative to this directory) to place at the top
++# of the sidebar.
++#html_logo = None
++
++# The name of an image file (within the static path) to use as favicon of the
++# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
++# pixels large.
++#html_favicon = None
++
++# Add any paths that contain custom static files (such as style sheets) here,
++# relative to this directory. They are copied after the builtin static files,
++# so a file named "default.css" will overwrite the builtin "default.css".
++html_static_path = ['_static']
++
++# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
++# using the given strftime format.
++#html_last_updated_fmt = '%b %d, %Y'
++
++# If true, SmartyPants will be used to convert quotes and dashes to
++# typographically correct entities.
++#html_use_smartypants = True
++
++# Custom sidebar templates, maps document names to template names.
++#html_sidebars = {}
++
++# Additional templates that should be rendered to pages, maps page names to
++# template names.
++#html_additional_pages = {}
++
++# If false, no module index is generated.
++#html_domain_indices = True
++
++# If false, no index is generated.
++#html_use_index = True
++
++# If true, the index is split into individual pages for each letter.
++#html_split_index = False
++
++# If true, links to the reST sources are added to the pages.
++#html_show_sourcelink = True
++
++# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
++#html_show_sphinx = True
++
++# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
++#html_show_copyright = True
++
++# If true, an OpenSearch description file will be output, and all pages will
++# contain a <link> tag referring to it.  The value of this option must be the
++# base URL from which the finished HTML is served.
++#html_use_opensearch = ''
++
++# This is the file name suffix for HTML files (e.g. ".xhtml").
++#html_file_suffix = None
++
++# Output file base name for HTML help builder.
++htmlhelp_basename = 'NoseOfYetidoc'
++
++
++# -- Options for LaTeX output --------------------------------------------------
++
++# The paper size ('letter' or 'a4').
++#latex_paper_size = 'letter'
++
++# The font size ('10pt', '11pt' or '12pt').
++#latex_font_size = '10pt'
++
++# Grouping the document tree into LaTeX files. List of tuples
++# (source start file, target name, title, author, documentclass [howto/manual]).
++latex_documents = [
++  ('index', 'NoseOfYeti.tex', u'NoseOfYeti Documentation',
++   u'Stephen Moore', 'manual'),
++]
++
++# The name of an image file (relative to this directory) to place at the top of
++# the title page.
++#latex_logo = None
++
++# For "manual" documents, if this is true, then toplevel headings are parts,
++# not chapters.
++#latex_use_parts = False
++
++# If true, show page references after internal links.
++#latex_show_pagerefs = False
++
++# If true, show URL addresses after external links.
++#latex_show_urls = False
++
++# Additional stuff for the LaTeX preamble.
++#latex_preamble = ''
++
++# Documents to append as an appendix to all manuals.
++#latex_appendices = []
++
++# If false, no module index is generated.
++#latex_domain_indices = True
++
++
++# -- Options for manual page output --------------------------------------------
++
++# One entry per manual page. List of tuples
++# (source start file, name, description, authors, manual section).
++man_pages = [
++    ('index', 'noseofyeti', u'NoseOfYeti Documentation',
++     [u'Stephen Moore'], 1)
++]
++
+Index: nose-of-yeti-1.5.1/docs/dev/index.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/dev/index.rst
+@@ -0,0 +1,18 @@
++.. _devindex:
++
++Development
++===========
++
++Here be some information for those interested in contributing to NoseOfYeti.
++
++.. toctree::
++    :maxdepth: 2
++
++    tests
++    internals
++
++Also, remember to
++
++ * Fork the github repo : https://github.com/delfick/nose-of-yeti/fork
++ * Report issues : https://github.com/delfick/nose-of-yeti/issues
++
+Index: nose-of-yeti-1.5.1/docs/dev/internals.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/dev/internals.rst
+@@ -0,0 +1,5 @@
++.. _internals:
++
++Internals
++=========
++
+Index: nose-of-yeti-1.5.1/docs/dev/tests.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/dev/tests.rst
+@@ -0,0 +1,8 @@
++.. _tests:
++
++.. include:: ../../noseOfYeti/specs/readme.rst
++
++Below is the specs that noseOfYeti has. To see the original source, just click a spec.
++
++.. show_tests::
++
+Index: nose-of-yeti-1.5.1/docs/examples.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/examples.rst
+@@ -0,0 +1,23 @@
++.. _examples:
++
++Examples
++========
++
++As found in the example directory:
++
++Comparison
++----------
++
++The way nose-of-yeti works is when a file with the necessary codec is imported, it will be translated into python code before being executed. This has the nice side effect that using a nose-of-yeti spec is transparently handled via python mechanisms, and once you have a .pyc file, it doesn't need to do the translation again (untill you either delete the .pyc or change the file).
++
++To tell python to use the correct encoding, you first let nose-of-yeti register it's codec (it comes with a plugin for both nose and pylint for this) and then you have ``# coding: spec`` as the first line of the file.
++
++.. literalinclude:: ../example/comparison.py
++   :language: python
++
++Another Example
++---------------
++
++.. literalinclude:: ../example/test.py
++   :language: python
++
+Index: nose-of-yeti-1.5.1/docs/features.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/features.rst
+@@ -0,0 +1,374 @@
++.. _features:
++
++Features
++========
++
++describe and context
++--------------------
++
++To group a bunch of tests together you can use the describe or context keywords::
++
++    describe "Some Test":
++        it "does things":
++            assert 1 == 1
++
++    context "Some Context":
++        it "does other things":
++            assert 2 == 2
++
++Will be converted into classes where each test under the group becomes a method prefixed with test\_::
++
++    class Test_SomeTest(object):
++        def test_does_things(self):
++            assert 1 == 1
++
++    class Test_SomeContext(object):
++        def test_does_other_things(self):
++            assert 2 == 2
++
++The class that is inherited can be changed by putting the name of the super class between the describe keyword and the name of the group::
++
++    describe NiceTestCase "name": pass
++
++becomes::
++
++    class TestName(NiceTestCase): pass
++
++The default class to inherit from is ``object``, however this can be changed with the :ref:`default-kls option <options>`.
++
++Describe and context blocks can also be nested. The way this works is that each nested level will inherit from the class of the previous level. Then, to ensure that tests from inherited super classes aren't run multiple times, a special ``is_noy_spec`` attribute is set on each class and the nose plugin will ensure only methods defined on the class itself will be run::
++
++    describe "NestedOne":
++        it "has test"
++
++        describe "NestedTwo":
++            it "also has test"
++
++            context "You get the point":
++                it "ladelalalal"
++
++becomes::
++
++    class Test_NestedOne(object):
++        def test_has_test(self): raise nose.skipTest
++
++    class Test_NestedOne_NestedTwo(NestedOne):
++        def test_also_has_test(self): raise nose.skipTest
++
++    class Test_NestedOne_NestedTwo_You_get_the_point(Test_NestedOne_NestedTwo):
++        def test_ladelalalal(self): raise nose.skipTest
++
++    Test_NestedOne.is_noy_spec = True
++    Test_NestedOne_NestedTwo.is_noy_spec = True
++    Test_NestedOne_NestedTwo_You_get_the_point.is_noy_spec = True
++
++It will prevent nested classes from having the same name as non-nested classes by prefixing the name of the class with the name of the class it inherits from.
++
++it and ignore
++-------------
++
++The tests themselves can be specified with ``it`` or ``ignore`` in a similar fashion to ``describe`` and ``context``::
++
++    it "is a test without a describe":
++        # Note that it doesn't have a self paramater
++        pass
++
++    # This function has no colon, it raises nose.SkipTest
++    it "is a method without a colon"
++
++    describe "AGroup":
++        it "is a test with a describe":
++            # Note that it does have a self parameter
++            pass
++
++        ignore "ignored method":
++            # This method is named ignore__%s
++            assert 1 == 3
++
++        # This method has no colon, it raises nose.SkipTest
++        it "is a test without a colon"
++
++becomes::
++
++    def test_is_a_test_without_a_describe":
++        # Note that it doesn't have a self parameter
++        pass
++
++    # This function has no colon, it raises nose.SkipTest
++    def test_is_a_method_without_a_colon(): raise nose.SkipTest
++
++    class Test_AGroup(object):
++        def test_is_a_test_with_a_describe(self):
++            # Note that it does have a self parameter
++            pass
++
++        def ignore__ignored_method(self):
++            # This method is named ignore__%s
++            assert 1 == 3
++
++        # This method has no colon, it raises nose.SkipTest
++        def test_is_a_test_without_a_colon(self): raise nose.SkipTest
++
++    Test_AGroup.is_noy_spec = True
++
++As shown in the example:
++ * ``it "name"`` converts to ``def test_name``
++ * ``ignore "name""`` converts to ``def ignore__name``
++ * If it is part of a describe block, it is given a ``self`` parameter
++ * If it has no colon, it raises nose.SkipTest
++
++NoseOfYeti can also cope with non-alphanumeric characters in the name of a test, by removing them from the function name, and then setting ``__testname__`` on the function/method later on::
++
++    it "won't don't $houldn't"
++
++    describe "Blah":
++        it "copes with 1!2@3#"
++
++becomes::
++
++    def test_wont_dont_houldnt(): raise nose.SkipTest
++
++    class Test_Blah(object):
++        def test_copes_with_123(self): raise nose.SkipTest
++
++    test_wont_dont_houldnt.__testname__ = "won't don't $houldn't"
++    Test_Blah.test_copes_with_123.__testname__ = "copes with 1!2@3#"
++
++The ``__testname__`` attribute can then be used by nose to print out the names of tests when it runs them.
++
++Extra parameters
++----------------
++
++NoseOfYeti is also able to cope with making tests accept other parameters. This is useful if you use decorators that do this::
++
++    @fudge.patch("MyAwesomeModule.AwesomeClass")
++    it "takes in a patched object", fakeAwesomeClass:
++        fakeAwesomeClass.expects_call().returns_fake().expects('blah').with_args(1)
++        fakeAwesomeClass().blah(1)
++
++    describe "Blah":
++        @fudge.patch("sys")
++        it "also works with self", fakeSys:
++            path = fudge.Fake('path')
++            fakeSys.expects("path").returns(path)
++            self.assertEqual(myFunction(), path)
++
++        it "handles default arguments", thing=3, other=4:
++            self.assertIs(thing, other)
++
++becomes::
++
++    @fudge.patch("MyAwesomeModule.AwesomeClass")
++    def test_takes_in_a_patched_object(fakeAwesomeClass):
++        fakeAwesomeClass.expects_call().returns_fake().expects('blah').with_args(1)
++        fakeAwesomeClass().blah(1)
++
++    class Test_Blah(object):
++        @fudge.patch("sys")
++        def test_also_works_with_self(self, fakeSys):
++            path = fudge.Fake('path')
++            fakeSys.expects("path").returns(path)
++            self.assertEqual(myFunction(), path)
++
++        def test_handles_default_arguments(self, thing=3, other=4):
++            self.assertIs(thing, other)
++
++Note that it will also cope with multiline lists as default parameters::
++
++    it "has a contrived default argument", thing = [
++        1
++        , 2
++        , 3
++        ]
++
++becomes::
++
++    def test_has_a_contrived_default_argument(thing=[
++        1
++        , 2
++        , 3
++        ]): raise nose.SkipTest
++
++.. _before_and_after_each:
++
++before_each and after_each
++--------------------------
++
++NoseOfYeti will turn ``before_each`` and ``after_each`` into ``setUp`` and ``tearDown`` respectively.
++
++It will also make sure the ``setUp``/``tearDown`` method of the super class (if it has one) gets called as the first thing in a ``before_each``/``after_each``::
++
++    describe "Meh":
++        before_each:
++            doSomeSetup()
++
++        after_each:
++            doSomeTearDown()
++
++becomes::
++
++    class Test_Meh(object):
++        def setUp(self):
++            noy_sup_setUp(super(Test_Meh, self)); doSomeSetup()
++
++        def tearDown(self):
++            noy_sup_tearDown(super(Test_Meh, self)); doSomeTearDown()
++
++An example of a class that does have it's own ``setUp`` and ``tearDown`` functions is ``unittest.TestCase``. Use :ref:`default-kls option <options>` to set this as a default.
++
++.. note::
++    To ensure that line numbers between the spec and translated output are the same, the first line of a ``setUp``/``tearDown`` will be placed on the same line as the inserted super call. This means if you don't want pylint to complain about multiple statements on the same line or you want to define a function inside ``setUp``/``tearDown``, then just don't do it on the first line after ``before_each``/``after_each``::
++
++        describe "Thing":
++            before_each:
++                # Comments are put on the same line, but no semicolon is inserted
++
++            after_each:
++
++                # Blank line after the after_each
++                self.thing = 4
++
++    becomes::
++
++        class Test_Meh(unittest.TestCase):
++            def setUp(self):
++                noy_sup_setUp(super(Test_Meh, self)) # Comments are put on the same line, but no semicolon is inserted
++
++            def tearDown(self):
++                noy_sup_tearDown(super(Test_Meh, self))
++                # Blank line after the after_each
++                self.thing = 4
++
++Also, remember, unless you use the :ref:`with-default-imports option <options>` then you'll have to manually import ``noy_sup_setUp`` and ``noy_sup_tearDown`` by doing ``from noseOfYeti.tokeniser.support import noy_sup_setUp, noy_sup_tearDown``
++
++.. note::
++    Anything on the same line as a ``before_each``/``after_each`` will remain on that line
++
++        describe "Thing":
++            before_each: # pylint: disable-msg: C0103
++
++    becomes::
++
++        class Test_Meh(unittest.TestCase):
++            def setUp(self): # pylint: disable-msg: C0103
++                noy_sup_setUp(super(Test_Meh, self))
++
++Wrapped Setup
++-------------
++
++.. versionadded:: 1.4.3
++    there is now a :ref:`wrapped-setup option <options>` that will achieve calling super functions for setUp and tearDown using a decorator that is applied at the end of the file.
++
++So with this option set to True (default is False)::
++
++    describe "Meh":
++        before_each:
++            class HelpfulClass(object):
++                def things(a):
++                    return a + 1
++
++            self.helper = HelpfulClass()
++
++        after_each:
++            for i in range(10):
++                doSomeTearDown(i)
++
++becomes::
++
++    class Test_Meh(object):
++        def setUp(self):
++            class HelpfulClass(object):
++                def things(a):
++                    return a + 1
++
++            self.helper = HelpfulClass()
++
++        def tearDown(self):
++            for i in range(10):
++                doSomeTearDown(i)
++
++    Test_Meh.setUp = noy_wrap_setUp(Test_Meh, Test_Meh.setUp)
++    Test_Meh.tearDown = noy_wrap_tearDown(Test_Meh, Test_Meh.tearDown)
++
++This adds some overhead to setUp and tearDown calls (which is why it defaults to off) but it does allow the first line after a before_each or after_each to contain the first line of an indented block (if, for, def, class, etc).
++
++.. note::
++    If you don't have :ref:`with-default-imports option <options>` set to True then you'll need to manually import ``from noseOfYeti.tokeniser.support import noy_wrap_setUp, noy_wrap_tearDown``.
++
++The wrapper will ensure a ``noy_sup_*`` helper is called before the setUp/tearDown
++
++Default imports
++---------------
++
++If you have :ref:`with-default-imports option <options>` set to True then the following will be imported at the top of the spec file::
++
++    import nose; from nose.tools import *; from noseOfYeti.tokeniser.support import *
++
++Line numbers
++------------
++
++With many thanks to work by ``jerico_dev`` (https://bitbucket.org/delfick/nose-of-yeti/changeset/ebf4e335bb1c), noseOfYeti will ensure that the line numbers line up between spec files and translated output. It does this by doing the following:
++
++ * Default imports are all placed on the same line where ``# coding: spec`` is in the original file. If you have pylint complaining about multiple statements on a single line, it is suggested you use the :ref:`no-default-imports option <options>` and import things manually.
++
++ * As mentioned :ref:`above <before_and_after_each>`, lines after a ``before_each`` or ``after_each`` will be placed on the same line as the inserted super call.
++
++ * Setting ``is_noy_spec`` on classes and ``__testname__`` on tests happen at the end of the file after all the other code.
++
++Central Configuration
++---------------------
++
++.. versionadded:: 1.4.6
++
++You can now have a configuration file that is read by all plugins, which is called ``noy.json`` by default.
++
++For example:
++
++.. code-block:: json
++
++    { "default-kls" : "unittest.TestCase"
++    }
++
++This way you can have all your nose-of-yeti options in one place that is read from by the plugins.
++
++.. note:: Any nose-of-yeti configuration you specify in the configuration specific to a plugin will override the json configuration file
++
++Basic support for shared tests
++------------------------------
++
++.. versionadded:: 1.4.9
++
++You can say in one describe that it should only run the tests specified on it on
++subclasses.
++
++So for example:
++
++.. code-block:: python
++
++    describe "ParentTest":
++        __only_run_tests_in_children__ = True
++
++        it "is a test":
++            assert self.variable_one
++
++        it "is a another test":
++            assert self.variable_two
++
++        describe "ChildTest":
++            variable_one = True
++            variable_two = True
++
++        describe "ChildTest2":
++            variable_one = True
++            variable_two = False
++
++Here we've specified the magic ``__only_run_tests_in_children__`` attribute on
++the parent describe which means the tests won't be run in the context of that
++class.
++
++However, those tests will be run in the context of ``ChildTest``
++and ``ChildTest2``.
++
++Normally, any tests on parents will be ignored when run in the context of the
++children.
++
+Index: nose-of-yeti-1.5.1/docs/index.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/index.rst
+@@ -0,0 +1,9 @@
++.. toctree::
++   :hidden:
++
++   examples
++   usage
++   features
++   dev/index
++
++.. include:: ../README.rst
+\ No newline at end of file
+Index: nose-of-yeti-1.5.1/docs/usage.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/docs/usage.rst
+@@ -0,0 +1,55 @@
++.. _usage:
++
++Usage
++=====
++
++All that's needed to setup nose-of-yeti is to register the spec codec before importing the specs. Python mechanics handle the rest. Included with nose-of-yeti is plugins for nosetests and pylint for doing just this.
++
++Nosetests
++=========
++
++After running setup.py (``easy_install .`` or ``pip install .`` or even ``pip install noseOfYeti``) you can run nosetests with ``--with-noy``, which will enable the spec codec.
++
++see :ref:`options` for other options available.
++
++Pylint
++======
++
++It is possible to use pylint with a noseOfYeti spec. All you have to do is add ``noseOfYeti.plugins.pylinter'`` to pylint's ``load-plugins`` option.
++
++This plugin will register the spec codec so that it can use it to determine what is in a spec file.
++
++The codec will also make an effort to return lines from the original file (with normalized indentation) so that you don't get too many errors about bad spacing. (codec doesn't have any control over spaces between things)
++
++see :ref:`options` for options that are available.
++
++Sphinx
++======
++
++You can add ``noseOfYeti.plugins.sphinx`` to sphinx' ``extensions`` option to register the spec encoding so that sphinx may successfully import your tests (i.e. for automatic documentation creation)
++
++see :ref:`options` for options that are available.
++
++.. _options:
++
++Options
++=======
++
++Nosetests and pylint offer the same settings as shown below
++
++Note that Nosetests require the settings to be prefixed by --noy; and sphinx prefixes options with noy\_ and replaces dashes with underscores.
++
++.. spec_options::
++    asdf
++
++PyDev - Debugger
++================
++
++If you're using PyDev debugger, you are able to set breakpoints in spec files if you can patch::
++
++    eclipse/plugins/org.python.pydev.debug_.../pysrc/pydevd_frame.py, in trace_dispatch():
++
++        < if func_name in ('None', curr_func_name):
++
++        > if func_name in ('None', '', curr_func_name):
++
+Index: nose-of-yeti-1.5.1/example/comparison.py
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/example/comparison.py
+@@ -0,0 +1,122 @@
++# coding: spec
++# This is a comparison of dsl syntax to what is generated
++
++########################
++###   BEFORE
++########################
++# coding: spec
++
++from noseOfYeti.tokeniser.support import noy_sup_setUp
++from unittest import TestCase
++import nose
++
++it 'can exist without a describe'
++
++it 'can have args', blah=1
++
++describe TestCase, 'numbers':
++    before_each:
++        self.number1 = 1
++        self.number2 = 2
++
++    it 'has number1 as 1':
++        self.assertEqual(self.number1, 1)
++
++    ignore 'some test that I want to be named so it isnt ran':
++        pass
++
++    it 'is skipped'
++
++    describe 'testing number 3':
++        before_each:
++            self.number3 = 3
++
++        it 'has number1 from the lower level describe':
++            self.assertEqual(self.number1, 1)
++
++        it 'also has number3':
++            self.assertEqual(self.number3, 3)
++
++        it "works when I have non alphanumeric characters in the test name, things like ' or %":
++            self.assertEqual(5, 5)
++
++        it "can have arguments", arg1=2, arg2=4:
++            self.assertEqual(arg2, 4)
++
++        it "maintains newlines to keep line numbers same in exceptions":
++
++
++            pass
++
++        describe "let's change a number":
++            before_each:
++
++                self.number1 = 4
++
++            it 'changed number1 but kept others the same':
++                self.assertEqual(self.number1, 4)
++                self.assertEqual(self.number2, 2)
++                self.assertEqual(self.number3, 3)
++
++########################
++###   AFTER
++### Note that I did clean it up very slightly
++########################
++
++from noseOfYeti.tokeniser.support import noy_sup_setUp
++from unittest import TestCase
++import nose
++
++def test_can_exist_without_a_describe(): raise nose.SkipTest
++
++def test_can_have_args(blah=1): raise nose.SkipTest
++
++class TestNumbers(TestCase):
++    def setUp(self):
++        noy_sup_setUp(super(TestNumbers, self)); self.number1 = 1
++        self.number2 = 2
++
++    def test_has_number1_as_1(self):
++        self.assertEqual(self.number1, 1)
++
++    def ignore__some_test_that_I_want_to_be_named_so_it_isnt_ran(self):
++        pass
++
++    def test_is_skipped(self): raise nose.SkipTest
++
++class TestNumbers_TestingNumber3(TestNumbers):
++    def setUp(self):
++        noy_sup_setUp(super(TestNumbers_TestingNumber3, self)); self.number3 = 3
++
++    def test_has_number1_from_the_lower_level_describe(self):
++        self.assertEqual(self.number1, 1)
++
++    def test_also_has_number3 (self ):
++        self.assertEqual(self.number3, 3)
++
++    def test_works_when_I_have_non_alphanumeric_characters_in_the_test_name_things_like_or(self):
++        self.assertEqual(5, 5)
++
++    def test_can_have_arguments(self, arg1 = 2, arg2 = 4):
++        self.assertEqual(arg2, 4)
++
++    def test_maintains_newlines_to_keep_line_numbers_same_in_exceptions(self):
++
++
++        pass
++
++class TestNumbers_TestingNumber3_LetsChangeANumber(TestNumbers_TestingNumber3):
++    def setUp(self):
++        noy_sup_setUp(super(TestNumbers_TestingNumber3_LetsChangeANumber, self))
++        self.number1 = 4
++
++    def test_changed_number1_but_kept_others_the_same(self):
++        self.assertEqual(self.number1, 4)
++        self.assertEqual(self.number2, 2)
++        self.assertEqual(self.number3, 3)
++
++TestNumbers.is_noy_spec= True
++TestNumbers_TestingNumber3.is_noy_spec= True
++TestNumbers_TestingNumber3_LetsChangeANumber.is_noy_spec = True
++TestNumbers_TestingNumber3.test_works_when_I_have_non_alphanumeric_characters_in_the_test_name_things_like_or.__func__.__testname__ = "works when I have non alphanumeric characters in the test name, things like ' or %"
++
+Index: nose-of-yeti-1.5.1/example/test.py
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/example/test.py
+@@ -0,0 +1,82 @@
++# coding: spec
++
++# The noy plugin for nosetests (enabled by the --with-noy option)
++# will register the "spec" codec, which means any file that has
++# "# coding: sepc" as the first line, like this file, will be parsed
++# by the spec codec before it is imported.
++
++# The codec will then turn what you have written into proper
++# , executable python code!
++
++# The test can then be specified using describes and its
++
++import nose
++
++it "is possible to add numbers":
++    self.assertEqual(1 + 1, 2)
++
++it "is possible to add the number three", three=3:
++    # Contrived example of default arguments
++    self.assertEqual(1 + three, 4)
++
++describe "Python Mathematics":
++    # That is replaced with "class test_Python_Mathematics(object):"
++
++    it 'is be able to add two numbers':
++        # that is replaced with "def test_is_able_to_add_two_numbers(self):"
++        self.assertEqual(2 + 3, 5)
++        self.assertEqual(2 + 0, 2)
++
++    it "can't divide by zero":
++        with self.assertRaises(ZeroDivisionError):
++            2 / 0
++
++    it 'does this other thing'
++    # Because it doesn't have colon at the end it will be a skipped test.
++    # Which means it adds a raise nose.SkipTest for you
++    #  "def test_does_this_other_thing(self): raise nose.SkipTest"
++    # Note that if you don't have the "with-default-imports" option set,
++    # then it is up to you to import nose
++
++# We can also define a class for the describes
++# Either when we create the tokeniser and register it
++# Or inside the spec file itself, per describe
++
++class DifferentBase(object):
++    def x(self):
++        return 5
++
++describe DifferentBase 'Inheritance':
++    it 'has an x equal to 5':
++        self.assertEqual(self.x(), 5)
++
++# You can even nest describes !
++# The following is a bad example, but it demonstrates well enough
++
++describe 'numbers':
++    before_each:
++        self.number1 = 1
++        self.number2 = 2
++
++    it 'has number1 as 1':
++        self.assertEqual(self.number1, 1)
++
++    describe 'testing number 3':
++        before_each:
++            self.number3 = 3
++
++        it 'has number1 from the lower level describe':
++            self.assertEqual(self.number1, 1)
++
++        it 'also has number3':
++            self.assertEqual(self.number3, 3)
++
++        describe "let's change a number":
++            before_each:
++                self.number1 = 4
++
++            it 'changed number1 but kept others':
++                self.assertEqual(self.number1, 4)
++                self.assertEqual(self.number2, 2)
++                self.assertEqual(self.number3, 3)
++
+Index: nose-of-yeti-1.5.1/noseOfYeti/specs/readme.rst
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/noseOfYeti/specs/readme.rst
+@@ -0,0 +1,17 @@
++Tests
++=====
++
++To run the tests, execute the ``test.sh`` script in the root directory.
++
++The majority of my tests are black box tests that ensure given a particular fragment of code, a particular output is achieved. To do this, I created a custom should_dsl matcher that will let me do this::
++
++    class Test_Tokenisor_translation(object):
++        def setUp(self):
++            self.toka = Tokeniser(with_describe_attrs=False)
++
++        def test_it_should_translate_a_describe(self):
++            (self.toka, 'describe "Something testable"') |should| result_in('class TestSomethingTestable (object ):pass')
++
++The matcher takes (tokeniser, original) on the left and expects a string on the right. It will use the tokeniser provided to translate the original string, followed by comparing that result to the string on the right.
++
++.. note:: NoseOfYeti doesn't have any say on space between tokens and so the output can have some weird spacing.
+Index: nose-of-yeti-1.5.1/readthedocs.pip
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/readthedocs.pip
+@@ -0,0 +1,4 @@
++nose
++fudge
++pinocchio
++should_dsl
+Index: nose-of-yeti-1.5.1/test.sh
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/test.sh
+@@ -0,0 +1,9 @@
++#!/usr/bin/env python
++from noseOfYeti.plugins.nosetests import Plugin as noyPlugin
++import nose
++import sys
++
++if __name__ == '__main__':
++    from noseOfYeti.specs.matchers import ResultIn
++    nose.main()
++
+Index: nose-of-yeti-1.5.1/tox.ini
+===================================================================
+--- /dev/null
++++ nose-of-yeti-1.5.1/tox.ini
+@@ -0,0 +1,8 @@
++[tox]
++envlist = py27,py33
++
++[testenv]
++commands = ./test.sh {posargs}
++deps =
++  -e.
++  noseOfYeti[tests]

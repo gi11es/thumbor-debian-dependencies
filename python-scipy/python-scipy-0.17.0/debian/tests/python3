@@ -1,0 +1,47 @@
+#!/bin/sh
+set -efu
+
+PYS=${PYS:-"$(py3versions -r 2>/dev/null)"}
+TESTMODE=${TESTMODE:-full}
+TESTPKG=${TESTPKG:-scipy}
+export HOME=$ADTTMP
+export TMPDIR=$ADTTMP
+
+cd "$ADTTMP"
+#nosetest does not handle knowfailures
+cat << EOF > runtest.py
+import $TESTPKG
+import re
+# add failures to skip here
+skip = [
+# ppc failure
+"test_qhull.TestUtilities.test_degenerate_barycentric_transforms",
+# i386 small rounding issue
+"test_qhull.TestUtilities.test_more_barycentric_transforms",
+# atlas 3.10 issue, scipy github #2842
+"test_decomp.TestQZ.test_qz_complex64",
+]
+r = $TESTPKG.test(label='$TESTMODE', verbose=2);
+errors = []
+for e in (r.errors + r.failures):
+    eid = e[0].id()
+    test = [re.search(s, eid) is not None for s in skip]
+    if not any(test):
+        print("failed:", eid)
+        errors.append(e)
+    else:
+        print("skipped:", eid)
+        if True in test:
+            del skip[test.index(True)]
+print("#errors: %d" % len(errors))
+for s in skip:
+    print("unused skips:", s)
+assert len(errors) == 0
+EOF
+
+
+for py in $PYS; do
+    echo "=== Testing: $py $TESTPKG ==="
+    $py runtest.py 2>&1
+    echo "=== Done: $py $TESTPKG ==="
+done

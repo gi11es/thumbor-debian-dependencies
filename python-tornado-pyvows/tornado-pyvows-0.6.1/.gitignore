@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+build
+dist
+pyVows.egg-info
+tornado_pyvows.egg-info/

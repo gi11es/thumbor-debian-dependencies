@@ -1,0 +1,27 @@
+From f96b2753dddf2096924c8e95f766c281ceb98a60 Mon Sep 17 00:00:00 2001
+From: Julian Taylor <jtaylor.debian@googlemail.com>
+Date: Mon, 12 Oct 2015 15:17:23 -0700
+Subject: enable large file support
+
+ probably not needed as the file open api of qhull is not available in python
+Forwarded: no
+
+Patch-Name: qhull-lfs.patch
+---
+ scipy/spatial/setup.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/scipy/spatial/setup.py b/scipy/spatial/setup.py
+index 43b635d..bebf9b2 100755
+--- a/scipy/spatial/setup.py
++++ b/scipy/spatial/setup.py
+@@ -30,6 +30,9 @@ def configuration(parent_package='', top_path=None):
+     cfg = dict(get_sys_info('lapack_opt'))
+     cfg.setdefault('include_dirs', []).extend(inc_dirs)
+     cfg.setdefault('define_macros', []).append(('qh_QHpointer','1'))
++    cfg.setdefault('define_macros', []).append(('_FILE_OFFSET_BITS','64'))
++    cfg.setdefault('define_macros', []).append(('_LARGEFILE_SOURCE','1'))
++    cfg.setdefault('define_macros', []).append(('_LARGEFILE64_SOURCE','1'))
+     config.add_extension('qhull',
+                          sources=['qhull.c'] + qhull_src,
+                          **cfg)

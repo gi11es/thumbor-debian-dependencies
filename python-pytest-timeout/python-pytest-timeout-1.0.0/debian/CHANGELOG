@@ -1,0 +1,467 @@
+commit d3b2fd55281e5707085442e8dcbda9864e58dc29
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Aug 6 00:11:21 2014 +0100
+
+    Update copyright year
+
+commit 54187a5e10623bf2e5b2d1393579047b4d0ae585
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Aug 5 23:41:26 2014 +0100
+
+    Add setup.cfg to mark wheels as being universal
+
+commit b36752170253e927597b68c0d05954577bb41673
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Aug 5 23:30:50 2014 +0100
+
+    Set version and classify as stable
+
+commit d166adbf9b33f6b17f89154734b8b08dfdd4a6ad
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Aug 5 23:27:09 2014 +0100
+
+    Tweak the readme
+
+commit d1f2fad93db73230ca6b341176214d5f6280174b
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Aug 5 23:10:46 2014 +0100
+
+    Fix timeouts during pdb interaction
+    
+    So far it seems rather tricky to write meaningful tests for this,
+    so sadly there are none.
+
+commit eb57fce57a1a25e31c2ad3374c272a0019930ae3
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Jul 28 21:29:36 2014 +0200
+
+    Support timeouts in fixture teardown on all scopes
+    
+    This uses the pytest_runtest_protocol hook to capture timeouts in all
+    the fixture teardown instead of relying on the order in which py.test
+    calls the pytest_runtest_setup and pytest_runtest_teardown hooks in
+    relation with the fixtures and nose/unittest hooks.
+
+commit dcdc60205cc44d771bbe7869186c3e421a7b5605
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Jul 28 21:27:55 2014 +0200
+
+    Test on pypy set dev version number
+
+commit 67aa2388438a5c0afd3d76280dfdfae2939b30d3
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Jul 26 15:44:00 2014 +0200
+
+    Chane underscore to dash for consistency
+    
+    py.test seems to be using dashes in it's command line options now, so
+    let's be consistent with the command line instead of the config file.
+
+commit f64095eee064133d9cb43345021bcc379df75cde
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Jul 26 14:29:43 2014 +0200
+
+    Merge pytest.ini and tox.ini
+
+commit 8fc8c666c5200d3cd26e3f1a5f3e835b5b9f06ad
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Jul 26 14:25:51 2014 +0200
+
+    Modernise and style nitpicking
+
+commit 5a27bdd341d4948b7b5c7aee28ae7a3cd5d0f3bf
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Jul 6 18:41:56 2013 +0200
+
+    Update short description
+
+commit 8caf867257d915755e3e9035bb7b1e923de40035
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Jul 6 18:39:35 2013 +0200
+
+    Ignore .ropeproject directory
+
+commit 835b1556df5989769981bdadf097a4c2165f00fe
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Sep 19 00:44:30 2012 +0100
+
+    Style and small corrections
+
+commit 25b5d00f0fdf9c5a2244cfb54556f00820ddfefa
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Sep 19 00:35:37 2012 +0100
+
+    Added tag 0.3 for changeset e54c7a8a55c3
+
+commit 089e619597fc52843cbbebbd8b96318e969d1718
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Sep 19 00:30:20 2012 +0100
+
+    Update setup.py for release
+
+commit 7d1bf6eba46dc56485449dda2c6b92a863a78112
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Sep 19 00:29:48 2012 +0100
+
+    Update the README and TODO file for upcoming release
+
+commit d025ed4c3d1736961e291d2bdc72828176be64e2
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Sep 18 19:51:17 2012 +0100
+
+    No longer need this to enable the plugin
+
+commit c6cb6084ccb28d441a0c2b9863bb754a89c1c52e
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Sep 18 00:34:58 2012 +0100
+
+    Update failure demo descriptions
+
+commit 9da2e9dcc84da6467f22b1351c5590c73ef32b6a
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Sep 18 00:30:39 2012 +0100
+
+    Test using python 3.1 as well
+
+commit bec405bf40bfcfdcc55e7e480efd1f218e8b0e12
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Sep 18 00:29:51 2012 +0100
+
+    Python 3.x compatibility
+    
+    In 3.x you can no longer compare None and integers.
+
+commit f7479e0b4ef085e1fc0d260614f64b84e1b93ce4
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Jun 23 16:46:49 2012 +0100
+
+    Remove old commented out code
+
+commit f8d2da763febf24e634d53969b01af462f0e7b6e
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Thu Jun 21 00:00:05 2012 +0100
+
+    Major refactor, only have one plugin
+    
+    Since the plugin is now always active whenever installed and activation
+    of the timeout happens on a per-item basis there is no longer a need
+    for the funny two-plugin structure.  Thus just make everything simple
+    functions in the module.
+
+commit 9db29c394037f0168045a10ee6dde6774d63dec1
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Jun 19 23:53:06 2012 +0100
+
+    Remove changelog again, we keep this in README
+    
+    I seemed to have forgotten that, oops.
+
+commit 76eb2d7c5fe3ab54d643f85898f37cd47362fcdf
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Tue Jun 19 23:50:28 2012 +0100
+
+    Get timeout value from PYTEST_TIMEOUT environment variable
+    
+    It is now possible to specify the timeout using a PYTEST_TIMEOUT
+    environment variable.
+    
+    Also add CHANGELOG file and correst some typos
+
+commit 0d9e559c168a42534ca84dc5d9be9e36e7e79385
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Apr 16 22:52:02 2012 +0100
+
+    Make the "method" argument to to timeout marker not keyword-only
+    
+    So you can now use the marker as @pytest.mark.timeout(1, 'thread') too
+    as well as @pytest.mark.timeout(1, method='thread').  Even
+    @pytest.mark.timeout(timeout=1, method='thread') is allowed now.
+
+commit 292c8d14a3550204a1a3ae7739be6f51b7d8e347
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Apr 16 22:50:05 2012 +0100
+
+    Set version number to dev version
+
+commit 56b5b512ff6f13fdc4349c7fa3015d44a51f5e42
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Mar 19 11:29:42 2012 +0100
+
+    Update TODO
+
+commit 374f63bd26a7c45c1d7d64486abc648ff5d1d7a8
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Mar 19 11:28:06 2012 +0100
+
+    Register the marker and activate plugin by default
+
+commit 75fd9c1db602e82a9b9ae196aced59e8f692e6eb
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Mar 17 17:46:07 2012 +0100
+
+    Added tag 0.2 for changeset 67ad1855fe86
+
+commit 3537ad296e33a5482536b8b8cddb3901355f54f9
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Mar 17 17:44:39 2012 +0100
+
+    Added tag 0.1 for changeset 36f2c379bdb3
+
+commit d06b7ccae0a71684e1489d48aa1bc0e9d03513af
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Mar 21 22:20:38 2012 +0000
+
+    Include MANIFEST.in in the sdist
+
+commit b426a73df1d8a26e2050f4221abdc81008dc3d10
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Mar 17 17:42:53 2012 +0100
+
+    Fix for python3, add 3.2 to tox config
+
+commit 275375cc41bb891ab5540c9269b055dca192df55
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Mar 17 00:19:52 2012 +0100
+
+    Add tox configuration
+    
+    Also tweak the tests to run in all setuptools' weird forms.
+
+commit 0a7b1d6ea9dc6a3ac23571aeefb52ce261d95557
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Thu Mar 15 20:56:13 2012 +0100
+
+    Ship the tests and failure demo
+
+commit b1e7745499f24ad56e2901ddbe3a0c091a780d95
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Mar 14 22:19:41 2012 +0100
+
+    Update the failure demo
+    
+    No longer need to invoke it specially since we can use the configuration
+    file now.  Also show a thread.
+
+commit 0dd7c2878ec0a2878c363e1ffc0dd517c58bac75
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Mar 14 22:05:20 2012 +0100
+
+    Fix setuptools deployment by using a different plugin name
+
+commit 5162149f7195cf0b2b74753efe8700facbc27388
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Wed Mar 14 14:26:44 2012 +0100
+
+    Add configuration file options
+    
+    Add the timeout and timeout_method configuration file options.  This
+    renames the --nosigalrm option to --timeout_method.  This also adds
+    the method keyword to the timeout marker.
+
+commit fbb7528ef4bfabbaf3f46865443b618d09ebd375
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Mar 12 21:29:48 2012 +0000
+
+    Attribution
+
+commit 12f96aba8a40e80c2fa006ce40123a14705767a5
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Mar 12 21:27:01 2012 +0000
+
+    Add tests to check incorrect usage of timeout marker
+
+commit 698424422208fc1e3726f155cb3d1ca5645efa6b
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Mar 9 23:39:55 2012 +0000
+
+    Add marker to modify the timeout
+
+commit 604d4af92d009b3a3b9418af16834cf0cf7ea2e4
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Mar 9 21:45:22 2012 +0000
+
+    Rename old class name, this no longer uses faulthandler
+
+commit f6dea102ac1f25eae0125d1b9cbd4487685d02bf
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Thu Mar 8 23:21:26 2012 +0000
+
+    Add newline at EOF
+
+commit c2da660f87d05bdefa39e93b45d510af5c832db1
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Feb 24 01:37:21 2012 +0000
+
+    Add a license and trove classifiers
+
+commit b4b0ff35a4d5031d3b6dfdf0155709e1b091d6cd
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Feb 24 01:20:20 2012 +0000
+
+    Ingore setuptools stuff
+
+commit de3bae5ae4e1518816d3f08f39dc46ac63e6292c
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Feb 24 01:18:23 2012 +0000
+
+    Ignore some distutils dirs
+
+commit a554acd8ed8a6c263546a8f8f196dccfafe4e71a
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Feb 24 01:18:03 2012 +0000
+
+    Rename to make distutils happy
+
+commit db19b5793f27e25bd6f8cd3c3a72b76f7ca94501
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Feb 24 01:06:15 2012 +0000
+
+    Add README and setup.py
+
+commit 4f373efe2ead6e789443b978fdc626d8ad092b50
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Feb 24 01:05:28 2012 +0000
+
+    Improve the reporting
+    
+    This now adapts to the terminal width and avoids a bug of the
+    timeout message interferring with the capturemanager.  It also
+    adds support for the pytest-capturelog plugin by not hiding
+    this information in case of an exit.
+
+commit 673df6ccb4a7d714a1b0557fb0092c7bb9a6b0c6
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Jan 23 17:50:44 2012 +0000
+
+    Fixup canceling
+    
+    The canceling code did not respect the --nosigalrm option which
+    resulted in general mayhem.  This is now slightly refactored and does
+    it correctly.
+
+commit 67bcc258d913e5e3f462716927414eb55f65abba
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 20 14:59:16 2012 +0000
+
+    Check the last line is actually the last
+
+commit e06552ef601846a026fb83f86a24081148f395f3
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Thu Jan 12 09:49:03 2012 +0000
+
+    Fix test and wait for the thread
+    
+    When not waiting for the thread to finish Solaris seems to end up with
+    many many threads before long.  The slow down seems not too noticable.
+
+commit 040e3f4f33950dbde1d6c9bc6cfee32d2983b6dc
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 16:47:04 2012 +0000
+
+    Get rid of old name
+
+commit 5f6c2acb17282b089547a5b7a3eaacc8af686066
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 16:40:38 2012 +0000
+
+    First attempt at testing the threaded code
+    
+    Doesn't work yet.
+
+commit bc6e5bb8e0b19450a6a610e153ae708558ac95d5
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 16:39:57 2012 +0000
+
+    Add option to not use SIGALRM and better thread dumping
+    
+    The --nosigalrm option helps testing could be useful for real too if
+    the code under test already uses SIGALRM.
+    
+    Also show the thread names, which can be eaier to read.  And no longer
+    dump the thread which is doing the thread dumping, it's not very
+    interesting.
+
+commit 097d686af9c254969b7cbb5fc0171a72df594e4a
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 15:23:08 2012 +0000
+
+    Fix for pytest.fail usage
+
+commit a9e42f1226015f7f22b2204cf41a4334911e102f
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 15:22:56 2012 +0000
+
+    Add a failure demo file
+
+commit 47ac793a95b71c2869cfd3ab0145440651e53e7c
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 15:22:42 2012 +0000
+
+    Hide helper functions and load timeout dynamic
+    
+    * Load the timeout dynamic instead of at the time the plugin gets
+      created.  This means someone can modify the configuration in a
+      conftest.py or similar.
+    
+    * Use pytest.fail instead of raising an exception and also hide our
+      methods from the exceptions.
+
+commit 6df8e14e2c1e7b0a2a448c7c2d8e4b6f0128bf1e
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 00:06:34 2012 +0000
+
+    Make the test actually work
+
+commit 0ab17106f465f91b0f9aaa750bc7016c76a7e7d9
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 00:06:07 2012 +0000
+
+    Add pytest.ini to show skip reasons by default
+
+commit bb2605e5ee37df83eeb557b4bfb1808a9eb8b73e
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Fri Jan 6 00:05:19 2012 +0000
+
+    Better section header
+
+commit 401cdd88cd266cd8425200b3dd505d277f26d2ed
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Thu Jan 5 00:31:52 2012 +0000
+
+    Rename module and improve behaviour
+    
+    * Be a bit better in using SIGALRM or Timer, improve code re-use.
+    
+    * Completely broken tests for now.
+    
+    * Add TODO file to help my poor memory.
+
+commit 8b3c59ba846a11f3e640d1d20d524c706fca3403
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Dec 26 13:43:48 2011 +0000
+
+    Raise a traceback after the timeout if no exit is requested
+    
+    This stops timed out tests when no exit is requested by raising an
+    exception in the current thread.  Currently it doesn't work yet if
+    SIGALRM is not available (Windows).
+
+commit d60b2b2601e2b416699738ebfdd420ddb825535c
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Mon Dec 26 14:21:00 2011 +0100
+
+    No longer require the faulthandler module
+    
+    We now use SIGALRM instead of threads, like faulthandler does, and no
+    longer use the faulthandler module itself since we use
+    sys._current_frames() instead to provide full tracebacks of all
+    threads.
+
+commit 1e0e9f332461b123bd450852d8d903e4d72c91ec
+Author: Floris Bruynooghe <flub@devork.be>
+Date:   Sat Dec 24 23:27:04 2011 +0100
+
+    Initial code
+    
+    This is the very first version quickly thrown together whithout having
+    given it much tought.

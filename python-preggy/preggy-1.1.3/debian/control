@@ -1,0 +1,43 @@
+Source: preggy
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-coverage,
+               python-nose,
+               python-setuptools,
+               python-six,
+               python-tox,
+               python-unidecode,
+               python3-all,
+               python3-coverage,
+               python3-nose,
+               python3-setuptools,
+               python3-six,
+               python3-unidecode 
+Standards-Version: 3.9.8
+Homepage: http://heynemann.github.io/preggy
+Vcs-Browser: http://anonscm.debian.org/cgit/users/metal/preggy.git
+Vcs-Git: git://anonscm.debian.org/users/metal/preggy.git
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+
+Package: python-preggy
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-six, python-unidecode
+Description: Assertion library for Python
+ Collection of expectations for python applications, extracted from
+ the pyVows project.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-preggy
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-six, python3-unidecode
+Description: Assertion library for Python
+ Collection of expectations for python applications, extracted from
+ the pyVows project.
+ .
+ This package installs the library for Python 3.

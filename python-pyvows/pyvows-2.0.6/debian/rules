@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python2 --buildsystem=python_distutils
+
+override_dh_auto_test:
+	$(MAKE) test
+
+override_dh_auto_clean:
+	rm -f debian/pyvows.1
+	dh_auto_clean
+
+override_dh_installman:
+	help2man -N --no-discard-stderr -n "BDD test engine based on Vows.js" pyvows/cli.py > debian/pyvows.1
+	dh_installman

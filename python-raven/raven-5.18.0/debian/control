@@ -1,0 +1,94 @@
+Source: raven
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-anyjson,
+               python-blinker,
+               python-bottle,
+               python-celery (>= 2.5),
+               python-contextlib2,
+               python-django (>= 1.4),
+               python-django-celery (>= 2.5),
+               python-exam (>= 0.5.2),
+               python-flake8 (>= 2.0),
+               python-flask,
+               python-flask-login (>= 0.3.2),
+               python-logbook,
+               python-mock,
+               python-nose,
+               python-paste,
+               python-pep8,
+               python-pytest,
+               python-pytest-django,
+               python-pytest-timeout,
+               python-requests,
+               python-six,
+               python-setuptools,
+               python-tornado (>= 4.1),
+               python-tz,
+               python-unittest2,
+               python-webob,
+               python-webpy,
+               python-webtest,
+               python3-all,
+               python3-anyjson,
+               python3-blinker,
+               python3-bottle,
+               python3-celery (>= 2.5),
+               python3-contextlib2,
+               python3-django (>= 1.4),
+               python3-django-celery (>= 2.5),
+               python3-exam (>= 0.5.2),
+               python3-flake8 (>= 2.0),
+               python3-flask,
+               python3-flask-login (>= 0.3.2),
+               python3-logbook,
+               python3-mock,
+               python3-nose,
+               python3-pep8,
+               python3-pytest,
+               python3-pytest-django,
+               python3-pytest-timeout,
+               python3-requests,
+               python3-six,
+               python3-setuptools,
+               python3-tornado (>= 4.1),
+               python3-tz,
+               python3-webob,
+               python3-webtest
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+Homepage: https://github.com/getsentry/raven-python
+Vcs-Git: git://github.com/getsentry/raven-python.git
+Vcs-Browser: https://github.com/getsentry/raven-python
+
+Package: raven
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-raven
+Description: Raven is a Python client for Sentry
+ It provides full out-of-the-box support for many of the popular frameworks, including Django, and Flask.
+ Raven also includes drop-in support for any WSGI-compatible web application.
+ .
+ This is the raven binary.
+
+Package: python-raven
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-contextlib2
+Description: Raven is a Python client for Sentry
+ It provides full out-of-the-box support for many of the popular frameworks, including Django, and Flask.
+ Raven also includes drop-in support for any WSGI-compatible web application.
+ .
+ This is the Python 2 library version.
+
+Package: python3-raven
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-contextlib2
+Description: Raven is a Python client for Sentry
+ It provides full out-of-the-box support for many of the popular frameworks, including Django, and Flask.
+ Raven also includes drop-in support for any WSGI-compatible web application.
+ .
+ This is the Python 3 library version.

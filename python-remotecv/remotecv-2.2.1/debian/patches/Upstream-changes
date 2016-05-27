@@ -1,0 +1,41 @@
+Description: Upstream changes
+ This includes an upstream fix of the "coverage" path to
+ make it work on debian.
+ .
+ remotecv (2.2.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Author: Gilles Dubuc <gilles@wikimedia.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- remotecv-2.2.1.orig/Makefile
++++ remotecv-2.2.1/Makefile
+@@ -1,11 +1,13 @@
++COVERAGE = $(or $(shell which coverage), $(shell which python-coverage), coverage)
++
+ setup:
+ 	@pip install -Ue.\[tests\]
+ 
+ test:
+-	@coverage run --branch `which nosetests` -v --with-yanc -s tests/
++	@$(COVERAGE) run --branch `which nosetests` -v --with-yanc -s tests/
+ 
+ coverage:
+-	@coverage report -m --fail-under=30
++	@$(COVERAGE) report -m --fail-under=30
+ 
+ focus:
+-	@coverage run --branch `which nosetests` -vv --with-yanc --logging-level=WARNING --with-focus -i -s tests/
++	@$(COVERAGE) run --branch `which nosetests` -vv --with-yanc --logging-level=WARNING --with-focus -i -s tests/

@@ -1,0 +1,21 @@
+flask-login (0.3.2-1) UNRELEASED; urgency=medium
+
+  * New upstream release
+  * debian/watch
+   - switched to pypi.debian.net
+  * debian/control
+   - reordered Build-Depends alphabetically
+   - removed minimum versions on python-all and python-setuptools
+   - build depend on python-flask and debhelper (>= 9)
+   - bumped standards version to 3.9.8
+   - added python3 package
+  * debian/rules
+   - switched to pybuild
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Thu, 26 May 2016 09:59:48 +0000
+
+flask-login (0.2.6-1) unstable; urgency=low
+
+  * Initial release. Closes: 718554
+
+ -- Tonnerre LOMBARD <tonnerre@ancient-solutions.com>  Thu, 01 Aug 2013 01:40:50 +0200

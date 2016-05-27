@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+#export PYBUILD_TEST_TOX=1
+
+%:
+	dh $@ --buildsystem=pybuild --with python3,python2
+
+override_dh_installchangelogs:
+	if [ -e $(CURDIR)/debian/CHANGELOG ] ; then \
+		dh_installchangelogs $(CURDIR)/debian/CHANGELOG ; \
+	else \
+		dh_installchangelogs ; \
+	fi
+
+override_dh_install:
+	dh_install -O--buildsystem=pybuild
+
+override_dh_installdocs:
+	dh_installdocs -A README TODO
+
+override_dh_auto_test:
+	dh_auto_install
+	PYTHONPATH=$(CURDIR) py.test-3
+	PYTHONPATH=$(CURDIR) py.test

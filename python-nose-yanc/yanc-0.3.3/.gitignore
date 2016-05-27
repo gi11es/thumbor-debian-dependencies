@@ -1,0 +1,6 @@
+*.pyc
+/*.egg*
+/.build/
+/.makeenv*
+/.venv/
+/.coverage.*

@@ -1,0 +1,25 @@
+From 4b09aa3b24da89a94c67b4d89d8023489a8634b1 Mon Sep 17 00:00:00 2001
+From: SVN-Git Migration <python-modules-team@lists.alioth.debian.org>
+Date: Mon, 12 Oct 2015 15:17:20 -0700
+Subject: use_local_mathjax
+
+Setting mathjax_path variable to use the local mathjax javascript library
+Patch-Name: use_local_mathjax.patch
+---
+ doc/source/conf.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/doc/source/conf.py b/doc/source/conf.py
+index 854f056..567c658 100644
+--- a/doc/source/conf.py
++++ b/doc/source/conf.py
+@@ -141,7 +141,8 @@ html_file_suffix = '.html'
+ 
+ htmlhelp_basename = 'scipy'
+ 
+-mathjax_path = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
++#mathjax_path='/usr/share/javascript/mathjax/MathJax.js'
++mathjax_path='MathJax.js'
+ 
+ 
+ # -----------------------------------------------------------------------------

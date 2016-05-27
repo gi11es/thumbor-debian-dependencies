@@ -1,0 +1,19 @@
+Source: pexif
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3),
+ python-all (>= 2.6.6-3),
+ debhelper (>= 7.4.3),
+ dh-python
+Standards-Version: 3.9.6
+Homepage: https://pypi.python.org/pypi/pexif
+Vcs-Browser: http://anonscm.debian.org/cgit/users/metal/pexif.git
+Vcs-Git: git://anonscm.debian.org/users/metal/pexif.git
+X-Python-Version: >= 2.6
+
+Package: python-pexif
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python EXIF parsing
+ This module allows you to parse and edit the EXIF data tags in a JPEG image

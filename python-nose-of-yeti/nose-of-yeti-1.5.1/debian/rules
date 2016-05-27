@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=nose-of-yeti
+export PYBUILD_TEST_NOSE=1
+export PYBUILD_TEST_ARGS=--with-doctest
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf noseOfYeti.egg-info
+	dh_clean

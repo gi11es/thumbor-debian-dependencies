@@ -1,0 +1,186 @@
+[![Build
+Status](https://secure.travis-ci.org/rosner/tornado_pyvows.png?branch=master)](http://travis-ci.org/rosner/tornado_pyvows)
+
+Tornado_pyVows
+==============
+
+This project contains extensions to test Tornado apps under pyVows.
+
+TornadoHTTPContext
+------------------
+
+To test a tornado app (or handlers) use this context instead of the regular
+Vows.Context, like this:
+
+```python
+import tornado
+from tornado_pyvows import TornadoHTTPContext
+from pyvows import Vows, expect
+
+class HomeHandler(tornado.web.RequestHandler):
+    
+    def get(self):
+        self.write("hello_world")
+
+    def post(self):
+        self.write("hello_world")
+
+
+@Vows.batch
+class SomeVows(TornadoHTTPContext):
+
+    def get_app(self):
+        application = tornado.web.Application([
+            (r"/", HomeHandler),
+        ])
+        return application
+
+    class HomeUrl(TornadoHTTPContext):
+        def topic(self):
+            self.http_client.fetch(self.get_url('/'), self.stop)
+            response = self.wait()
+            return response.body
+
+        def should_be_hello_world(self, topic):
+            expect(topic).to_equal("hello_world")
+
+    class SameUrl(HomeUrl):
+        def topic(self):
+            """
+            For convenience you can also use ``get`` and ``post`` to wrap the 
+            calls to the ``http_client``.
+            """
+            response = self.get("/")
+            return response.body
+
+    class SimplePost(HomeUrl):
+        def topic(self):
+            response = self.post("/")
+            return response.body
+```
+
+Each `TornadoHTTPContext` provides Tornado's testing methods like
+`http_client`, `get_url`, `stop`, `wait`, `fetch` and others. 
+
+If you're developing based on Tornados HTTPClient you can just do that with simple 
+wrappers as seen in 
+[client_vows.py](https://github.com/rafaelcaricio/tornado_pyvows/blob/master/vows/client_vows.py)
+
+
+IsolatedTornadoHTTPContext
+--------------------------
+
+The new `IsolatedTornadoHTTPContext` creates a new `HTTPServer` that runs the
+application. This helps when testing handlers using mocks, e.g.::
+
+```python
+@Vows.batch
+class ASimpleTestWithAMock(TornadoHTTPContext):
+
+    def get_handler_spec(self):
+        """..."""
+        return (r'^/echo$', ExampleHandler)
+
+    def get_application_settings(self):
+        return {'debug': True}
+
+    class AndASimpleTestCase(IsolatedTornadoHTTPContext):
+
+        def topic(self):
+            mock = AsyncMock()
+            mock.return_value = 'mocked echo'
+            self.get_test_handler().echo = mock
+
+            yield (mock, self.fetch('/echo'))
+
+        def shouldWorkAsUsual(self, topic):
+            expect(topic).Not.to_be_an_error()
+
+        def shouldReturnTheExpectedTopic(self, topic):
+            (_, resp) = topic
+            expect(resp.body).to_equal('mocked echo')
+
+        class ThatBlahsBlahs(TornadoHTTPContext):
+
+            def topic(self, topic):
+                yield (topic, self.fetch('/echo'))
+
+            def shouldReturnTheExpectedTopic(self, topic):
+                (_, resp) = topic
+                expect(resp.body).to_equal('mocked echo')
+
+    class ThatHasNoSideEffects(IsolatedTornadoHTTPContext):
+
+        def topic(self):
+            yield self.fetch('/echo')
+
+        def shouldWorkAsUsual(self, topic):
+            expect(topic).Not.to_be_an_error()
+
+        def shouldReturnTheExpectedTopic(self, resp):
+            expect(resp.body).to_equal('echo')
+```
+
+
+TornadoContext
+--------------
+
+If you want to test a tornado based app without the HTTP overhead you may also
+use the `TornadoContext`:
+
+```python
+def asyncMethod(callback):
+    callback("Pseudo Async Result")
+
+@Vows.batch
+class AsyncVows(TornadoContext):
+
+    class CallbacksShouldWork(TornadoContext):
+
+        def topic(self):
+            self.io_loop = self.get_new_ioloop()
+            self.io_loop.add_callback(lambda: asyncMethod(self.stop))
+            return self.wait()
+
+        def and_have_the_correct_result(self, topic):
+            expect(topic).to_equal("Pseudo Async Result")
+```
+
+The above example creates a new IOLoop for every test, which is nice. Some libraries add
+callbacks to the `IOLoop.instance()` singleton, such as `tornado.httpclient.AsyncHTTPClient`.
+These libraries can be tested by overloading the `get_new_ioloop` method to return the
+`IOLoop.instance()` singleton.
+
+
+```python
+@Vows.batch
+class AsyncVows(TornadoContext):
+
+    class PyVowsSiteVows(TornadoContext):
+
+        def get_new_ioloop(self):
+            return IOLoop.instance()
+
+        def topic(self):
+            self.io_loop = self.get_new_ioloop()
+            http_client = AsyncHTTPClient()
+            http_client.fetch("http://heynemann.github.com/pyvows/",
+                              self.stop)
+            return self.wait()
+
+        def to_be_about_asynchronous_testing(self, topic):
+            expect(topic.body).to_include('Asynchronous BDD for Python')
+```
+
+Contributors
+============
+
+Contributions are very welcome. To contribute fork it and create a pull request.
+
+The team behind Tornado_pyVows (in order of joining the project):
+
+ - Rafael Carício [@rafaelcaricio](https://github.com/rafaelcaricio)
+ - Bernardo Heynemann [@heynemann](https://github.com/heynemann)
+ - Daniel Truemper [@truemped](https://github.com/truemped)
+ - Norman Rosner [@rosner](https://github.com/rosner)
+

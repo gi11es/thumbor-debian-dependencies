@@ -1,0 +1,34 @@
+Description: Upstream pull request 35
+ Fixes running tests via setup.py.
+ .
+ should-dsl (2.1.2-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Author: Gilles Dubuc <gilles@wikimedia.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- should-dsl-2.1.2.orig/run_all_examples.py
++++ should-dsl-2.1.2/run_all_examples.py
+@@ -10,6 +10,9 @@ def all_examples():
+         filter(lambda f: f.endswith('.txt'), os.listdir(doctests_path))))
+     return documentation + doctests
+ 
+-if __name__ == '__main__':
++def test_suite():
+     run(all_examples())
+ 
++if __name__ == '__main__':
++    test_suite()
++

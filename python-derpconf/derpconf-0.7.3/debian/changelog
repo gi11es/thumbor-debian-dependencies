@@ -1,0 +1,63 @@
+derpconf (0.7.3-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Thu, 05 May 2016 07:09:45 +0000
+
+derpconf (0.7.3-1) unstable; urgency=low
+
+   * New upstream release (Closes: #774656)
+   * Updated Standards-Version to 3.9.6 (no changes)
+   * Added watch file
+   * Rules:
+     + build with buildsystem=python_distutils
+     + Added override_dh_auto_test target
+     + Added get-orig-source target
+     + Added override_dh_clean target
+   * Control:
+     + Fixed build-depends
+     + Added me as Maintainer
+     + Updating long description
+   * Updating debian copyright
+
+ -- Marcelo Jorge Vieira <metal@debian.org>  Mon, 06 Apr 2015 23:37:14 -0300
+
+derpconf (0.4.9-2) UNRELEASED; urgency=low
+
+  * Added docs file
+
+ -- Marcelo Jorge Vieira (metal) <metal@debian.org>  Wed, 20 Nov 2013 21:18:47 -0200
+
+derpconf (0.4.9-1) UNRELEASED; urgency=low
+
+  * New release 0.4.9;
+  * Fixed python-six dependency;
+  * Fixed python support;
+  * Minimizing rules file;
+  * Improving package description;
+  * Refactoring Maintainer field; Now globo.com is the Maintainer
+    and I and Wichert as uploaders;
+  * Switch to dpkg-source 3.0 (quilt) format;
+  * Convert copyright file to machine readable specification;
+  * Fixed debhelper compatibility level;
+  * Updated Standards-Version to 3.9.4 (no changes).
+
+ -- Marcelo Jorge Vieira (metal) <metal@debian.org>  Wed, 20 Nov 2013 19:23:15 -0200
+
+derpconf (0.3.3ubuntu1) UNRELEASED; urgency=low
+
+  * Fixes on rules file - missing python libs after install package
+
+ -- Paulo Sousa <paulo.sousa@corp.globo.com>  Wed, 16 Jan 2013 18:24:36 -0200
+
+derpconf (0.3.3) UNRELEASED; urgency=low
+
+  * New release 0.3.3
+
+ -- Paulo Sousa <paulo.sousa@corp.globo.com>  Wed, 16 Jan 2013 14:29:45 -0200
+
+derpconf (0.3.0-1) UNRELEASED; urgency=low
+
+  * First packaging
+
+ -- Wichert Akkerman <wichert@wiggy.net>  Tue, 25 Sep 2012 10:04:40 +0200

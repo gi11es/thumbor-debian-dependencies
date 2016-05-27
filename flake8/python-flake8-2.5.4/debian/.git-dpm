@@ -1,0 +1,11 @@
+# see git-dpm(1) from git-dpm package
+92b64a0f0c7ef81e48dad173534273c0c1eaafce
+92b64a0f0c7ef81e48dad173534273c0c1eaafce
+5a9c8328c6584d2a2b1b0f34b1150711b716189e
+5a9c8328c6584d2a2b1b0f34b1150711b716189e
+python-flake8_2.5.4.orig.tar.gz
+778b32ee00738628f28b061a93427fe9e23eb7f0
+81663
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"

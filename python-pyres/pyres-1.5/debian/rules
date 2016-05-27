@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=pyres
+export PYBUILD_TEST_PYTEST=1
+export PYBUILD_BEFORE_TEST=cp -R {dir}/tests {build_dir} ; redis-server > /dev/null & echo "$$!" > pyres-pybuild-redis-pid
+export PYBUILD_AFTER_TEST=rm -fR {build_dir}/tests ; cat pyres-pybuild-redis-pid | xargs kill ; rm pyres-pybuild-redis-pid
+export PYBUILD_TEST_ARGS=-k 'not test_worker_pids'
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf pyres.egg-info .cache dump.rdb
+	dh_clean

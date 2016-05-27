@@ -1,0 +1,41 @@
+From e2f5a19961674ea549446741ef148ec809b82a79 Mon Sep 17 00:00:00 2001
+From: Sameer Morar <smorar@gmail.com>
+Date: Mon, 12 Oct 2015 15:17:22 -0700
+Subject: Fixes scipy.weave.inline compalition with g++ 4.3 and upwards
+
+Forwarded: http://projects.scipy.org/scipy/scipy/ticket/739
+Bug-Debian: http://bugs.debian.org/598520
+Bug-Ubuntu: https://launchpad.net/bugs/302649
+
+Patch-Name: blitz++.patch
+---
+ scipy/weave/blitz/blitz/blitz.h       | 2 ++
+ scipy/weave/blitz/blitz/prettyprint.h | 2 ++
+ 2 files changed, 4 insertions(+)
+
+diff --git a/scipy/weave/blitz/blitz/blitz.h b/scipy/weave/blitz/blitz/blitz.h
+index f094eb8..1141fcf 100644
+--- a/scipy/weave/blitz/blitz/blitz.h
++++ b/scipy/weave/blitz/blitz/blitz.h
+@@ -65,6 +65,8 @@
+ 
+ #define BZ_THROW                     // Needed in <blitz/numinquire.h>
+ 
++#include <cstdlib>
++
+ BZ_NAMESPACE(blitz)
+ 
+ #ifdef BZ_HAVE_STD
+diff --git a/scipy/weave/blitz/blitz/prettyprint.h b/scipy/weave/blitz/blitz/prettyprint.h
+index f13c22a..8480ae0 100644
+--- a/scipy/weave/blitz/blitz/prettyprint.h
++++ b/scipy/weave/blitz/blitz/prettyprint.h
+@@ -22,6 +22,8 @@
+ #ifndef BZ_PRETTYPRINT_H
+ #define BZ_PRETTYPRINT_H
+ 
++#include <cstdlib>
++
+ BZ_NAMESPACE(blitz)
+ 
+ class prettyPrintFormat {

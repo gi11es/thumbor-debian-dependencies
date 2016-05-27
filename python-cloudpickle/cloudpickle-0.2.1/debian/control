@@ -1,0 +1,38 @@
+Source: cloudpickle
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-mock,
+               python-pytest,
+               python-pytest-cov,
+               python-setuptools,
+               python3-all,
+               python3-mock,
+               python3-pytest,
+               python3-pytest-cov,
+               python3-setuptools
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.3
+Homepage: https://github.com/cloudpipe/cloudpickle
+Vcs-Git: git://github.com/cloudpipe/cloudpickle.git
+Vcs-Browser: https://github.com/cloudpipe/cloudpickle
+
+Package: python-cloudpickle
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python module to make it possible to serialize Python constructs not supported by the default pickle module from the Python standard library
+ Makes it possible to serialize Python constructs not supported by the default pickle module from the Python standard library.
+ .
+ This is the Python 2 library version.
+
+Package: python3-cloudpickle
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Python module to make it possible to serialize Python constructs not supported by the default pickle module from the Python standard library
+ Makes it possible to serialize Python constructs not supported by the default pickle module from the Python standard library.
+ .
+ This is the Python 3 library version.

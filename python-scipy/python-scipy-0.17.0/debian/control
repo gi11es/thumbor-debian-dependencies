@@ -1,0 +1,152 @@
+Source: python-scipy
+Section: python
+Priority: extra
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Alexandre Fayolle <afayolle@debian.org>,
+           Ondrej Certik <ondrej@certik.cz>,
+           David Cournapeau <cournape@gmail.com>,
+           Varun Hiremath <varun@debian.org>
+Build-Depends: cython (>= 0.22),
+               debhelper (>= 8.9.7~),
+               dh-python,
+               gfortran,
+               libblas-dev,
+               liblapack-dev,
+               libsuitesparse-dev (>= 3.1.0-3),
+               python-all-dbg,
+               python-all-dev (>= 2.6.6-3~),
+               python-decorator,
+               python-mako,
+               python-nose,
+               python-numpy (>= 1:1.5.1),
+               python-numpy-dbg (>= 1:1.5.1),
+               python3-all-dbg,
+               python3-all-dev,
+               python3-decorator,
+               python3-nose,
+               python3-numpy (>= 1:1.7.2),
+               python3-numpy-dbg
+Build-Depends-Indep: dvipng,
+                     python-doc,
+                     python-docutils,
+                     python-matplotlib,
+                     python-numpy-doc,
+                     python-numpydoc,
+                     python-sphinx,
+                     rdfind,
+                     symlinks,
+                     texlive-latex-base,
+                     texlive-latex-extra
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.1
+Standards-Version: 3.9.6
+Homepage: http://www.scipy.org/
+Vcs-Git: git://anonscm.debian.org/python-modules/packages/python-scipy.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-scipy.git
+
+Package: python-scipy
+Architecture: any
+Depends: python-decorator,
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Provides: ${python:Provides}
+Recommends: g++ | c++-compiler, python-dev, python-imaging
+Suggests: python-scipy-doc
+Description: scientific tools for Python
+ SciPy supplements the popular NumPy module (python-numpy package), gathering a
+ variety of high level science and engineering modules together as a single
+ package.
+ .
+ SciPy is a set of Open Source scientific and numeric tools for Python. It
+ currently supports special functions, integration, ordinary differential
+ equation (ODE) solvers, gradient optimization, genetic algorithms, parallel
+ programming tools, an expression-to-C++ compiler for fast execution, and
+ others.
+
+Package: python3-scipy
+Architecture: any
+Depends: python3-decorator,
+         python3-numpy (>= 1:1.7.2),
+         ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends}
+Recommends: g++ | c++-compiler
+Suggests: python-scipy-doc
+Description: scientific tools for Python 3
+ SciPy supplements the popular NumPy module (python-numpy package), gathering a
+ variety of high level science and engineering modules together as a single
+ package.
+ .
+ SciPy is a set of Open Source scientific and numeric tools for Python. It
+ currently supports special functions, integration, ordinary differential
+ equation (ODE) solvers, gradient optimization, genetic algorithms, parallel
+ programming tools, an expression-to-C++ compiler for fast execution, and
+ others.
+ .
+ This package provides the Python 3 version.
+
+Package: python-scipy-dbg
+Section: debug
+Architecture: any
+Depends: python-dbg,
+         python-numpy-dbg (>= 1:1.5.1),
+         python-scipy (= ${binary:Version}),
+         ${misc:Depends},
+         ${python:Depends},
+         ${shlibs:Depends}
+Description: scientific tools for Python - debugging symbols
+ SciPy supplements the popular NumPy module (python-numpy package), gathering a
+ variety of high level science and engineering modules together as a single
+ package.
+ .
+ SciPy is a set of Open Source scientific and numeric tools for Python. It
+ currently supports special functions, integration, ordinary differential
+ equation (ODE) solvers, gradient optimization, genetic algorithms, parallel
+ programming tools, an expression-to-C++ compiler for fast execution, and
+ others.
+ .
+ This package provides debugging symbols for python-scipy.
+
+Package: python3-scipy-dbg
+Section: debug
+Architecture: any
+Depends: python3-dbg,
+         python3-numpy-dbg (>= 1:1.7.2),
+         python3-scipy (= ${binary:Version}),
+         ${misc:Depends},
+         ${python3:Depends},
+         ${shlibs:Depends}
+Description: scientific tools for Python 3 - debugging symbols
+ SciPy supplements the popular NumPy module (python-numpy package), gathering a
+ variety of high level science and engineering modules together as a single
+ package.
+ .
+ SciPy is a set of Open Source scientific and numeric tools for Python. It
+ currently supports special functions, integration, ordinary differential
+ equation (ODE) solvers, gradient optimization, genetic algorithms, parallel
+ programming tools, an expression-to-C++ compiler for fast execution, and
+ others.
+ .
+ This package provides debugging symbols for python3-scipy.
+
+Package: python-scipy-doc
+Depends: libjs-jquery,
+         libjs-mathjax,
+         libjs-underscore,
+         ${misc:Depends},
+         ${sphinxdoc:Depends}
+Section: doc
+Architecture: all
+Description: scientific library for Python - documentation
+ SciPy supplements the popular NumPy module (python-numpy package), gathering a
+ variety of high level science and engineering modules together as a single
+ package.
+ .
+ SciPy is a set of Open Source scientific and numeric tools for Python. It
+ currently supports special functions, integration, ordinary differential
+ equation (ODE) solvers, gradient optimization, genetic algorithms, parallel
+ programming tools, an expression-to-C++ compiler for fast execution, and
+ others.
+ .
+ This package contains documentation for the SciPy library.

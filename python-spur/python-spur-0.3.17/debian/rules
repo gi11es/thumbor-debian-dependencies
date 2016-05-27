@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+#DH_VERBOSE = 1
+
+export PYBUILD_NAME = spur
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+
+override_dh_installchangelogs:
+	dh_installchangelogs -k CHANGES
+
+
+override_dh_clean:
+	dh_clean
+	rm -rf spur.egg-info

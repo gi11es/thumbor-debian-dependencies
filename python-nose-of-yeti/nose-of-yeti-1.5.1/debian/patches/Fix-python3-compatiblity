@@ -1,0 +1,42 @@
+Description: Fix python3 compatibility
+ Some tests still had python 2-specific code.
+ .
+ nose-of-yeti (1.5.1-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Author: Gilles Dubuc <gilles@wikimedia.org>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- nose-of-yeti-1.5.1.orig/noseOfYeti/plugins/pylinter.py
++++ nose-of-yeti-1.5.1/noseOfYeti/plugins/pylinter.py
+@@ -10,7 +10,7 @@ from pylint.checkers import BaseChecker
+ 
+ from noseOfYeti.tokeniser.spec_codec import register_from_options
+ from noseOfYeti.tokeniser.config import Default
+-from support.spec_options import spec_options
++from .support.spec_options import spec_options
+ 
+ import os
+ 
+--- nose-of-yeti-1.5.1.orig/noseOfYeti/plugins/sphinx.py
++++ nose-of-yeti-1.5.1/noseOfYeti/plugins/sphinx.py
+@@ -1,6 +1,6 @@
+ from noseOfYeti.tokeniser.spec_codec import register_from_options
+ from noseOfYeti.tokeniser.config import Default
+-from support.spec_options import spec_options
++from .support.spec_options import spec_options
+ 
+ import os
+ 

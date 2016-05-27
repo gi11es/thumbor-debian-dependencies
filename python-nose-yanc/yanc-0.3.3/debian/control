@@ -1,0 +1,15 @@
+Source: yanc
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7), dh-python, python-nose
+Standards-Version: 3.9.6
+Vcs-Browser: http://anonscm.debian.org/cgit/users/metal/yanc.git
+Vcs-Git: git://anonscm.debian.org/users/metal/yanc.git
+X-Python-Version: >= 2.6
+
+Package: python-nose-yanc
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Color output plugin for nose
+ YANC is color output plugin for nose that plays nicely with others.

@@ -1,0 +1,93 @@
+.TH FLAKE8 "1" "November 2013" "flake8 2.0 (pep8: 1.4.6, mccabe: 0.2, pyflakes: 0.7.3)" "User Commands"
+.SH NAME
+flake8 \- code checker using pep8 and pyflakes
+.SH SYNOPSIS
+.B flake8
+[\fIoptions\fR] \fIinput \fR...
+.SH OPTIONS
+.TP
+\fB\-\-version\fR
+show program's version number and exit
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+show this help message and exit
+.TP
+\fB\-v\fR, \fB\-\-verbose\fR
+print status messages, or debug with \fB\-vv\fR
+.TP
+\fB\-q\fR, \fB\-\-quiet\fR
+report only file names, or nothing with \fB\-qq\fR
+.TP
+\fB\-\-first\fR
+show first occurrence of each error
+.TP
+\fB\-\-exclude\fR=\fIpatterns\fR
+exclude files or directories which match these comma
+separated patterns (default:
+\&.svn,CVS,.bzr,.hg,.git,__pycache__)
+.TP
+\fB\-\-filename\fR=\fIpatterns\fR
+when parsing directories, only check filenames
+matching these comma separated patterns (default:
+*.py)
+.TP
+\fB\-\-select\fR=\fIerrors\fR
+select errors and warnings (e.g. E,W6)
+.TP
+\fB\-\-ignore\fR=\fIerrors\fR
+skip errors and warnings (e.g. E4,W)
+.TP
+\fB\-\-show\-source\fR
+show source code for each error
+.TP
+\fB\-\-show\-pep8\fR
+show text of PEP 8 for each error (implies \fB\-\-first\fR)
+.TP
+\fB\-\-statistics\fR
+count errors and warnings
+.TP
+\fB\-\-count\fR
+print total number of errors and warnings to standard
+error and set exit code to 1 if total is not null
+.TP
+\fB\-\-max\-line\-length\fR=\fIn\fR
+set maximum allowed line length (default: 79)
+.TP
+\fB\-\-hang\-closing\fR
+hang closing bracket instead of matching indentation
+of opening bracket's line
+.TP
+\fB\-\-format\fR=\fIformat\fR
+set the error format [default|pylint|<custom>]
+.TP
+\fB\-\-diff\fR
+report only lines changed according to the unified
+diff received on STDIN
+.TP
+\fB\-\-exit\-zero\fR
+exit with code 0 even if there are errors
+.TP
+\fB\-\-max\-complexity\fR=\fIMAX_COMPLEXITY\fR
+McCabe complexity threshold
+.TP
+\fB\-\-builtins\fR=\fIBUILTINS\fR
+define more built\-ins, comma separated
+.TP
+\fB\-\-install\-hook\fR
+Install the appropriate hook for this repository.
+.IP
+Testing Options:
+.TP
+\fB\-\-benchmark\fR
+measure processing speed
+.IP
+Configuration:
+.IP
+The project options are read from the [flake8] section of the tox.ini
+file or the setup.cfg file located in any parent folder of the path(s)
+being processed.  Allowed options are: exclude, filename, select,
+ignore, max\-line\-length, hang\-closing, count, format, quiet, showpep8, show\-source, statistics, verbose, max\-complexity, builtins.
+.TP
+\fB\-\-config\fR=\fIpath\fR
+user config file location (default:
+~/.config/flake8)

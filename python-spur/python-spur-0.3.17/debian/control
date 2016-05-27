@@ -1,0 +1,41 @@
+Source: python-spur
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Ruben Undheim <ruben.undheim@gmail.com>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-setuptools,
+               python-paramiko,
+               python3-all,
+               python3-setuptools,
+               python3-paramiko
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-spur.git
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-spur.git
+Homepage: https://github.com/mwilliamson/spur.py
+X-Python-Version: all
+X-Python3-Version: >= 3.1
+
+Package: python-spur
+Architecture: all
+Depends: ${python:Depends},
+         ${misc:Depends},
+         python-paramiko
+Description: Run commands easily over SSH
+ With this Python library you can run commands and manipulate files locally
+ or over SSH using the same interface. It offers a much easier-to-use API than
+ alternatives such as python-paramiko
+
+Package: python3-spur
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends},
+         python3-paramiko
+Description: Run commands easily over SSH (Python3)
+ With this Python library you can run commands and manipulate files locally
+ or over SSH using the same interface. It offers a much easier-to-use API than
+ alternatives such as python-paramiko
+ .
+ This is the Python3 version of the library.

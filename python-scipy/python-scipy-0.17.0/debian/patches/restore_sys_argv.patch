@@ -1,0 +1,26 @@
+From 46f2203621078d3aebc80eee13f399229aef2296 Mon Sep 17 00:00:00 2001
+From: SVN-Git Migration <python-modules-team@lists.alioth.debian.org>
+Date: Mon, 12 Oct 2015 15:17:21 -0700
+Subject: restore sys.argv in case of exception
+
+Bug-Debian: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=500814
+
+Patch-Name: restore_sys_argv.patch
+---
+ scipy/weave/build_tools.py | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/scipy/weave/build_tools.py b/scipy/weave/build_tools.py
+index 696407e..4a3c146 100644
+--- a/scipy/weave/build_tools.py
++++ b/scipy/weave/build_tools.py
+@@ -292,6 +292,9 @@ def build_extension(module_path,compiler_name='',build_dir=None,
+         configure_python_path(build_dir)
+     except SyntaxError:  # TypeError:
+         success = 0
++    except Exception, e:
++        restore_sys_argv()
++        raise e
+ 
+     # restore argv after our trick...
+     restore_sys_argv()

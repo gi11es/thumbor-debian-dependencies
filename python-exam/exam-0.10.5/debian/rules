@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=exam
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf exam.egg-info .cache
+	dh_clean

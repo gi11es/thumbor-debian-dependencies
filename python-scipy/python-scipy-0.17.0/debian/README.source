@@ -1,0 +1,12 @@
+Creating source package
+=======================
+
+In the upstream supplied source tarball, certain source files are
+missing which are present in the upstream subversion repository.
+
+The debian/orig-tar.sh script adds the missing source files and
+creates a DFSG compatible source tarball for debian release. Please
+use the 'rules/get-orig-source' target to create the tarball for
+debian packaging.
+
+-- Varun Hiremath <vh63@cornell.edu>  Fri, 30 Jul 2010 18:27:23 -0400

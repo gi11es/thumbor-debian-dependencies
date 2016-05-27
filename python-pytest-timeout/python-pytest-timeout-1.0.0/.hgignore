@@ -1,0 +1,9 @@
+syntax: glob
+build
+dist
+.tox
+.ropeproject
+.cache
+*~
+*.pyc
+*.egg-info

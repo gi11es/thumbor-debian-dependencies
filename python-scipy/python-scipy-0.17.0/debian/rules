@@ -1,0 +1,124 @@
+#!/usr/bin/make -f
+
+unexport LDFLAGS
+export FFLAGS="-fPIC"
+export ATLAS=None
+
+PY2VERS:= $(shell pyversions -v -r debian/control)
+PY3VERS:= $(shell py3versions -v -r debian/control)
+TMPDIR := $(CURDIR)/build/tmp
+BASE=$(shell pwd)/debian
+DVER=$(shell dpkg-parsechangelog | egrep '^Version:' | cut -f 2 -d ' ' | sed 's/-[^-]*$$//')
+UVER=$(shell echo $(DVER) | sed "s/+dfsg.*//g")
+PYLIBPATH := $(shell python -c "from distutils.command.build import build ; from distutils.core import Distribution ; b = build(Distribution()) ; b.finalize_options() ; print b.build_platlib")
+
+%:
+	dh $@ --with python2,python3
+
+override_dh_auto_clean:
+	rm -rf build
+	find . -name "*.pyc" -exec rm {} \;
+
+override_dh_auto_configure:
+	cd scipy/special && python generate_ufuncs.py
+	# cython and swig done by setup.py
+
+build-python%:
+	python$* setup.py config_fc --noarch build;
+	CFLAGS="-g -ggdb" python$*-dbg setup.py config_fc \
+				--noarch build;
+
+build: build-arch build-indep
+
+build-arch:
+	dh build --with=python2,python3
+
+build-indep:
+	(export MPLCONFIGDIR=. ; make -C doc html PYTHONPATH=../$(PYLIBPATH))
+
+override_dh_auto_build: $(PY2VERS:%=build-python%) $(PY3VERS:%=build-python%)
+
+install-python%:
+	python$* setup.py install --root $(BASE)/tmp \
+		--force --no-compile --install-layout=deb;
+
+	python$*-dbg setup.py install --root $(BASE)/tmp \
+		--force --no-compile --install-layout=deb;
+
+override_dh_install: $(PY3VERS:%=install-python%) $(PY2VERS:%=install-python%)
+	dh_install
+	find debian/python-scipy -type f -name '*_d.so' -delete
+	find debian/python3-scipy -type f -name '*.cpython-3?d*.so' -delete
+	find debian/python-scipy-dbg ! -type d ! -name '*_d.so' -delete
+	find debian/python3-scipy-dbg ! -type d ! -name '*.cpython-3?d*.so' -delete
+	find debian/python-scipy-dbg -depth -empty -exec rmdir {} \;
+	find debian/python3-scipy-dbg -depth -empty -exec rmdir {} \;
+	rm -f $(BASE)/python-scipy*/usr/lib/python*/*-packages/scipy/LICENSE.txt;
+	rm -fr $(BASE)/python-scipy*/usr/lib/python*/*-packages/scipy/weave/examples/
+
+	# drop all the installed setup.py files
+	find $(BASE)/ -name setup.py -delete
+	find $(BASE)/ -name generate_ufuncs.py -delete
+
+	set -e && for py in $(PY2VERS); do \
+	  ln -sf /usr/lib/python$$py/dist-packages/decorator.py $(BASE)/python-scipy/usr/lib/python$$py/dist-packages/scipy/_lib/decorator.py; \
+	done
+	ln -sf /usr/lib/python3/dist-packages/decorator.py $(BASE)/python3-scipy/usr/lib/python3/dist-packages/scipy/_lib/decorator.py
+
+	# not ported to py3 in 0.10.1
+	rm -rf $(BASE)/python3-scipy/usr/lib/python3/dist-packages/scipy/weave
+
+	dh_numpy
+	dh_numpy3
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	mkdir -p $(TMPDIR)
+	-set -e && for pyvers in $(PY2VERS); do \
+	  ADTTMP=$(TMPDIR) \
+	  PYTHONPATH=$(BASE)/python-scipy/usr/lib/python$$pyvers/dist-packages/ \
+	  PYS=python$$pyvers TESTMODE=fast $(BASE)/tests/python2; \
+	done
+	-set -e && for pyvers in $(PY3VERS); do \
+	  ADTTMP=$(TMPDIR) \
+	  PYTHONPATH=$(BASE)/python3-scipy/usr/lib/python3/dist-packages/ \
+	  PYS=python$$pyvers TESTMODE=fast $(BASE)/tests/python3; \
+	done
+endif
+
+override_dh_fixperms:
+	dh_fixperms
+	set -e; for i in `find debian -mindepth 2 -type f ! -perm 755`; do \
+		if head -1 $$i | grep -q '^#!' ; then                      \
+	    		chmod +x $$i;                                      \
+		fi ;                                                       \
+	done
+	sed -i '1s|.|#!/usr/bin/python\n&|' $(BASE)/python-scipy/usr/lib/$(shell pyversions -d)/dist-packages/scipy/cluster/tests/test_vq.py
+	sed -i '1s|.|#!/usr/bin/python\n&|' $(BASE)/python-scipy/usr/lib/$(shell pyversions -d)/dist-packages/scipy/stats/tests/test_stats.py
+	sed -i '1s|.|#!/usr/bin/python3\n&|' $(BASE)/python3-scipy/usr/lib/python3/dist-packages/scipy/cluster/tests/test_vq.py
+	sed -i '1s|.|#!/usr/bin/python3\n&|' $(BASE)/python3-scipy/usr/lib/python3/dist-packages/scipy/stats/tests/test_stats.py
+	#replace all the usr/bin/env python
+	find $(BASE)/python3-scipy/usr/lib/python3/ -name "*.py" -type f | xargs sed -i -e "1s#usr/bin/env\s\+python\s*\$$#usr/bin/env python3#"
+
+	# .Mat files should not be executable
+	find $(BASE)/python*-scipy/usr/lib/python*/dist-packages/scipy/io/matlab/tests/data/ -executable -type f | xargs chmod -x
+
+override_dh_strip:
+	dh_strip -ppython-scipy --dbg-package=python-scipy-dbg
+	dh_strip -ppython3-scipy --dbg-package=python3-scipy-dbg
+
+override_dh_installdocs-indep:
+	dh_installdocs -i
+
+	rm -rf debian/python-scipy-doc/usr/share/doc/python-scipy-doc/html/_static/jquery.js
+	dh_link -ppython-scipy-doc /usr/share/javascript/jquery/jquery.js /usr/share/doc/python-scipy-doc/html/_static/jquery.js
+
+	rm -rf debian/python-scipy-doc/usr/share/doc/python-scipy-doc/html/_static/underscore.js
+	dh_link -ppython-scipy-doc /usr/share/javascript/underscore/underscore.js /usr/share/doc/python-scipy-doc/html/_static/underscore.js
+
+	dh_link -ppython-scipy-doc /usr/share/javascript/mathjax/MathJax.js /usr/share/doc/python-scipy-doc/html/_static/MathJax.js
+	dh_sphinxdoc -i
+	rdfind -outputname /dev/null -makesymlinks true -removeidentinode false debian/python-scipy-doc
+	symlinks -r -s -c debian/python-scipy-doc
+
+get-orig-source:
+	-uscan --force-download --download-version $(UVER) --rename
+

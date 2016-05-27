@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=locket
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	# No tests in module
+
+override_dh_clean:
+	rm -rf .cache
+	dh_clean

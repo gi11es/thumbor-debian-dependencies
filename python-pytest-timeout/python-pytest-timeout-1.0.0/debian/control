@@ -1,0 +1,64 @@
+Source: python-pytest-timeout
+Section: python
+Priority: optional
+Maintainer: gustavo panizzo <gfa@zumbi.com.ar>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all (>= 2.6.6-3~),
+               python-pytest,
+               python-setuptools,
+               python3-all,
+               python3-pytest,
+               python3-setuptools
+Standards-Version: 3.9.7
+Homepage: http://bitbucket.org/flub/pytest-timeout/
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/python-pytest-timeout.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/python-pytest-timeout.git
+
+Package: python-pytest-timeout
+Architecture: all
+Depends: python-pytest, ${misc:Depends}, ${python:Depends}
+Suggests: ${python:Recommends}
+Description: Pytest plugin to abort hanging tests - Python 2.X
+ This is a plugin which will terminate tests after a certain timeout.
+ When doing so it will show a stack dump of all threads running at the
+ time. This is useful when running tests under a continuous integration
+ server or simply if you don’t know why the test suite hangs.
+ .
+ Note that while by default on POSIX systems py.test will continue to
+ execute the tests after a test has timed, out this is not always
+ possible. Often the only sure way to interrupt a hanging test is by
+ terminating the entire process. As this is a hard termination
+ (os._exit()) it will result in no teardown, JUnit XML output etc. But
+ the plugin will ensure you will have the debugging output on stderr
+ nevertheless, which is the most important part at this stage. See below
+ for detailed information on the timeout methods and their side-effects.
+ .
+ The pytest-timeout plugin has been tested on Python 2.6 or higher,
+ including 3.X and pypy.
+ .
+ This package provides support for Python 2.X.
+
+Package: python3-pytest-timeout
+Architecture: all
+Depends: python3-pytest, ${misc:Depends}, ${python3:Depends}
+Suggests: ${python3:Recommends}
+Description: Pytest plugin to abort hanging tests - Python 3.X
+ This is a plugin which will terminate tests after a certain timeout.
+ When doing so it will show a stack dump of all threads running at the
+ time. This is useful when running tests under a continuous integration
+ server or simply if you don’t know why the test suite hangs.
+ .
+ Note that while by default on POSIX systems py.test will continue to
+ execute the tests after a test has timed, out this is not always
+ possible. Often the only sure way to interrupt a hanging test is by
+ terminating the entire process. As this is a hard termination
+ (os._exit()) it will result in no teardown, JUnit XML output etc. But
+ the plugin will ensure you will have the debugging output on stderr
+ nevertheless, which is the most important part at this stage. See below
+ for detailed information on the timeout methods and their side-effects.
+ .
+ The pytest-timeout plugin has been tested on Python 2.6 or higher,
+ including 3.X and pypy.
+ .
+ This package provides support for Python 3.X.

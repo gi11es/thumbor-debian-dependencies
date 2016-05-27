@@ -1,0 +1,42 @@
+Source: pep8
+Section: python
+Priority: optional
+Uploaders: David Watson <dwatson@debian.org>, Sylvestre Ledru <sylvestre@debian.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7),
+ python-all,
+ python3-all,
+ python-setuptools,
+ python3-setuptools,
+ python-nose
+Standards-Version: 3.9.7
+Homepage: http://pypi.python.org/pypi/pep8
+Vcs-Git: git://anonscm.debian.org/python-modules/packages/pep8.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/pep8.git
+
+Package: pep8
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-pep8
+Description: Python PEP 8 code style checker
+ Features a plugin architecture allowing for adding new checks is easily.
+ Parseable output listing line numbers of the error location.  Consists of
+ just one Python file, and requires only stdlib.
+
+Package: python-pep8
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-pkg-resources
+Replaces: pep8 (<< 1.6.2-0.1)
+Description: Python PEP 8 code style checker - python
+ Features a plugin architecture allowing for adding new checks is easily.
+ Parseable output listing line numbers of the error location.  Consists of
+ just one Python file, and requires only stdlib.
+
+Package: python3-pep8
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-pkg-resources
+Description: Python PEP 8 code style checker - python3
+ Features a plugin architecture allowing for adding new checks is easily.
+ Parseable output listing line numbers of the error location.  Consists of
+ just one Python file, and requires only stdlib.
+ .
+ Python 3 version.

@@ -1,0 +1,739 @@
+python-scipy (0.17.0-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Wed, 11 May 2016 19:48:47 +0000
+
+python-scipy (0.17.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 23 Jan 2016 20:39:44 +0100
+
+python-scipy (0.16.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+  * update adt-tests to new layout
+  * remove duplicate files in -doc package
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sun, 25 Oct 2015 11:51:34 +0100
+
+python-scipy (0.16.0-2) unstable; urgency=medium
+
+  [ Julian Taylor ]
+  * bump cython build-depend to required 0.22
+
+  [ Jean-Christophe Jaskula ]
+  * fix build of documentation in arch only builds
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 24 Aug 2015 09:51:10 +0200
+
+python-scipy (0.16.0-1) unstable; urgency=medium
+
+  [ Varun Hiremath ]
+  * New upstream release
+  * Bump Standards-Version to 3.9.6
+  * Remove upstream applied patches:
+    - fitpack-alias.patch
+    - fix-undefined-behavior-in-alngam.patch
+    - relax-bounds-of-interpolate-test.patch
+  * d/rules: minor build fixes
+
+  [ Jean-Christophe Jaskula ]
+  * Pointed debian/watch to github.com (cleaner sources)
+  * d/control:
+    - Added dh_python to B-d
+    - Removed unnecessary XS-Testsuite field
+  * Linking to local javascript libraries
+    - use_local_mathjax.patch
+  * Using local intersphinx objects
+    - use_local_objects.patch
+  * Cleaned debian/copyright
+
+ -- Varun Hiremath <varun@debian.org>  Sun, 23 Aug 2015 23:01:46 -0400
+
+python-scipy (0.14.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+    remove upstream applied patches:
+     - numpy-version-fix.patch
+     - numpy_ufunc.patch
+     - put-_gen-classes-back.patch
+     - put-back-veccdf.patch
+     - sparse-fix-omitted-types.patch
+     - sparse-superlu-fix.patch
+  * add python-gmpy2 dependency to autopkgtest to speed up mpmath tests
+  * add suggest on python-scipy-doc (Closes: #760522)
+  * debian/copyright: add bootstrap Apache 2.0 license
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 05 Sep 2014 18:56:54 +0200
+
+python-scipy (0.14.0-2) unstable; urgency=medium
+
+  * add patches to fix test failures on i386 and mips:
+    - fix-undefined-behavior-in-alngam.patch (Closes: #756905)
+    - relax-bounds-of-interpolate-test.patch
+  * add patches from 0.14.x maintenance branch:
+    - sparse-superlu-fix.patch: fix crash
+    - sparse-fix-omitted-types.patch: fix crash
+    - put-back-veccdf.patch: restore stats api
+    - put-_gen-classes-back.patch: restore stats api
+    - numpy-version-fix.patch: fix wrong version check
+    - numpy_ufunc.patch: compatibility with numpy 1.9
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Wed, 27 Aug 2014 14:40:24 +0200
+
+python-scipy (0.14.0-1) unstable; urgency=low
+
+  [ Denis Laxalde ]
+  * Add the documentation binary package (Closes: #600547).
+
+  [ Julian Taylor ]
+  * New upstream release
+  * drop not swig build dependency and reswig.patch, not needed anymore
+  * use embedded six, current unstable version not compatible
+  * fitpack-alias.patch: fix wrong aliasing in interpolate.splder
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 23 May 2014 10:37:06 +0200
+
+python-scipy (0.13.3-2) unstable; urgency=medium
+
+  * upload to unstable
+  * add build-essential dependency to adt tests, needed for weave
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 31 Mar 2014 23:32:16 +0200
+
+python-scipy (0.13.3-1) experimental; urgency=low
+
+  * New upstream release
+  * ignore TestSplder.test_kink adt failure, probably numerical error
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 04 Feb 2014 19:48:01 +0100
+
+python-scipy (0.13.2-1) experimental; urgency=low
+
+  * New upstream release
+  * update X-Python-Version to >= 2.6
+  * require python3-numpy (>= 1:1.7.2) for hashing fixes
+  * bump standard to 3.9.5, no changes required
+  * bump cython dependency to >= 0.19 to avoid leaks with fused types
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 21 Oct 2013 18:59:29 +0200
+
+python-scipy (0.13.0~b1-1) experimental; urgency=low
+
+  [ Julian Taylor ]
+  * New upstream beta release
+  * require python-six >= 1.3.0, scipy ships a slightly patched 1.2.0,
+    version 1.3.0 includes the patches
+
+  [ Varun Hiremath ]
+  * Fix debian/watch file
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Sat, 07 Sep 2013 18:06:00 +0200
+
+python-scipy (0.12.0-3) unstable; urgency=high
+
+  * temporary-directory-usage.patch:
+    fix insecure temporary directory usage of weave module. (Closes: #726093)
+    Thanks to Tomas Tomecek for the patch.
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Tue, 22 Oct 2013 23:44:47 +0200
+
+python-scipy (0.12.0-2) unstable; urgency=low
+
+  * ignore testsuite failures to not block python3.3 transition
+    only masks issues on hardly used ports
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Mon, 01 Jul 2013 20:09:40 +0200
+
+python-scipy (0.12.0-1) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * New upstream release, no repackaging required anymore
+    - Closes: #707315
+    - Closes: #691254
+  * also fail on test failures not only test errors
+  * skip failing test_mio on big endian python3 >= 3.2
+  * print skipped tests and unused skips in autopkgtest scripts
+  * add-swig-filetypes.patch, reswig.patch:
+    reswigging from setup.py, dropped from debian/rules
+  * cython-wraparound.patch: fix issue in ckdtree.pyx
+  * qhull-lfs.patch: enable large file support
+  * cap-ld-precision.patch: fix test failures due to broken np.finfo on ppc
+  * refresh patches and remove upstream applied:
+    - BUG-fix-dependency-on-dict-ordering-in-test.patch
+    - BUG-remove-inline-statement-rejected-by-cython.patch
+    - fix-dbg-crash.patch
+    - fix-f2py-dependencies.patch
+    - fix-test_basic.py-cephes_vs_amos_mass_te.patch
+    - python3.3-incdir.diff
+  * Bump standard to 3.9.4, no changes required
+  * drop unused sharutils build depend and python-profiler from suggests
+  * use system python-six and python-decorator instead of embedded copies
+  * don't install setup.py and generator scripts
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+  * Remove DM-Upload-Allowed; it's no longer used by the archive
+    software.
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 09 May 2013 11:35:07 +0200
+
+python-scipy (0.11.0+dfsg1-1) experimental; urgency=low
+
+  * New upstream release
+  * bump required cython to >= 0.17
+  * refresh patches:
+    - drop upstream applied:
+      - interpnd-generator.patch
+      - dtype.diff,
+      - kolmogorov.diff,
+      - up_minpack_ints.diff
+      - kde.diff
+    - new patches for python3.3 compatibility and test fixing:
+      - BUG-remove-inline-statement-rejected-by-cython.patch
+      - BUG-fix-dependency-on-dict-ordering-in-test.patch
+      - fix-test_basic.py-cephes_vs_amos_mass_te.patch
+      - python3.3-incdir.diff
+      - fix-dbg-crash.patch
+      - fix-f2py-dependencies.patch
+  * add autopkgtests
+  * run fast tests during build
+  * update debian/copyright to dep5
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 25 Jan 2013 23:54:43 +0100
+
+python-scipy (0.10.1+dfsg2-1) unstable; urgency=low
+
+  * add missing cython and swig sources from git tag (Closes: #589731)
+  * generate cython c files, requires python-mako and cython build depends
+  * ensure that all swig files are regenerated
+  * update debian/orig-tar.sh appropriately
+  * interpnd-generator.patch: fix the interpnd.pyx generation
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Thu, 29 Nov 2012 21:56:31 +0100
+
+python-scipy (0.10.1+dfsg1-4) unstable; urgency=low
+
+  [ Julian Taylor ]
+  * use dh_numpy3
+    - build depend on python3-numpy >= 1:1.6.2~rc1-1~
+  * debian/rules: remove reference to pyshared
+
+  [ Varun Hiremath ]
+  * debian/patches:
+    - add dtype.diff (Closes: #682030)
+    - add up_minpack_ints.diff, thanks to Yaroslav Halchenko (Closes: #681270)
+
+ -- Varun Hiremath <varun@debian.org>  Sat, 21 Jul 2012 17:23:02 -0400
+
+python-scipy (0.10.1+dfsg1-3) unstable; urgency=low
+
+  * wrap-and-sort debian folder
+  * add python3 packages (Closes: #664785)
+  * debian/rules:
+    - split the build into build and install step
+    - use .install files instead of direct setup.py install
+
+ -- Julian Taylor <jtaylor.debian@googlemail.com>  Fri, 20 Apr 2012 21:59:33 +0200
+
+python-scipy (0.10.1+dfsg1-2) unstable; urgency=low
+
+  * debian/control:
+    - Recommends: python-imaging (Closes: #648036)
+    - Recommends: python-dev (Closes: #651760)
+  * debian/patches:
+    - Add kolmogorov.diff, thanks to Yaroslav Halchenko (Closes: #653948)
+    - Add kde.diff (Closes: #648034)
+
+ -- Varun Hiremath <varun@debian.org>  Fri, 20 Apr 2012 02:37:28 -0400
+
+python-scipy (0.10.1+dfsg1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #653262)
+  * Update debian/orig-tar.sh script
+  * debian/patches
+    - updated restore_sys_argv.patch
+    - removed string_exception.patch, not needed
+
+ -- Varun Hiremath <varun@debian.org>  Thu, 19 Apr 2012 16:14:28 -0400
+
+python-scipy (0.9.0+dfsg1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #614407, #579041, #569008)
+  * Convert to dh_python2 (Closes: #617028)
+
+ -- Varun Hiremath <varun@debian.org>  Wed, 06 Apr 2011 21:26:25 -0400
+
+python-scipy (0.8.0+dfsg1-1) experimental; urgency=low
+
+  [ Varun Hiremath ]
+  * New upstream release
+  * Build-Depend on python-numpy-* (>= 1:1.5.1)
+  * Update all the debian/patches/*
+
+  [ Luca Falavigna ]
+  * Remove myself from Uploaders.
+
+  [ Stefano Rivera ]
+  * debian/patches/blitz++.patch: Fix scipy.weave.inline compilations. Thanks
+    to Sameer Morar (Closes: #598520, LP: #302649)
+
+ -- Varun Hiremath <varun@debian.org>  Fri, 24 Dec 2010 08:20:54 -0500
+
+python-scipy (0.7.2+dfsg1-1) unstable; urgency=low
+
+  * Release with a new source tarball with missing cython source files
+  * debian/rules: Add get-orig-source target
+  * Add debian/README.source explaining the repackaging of source tarball
+  * Add debian/orig-tar.sh to add missing cython source files to the
+    source tarball (Closes: #589731)
+  * debian/rules: add call to dh_numpy to generate stricter versioned
+    depends on python-numpy (Closes: #590763)
+  * Bump Standards-Version to 3.9.1
+  * Add myself to Uploaders
+
+ -- Varun Hiremath <varun@debian.org>  Fri, 30 Jul 2010 18:29:18 -0400
+
+python-scipy (0.7.2-2) unstable; urgency=low
+
+  * debian/patches/string_exceptions.patch:
+    - Do not use string exceptions, not supported by Python 2.6.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Mon, 07 Jun 2010 14:52:40 +0200
+
+python-scipy (0.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to debhelper 7.
+  * Provide python-scipy-dbg package (Closes: #525329).
+  * Add myself to Uploaders.
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 25 Apr 2010 17:21:21 +0200
+
+python-scipy (0.7.1-1) unstable; urgency=low
+
+  [ Sandro Tosi ]
+  * debian/control
+    - removed Marco Presi from uploaders: thanks for your work!
+
+  [ Luca Falavigna ]
+  * New upstream release.
+    - Fix KeyError exception in sparse module (Closes: #525109).
+    - Fix SyntaxWarning exception with python2.6 (Closes: #567148).
+  * debian/patches/restore_sys_argv.patch:
+    - Restore sys.argv in case of exception (Closes: #500814).
+  * debian/control:
+    - Depend on ${misc:Depends}.
+    - Drop useless Conflicts/Replaces fields.
+    - Bump Standards-Version to 3.8.4, no changes required.
+  * debian/README.Debian:
+    - Remove obsolete information.
+  * debian/pycompat:
+    - Remove, useless.
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Mon, 05 Apr 2010 17:10:56 +0200
+
+python-scipy (0.7.0-2) unstable; urgency=medium
+
+  [ Julien Lavergne ]
+  * debian/copyright : Update Copyright holders (Closes: #524131)
+  * From Ubuntu, prepare for the future python transition:
+   - debian/rules:
+    + Include /usr/share/python/python.mk
+    + Add $(py_setup_install_args) to setup.py install
+    + Replace site-packages by *-packages
+   - debian/control:
+    + Bump build-depends to python-all-dev (>= 2.5.4-1~)
+
+  [ Luca Falavigna ]
+  * Remove patches, they are no longer needed and also causing FTBFS with
+    recent python-numpy. Remove quilt machinery too (Closes: #545606).
+  * debian/copyright: add missing copyright holder (Closes: #540504).
+  * debian/control: bump Standards-Version to 3.8.3, no changes required.
+  * debian/watch: fix regex to report correct upstream stable version.
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Tue, 15 Sep 2009 23:30:12 +0200
+
+python-scipy (0.7.0-1) unstable; urgency=low
+
+  [ Ondrej Certik ]
+  * Beta version
+  * debian/patches: scipy_include_fix.diff and segfault.patch removed (applied
+    upstream),  swig_ftbfs.dpatch and umfpack.dpatch updated to new paths
+
+  [ Sandro Tosi ]
+  * debian/control
+    - switch Vcs-Browser field to viewsvn
+
+  [ David Cournapeau ]
+  * New upstream version
+  * Remove obsolete dependencies on libfftw3-dev, libx11-dev and libnetcdf-dev
+  * Update version for numpy dependency: scipy requires version >= 1.2.0
+  * Set ATLAS to None when building scipy to avoid depending on ATLAS API, and
+  only use BLAS/LAPACK public API, even when ATLAS is installed on the build
+  machine
+
+ -- Ondrej Certik <ondrej@certik.cz>  Sun, 08 Mar 2009 18:47:03 -0700
+
+python-scipy (0.6.0-12) unstable; urgency=low
+
+  * The description updated to match the current SciPy (Closes: #489149).
+  * Standards-Version bumped to 3.8.0 (no action needed)
+  * Build-Depends: netcdf-dev changed to libnetcdf-dev
+
+ -- Ondrej Certik <ondrej@certik.cz>  Mon, 16 Jun 2008 22:58:01 +0200
+
+python-scipy (0.6.0-11.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Change description to refer to python-numpy package instead of Numeric
+    to avoid confusion with python-numeric package.
+
+ -- Chris AtLee <chris@atlee.ca>  Wed, 23 Apr 2008 15:45:22 -0400
+
+python-scipy (0.6.0-11) unstable; urgency=low
+
+  * Fixes FTBFS, by unexporting LDFLAGS and setting FFLAGS directly, the same
+    hack as in numpy (Closes: #475990)
+
+ -- Ondrej Certik <ondrej@certik.cz>  Mon, 14 Apr 2008 14:53:57 +0200
+
+python-scipy (0.6.0-10) unstable; urgency=low
+
+  [Sandro Tosi]
+  * Fixes a dangling symlink (Closes: #471825)
+
+ -- Ondrej Certik <ondrej@certik.cz>  Thu, 20 Mar 2008 14:50:31 +0100
+
+python-scipy (0.6.0-9) unstable; urgency=medium
+
+  * Uses correct pycentral locations (Closes: #471549)
+
+ -- Ondrej Certik <ondrej@certik.cz>  Wed, 19 Mar 2008 21:41:12 +0100
+
+python-scipy (0.6.0-8) unstable; urgency=low
+
+  * Build depend on libsuitesparse (>= 3.1.0-3)
+  * Build depends fixed to use gfortran based lapack and blas (Closes: #466868)
+
+ -- Ondrej Certik <ondrej@certik.cz>  Sat, 23 Feb 2008 01:21:51 +0100
+
+python-scipy (0.6.0-7) unstable; urgency=low
+
+  * Bumped the version, because python-numpy conflicts with python-scipy (<=
+    0.6.0-6). This compiles against the old suitesparse, but it makes the
+    package installable and working again.
+
+ -- Ondrej Certik <ondrej@certik.cz>  Thu, 21 Feb 2008 15:38:00 +0100
+
+python-scipy (0.6.0-6) UNRELEASED; urgency=low
+
+  * debian/control
+    - uniforming both Vcs-Svn and Vcs-Browser fields
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Thu, 03 Jan 2008 12:18:46 +0100
+
+python-scipy (0.6.0-5.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Changed `fftw3-dev' to `libfftw3-dev' to get rid of that dependency
+    on a virtual package.
+  * Fix FTBFS with relation to swig with a patch provided by
+    Kumar Appaiah (Closes: #456892)
+
+ -- Philipp Kern <pkern@debian.org>  Mon, 31 Dec 2007 13:45:10 +0100
+
+python-scipy (0.6.0-5) unstable; urgency=low
+
+  * DM-Upload-Allowed changed to XS-DM-Upload-Allowed
+  * standards-version made uptodate (3.7.3)
+  * don't create an empty dir usr/share/doc/python-scipy/weave/
+
+ -- Ondrej Certik <ondrej@certik.cz>  Tue, 04 Dec 2007 22:27:48 +0100
+
+python-scipy (0.6.0-4) unstable; urgency=low
+
+  * Use quilt (much eaiser to use) instead of dpatch
+  * Paul's patch added (Closes: #452991)
+  * Add DM-Upload-Allowed: yes
+
+ -- Ondrej Certik <ondrej@certik.cz>  Mon, 03 Dec 2007 15:33:24 +0100
+
+python-scipy (0.6.0-3) unstable; urgency=low
+
+  [ Piotr Ożarowski ]
+  * Rename XS-Vcs-* fields to Vcs-* (dpkg supports them now)
+
+  [ Ondrej Certik ]
+  * Depending on libsuitesparse-dev directly instead of libufsparse-dev
+    (Closes: #445771)
+
+ -- Ondrej Certik <ondrej@certik.cz>  Mon, 15 Oct 2007 20:09:07 +0200
+
+python-scipy (0.6.0-2) unstable; urgency=medium
+
+  * Replaced fftw-dev with fftw3-dev in Build-Depends (closes: #444124)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 26 Sep 2007 23:52:25 +0200
+
+python-scipy (0.6.0-1) unstable; urgency=low
+
+  [Ondřej Čertík]
+  * New upstream release
+  * watch file added
+
+  [Piotr Ożarowski]
+  * Homepage field added
+
+ -- Ondrej Certik <ondrej@certik.cz>  Sun, 23 Sep 2007 16:14:35 +0200
+
+python-scipy (0.5.2.1-2) unstable; urgency=low
+
+  * Got rid of all lintian and linda warnings (removed "SciPy is an open
+    source library of scientific tools for Python" (first sentence) from the
+    long description)
+  * debian/control: Added XS-Vcs-Svn and XS-Vcs-Browser fields to the Source
+    section
+
+ -- Ondrej Certik <ondrej@certik.cz>  Fri, 31 Aug 2007 04:29:55 +0200
+
+python-scipy (0.5.2.1-1) unstable; urgency=low
+
+  * Adopting the package
+  * New upstream release (Closes: #426012)
+  * Removed unnecessary patches
+  * Removing LICENSE.txt, since it is unnecessary (and it fixes a lintian
+    warning)
+
+ -- Ondrej Certik <ondrej@certik.cz>  Tue, 28 Aug 2007 12:03:29 +0200
+
+python-scipy (0.5.2-9) experimental; urgency=low
+
+  * Added Build-Dep on python-numpy (Closes: 422389)
+  * Made build independent of the python version (Closes: 414626)
+  * Added a new patch on sandbox/montecarlo to fix py2.5 compatibility
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Fri, 18 May 2007 11:12:31 +0100
+
+python-scipy (0.5.2-8) experimental; urgency=low
+
+  * Fixed compatibility with numpy >= 1.0.2, by importing parts from upstream svn
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sat, 21 Apr 2007 22:46:29 +0100
+
+python-scipy (0.5.2-7+b1) unstable; urgency=low
+
+  * Binary-only non-maintainer upload for i386; no source changes.
+  * Rebuild to fix binaries built against experimental
+
+ -- Debian/i386 Build Daemon <buildd_i386-saens>  Tue, 27 Feb 2007 02:01:45 -0600
+
+python-scipy (0.5.2-7) unstable; urgency=low
+
+  * Added 'm86k' among the archs on which xplt should not build.
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sat, 24 Feb 2007 13:40:42 +0000
+
+python-scipy (0.5.2-6) unstable; urgency=low
+
+  * Merged patch for image viwer from upstream svn
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sat, 24 Feb 2007 01:39:18 +0000
+
+python-scipy (0.5.2-5) experimental; urgency=low
+
+  * Added a fix in sandbox/montecarlo tests that prevented installation
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Thu, 22 Feb 2007 01:33:18 +0000
+
+python-scipy (0.5.2-4) experimental; urgency=low
+
+  * Incorporated code from setup_without_xplt.py into patches/sandbox.dpatch, in order to
+    build sandbox/xplt only on supported archs (Closes: #407869).
+  * Added libx11-dev among Build-Deps to support xplt.
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Thu, 22 Feb 2007 00:33:51 +0000
+
+python-scipy (0.5.2-3) experimental; urgency=low
+
+  * Added netcdfg-dev Build-Deps (completed sandbox inclusion)
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Tue, 20 Feb 2007 23:28:43 +0000
+
+python-scipy (0.5.2-2) experimental; urgency=low
+
+  * Enabled sandbox modules. To this aim randomkit.[ch] are included from
+    pyhon-numpy sources. See debian/patches/sandbox.dpatch
+    (Closes: #407869).
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Mon, 19 Feb 2007 19:26:22 +0000
+
+python-scipy (0.5.2-1) unstable; urgency=low
+
+  * Fixed scipy.signal segfault (closes: #410757)
+  * Replaced hard-coded xv command with "see" (from mime-support).
+    Additionally, the environment variable SCIPY_PIL_IMAGE_VIEWER can be set.
+    (Closes: #395198)
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sun, 18 Feb 2007 16:22:03 +0000
+
+python-scipy (0.5.2-0.1) unstable; urgency=medium
+
+  * Remove build dependency on python-numpy-dev.
+  * python-scipy: Depend on python-numpy instead of python-numpy-dev.
+  * Package builds on other archs than i386. Closes: #402783.
+
+ -- Matthias Klose <doko@debian.org>  Sun,  7 Jan 2007 14:12:12 +0100
+
+python-scipy (0.5.2-0) experimental; urgency=low
+
+  * New upstream version (compatible with python-numpy-1.0.x).
+  * (Build-)depend on python-numpy (>= 1:1.0.1).
+  * Remove redundant (build-)dependencies.
+  * weave examples and docs are removed from the upstream tarball.
+
+ -- Matthias Klose <doko@debian.org>  Wed,  3 Jan 2007 22:37:49 +0100
+
+python-scipy (0.5.1-3) unstable; urgency=low
+
+  * Moved weave/examples into /usr/share/doc/python-scipy/
+    and removed *.so files that prevented building on non x86 archs
+    (closes: #397241)
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sat, 16 Sep 2006 18:46:56 +0200
+
+python-scipy (0.5.1-2) unstable; urgency=low
+
+  * Added swig and libufsparse-dev among Build-deps
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Mon, 11 Sep 2006 22:05:45 +0200
+
+python-scipy (0.5.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Thu,  7 Sep 2006 00:32:07 +0200
+
+python-scipy (0.5.0-3) unstable; urgency=low
+
+  * Re-compiled to reflect C-API changes in numpy.
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Fri, 18 Aug 2006 01:06:06 +0200
+
+python-scipy (0.5.0-2) unstable; urgency=low
+
+  * Re-added fftw-dev among build-deps.
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Tue,  8 Aug 2006 17:34:44 -0400
+
+python-scipy (0.5.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Removed debian/patches/python2.3.dpatch now included in upstream release
+
+ -- Marco Presi (Zufus) <zufus@debian.org>  Sun, 30 Jul 2006 00:33:21 +0200
+
+python-scipy (0.4.9-2) unstable; urgency=low
+
+  * Build against new release of python-numpy.
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Wed, 05 Jul 2006 18:06:41 +0100
+
+python-scipy (0.4.9-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Tue, 04 Jul 2006 16:11:01 +0100
+
+python-scipy (0.3.2-9) unstable; urgency=low
+
+  * Updated to new python policy (closes: #373352)
+  * Updated standards to 3.7.2
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Thu, 15 Jun 2006 17:10:49 +0200
+
+python-scipy (0.3.2-8) unstable; urgency=low
+
+  * Changed dependency on libwxgtk2.4-1-python to python-wxgtk2.4 (closes: #333795)
+  * Added cow progress bar fix by Glen W. Mabey (closes: #322796)
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Tue,  8 Nov 2005 11:56:51 +0100
+
+python-scipy (0.3.2-7) unstable; urgency=low
+
+  * Depend on libwxgtk2.4-1-python due to new C++ ABI.
+  * Do not depend on obsolete blas-dev (Closes: #320441)
+  * Drop the python2.2 version due to python2.2-numeric removal.
+  * Applied Andreas Jochens' patch fixing gcc4.0 storage class
+    error (Closes: #302598)
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Sun, 31 Jul 2005 11:11:42 +0100
+
+python-scipy (0.3.2-6) unstable; urgency=low
+
+  * Added a Suggests: python2.X-profiler in debian/control, made the
+    import of pstats optional by patching stats/__init__.py
+    (Closes: #296796)
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Fri, 11 Mar 2005 10:54:35 +0100
+
+python-scipy (0.3.2-5) unstable; urgency=low
+
+  * Applied Adam Conrad's patch to allow build on m68k (Closes: #292919)
+  * Applied Andreas Jochens' patch fixing gcc4.0 incompatibility and
+    syntax error in debian/control (Closes: #288181)
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Thu, 17 Feb 2005 14:49:03 +0100
+
+python-scipy (0.3.2-4) unstable; urgency=low
+
+  * Build for python 2.4.
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Mon, 24 Jan 2005 12:25:16 +0000
+
+python-scipy (0.3.2-3) unstable; urgency=low
+
+  * fixed build dependencies on arm (Closes: #277897)
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Sat, 23 Oct 2004 11:28:51 +0200
+
+python-scipy (0.3.2-2) unstable; urgency=low
+
+  * Updated package description
+  * removed scipy.xplt on hppa, s390, ia64, mips, mipsel (Closes: #277485)
+  * Added note about the missing module in README.Debian
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Fri, 22 Oct 2004 15:05:00 +0200
+
+python-scipy (0.3.2-1) unstable; urgency=low
+
+  * New version.
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Mon, 18 Oct 2004 16:28:16 +0100
+
+python-scipy (0.3.0+266.4239-1) unstable; urgency=low
+
+  * Updated to release.
+  * Recommends c++-compiler.
+  * Dropped python2.1 support.
+  * Official package (closes: #126037).
+  * Added Alexandre Fayolle and Marco Presi as uploaders
+  * Added missing build dependencies
+
+ -- Alexandre Fayolle <afayolle@debian.org>  Mon, 13 Sep 2004 23:04:34 +0200
+
+python-scipy (0.2.0+cvs20031002-1) unstable; urgency=low
+
+  * Moved scipy_core into a seperate package.
+  * Default to python-2.3.
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Thu, 02 Oct 2003 13:31:30 +0100
+
+python-scipy (0.2.0+alpha144.4350-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- José Fonseca <j_r_fonseca@yahoo.co.uk>  Tue, 01 Jul 2003 13:35:03 +0100
+

@@ -1,0 +1,41 @@
+Source: pyres
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 8),
+               dh-python,
+               python-all,
+               python-pytest,
+               python-redis,
+               python-setproctitle,
+               python-setuptools,
+               python-simplejson,
+               python3-all,
+               python3-pytest,
+               python3-redis,
+               python3-setproctitle,
+               python3-setuptools,
+               python3-simplejson,
+               redis-server
+X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.3
+Homepage: https://github.com/binarydud/pyres
+Vcs-Git: git://github.com/binarydud/pyres.git
+Vcs-Browser: https://github.com/binarydud/pyres
+
+Package: python-pyres
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-simplejson, python-redis, python-setproctitle
+Description: Python module to provide a Resque-like job queue
+ Provides a Resque-like job queue for your app.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-pyres
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-simplejson, python3-redis, python3-setproctitle
+Description: Python module to provide a Resque-like job queue
+ Provides a Resque-like job queue for your app.
+ .
+ This package installs the library for Python 3.

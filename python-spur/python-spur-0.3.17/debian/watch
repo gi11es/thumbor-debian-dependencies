@@ -1,0 +1,2 @@
+version=3
+https://github.com/mwilliamson/spur.py/releases /mwilliamson/spur.py/archive/(\d\S+)\.tar\.(?:bz2|gz|xz)

@@ -1,0 +1,25 @@
+python-pytest-timeout (1.0.0-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Wed, 18 May 2016 15:54:30 +0000
+
+python-pytest-timeout (1.0.0-1) unstable; urgency=medium
+
+  * New upstream release. 
+  * Bumped standard version to 3.9.7, no changes were needed.
+  * Use SSL enabled VCS fields.
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Mon, 18 Apr 2016 08:57:21 +0000
+
+python-pytest-timeout (0.4-2) unstable; urgency=medium
+
+  * Call tests from debian/rules, fix FTBFS (Closes: #795001).
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Mon, 17 Aug 2015 08:37:56 +0800
+
+python-pytest-timeout (0.4-1) unstable; urgency=low
+
+  * Initial release. (Closes: #779417)
+
+ -- gustavo panizzo <gfa@zumbi.com.ar>  Sat, 28 Feb 2015 18:29:40 +0800

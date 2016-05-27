@@ -1,0 +1,40 @@
+Source: exam
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-mock,
+               python-nose,
+               python-pytest,
+               python-setuptools,
+               python-sphinx,
+               python3-all,
+               python3-mock,
+               python3-nose,
+               python3-pytest,
+               python3-setuptools,
+               python3-sphinx
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+Homepage: https://github.com/fluxx/exam
+Vcs-Git: git://github.com/fluxx/exam.git
+Vcs-Browser: https://github.com/fluxx/exam
+
+Package: python-exam
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-mock
+Description: Python module to help write better tests
+ Toolkit for writing better tests.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-exam
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-mock
+Description: Python module to help write better tests
+ Toolkit for writing better tests.
+ .
+ This package installs the library for Python 3.

@@ -2,25 +2,35 @@ Format: 1.8
 Date: Thu, 19 May 2016 17:03:26 +0000
 Source: nose-of-yeti
 Binary: python-nose-of-yeti python3-nose-of-yeti
-Architecture: all
+Architecture: source all
 Version: 1.5.1-1
 Distribution: UNRELEASED
 Urgency: medium
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-nose-of-yeti - Python module to provide a BDD DSL for python tests
  python3-nose-of-yeti - Python module to provide a BDD DSL for python tests
+Closes: 825826
 Changes:
  nose-of-yeti (1.5.1-1) UNRELEASED; urgency=medium
  .
-   * Initial release.
+   * Initial release. Closes: #825826
 Checksums-Sha1:
- 589af202528ae8500f3f37ddb4551e51e5818bf5 25700 python-nose-of-yeti_1.5.1-1_all.deb
- 701f1ef28f9969a7f1aeb436982bd5bd4eaed925 24648 python3-nose-of-yeti_1.5.1-1_all.deb
+ edf76336594392b744f627197678006ec3d58753 1432 nose-of-yeti_1.5.1-1.dsc
+ c050c4bce7ca96926c09ea86f4c6042a9241e4fd 26040 nose-of-yeti_1.5.1.orig.tar.gz
+ 528e00f821c09164e6275ed25add9e02a14b5c3b 21276 nose-of-yeti_1.5.1-1.debian.tar.xz
+ d60aaff9d8cc18e1be3eac009b746ebb19cb7529 25892 python-nose-of-yeti_1.5.1-1_all.deb
+ db470eae7098f2d19f3c534af3cc914ce6c26019 24856 python3-nose-of-yeti_1.5.1-1_all.deb
 Checksums-Sha256:
- d83999f0ac6bc148bf6223a0a1979b7bb8fca8572d15984bcacd3eb6f56e347e 25700 python-nose-of-yeti_1.5.1-1_all.deb
- 316dca6077710c432a1b2ce688b3786e9b9ae242d0c7765ef6257404664a4efb 24648 python3-nose-of-yeti_1.5.1-1_all.deb
+ 4d0fd4eb4347f8f8f72f31b6d709b0dfbd017b496b24c69f97b5a3f1b968c0d8 1432 nose-of-yeti_1.5.1-1.dsc
+ 07307e34d210c524aa2edc3f865c4b6b1be8702ad44ce09cd5685e9992cde955 26040 nose-of-yeti_1.5.1.orig.tar.gz
+ 8e13b568d6a0238c6f7ca5775125aaa01315d67b810cb9cf3ccad73a66c9c91b 21276 nose-of-yeti_1.5.1-1.debian.tar.xz
+ 14bfcfa908240175efbef94cf67be124d04753745860eabc67cfd52dfc70dc21 25892 python-nose-of-yeti_1.5.1-1_all.deb
+ 7f44a70535abf3fd9cec0ab5637a46b79773342590e2dc53d801ca40b8af539a 24856 python3-nose-of-yeti_1.5.1-1_all.deb
 Files:
- 1ea4beed1bc63b0922bbadff1709fe97 25700 python optional python-nose-of-yeti_1.5.1-1_all.deb
- 8d5772db3f626589d2baac2092858ca0 24648 python optional python3-nose-of-yeti_1.5.1-1_all.deb
+ dd925b981268fe4220003599c6fc725c 1432 python optional nose-of-yeti_1.5.1-1.dsc
+ 9f96ed1c9ad0e3d3af368df30e4a1006 26040 python optional nose-of-yeti_1.5.1.orig.tar.gz
+ 86a46a2c40a1f2685937e97cc9f13e19 21276 python optional nose-of-yeti_1.5.1-1.debian.tar.xz
+ a4ccef6b817d301b072648ef5a74375c 25892 python optional python-nose-of-yeti_1.5.1-1_all.deb
+ 652404a0d7dcb954b46f36f3ea03d8ce 24856 python optional python3-nose-of-yeti_1.5.1-1_all.deb

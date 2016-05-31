@@ -1,5 +1,6 @@
 Source: nose-of-yeti
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional
 Standards-Version: 3.9.8
@@ -22,8 +23,8 @@ Build-Depends: debhelper (>= 9),
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Homepage: https://github.com/delfick/nose-of-yeti
-Vcs-Git: git://github.com/delfick/nose-of-yeti.git
-Vcs-Browser: https://github.com/delfick/nose-of-yeti
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-nose-of-yeti.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-nose-of-yeti.git
 
 Package: python-nose-of-yeti
 Architecture: all

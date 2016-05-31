@@ -1,22 +1,23 @@
 Format: 1.8
 Date: Thu, 19 May 2016 16:38:43 +0000
 Source: remotecv
-Binary: python-remotecv
+Binary: remotecv
 Architecture: all
 Version: 2.2.1-1
 Distribution: UNRELEASED
 Urgency: medium
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
- python-remotecv - Python module providing an OpenCV server for facial and feature r
+ remotecv   - Python module providing an OpenCV server for facial and feature r
+Closes: 825893
 Changes:
  remotecv (2.2.1-1) UNRELEASED; urgency=medium
  .
-   * Initial release.
+   * Initial release. Closes: #825893
 Checksums-Sha1:
- fb58a8b7261496b8a9d3b28713990f0d2449c22c 734900 python-remotecv_2.2.1-1_all.deb
+ 4803523f47d983a970ec1ebbb98416aff7293733 734778 remotecv_2.2.1-1_all.deb
 Checksums-Sha256:
- 91627583c9d634c5b660992f9cb37210e4d0b11cc6f1848a3183556b83e131a9 734900 python-remotecv_2.2.1-1_all.deb
+ 7b1d46f21cc2c77f30ff918a879ada9583fcb93efc8f01774083a715f0f387a8 734778 remotecv_2.2.1-1_all.deb
 Files:
- 83d5bd80ccd5d8dbe3448645784749de 734900 python optional python-remotecv_2.2.1-1_all.deb
+ 1b71e7d6086ca54df3c05323772991ff 734778 python optional remotecv_2.2.1-1_all.deb

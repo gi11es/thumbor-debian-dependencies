@@ -6,21 +6,22 @@ Architecture: all
 Version: 2.1.2-1
 Distribution: UNRELEASED
 Urgency: medium
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-should-dsl - Python module to improve readability for should-style expectation
  python3-should-dsl - Python module to improve readability for should-style expectation
+Closes: 825827
 Changes:
  should-dsl (2.1.2-1) UNRELEASED; urgency=medium
  .
-   * Initial release.
+   * Initial release. Closes: #825827
 Checksums-Sha1:
- c798c9ce54750ed7ad991526fbf0f2972e4a34fa 9264 python-should-dsl_2.1.2-1_all.deb
- 94157200337d9681a857d7bf2682e6e23921619a 9202 python3-should-dsl_2.1.2-1_all.deb
+ 2c4a6b8406f021ba16a90be66a2134a0f35bcc47 9312 python-should-dsl_2.1.2-1_all.deb
+ 5148c38ab39425de52bc9ace57f451f1800313da 9244 python3-should-dsl_2.1.2-1_all.deb
 Checksums-Sha256:
- bac8cdce14c0683ea45b0018b1b71fde265cc4970673dc8155a2f4f798a8f8ed 9264 python-should-dsl_2.1.2-1_all.deb
- 3d57ec5f117ba33fe0700b228c0f951777f155b01531c48cdd115f84e4a28ccc 9202 python3-should-dsl_2.1.2-1_all.deb
+ c8455dec7212556956bf8fdb71eef26acce0ee8c45f02e1979ef43ae06eb0e6b 9312 python-should-dsl_2.1.2-1_all.deb
+ 93dbeb3d3c9ca3b92761e60ee11dd467c5ae8e235b676fdbdf6450dc0cdcacd9 9244 python3-should-dsl_2.1.2-1_all.deb
 Files:
- d8dd69209930b87f6628e16c2f050480 9264 python optional python-should-dsl_2.1.2-1_all.deb
- 37555cdf9e97f0a49017da93d5587d3b 9202 python optional python3-should-dsl_2.1.2-1_all.deb
+ 9aa5bbc772720fa45fc2f174240a3872 9312 python optional python-should-dsl_2.1.2-1_all.deb
+ 614539ecbf954409e8edfcda5f54208e 9244 python optional python3-should-dsl_2.1.2-1_all.deb

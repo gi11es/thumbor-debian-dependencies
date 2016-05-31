@@ -6,6 +6,7 @@ Priority: optional
 Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9),
                dh-python,
+               pyres (>= 1.2),
                python-all,
                python-coverage,
                python-mock,
@@ -14,7 +15,6 @@ Build-Depends: debhelper (>= 9),
                python-opencv,
                python-pil (>= 3.0),
 	       python-preggy,
-               python-pyres (>= 1.2),
                python-setuptools
 X-Python-Version: >= 2.6
 Homepage: https://github.com/thumbor/remotecv
@@ -23,6 +23,6 @@ Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/remotecv.gi
 
 Package: remotecv
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-pyres (>= 1.2), python-pil (>= 3.0), python-opencv
+Depends: ${misc:Depends}, ${python:Depends}, pyres (>= 1.2), python-pil (>= 3.0), python-opencv
 Description: Python module providing an OpenCV server for facial and feature recognition
  OpenCV server for facial and feature recognition.

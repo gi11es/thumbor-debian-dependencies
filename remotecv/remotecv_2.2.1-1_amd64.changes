@@ -2,7 +2,7 @@ Format: 1.8
 Date: Thu, 19 May 2016 16:38:43 +0000
 Source: remotecv
 Binary: remotecv
-Architecture: all
+Architecture: source all
 Version: 2.2.1-1
 Distribution: UNRELEASED
 Urgency: medium
@@ -16,8 +16,17 @@ Changes:
  .
    * Initial release. Closes: #825893
 Checksums-Sha1:
- 4803523f47d983a970ec1ebbb98416aff7293733 734778 remotecv_2.2.1-1_all.deb
+ 6064a3ff5a9196a1e618780fe3c134f498bc9030 1245 remotecv_2.2.1-1.dsc
+ af34707d7eb842d0ed623dc5fe60fbc3602d6cf2 9978935 remotecv_2.2.1.orig.tar.gz
+ 3df38fea291e94925bad44dc550aa3c2564ea22b 2612 remotecv_2.2.1-1.debian.tar.xz
+ ab5f62c01c4f407200984f00184a61487c6714b4 735324 remotecv_2.2.1-1_all.deb
 Checksums-Sha256:
- 7b1d46f21cc2c77f30ff918a879ada9583fcb93efc8f01774083a715f0f387a8 734778 remotecv_2.2.1-1_all.deb
+ 34f8fdae4c79855e11beadd59f054394c079b8210c2b416a59ae432a2cc75c2a 1245 remotecv_2.2.1-1.dsc
+ 74b5162edf42d5b798e09755d60a12b67f7db8ebae96b7a9cd7e72d3e1f5fce3 9978935 remotecv_2.2.1.orig.tar.gz
+ 3aad652e802c4e03ec37ef55147655d714330453ff8a4bc91c663bdee648afe3 2612 remotecv_2.2.1-1.debian.tar.xz
+ c9a3b5367e40d46e90ead257e5f1994a9f2caeb42e1ef851554eba397c872994 735324 remotecv_2.2.1-1_all.deb
 Files:
- 1b71e7d6086ca54df3c05323772991ff 734778 python optional remotecv_2.2.1-1_all.deb
+ 65e30ab87e834eb9efb5ce031e870334 1245 python optional remotecv_2.2.1-1.dsc
+ 90fe5293e6a8836f2fe9da96f74a88bb 9978935 python optional remotecv_2.2.1.orig.tar.gz
+ 9f94c52eef8e0f3b5d794bc5a021eaf8 2612 python optional remotecv_2.2.1-1.debian.tar.xz
+ 1574f915baa588b54217dbd6b5e13493 735324 python optional remotecv_2.2.1-1_all.deb

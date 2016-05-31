@@ -1,7 +1,0 @@
-YANC for Debian
----------------
-
-To enable the plugin pass `--with-yanc` to `nosetests`.
-
-
- -- Marcelo Jorge Vieira <metal@debian.org>  Mon, 26 jan 2013 11:10:03 -0200

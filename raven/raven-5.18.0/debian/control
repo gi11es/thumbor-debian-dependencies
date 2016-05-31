@@ -1,5 +1,6 @@
 Source: raven
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional
 Standards-Version: 3.9.8
@@ -63,8 +64,8 @@ Build-Depends: debhelper (>= 9),
 X-Python-Version: >= 2.6
 X-Python3-Version: >= 3.2
 Homepage: https://github.com/getsentry/raven-python
-Vcs-Git: git://github.com/getsentry/raven-python.git
-Vcs-Browser: https://github.com/getsentry/raven-python
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/raven.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/raven.git
 
 Package: raven
 Architecture: all

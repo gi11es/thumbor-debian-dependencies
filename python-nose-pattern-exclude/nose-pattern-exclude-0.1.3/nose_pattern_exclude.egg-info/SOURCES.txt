@@ -1,5 +1,6 @@
 README.rst
 nose_pattern_exclude.py
+setup.cfg
 setup.py
 nose_pattern_exclude.egg-info/PKG-INFO
 nose_pattern_exclude.egg-info/SOURCES.txt

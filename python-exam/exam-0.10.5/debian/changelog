@@ -1,5 +1,5 @@
 exam (0.10.5-1) UNRELEASED; urgency=medium
 
-  * Initial release.
+  * Initial release. Closes: #825822
 
  -- Gilles Dubuc <gilles@wikimedia.org>  Thu, 19 May 2016 17:03:26 +0000

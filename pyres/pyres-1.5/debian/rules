@@ -6,7 +6,7 @@ export PYBUILD_AFTER_TEST=rm -fR {build_dir}/tests ; cat pyres-pybuild-redis-pid
 export PYBUILD_TEST_ARGS=-k 'not test_worker_pids'
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2 --buildsystem=pybuild
 
 override_dh_clean:
 	rm -rf pyres.egg-info .cache dump.rdb

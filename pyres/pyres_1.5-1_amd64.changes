@@ -1,26 +1,32 @@
 Format: 1.8
 Date: Wed, 18 May 2016 16:16:36 +0000
 Source: pyres
-Binary: python-pyres python3-pyres
-Architecture: all
+Binary: pyres
+Architecture: source all
 Version: 1.5-1
 Distribution: UNRELEASED
 Urgency: low
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
- python-pyres - Python module to provide a Resque-like job queue
- python3-pyres - Python module to provide a Resque-like job queue
+ pyres      - Python module to provide a Resque-like job queue
+Closes: 825896
 Changes:
  pyres (1.5-1) UNRELEASED; urgency=low
  .
-   * Initial release.
+   * Initial release. Closes: #825896
 Checksums-Sha1:
- 60039dd49d4a00a720b6ada57145436bd745a885 20598 python-pyres_1.5-1_all.deb
- 9ab53a0e88fefe632395eb86a10d5d103d529835 19894 python3-pyres_1.5-1_all.deb
+ 7d2124bf14eaa151f5735c3f6c76b9fa6d3b93fc 1148 pyres_1.5-1.dsc
+ e7e3973b3d05869d3878e933f74c95f596c134ae 269001 pyres_1.5.orig.tar.gz
+ 6c6b52becae023d28133a8fa3439776d7ab42562 2000 pyres_1.5-1.debian.tar.xz
+ c94d8825bf0fbc6a93f554a0e466764e54ebd7a2 19334 pyres_1.5-1_all.deb
 Checksums-Sha256:
- 49ec458a76652812b7ba0a52adc0ae6b95c52d9b7da91cfd9c3b5c7754b9f112 20598 python-pyres_1.5-1_all.deb
- 4c01c28cce4e5b5034d200bcb73f9a7da7a0c5e1c6763ebebb190735335382ea 19894 python3-pyres_1.5-1_all.deb
+ 307a04ef101b0d493e2a7bb807d3c60bf336fdbd278a4483b570259e351b0e20 1148 pyres_1.5-1.dsc
+ 417ae7890bb7f860728b48f5dee199712cc675e0e6335febdb8e69696d863391 269001 pyres_1.5.orig.tar.gz
+ 7141cc0172b619490a913067c060fe2cc22c0d23457b948c38e937ff29ea32cc 2000 pyres_1.5-1.debian.tar.xz
+ c5f39a03d220a9c72d290da774aa2f060f0aae1e3f6ddb6e0501e99f307c3596 19334 pyres_1.5-1_all.deb
 Files:
- bd07add00b4f595f789d29b415e8478a 20598 python optional python-pyres_1.5-1_all.deb
- 44ca684aa9922a6c9a9c70ac1b98c242 19894 python optional python3-pyres_1.5-1_all.deb
+ c6f6fd0894f5ab382afb3ccb8bd91e7b 1148 python optional pyres_1.5-1.dsc
+ 7437d6661cc4a47cdb9b4dde9cafc165 269001 python optional pyres_1.5.orig.tar.gz
+ df136b37636ebcd56db3e3bc500fb0bd 2000 python optional pyres_1.5-1.debian.tar.xz
+ 9865d67ec479875f19affbc1ec39201e 19334 python optional pyres_1.5-1_all.deb

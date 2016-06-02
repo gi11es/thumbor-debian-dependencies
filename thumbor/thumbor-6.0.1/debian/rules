@@ -10,3 +10,8 @@ export PYBUILD_AFTER_TEST=cat thumbor-pybuild-redis-pid | xargs kill ; rm thumbo
 override_dh_clean:
 	rm -rf thumbor.egg-info
 	dh_clean
+
+override_dh_install:
+	dh_install
+	mkdir debian/thumbor/etc
+	install -p -o root -g root -m 644 debian/thumbor.conf debian/thumbor/etc

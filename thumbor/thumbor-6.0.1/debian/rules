@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=pyres
+export PYBUILD_TEST_NOSE=1
+export PYBUILD_BEFORE_TEST=redis-server --port 6668 --requirepass hey_you > /dev/null & echo "$$!" > thumbor-pybuild-redis-pid
+export PYBUILD_AFTER_TEST=cat thumbor-pybuild-redis-pid | xargs kill ; rm thumbor-pybuild-redis-pid
+
+%:
+	dh $@ --with python2 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf thumbor.egg-info
+	dh_clean

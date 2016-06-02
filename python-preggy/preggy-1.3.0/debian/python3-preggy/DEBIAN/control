@@ -1,0 +1,15 @@
+Package: python3-preggy
+Source: preggy
+Version: 1.3.0-1
+Architecture: all
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Installed-Size: 100
+Depends: python3-six, python3-unidecode, python3:any (>= 3.3.2-2~)
+Section: python
+Priority: optional
+Homepage: http://heynemann.github.io/preggy
+Description: Assertion library for Python
+ Collection of expectations for python applications, extracted from
+ the pyVows project.
+ .
+ This package installs the library for Python 3.

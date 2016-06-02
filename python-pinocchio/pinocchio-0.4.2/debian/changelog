@@ -1,0 +1,5 @@
+pinocchio (0.4.2-1) UNRELEASED; urgency=medium
+
+  * Initial release. Closes: #825828
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Thu, 19 May 2016 17:03:26 +0000

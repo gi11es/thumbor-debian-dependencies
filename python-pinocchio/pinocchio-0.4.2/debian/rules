@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=pinocchio
+export PYBUILD_TEST_NOSE=1
+
+%:
+	dh $@ --with python2,python3 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf pinocchio.egg-info
+	dh_clean

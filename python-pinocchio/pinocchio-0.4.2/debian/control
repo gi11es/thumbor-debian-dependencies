@@ -1,0 +1,124 @@
+Source: pinocchio
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-colorama,
+               python-nose,
+               python-setuptools,           
+               python3-all,
+               python3-colorama,
+               python3-nose,
+               python3-setuptools,
+               python3-six
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+Homepage: https://github.com/mkwiatkowski/pinocchio
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-pinocchio.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-pinocchio.git
+
+Package: python-pinocchio
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-colorama, python-nose
+Description: Set of extensions to the nose unit testing framework for Python
+ Pinocchio is a set of extensions to the nose unit testing framework for Python.
+ .
+ stopwatch -- selecting tests based on execution time
+ .
+ Sometimes your unit tests just seem to take forever. Well, now you can
+ get rid of the slow ones automatically!
+ .
+ The pinocchio.stopwatch extension module lets you time the unit tests
+ being run, and -- once times have been recorded -- then lets you
+ select only those that run faster than a given amount of time. As a
+ bonus, the test names and run times are stored in a simple format -- a
+ pickled dictionary -- so you can target specific tests for speedup,
+ too.
+ .
+ decorator -- adding attributes to tests
+ .
+ The attrib extension module for nose is a great way to select subsets
+ of tests based on attributes you've given the test functions, classes,
+ or methods. But what if you don't want to modify the source code to
+ add the attributes?
+ .
+ figleafsections -- find out what tests are executing which parts of your code
+ .
+ (You'll need to install figleaf to use this plugin; it will install
+ the figleaf package and the annotate-sections script.)
+ .
+ This plugin lets you record code coverage per unit test, and then
+ annotate your Python source code with which unit tests are running
+ which lines of code. It's a useful way to figure out which nose tests
+ are exercising what parts of your program.
+ .
+ See http://ivory.idyll.org/blog/feb-07/figleaf-goodness.html for some
+ detailed examples.
+ .
+ outputsave -- save your stdout into files
+ .
+ This plugin records the stdout from each test into a separate file,
+ with a prefix indicating whether or not the test succeeded.
+ .
+ spec -- generate test description from test class/method names
+ .
+ spec lets you generate a "specification" similar to testdox . The ppec
+ plugin can generate simple documentation directly from class and
+ method names of test cases.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-pinocchio
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python3-colorama, python3-nose
+Description: Set of extensions to the nose unit testing framework
+ Pinocchio is a set of extensions to the nose unit testing framework for Python.
+ .
+ stopwatch -- selecting tests based on execution time
+ .
+ Sometimes your unit tests just seem to take forever. Well, now you can
+ get rid of the slow ones automatically!
+ .
+ The pinocchio.stopwatch extension module lets you time the unit tests
+ being run, and -- once times have been recorded -- then lets you
+ select only those that run faster than a given amount of time. As a
+ bonus, the test names and run times are stored in a simple format -- a
+ pickled dictionary -- so you can target specific tests for speedup,
+ too.
+ .
+ decorator -- adding attributes to tests
+ .
+ The attrib extension module for nose is a great way to select subsets
+ of tests based on attributes you've given the test functions, classes,
+ or methods. But what if you don't want to modify the source code to
+ add the attributes?
+ .
+ figleafsections -- find out what tests are executing which parts of your code
+ .
+ (You'll need to install figleaf to use this plugin; it will install
+ the figleaf package and the annotate-sections script.)
+ .
+ This plugin lets you record code coverage per unit test, and then
+ annotate your Python source code with which unit tests are running
+ which lines of code. It's a useful way to figure out which nose tests
+ are exercising what parts of your program.
+ .
+ See http://ivory.idyll.org/blog/feb-07/figleaf-goodness.html for some
+ detailed examples.
+ .
+ outputsave -- save your stdout into files
+ .
+ This plugin records the stdout from each test into a separate file,
+ with a prefix indicating whether or not the test succeeded.
+ .
+ spec -- generate test description from test class/method names
+ .
+ spec lets you generate a "specification" similar to testdox . The ppec
+ plugin can generate simple documentation directly from class and
+ method names of test cases.
+ .
+ This package installs the library for Python 3.

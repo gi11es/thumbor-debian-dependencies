@@ -1,0 +1,39 @@
+Format: 1.8
+Date: Wed, 18 May 2016 16:16:36 +0000
+Source: pyssim
+Binary: pyssim python-pyssim python3-pyssim
+Architecture: source all
+Version: 0.2-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ pyssim     - Tool computing the Structural Similarity Image Metric (SSIM)
+ python-pyssim - Tool computing the Structural Similarity Image Metric (SSIM)
+ python3-pyssim - Tool computing the Structural Similarity Image Metric (SSIM)
+Changes:
+ pyssim (0.2-1) UNRELEASED; urgency=low
+ .
+   * Initial release. Closes #825899
+Checksums-Sha1:
+ 91b89ae3102f8ccdb76a02577323ec76f9aca961 1332 pyssim_0.2-1.dsc
+ c0b0f9467d09649e71bf0db15d9cfe8910ae29aa 2664213 pyssim_0.2.orig.tar.gz
+ 68f89393c3f69959dbc386386f413f0b2f59f6fd 2064 pyssim_0.2-1.debian.tar.xz
+ 3f72b08268e7d5b6d7d6a8dbd942810f7cbada3d 3424 pyssim_0.2-1_all.deb
+ ddeb3ad5039e162b05f178ee48262e99ebb657bf 6220 python-pyssim_0.2-1_all.deb
+ e29aa7083229f682979600bcd2055adc1053aab5 6304 python3-pyssim_0.2-1_all.deb
+Checksums-Sha256:
+ 62d4fff90d197d1aa9ea0a8a4b52a3e7cfaf13ef7f962791d88ed74aa8b6b059 1332 pyssim_0.2-1.dsc
+ ff6934fedb0942fd2c9bf94828f221293207bd80f47558209a07a79a58fb1099 2664213 pyssim_0.2.orig.tar.gz
+ 38512b7f02a03108cffda831bf7806ba395bf36f87bf91197d28a4ba2f004ecc 2064 pyssim_0.2-1.debian.tar.xz
+ 7b480244b320d04512c4f8eddd27b15028a2b5b39e3cdcd3a9e1503fca82d5ea 3424 pyssim_0.2-1_all.deb
+ 6887ff852c3eade73b35d9a19a851f5d987ce749e0c2a14091467f8158a82d87 6220 python-pyssim_0.2-1_all.deb
+ 09dfedb6f15ba919ea29c9e462b16cdfb872acdee4360254acde4e490cca7e14 6304 python3-pyssim_0.2-1_all.deb
+Files:
+ 74eeac2b406b6cc6e4bd17b98c163859 1332 python optional pyssim_0.2-1.dsc
+ 7dab9f4acc68865b8ffe741f449a1a78 2664213 python optional pyssim_0.2.orig.tar.gz
+ 0719eaa4398a576f8531f413bab6284c 2064 python optional pyssim_0.2-1.debian.tar.xz
+ 9558d749829101db689ef1d56f8a08d8 3424 python optional pyssim_0.2-1_all.deb
+ e9bfdbbff6c3f53c1c6e616b590703cc 6220 python optional python-pyssim_0.2-1_all.deb
+ 80fc8a6df978d1f109d746e21bffe42f 6304 python optional python3-pyssim_0.2-1_all.deb

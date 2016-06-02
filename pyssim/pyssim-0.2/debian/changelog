@@ -1,0 +1,5 @@
+pyssim (0.2-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes #825899
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Wed, 18 May 2016 16:16:36 +0000

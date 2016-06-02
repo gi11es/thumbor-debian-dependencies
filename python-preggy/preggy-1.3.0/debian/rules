@@ -5,7 +5,7 @@ export PYBUILD_BEFORE_TEST=cp -R {dir}/README.md {build_dir}
 export PYBUILD_AFTER_TEST=rm -fR {build_dir}/README.md
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2 --buildsystem=pybuild
 
 override_dh_auto_clean:
 	rm -f .coverage

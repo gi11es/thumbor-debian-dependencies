@@ -1,0 +1,11 @@
+[Unit]
+Description=Thumbor image manipulation service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/thumbor
+User=thumbor
+
+[Install]
+WantedBy=default.target
+

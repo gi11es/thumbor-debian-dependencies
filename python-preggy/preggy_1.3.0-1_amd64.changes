@@ -1,7 +1,7 @@
 Format: 1.8
 Date: Thu, 02 Jun 2016 14:08:03 +0000
 Source: preggy
-Binary: python-preggy python3-preggy
+Binary: python-preggy
 Architecture: source all
 Version: 1.3.0-1
 Distribution: UNRELEASED
@@ -10,35 +10,29 @@ Maintainer: Marcelo Jorge Vieira <metal@debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-preggy - Assertion library for Python
- python3-preggy - Assertion library for Python
 Changes:
  preggy (1.3.0-1) UNRELEASED; urgency=medium
  .
    * New upstream release
-   * added python3 package
    * debian/control
     - added debhelper (>= 9)
     - removed minimum version on python-all and python-setuptools
     - rearranged Build-Depends alphabetically
     - bumped standards version to 3.9.8
    * debian/rules
-    - added python3
     - switched to pybuild
 Checksums-Sha1:
- 53f8b63530e378af5aa4f600834ecbf234c54edf 1219 preggy_1.3.0-1.dsc
+ 633749c9e2ba8e970db2b4f66dd2a9ce81543197 1061 preggy_1.3.0-1.dsc
  1d76290cb61f178c3de5ec5daaeecac886053e11 20432 preggy_1.3.0.orig.tar.gz
- 65e73d938f1ffdfc208194762fba70ec1b860676 2176 preggy_1.3.0-1.debian.tar.xz
- 8e5b7b997f2d699dbfa6ba59f545e2faa6c406c1 15374 python-preggy_1.3.0-1_all.deb
- 2b35431415a3004a196f63e697afe2b967eef386 12914 python3-preggy_1.3.0-1_all.deb
+ c2c02bf7ae633ce9c69757028453109ad6515a34 2096 preggy_1.3.0-1.debian.tar.xz
+ 0df092c675c7322b1479f69d9c21fb99dc76a66f 15316 python-preggy_1.3.0-1_all.deb
 Checksums-Sha256:
- d50c37040bfc85db98078c1d28ae64141a5513cb29d45e017962f26711875f40 1219 preggy_1.3.0-1.dsc
+ ef75f18f2ff16121dd27db52ff3bee9809e1402dce7ffb448ff34ed612329b1b 1061 preggy_1.3.0-1.dsc
  ee3a30b63cc0748f76b7f935315b106662c9dae06d2e2ed2b5d97250714b4e69 20432 preggy_1.3.0.orig.tar.gz
- ad957f5e4a35e66e4aa1df35b4d7cd3828f1f4b280fbced45618afbd603a0618 2176 preggy_1.3.0-1.debian.tar.xz
- a34f92a1897b27f06320eecbff7ea8aeebec3773e52aaefd332a3b9c973216a9 15374 python-preggy_1.3.0-1_all.deb
- 50714aec5d1d6db687224f9169833ce6ba6b3ed2316adc856b3615bc010de4a3 12914 python3-preggy_1.3.0-1_all.deb
+ 333bb37602d935ff6109e58708ee409c9920950f5e4f4d315cf001fb26776056 2096 preggy_1.3.0-1.debian.tar.xz
+ 350500015e3302ea6671be8f257611511f6b2a2bf506ffd8d8572951edac1f9e 15316 python-preggy_1.3.0-1_all.deb
 Files:
- 77ce5aff99b92315afe6ce0697d86c6b 1219 python optional preggy_1.3.0-1.dsc
+ 89289a56c38517d510d5ad9cd178add4 1061 python optional preggy_1.3.0-1.dsc
  3defa8535857d10812f42809d27bd97d 20432 python optional preggy_1.3.0.orig.tar.gz
- cda61cc22e57bcc9976c902f384c24de 2176 python optional preggy_1.3.0-1.debian.tar.xz
- ceafee43eabcdd5ecc947a6307c875b8 15374 python optional python-preggy_1.3.0-1_all.deb
- b1c7736ed9c09dd7e2968d89749c05f4 12914 python optional python3-preggy_1.3.0-1_all.deb
+ 9b4d8cfd11f63d5c352d6e10f368898f 2096 python optional preggy_1.3.0-1.debian.tar.xz
+ a750b70abe65ad3507bfb98d155f8d62 15316 python optional python-preggy_1.3.0-1_all.deb

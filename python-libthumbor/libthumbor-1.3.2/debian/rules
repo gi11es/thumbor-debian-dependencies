@@ -3,7 +3,7 @@ export PYBUILD_NAME=libthumbor
 export PYBUILD_TEST_NOSE=1
 
 %:
-	dh $@ --with python2,python3 --buildsystem=pybuild
+	dh $@ --with python2 --buildsystem=pybuild
 
 override_dh_clean:
 	rm -rf libthumbor.egg-info .coverage

@@ -1,26 +1,32 @@
 Format: 1.8
 Date: Thu, 19 May 2016 15:30:16 +0000
 Source: libthumbor
-Binary: python-libthumbor python3-libthumbor
-Architecture: all
+Binary: python-libthumbor
+Architecture: source all
 Version: 1.3.2-1
 Distribution: UNRELEASED
 Urgency: medium
-Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  python-libthumbor - Python module to make usage of Thumbor easy in Python
- python3-libthumbor - Python module to make usage of Thumbor easy in Python
+Closes: 783577
 Changes:
  libthumbor (1.3.2-1) UNRELEASED; urgency=medium
  .
-   * Initial release.
+   * Initial release. Closes: #783577
 Checksums-Sha1:
- 9d4210f2fd2e9eb6c87acf0489c23b38d4257c04 7714 python-libthumbor_1.3.2-1_all.deb
- d66eab1a66d60791ab8612be961765e2a82fbaa0 7348 python3-libthumbor_1.3.2-1_all.deb
+ 080d290d6c7dbf9a65e56f4ea8a5c014f27e79a2 1271 libthumbor_1.3.2-1.dsc
+ 09d1e3dce56ff8a2318cf0af8cde995f59cfd0fc 14651 libthumbor_1.3.2.orig.tar.gz
+ 5da4fa4fef5e7b1b55272e2660400bc1fc02dfab 1884 libthumbor_1.3.2-1.debian.tar.xz
+ cf6073bd2f2a02e1f40556db88c4e90aa851f5ea 7792 python-libthumbor_1.3.2-1_all.deb
 Checksums-Sha256:
- f35d1548c7f7b48e298182689038f09d9be73d6219c913da73c684049a07fba5 7714 python-libthumbor_1.3.2-1_all.deb
- e8be9865f40cc2ded1fd1fdf5839bc621122a946b31629c935695deee9aad478 7348 python3-libthumbor_1.3.2-1_all.deb
+ f4ea433552c4d8281b6dd8c060ebe9b2b5a50a375495b1949eb69b06123fe1cc 1271 libthumbor_1.3.2-1.dsc
+ b8a51583c86d74695a1d740db57412ab5f1edd2eb356a4b9da044f9f44aec71d 14651 libthumbor_1.3.2.orig.tar.gz
+ 7f63deb8b6b57ee250c76b962fb89c5003e500ba54e813ab3933083fe39fb5d2 1884 libthumbor_1.3.2-1.debian.tar.xz
+ e8c4ec5e6f37f8af7d35ed2f7ddecb86c0bdfabb46988ff0486026e09d02cdb9 7792 python-libthumbor_1.3.2-1_all.deb
 Files:
- 8b866fe1a908e3425bdd46c459898318 7714 python optional python-libthumbor_1.3.2-1_all.deb
- 2e8b131401bf2820fe70d2f76e9521db 7348 python optional python3-libthumbor_1.3.2-1_all.deb
+ 4d84c38e152984568b509a201b706b61 1271 python optional libthumbor_1.3.2-1.dsc
+ 3ec0f75199f81ca421994010595bc181 14651 python optional libthumbor_1.3.2.orig.tar.gz
+ 8ff5fb4af619ac0f360e2b4ac5b47036 1884 python optional libthumbor_1.3.2-1.debian.tar.xz
+ 6394912ad9a4415c57218bf3015754ec 7792 python optional python-libthumbor_1.3.2-1_all.deb

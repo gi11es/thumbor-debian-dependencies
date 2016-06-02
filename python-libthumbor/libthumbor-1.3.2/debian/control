@@ -14,17 +14,8 @@ Build-Depends: debhelper (>= 9),
                python-nose,
                python-preggy,
                python-setuptools,
-               python-six,
-               python3-all,
-               python3-coverage,
-               python3-flake8,
-               python3-mock,
-               python3-nose,
-               python3-preggy,
-               python3-setuptools,
-               python3-six
+               python-six
 X-Python-Version: >= 2.6
-X-Python3-Version: >= 3.2
 Homepage: https://github.com/thumbor/libthumbor
 Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-libthumbor.git
 Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-libthumbor.git
@@ -34,13 +25,3 @@ Architecture: all
 Depends: python-pkg-resources, ${misc:Depends}, ${python:Depends}, python-six
 Description: Python module to make usage of Thumbor easy in Python
  Allows easy usage of Thumbor in Python.
- .
- This is the Python 2 library version.
-
-Package: python3-libthumbor
-Architecture: all
-Depends: python3-pkg-resources, ${misc:Depends}, ${python3:Depends}, python3-six
-Description: Python module to make usage of Thumbor easy in Python
- Allows easy usage of Thumbor in Python.
- .
- This is the Python 3 library version.

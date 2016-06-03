@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. Closes: #723778
 Checksums-Sha1:
- 5b5456778d9bb4e0877f0c1ea32277fb0b30834e 1718 thumbor_6.0.1-1.dsc
+ c4965c0ee41a53071c920c202c86bef6118f6f5c 1730 thumbor_6.0.1-1.dsc
  c20ea5d5ef2aaf77dbf5dda38d563ca7f9298c11 15167213 thumbor_6.0.1.orig.tar.gz
- 77e6eb8e9675dfc734b3bbe65fec6772c356bdd0 7000 thumbor_6.0.1-1.debian.tar.xz
- 496fc54a9068a1783851acb9c7bfeb2abbd55180 4120248 thumbor_6.0.1-1_all.deb
+ d4a57e6cc673b0089599b2d1a06b35e7b23fb176 7020 thumbor_6.0.1-1.debian.tar.xz
+ 4a38ab5311702683df020b316e4b93bf765a8dd4 4120594 thumbor_6.0.1-1_all.deb
 Checksums-Sha256:
- 0a4b2673dd2127342df0d399af1e7a0f3178ea99e145d9928595e1a796af4c64 1718 thumbor_6.0.1-1.dsc
+ ba08aad37d654d98f776703b856acf7e78a347294e4ded3b17f17ecd304603de 1730 thumbor_6.0.1-1.dsc
  69ed88847a8848e80c6290c0a7546ce4f0b6066d792635e660e7affd95dacc82 15167213 thumbor_6.0.1.orig.tar.gz
- d60a451dc460186ddfd17d97ff847bdbdb26008d13e45ad2658d3b5f1e4a0df6 7000 thumbor_6.0.1-1.debian.tar.xz
- ef07ed0189d71127262a6fab9f073466589415079f2004f2f917460b61659614 4120248 thumbor_6.0.1-1_all.deb
+ f8a21205fbdcd8aadbe3a7ed8599027f838018f5ea54039b237c9aa97316c0c5 7020 thumbor_6.0.1-1.debian.tar.xz
+ df538438b2eea8405451a77b381a3e6e4361d942fbe55a3dbbe5e0646002588c 4120594 thumbor_6.0.1-1_all.deb
 Files:
- e1d6097c10b1627321c5e25390c31ea4 1718 python optional thumbor_6.0.1-1.dsc
+ 7a125d397700700bf3ea784ab70ad3ca 1730 python optional thumbor_6.0.1-1.dsc
  36a45e9df48238d367367afd9fc747a0 15167213 python optional thumbor_6.0.1.orig.tar.gz
- e55fdcfa926197a0dc8aff6457128db9 7000 python optional thumbor_6.0.1-1.debian.tar.xz
- c4340594efe073717ed998cdff79a80b 4120248 python optional thumbor_6.0.1-1_all.deb
+ b86e1938cd411ba6b53617140ccad87d 7020 python optional thumbor_6.0.1-1.debian.tar.xz
+ d61d524337e62ab10645f70f3843cb93 4120594 python optional thumbor_6.0.1-1_all.deb

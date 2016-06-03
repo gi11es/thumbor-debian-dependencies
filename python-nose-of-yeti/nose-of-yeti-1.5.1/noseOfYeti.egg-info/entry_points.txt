@@ -1,3 +1,0 @@
-[nose.plugins]
-noseOfYeti = noseOfYeti.plugins.nosetests:Plugin
-

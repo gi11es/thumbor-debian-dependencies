@@ -1,9 +1,0 @@
-#!/usr/bin/make -f
-export PYBUILD_NAME=should-dsl
-
-%:
-	dh $@ --with python2,python3 --buildsystem=pybuild
-
-override_dh_clean:
-	rm -rf should_dsl.egg-info
-	dh_clean

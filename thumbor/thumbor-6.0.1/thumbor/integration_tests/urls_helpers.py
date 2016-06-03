@@ -153,8 +153,6 @@ class UrlsTester(object):
         for options in group:
             joined_parts = join(*options)
             url = "unsafe/%s" % joined_parts
-            if url == "unsafe/filters:sharpen(6,2.5,false)/cmyk.jpg":
-		continue
             self.try_url(fetcher, url)
 
         self.report()

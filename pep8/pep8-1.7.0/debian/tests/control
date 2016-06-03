@@ -1,9 +1,0 @@
-Test-Command: python -c "import pep8; print pep8.__version__"
-
-Test-Command: python3 -c "import pep8; print(pep8.__version__)"
-
-Tests: smoketest-2.sh
-Depends: python-pep8
-
-Tests: smoketest-3.sh
-Depends: pep8, python3-pep8

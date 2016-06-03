@@ -16,10 +16,10 @@ Package-List:
  python3-pyssim deb python optional arch=all
 Checksums-Sha1:
  c0b0f9467d09649e71bf0db15d9cfe8910ae29aa 2664213 pyssim_0.2.orig.tar.gz
- 68f89393c3f69959dbc386386f413f0b2f59f6fd 2064 pyssim_0.2-1.debian.tar.xz
+ 883e1bd3a1f02f9af8a0cf3a86ee18e3c355577f 2588 pyssim_0.2-1.debian.tar.xz
 Checksums-Sha256:
  ff6934fedb0942fd2c9bf94828f221293207bd80f47558209a07a79a58fb1099 2664213 pyssim_0.2.orig.tar.gz
- 38512b7f02a03108cffda831bf7806ba395bf36f87bf91197d28a4ba2f004ecc 2064 pyssim_0.2-1.debian.tar.xz
+ 693a42c4bd67c811224d8b4ecd8d5d1927abf0ddac7db82fef366909e83ab33f 2588 pyssim_0.2-1.debian.tar.xz
 Files:
  7dab9f4acc68865b8ffe741f449a1a78 2664213 pyssim_0.2.orig.tar.gz
- 0719eaa4398a576f8531f413bab6284c 2064 pyssim_0.2-1.debian.tar.xz
+ 659a3df2c36fe1ad80b17ba17363659d 2588 pyssim_0.2-1.debian.tar.xz

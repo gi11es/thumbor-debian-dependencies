@@ -1,6 +1,0 @@
-use_local_objects.inv.patch
-use_local_mathjax.patch
-restore_sys_argv.patch
-blitz++.patch
-qhull-lfs.patch
-cap-ld-precision.patch

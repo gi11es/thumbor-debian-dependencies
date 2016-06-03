@@ -3,6 +3,7 @@ export PYBUILD_NAME=pyres
 export PYBUILD_TEST_NOSE=1
 export PYBUILD_BEFORE_TEST=redis-server --port 6668 --requirepass hey_you > /dev/null & echo "$$!" > thumbor-pybuild-redis-pid
 export PYBUILD_AFTER_TEST=cat thumbor-pybuild-redis-pid | xargs kill ; rm thumbor-pybuild-redis-pid
+#export PYBUILD_TEST_ARGS=-s
 
 %:
 	dh $@ --with python2,systemd --buildsystem=pybuild

@@ -1,0 +1,3 @@
+debian/pyres_manager.1
+debian/pyres_scheduler.1
+debian/pyres_worker.1

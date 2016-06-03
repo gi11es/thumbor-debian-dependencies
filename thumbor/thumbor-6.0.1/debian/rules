@@ -1,8 +1,8 @@
 #!/usr/bin/make -f
 export PYBUILD_NAME=pyres
 export PYBUILD_TEST_NOSE=1
-export PYBUILD_BEFORE_TEST=redis-server --port 6668 --requirepass hey_you > /dev/null & echo "$$!" > thumbor-pybuild-redis-pid
-export PYBUILD_AFTER_TEST=cat thumbor-pybuild-redis-pid | xargs /bin/kill ; rm thumbor-pybuild-redis-pid
+export PYBUILD_BEFORE_TEST=redis-server --port 6668 --requirepass hey_you > /dev/null &
+export PYBUILD_AFTER_TEST=redis-cli -p 6668 -a hey_you shutdown
 export PYBUILD_TEST_ARGS=-s
 export LC_ALL=C.UTF-8
 
@@ -11,7 +11,7 @@ export LC_ALL=C.UTF-8
 
 override_dh_clean:
 	rm -rf thumbor.egg-info
-	if [ -e "thumbor-pybuild-redis-pid" ] ; then cat thumbor-pybuild-redis-pid | xargs /bin/kill ; rm thumbor-pybuild-redis-pid ; fi
+	redis-cli -p 6668 -a hey_you shutdown || true
 	dh_clean
 
 override_dh_install:

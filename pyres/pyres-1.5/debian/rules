@@ -1,8 +1,8 @@
 #!/usr/bin/make -f
 export PYBUILD_NAME=pyres
 export PYBUILD_TEST_PYTEST=1
-export PYBUILD_BEFORE_TEST=cp -R {dir}/tests {build_dir} ; redis-server > /dev/null & echo "$$!" > pyres-pybuild-redis-pid
-export PYBUILD_AFTER_TEST=rm -fR {build_dir}/tests ; cat pyres-pybuild-redis-pid | xargs kill ; rm pyres-pybuild-redis-pid
+export PYBUILD_BEFORE_TEST=cp -R {dir}/tests {build_dir} ; redis-server > /dev/null &
+export PYBUILD_AFTER_TEST=rm -fR {build_dir}/tests ; redis-cli shutdown
 export PYBUILD_TEST_ARGS=-k 'not test_worker_pids'
 
 %:

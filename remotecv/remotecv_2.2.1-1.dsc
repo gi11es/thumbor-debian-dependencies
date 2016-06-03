@@ -14,10 +14,10 @@ Package-List:
  remotecv deb python optional arch=all
 Checksums-Sha1:
  af34707d7eb842d0ed623dc5fe60fbc3602d6cf2 9978935 remotecv_2.2.1.orig.tar.gz
- 9e47040c0e35a9fb39fd4e558e3403d69ec99928 1940 remotecv_2.2.1-1.debian.tar.xz
+ 2b548275be23af3d28f05414ca4a02bb0d2f6efa 1940 remotecv_2.2.1-1.debian.tar.xz
 Checksums-Sha256:
  74b5162edf42d5b798e09755d60a12b67f7db8ebae96b7a9cd7e72d3e1f5fce3 9978935 remotecv_2.2.1.orig.tar.gz
- ab0a9c8345af9258bb59e9d83d032b95480d7a1745476060f83cca19ffc6fb23 1940 remotecv_2.2.1-1.debian.tar.xz
+ 7d9da46682e13ef490c72aa0f4693ab7eb85d2914ab8efc9fab10ee8869b1850 1940 remotecv_2.2.1-1.debian.tar.xz
 Files:
  90fe5293e6a8836f2fe9da96f74a88bb 9978935 remotecv_2.2.1.orig.tar.gz
- 6a10d1cda0e129995f057997fc730ab1 1940 remotecv_2.2.1-1.debian.tar.xz
+ 87c8d3281eb1dd0f727aeb77dcfdeba2 1940 remotecv_2.2.1-1.debian.tar.xz

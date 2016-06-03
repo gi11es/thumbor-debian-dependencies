@@ -3,7 +3,8 @@ Upstream-Name: libthumbor
 Source: https://github.com/thumbor/libthumbor
 
 Files: *
-Copyright: 2014-2016 globo.com <timehome@corp.globo.com>
+Copyright: 2014-2016 globo.com <timehome@corp.globo.com>,
+           2011-2016 Bernardo Heynemann <heynemann@gmail.com>
 License: MIT
 
 Files: debian/*

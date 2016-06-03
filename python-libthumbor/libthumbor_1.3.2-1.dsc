@@ -14,10 +14,10 @@ Package-List:
  python-libthumbor deb python optional arch=all
 Checksums-Sha1:
  09d1e3dce56ff8a2318cf0af8cde995f59cfd0fc 14651 libthumbor_1.3.2.orig.tar.gz
- 21787222591e37aae3789714515ce53b41a295da 1864 libthumbor_1.3.2-1.debian.tar.xz
+ 612d6032c3935ab5c201e0debc1d83ae34fe992f 1892 libthumbor_1.3.2-1.debian.tar.xz
 Checksums-Sha256:
  b8a51583c86d74695a1d740db57412ab5f1edd2eb356a4b9da044f9f44aec71d 14651 libthumbor_1.3.2.orig.tar.gz
- dcbe51712a682e03325d8c2270f9142dfed783ed61870f602ead12e1eaac3e5b 1864 libthumbor_1.3.2-1.debian.tar.xz
+ e8cef1b9975cd2915e3a772d12af8dc51502dfe8682b4446fb778578aefa717f 1892 libthumbor_1.3.2-1.debian.tar.xz
 Files:
  3ec0f75199f81ca421994010595bc181 14651 libthumbor_1.3.2.orig.tar.gz
- aecdb1064eef6389f6d5d227ad1ac293 1864 libthumbor_1.3.2-1.debian.tar.xz
+ a1d42d7dbcf36dc702697a2d72c17e63 1892 libthumbor_1.3.2-1.debian.tar.xz

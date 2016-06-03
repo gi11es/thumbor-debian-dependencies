@@ -4,11 +4,15 @@ Upstream-Contact: Bernardo Heynemann <heynemann@gmail.com>
 Source: https://github.com/heynemann/pyvows
 
 Files: *
-Copyright: (c) 2013, Bernardo Heynemann <heynemann@gmail.com>
+Copyright: (c) 2013 Bernardo Heynemann <heynemann@gmail.com>
+License: MIT
+
+Files: tests/test_chaining.py
+Copyright: (c) 2014 Pablo Santiago Blum de Aguiar <scorphus@gmail.com>
 License: MIT
 
 Files: debian/*
-Copyright: (c) 2015, Marcelo Jorge Vieira <metal@debian.org>
+Copyright: (c) 2015 Marcelo Jorge Vieira <metal@debian.org>
 License: MIT
 
 License: MIT

@@ -1,0 +1,4 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc cean
+dpkg-buildpackage: unknown option or argument cean
+
+Use --help for program usage information.

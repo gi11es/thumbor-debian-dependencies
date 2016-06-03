@@ -17,22 +17,26 @@ Changes:
    * debian/control
     - added debhelper (>= 9)
     - removed minimum version on python-all and python-setuptools
+    - removed unneeded python-coverage dependency
     - rearranged Build-Depends alphabetically
     - bumped standards version to 3.9.8
    * debian/rules
     - switched to pybuild
+    - removed clean override that was cleaning up after coverage
+   * debian/compat
+    - bumped to 9
 Checksums-Sha1:
- b1065d2166244cfb73f27d460068961ac49d9c5a 1061 preggy_1.3.0-1.dsc
+ 17055fd2a51aee7fd7a6814af6262390f4e8eec6 1091 preggy_1.3.0-1.dsc
  1d76290cb61f178c3de5ec5daaeecac886053e11 20432 preggy_1.3.0.orig.tar.gz
- 31b610629296021e529bd37c33ed98d29258cdb1 2092 preggy_1.3.0-1.debian.tar.xz
- 1086d0bc5e4ecfb56f16e3e4ecf12685fdad922c 15318 python-preggy_1.3.0-1_all.deb
+ 82accc18dd7a9bc5fa427983cad754b89e5af30f 2176 preggy_1.3.0-1.debian.tar.xz
+ b1e244f251f0fffba41cb1e2979db0f1ea70b3af 15426 python-preggy_1.3.0-1_all.deb
 Checksums-Sha256:
- b3f55d76f6c19456824cdf9475c178adee0db037cd6dd069612ae02fb9993d98 1061 preggy_1.3.0-1.dsc
+ 12f2bd00617da8655e8c2957e2ea64ec708aa9329d750586123cab76911b4346 1091 preggy_1.3.0-1.dsc
  ee3a30b63cc0748f76b7f935315b106662c9dae06d2e2ed2b5d97250714b4e69 20432 preggy_1.3.0.orig.tar.gz
- 2dc56e5ac6de3503794e79599bf47aac0203b6c38c56876853aa87d2e3eca309 2092 preggy_1.3.0-1.debian.tar.xz
- e854e854db6a775dfb9203e8eb2467c813d265914a6117c6af1f7a1c67c96ed8 15318 python-preggy_1.3.0-1_all.deb
+ 3b866a703e73607402e401f6a0442bb51943cc92add8040fa3de53ba5806f87e 2176 preggy_1.3.0-1.debian.tar.xz
+ 4c0160e77dbecdfad02deeed5c5e8ac634dd5777781f65c3fd10cdcba3564c5f 15426 python-preggy_1.3.0-1_all.deb
 Files:
- 2848ffd4e4e77672f1148d23c7a4cc7c 1061 python optional preggy_1.3.0-1.dsc
+ f149c1d12730182c5eb8eb60aa911c12 1091 python optional preggy_1.3.0-1.dsc
  3defa8535857d10812f42809d27bd97d 20432 python optional preggy_1.3.0.orig.tar.gz
- 8757d00125d967642919da93bff6d5e5 2092 python optional preggy_1.3.0-1.debian.tar.xz
- b140748b14b8d08736bf33f976d8c9e8 15318 python optional python-preggy_1.3.0-1_all.deb
+ 0db568fe3fae469a0c60bdec31637825 2176 python optional preggy_1.3.0-1.debian.tar.xz
+ e3450fb009b4a3aeb1ae956f1bf4840b 15426 python optional python-preggy_1.3.0-1_all.deb

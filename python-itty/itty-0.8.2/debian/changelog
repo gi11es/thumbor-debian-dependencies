@@ -1,0 +1,5 @@
+itty (0.8.2-1) UNRELEASED; urgency=medium
+
+  * Initial release. Closes: #826601
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Thu, 19 May 2016 16:38:43 +0000

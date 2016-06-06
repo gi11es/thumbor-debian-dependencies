@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Thu, 19 May 2016 16:38:43 +0000
+Source: itty
+Binary: python-itty
+Architecture: source all
+Version: 0.8.2-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-itty - the itty-bitty python web framework
+Closes: 826601
+Changes:
+ itty (0.8.2-1) UNRELEASED; urgency=medium
+ .
+   * Initial release. Closes: #826601
+Checksums-Sha1:
+ c590fdb5315b72a2b58eae8e2d61d526deef9a60 1094 itty_0.8.2-1.dsc
+ 0e2611862e056e3f3b314db070d4ed066444eb4f 10322 itty_0.8.2.orig.tar.gz
+ 21015e2746d64ba6b8e8d362887de4508f06a2f7 2144 itty_0.8.2-1.debian.tar.xz
+ 480a7e952ff16d3f9abe3bde7f79d5c7b0acc511 11778 python-itty_0.8.2-1_all.deb
+Checksums-Sha256:
+ c3190563b7f6323babd648e48a0906346b7eca5ac43775dfdc86f97542aba0e5 1094 itty_0.8.2-1.dsc
+ 9d1e48db7314ab95b995410e068409727e24312531425acac0b38d92940b6b27 10322 itty_0.8.2.orig.tar.gz
+ d355dbb05486c0c18bebd8ab27dd26cf8688906910dbbabb0f0dd9edeea8eb16 2144 itty_0.8.2-1.debian.tar.xz
+ 4f2d7ddc3ba69a16e4dcefef8d65b6686e6da5d893897c0e433811a0f9a40e66 11778 python-itty_0.8.2-1_all.deb
+Files:
+ 54844f3c14c5d6bf173f439b8a63dd8e 1094 python optional itty_0.8.2-1.dsc
+ c8ae02d05ba32d8e2926656c6715d5ce 10322 python optional itty_0.8.2.orig.tar.gz
+ e2542ca3e4325082740317bfcd6b8d7f 2144 python optional itty_0.8.2-1.debian.tar.xz
+ 865e4bec028e77d53b6e083d332320e0 11778 python optional python-itty_0.8.2-1_all.deb

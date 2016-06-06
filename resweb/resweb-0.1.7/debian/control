@@ -1,0 +1,25 @@
+Source: resweb
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 8),
+               dh-python,
+               pyres,
+               python-all,
+               python-flask,
+               python-setuptools
+X-Python-Version: >= 2.7
+Homepage: https://github.com/pyres/resweb
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/resweb.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/resweb.git
+
+Package: resweb
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, pyres, python-flask
+Description: Web interface to pyres jobs
+ Resweb originally started as part of the pyres project. However, I
+ realized that for many reasons, both it and pyres would benefit from
+ being their own projects. Hopefully this will help the release
+ schedule of both pyres and resweb.

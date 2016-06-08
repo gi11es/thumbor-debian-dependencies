@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. Closes: #825893
 Checksums-Sha1:
- de1c8ff7d788e2ab31c2f6cc16c49f43e42c120c 1209 remotecv_2.2.1-1.dsc
+ a3eb3df142f2351000f02a68c82ed03358f542d0 1209 remotecv_2.2.1-1.dsc
  af34707d7eb842d0ed623dc5fe60fbc3602d6cf2 9978935 remotecv_2.2.1.orig.tar.gz
- 22439e085c2c0f69d4b5cfeaa9ecb8376c86187c 3576 remotecv_2.2.1-1.debian.tar.xz
- f7251bf7cc9b9c695a28edd2d944fff9631d167e 736338 remotecv_2.2.1-1_all.deb
+ 1c2d6c818ab551ca4e20a9b4078f36c897b3ad9b 3852 remotecv_2.2.1-1.debian.tar.xz
+ 53eeab5471807b8da15fe22659a56d6a710469ca 737088 remotecv_2.2.1-1_all.deb
 Checksums-Sha256:
- 6768e27ac404e26f2e3790be11a17dec57bbdc179cfbf19615abed625c18f5d5 1209 remotecv_2.2.1-1.dsc
+ e45be3fc185ab110c8e8ab7fc273340a2e7d2dec030fd69ff742f3d8b8bca88a 1209 remotecv_2.2.1-1.dsc
  74b5162edf42d5b798e09755d60a12b67f7db8ebae96b7a9cd7e72d3e1f5fce3 9978935 remotecv_2.2.1.orig.tar.gz
- 1b0290ef65062a564237e845e151aacb4004f01dd0a6c918feb78b09c021ccc1 3576 remotecv_2.2.1-1.debian.tar.xz
- d447891cca185956969d69fa61850f2bc92a34ff8746fe4b249282ed2192f534 736338 remotecv_2.2.1-1_all.deb
+ 82a16346ae0a1f374a8e348aeaccc5aaa9424df7ed193fc4f202889996123434 3852 remotecv_2.2.1-1.debian.tar.xz
+ 7a874060cd7b42e17706a73c6d849fcaf5d5fc1758687b734a587d457a0d75c2 737088 remotecv_2.2.1-1_all.deb
 Files:
- 60b9e7f59d1375c1204ca2720b51527e 1209 python optional remotecv_2.2.1-1.dsc
+ 824898ede5bd3453564463ded0dce9d1 1209 python optional remotecv_2.2.1-1.dsc
  90fe5293e6a8836f2fe9da96f74a88bb 9978935 python optional remotecv_2.2.1.orig.tar.gz
- f8452760000d458bc32acf7ef516b5ea 3576 python optional remotecv_2.2.1-1.debian.tar.xz
- 39db1e267acdc40dbfcfa5bb36e6e470 736338 python optional remotecv_2.2.1-1_all.deb
+ 8a86390defe236b4db3699ac15a6fc72 3852 python optional remotecv_2.2.1-1.debian.tar.xz
+ 8770f39dbbbbe9e2e5cf255120e3bdc4 737088 python optional remotecv_2.2.1-1_all.deb

@@ -1,0 +1,12 @@
+[Unit]
+Description=Pyres, a resque clone in python, manager for queue %I
+Requires=redis-server.service
+After=redis-server.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pyres_manager %i
+User=pyres
+
+[Install]
+WantedBy=default.target

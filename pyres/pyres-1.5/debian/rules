@@ -6,8 +6,13 @@ export PYBUILD_AFTER_TEST=rm -fR {build_dir}/tests ; redis-cli shutdown
 export PYBUILD_TEST_ARGS=-k 'not test_worker_pids'
 
 %:
-	dh $@ --with python2 --buildsystem=pybuild
+	dh $@ --with python2,systemd --buildsystem=pybuild
 
 override_dh_clean:
 	rm -rf pyres.egg-info .cache dump.rdb
 	dh_clean
+
+override_dh_installinit:
+	dh_installinit --name=pyres_manager@ --noscripts
+	dh_installinit --name=pyres_scheduler@ --noscripts
+	dh_installinit --name=pyres_worker@ --noscripts

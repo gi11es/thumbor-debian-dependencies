@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] ; then
+	if ! getent passwd pyres | grep -q pyres; then
+		useradd --system --user-group --home /var/lib/pyres pyres
+	fi
+
+	chown -R pyres:pyres /usr/bin/pyres_*
+fi
+
+#DEBHELPER#
+
+exit 0

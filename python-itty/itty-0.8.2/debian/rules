@@ -1,9 +1,0 @@
-#!/usr/bin/make -f
-export PYBUILD_NAME=itty
-
-%:
-	dh $@ --with python2 --buildsystem=pybuild
-
-override_dh_clean:
-	rm -rf itty.egg-info
-	dh_clean

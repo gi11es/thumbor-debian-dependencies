@@ -5,6 +5,7 @@ Description=Thumbor image manipulation service
 Type=simple
 ExecStart=/usr/bin/thumbor -k /etc/thumbor.key -c /etc/thumbor.conf
 User=thumbor
+PrivateTmp=yes
 
 [Install]
 WantedBy=default.target

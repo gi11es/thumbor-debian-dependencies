@@ -1,5 +1,5 @@
 thumbor (6.0.1-1) UNRELEASED; urgency=low
 
-  * Initial release. Closes: #723778
+  * Initial release. (Closes: #723778)
 
  -- Gilles Dubuc <gilles@wikimedia.org>  Wed, 18 May 2016 16:16:36 +0000

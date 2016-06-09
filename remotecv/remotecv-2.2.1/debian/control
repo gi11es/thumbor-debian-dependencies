@@ -23,4 +23,5 @@ Package: remotecv
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, pyres (>= 1.2), python-pil (>= 3.0), python-opencv
 Description: Python module providing an OpenCV server for facial and feature recognition
- OpenCV server for facial and feature recognition.
+ Remotecv can use a Pyres or Celery backend, this package is
+ configured to use Pyres and a Redis server to handle its job queue.

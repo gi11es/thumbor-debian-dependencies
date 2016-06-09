@@ -15,22 +15,22 @@ Closes: 825822
 Changes:
  exam (0.10.5-1) UNRELEASED; urgency=medium
  .
-   * Initial release. Closes: #825822
+   * Initial release. (Closes: #825822)
 Checksums-Sha1:
- 1e4c130b179e06f456af2244f13029e6eccaf1e3 1301 exam_0.10.5-1.dsc
+ df35633ea8edb430729ab39b3e364e080ce43f9f 1301 exam_0.10.5-1.dsc
  96fed3aedf8f71a760126804947fd8788085cb6d 15945 exam_0.10.5.orig.tar.gz
- ee3ba46cef2860b4ef672dbc2123ab2dcd8d3c05 2920 exam_0.10.5-1.debian.tar.xz
- 4f43053e4eebbc17854a8d47db9b9d99d6ef7dd7 13216 python-exam_0.10.5-1_all.deb
- 7da16ff2ecd371165030759212d3005be2c3e327 7382 python3-exam_0.10.5-1_all.deb
+ 4eb7b3b838e129c2d91aa9d330ac872e4b7cb7a1 3496 exam_0.10.5-1.debian.tar.xz
+ 087b087c7c2af05243d233ac92ba8ae95bdd6ace 13798 python-exam_0.10.5-1_all.deb
+ ec7875425ea56fed23b5a23e3613f06e3fae8822 7972 python3-exam_0.10.5-1_all.deb
 Checksums-Sha256:
- 4886e0cc79288e86ab493e3736fa782d62a1dc4763233673ec6be447df230ea3 1301 exam_0.10.5-1.dsc
+ f38fad7695adfbd58c949a68ea4f443edd3f6c7fcc18c47a203b917f626ebdac 1301 exam_0.10.5-1.dsc
  16ec06d61f72fc2c5511ea0a84fc4bfc09bac3e6341a72c848c7606be0222dca 15945 exam_0.10.5.orig.tar.gz
- c43f7ba8a2bd52bc93dbea036ac0c87ef300b1bcb4f267ef065b2c774c03081f 2920 exam_0.10.5-1.debian.tar.xz
- 2910c2b2cfe8f06f42a481638e1476f4a173791d577299c76f5e6cfab31581c6 13216 python-exam_0.10.5-1_all.deb
- 2d66ed7584cd3f9e0a5f0d5f9e5d0588a6a666db5513da171d6a402397198832 7382 python3-exam_0.10.5-1_all.deb
+ 5d90ea07f4156c339d9bb399438a5845296a3e2dc5c17d8dba39bbd40008a9e5 3496 exam_0.10.5-1.debian.tar.xz
+ 533685051c854cd7f55b9230d0eaac994d14c4841adf0bcecfd0c8408e97ec26 13798 python-exam_0.10.5-1_all.deb
+ ed3b8fbe9867a434f8bbd9a40b2cb548b04d3f06ad07af9ae428a0a958e19f61 7972 python3-exam_0.10.5-1_all.deb
 Files:
- 460a31284c6c94a1f5497671d2149949 1301 python optional exam_0.10.5-1.dsc
+ 28bc5a1bfb1eff3de19673e8f21513c5 1301 python optional exam_0.10.5-1.dsc
  a886e4bd77fe5dfcd9eccb736ef5a5e0 15945 python optional exam_0.10.5.orig.tar.gz
- d8fa523cc2a1223a586635f958420961 2920 python optional exam_0.10.5-1.debian.tar.xz
- cb08c316592b239ec4b5950e9a881aef 13216 python optional python-exam_0.10.5-1_all.deb
- 24f1dd9957ebac87e698ba3896ea0830 7382 python optional python3-exam_0.10.5-1_all.deb
+ 8561f4d6e549b7bbd8771a6d5f26a08c 3496 python optional exam_0.10.5-1.debian.tar.xz
+ f7845d5452a9d05a9c3fc1765848e752 13798 python optional python-exam_0.10.5-1_all.deb
+ 2f79a321e901e5cf59fc514d95e365bd 7972 python optional python3-exam_0.10.5-1_all.deb

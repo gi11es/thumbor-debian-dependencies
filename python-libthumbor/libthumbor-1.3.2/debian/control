@@ -20,4 +20,5 @@ Package: python-libthumbor
 Architecture: all
 Depends: python-pkg-resources, ${misc:Depends}, ${python:Depends}, python-six
 Description: Python module to make usage of Thumbor easy in Python
- Allows easy usage of Thumbor in Python.
+ Allows easy usage of Thumbor in Python, by facilitating the generation
+ of signed URLs to thumbor-generated assets.

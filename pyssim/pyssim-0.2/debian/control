@@ -27,8 +27,7 @@ Package: pyssim
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, python-pyssim
 Description: Tool computing the Structural Similarity Image Metric (SSIM)
- Tool computing the Structural Similarity Image Metric (SSIM)
- between two images.
+ Computes the SSIM between two images.
  .
  This package installs the Python 2 binaries.
 
@@ -36,8 +35,7 @@ Package: python-pyssim
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, python-argparse, python-numpy, python-pil, python-scipy
 Description: Tool computing the Structural Similarity Image Metric (SSIM)
- Tool computing the Structural Similarity Image Metric (SSIM)
- between two images.
+ Computes the SSIM between two images.
  .
  This package installs the library for Python 2.
 
@@ -45,7 +43,6 @@ Package: python3-pyssim
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}, python3-numpy, python3-pil, python3-scipy
 Description: Tool computing the Structural Similarity Image Metric (SSIM)
- Tool computing the Structural Similarity Image Metric (SSIM)
- between two images.
+ Computes the SSIM between two images.
  .
  This package installs the library for Python 3.

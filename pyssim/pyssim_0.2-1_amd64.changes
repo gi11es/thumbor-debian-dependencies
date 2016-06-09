@@ -12,28 +12,29 @@ Description:
  pyssim     - Tool computing the Structural Similarity Image Metric (SSIM)
  python-pyssim - Tool computing the Structural Similarity Image Metric (SSIM)
  python3-pyssim - Tool computing the Structural Similarity Image Metric (SSIM)
+Closes: 825899
 Changes:
  pyssim (0.2-1) UNRELEASED; urgency=low
  .
-   * Initial release. Closes #825899
+   * Initial release. (Closes: #825899)
 Checksums-Sha1:
- d6e344bb982eff890ffc80776ceb9de127534518 1332 pyssim_0.2-1.dsc
- c0b0f9467d09649e71bf0db15d9cfe8910ae29aa 2664213 pyssim_0.2.orig.tar.gz
- 883e1bd3a1f02f9af8a0cf3a86ee18e3c355577f 2588 pyssim_0.2-1.debian.tar.xz
- 75c160979a390d176f7301add081cfe63baabf86 4112 pyssim_0.2-1_all.deb
- 8bf8c080866967f14a8f52cc87f61d0e7eac3b9b 6234 python-pyssim_0.2-1_all.deb
- 25926b692586f3e4a856b452548170c2f3b80c14 6304 python3-pyssim_0.2-1_all.deb
+ 2360883edb24d4102e6f93ecb70c2b6a443f6b16 1329 pyssim_0.2-1.dsc
+ 718aae63b75fd035b971f7f5b943b1fa9beb19e5 267130 pyssim_0.2.orig.tar.gz
+ a07cc3d003feee8a00666d3fec38a007c86a2d12 2596 pyssim_0.2-1.debian.tar.xz
+ a9b784d601f910e121d0d045ceeaf00309db69e6 4116 pyssim_0.2-1_all.deb
+ 9ad3d6da8776ec45d372ca7a4b3e383f972de235 6252 python-pyssim_0.2-1_all.deb
+ 7eb8c0105f64bda60f9a42bd5e677fa6f2f5fec7 6320 python3-pyssim_0.2-1_all.deb
 Checksums-Sha256:
- 9fdb0b6badfc1f0657f7974dd9cbc3478ea6ea1998114bfd7367a9e8f2a8b108 1332 pyssim_0.2-1.dsc
- ff6934fedb0942fd2c9bf94828f221293207bd80f47558209a07a79a58fb1099 2664213 pyssim_0.2.orig.tar.gz
- 693a42c4bd67c811224d8b4ecd8d5d1927abf0ddac7db82fef366909e83ab33f 2588 pyssim_0.2-1.debian.tar.xz
- 944f026ba03e60dd3372838d15967cc99f95b9b1d3010349ffdae6b9e108c976 4112 pyssim_0.2-1_all.deb
- c4267c68a9346a90244155137f4710fc99869e03ba7c06c491ce9f8c4df8eee1 6234 python-pyssim_0.2-1_all.deb
- 57addac2116df39ed70ce5188545c7b328c4a4df2908eb0c82370f2876593c52 6304 python3-pyssim_0.2-1_all.deb
+ e923670a22c28b9a7d0e06dd6e8ade189b88fe755a15469632e895e2d8cdcffd 1329 pyssim_0.2-1.dsc
+ 15a79e96f15544e11b7368f9e1017c3854eaf09cc1b19620502fcf0287169ac6 267130 pyssim_0.2.orig.tar.gz
+ 89b658d49b96e46308a23b17c089607cca1511e47782b78c5d7e18efc6bb5ae9 2596 pyssim_0.2-1.debian.tar.xz
+ 44d87402794790dd8af35d57f8912d1f1b3c7a4e885f033e9c507abc0f5fc0ff 4116 pyssim_0.2-1_all.deb
+ efd95de2369db9040c717a5b38212024134bd50022cdc2c1b272990eb49c2119 6252 python-pyssim_0.2-1_all.deb
+ 01905573f24b7a1274e00811ad844d86cbe3616769f965920c6c4dbcfd7dfd61 6320 python3-pyssim_0.2-1_all.deb
 Files:
- 1093ab52a15fde745b235d686e894b2e 1332 python optional pyssim_0.2-1.dsc
- 7dab9f4acc68865b8ffe741f449a1a78 2664213 python optional pyssim_0.2.orig.tar.gz
- 659a3df2c36fe1ad80b17ba17363659d 2588 python optional pyssim_0.2-1.debian.tar.xz
- 4e0275c840f1b7204d7c51b842eb0f51 4112 python optional pyssim_0.2-1_all.deb
- 12e4f3fc41ab1d1d4da27b8623c70cd1 6234 python optional python-pyssim_0.2-1_all.deb
- 97484bdaf5a01994e5ff63f44925e491 6304 python optional python3-pyssim_0.2-1_all.deb
+ 1fa637741540959ccd5a162113298513 1329 python optional pyssim_0.2-1.dsc
+ 65643d0c5214249702128ed721c422e4 267130 python optional pyssim_0.2.orig.tar.gz
+ 54322c71bdc7436b35eaa82feeef115b 2596 python optional pyssim_0.2-1.debian.tar.xz
+ dedc686cf7e9162c62b9a3822c50871c 4116 python optional pyssim_0.2-1_all.deb
+ 7b3239c4fc4b946492c22b49a339f933 6252 python optional python-pyssim_0.2-1_all.deb
+ dc81006cde63eab7a5e00891f331b747 6320 python optional python3-pyssim_0.2-1_all.deb

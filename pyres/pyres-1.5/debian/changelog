@@ -1,5 +1,5 @@
 pyres (1.5-1) UNRELEASED; urgency=low
 
-  * Initial release. Closes: #825896
+  * Initial release. (Closes: #825896)
 
  -- Gilles Dubuc <gilles@wikimedia.org>  Wed, 18 May 2016 16:16:36 +0000

@@ -23,4 +23,18 @@ Package: pyres
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, python-simplejson, python-redis, python-setproctitle
 Description: Python module to provide a Resque-like job queue
- Provides a Resque-like job queue for your app.
+ Pyres - a Resque clone
+ .
+ Resque is a great implementation of a job queue by the people at
+ github. It's written in ruby, which is great, but I primarily work in
+ python. So I took on the task of porting over the code to python and
+ PyRes was the result
+ .
+ Project Goals
+ .
+ Because of some differences between ruby and python, there are a
+ couple of places where I chose speed over correctness. The goal will
+ be to eventually take the application and make it more pythonic
+ without sacrificing the awesome functionality found in resque. At the
+ same time, I hope to stay within the bounds of the original api and
+ web interface.

@@ -1,4 +1,4 @@
-pyres (1.5-1) UNRELEASED; urgency=low
+pyres (1.5-1) unstable; urgency=low
 
   * Initial release. (Closes: #825896)
 

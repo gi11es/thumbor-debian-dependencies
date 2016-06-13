@@ -1,4 +1,4 @@
-resweb (0.1.7-1) UNRELEASED; urgency=low
+resweb (0.1.7-1) unstable; urgency=low
 
   * Initial release. (Closes: #826606)
 

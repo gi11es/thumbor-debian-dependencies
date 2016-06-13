@@ -4,29 +4,29 @@ Source: remotecv
 Binary: remotecv
 Architecture: source all
 Version: 2.2.1-1
-Distribution: UNRELEASED
-Urgency: medium
+Distribution: unstable
+Urgency: low
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
  remotecv   - Python module providing an OpenCV server for facial and feature r
 Closes: 825893
 Changes:
- remotecv (2.2.1-1) UNRELEASED; urgency=medium
+ remotecv (2.2.1-1) unstable; urgency=low
  .
    * Initial release. (Closes: #825893)
 Checksums-Sha1:
- e24f93abafd65d041b127bf9b7ce851d14760a3c 1209 remotecv_2.2.1-1.dsc
+ aa0e21e7a418e1b2f220c4407fdc5758d19f9040 1209 remotecv_2.2.1-1.dsc
  af34707d7eb842d0ed623dc5fe60fbc3602d6cf2 9978935 remotecv_2.2.1.orig.tar.gz
- 171b088f6ddd6a8972c16e52b1930790e1d6393e 3908 remotecv_2.2.1-1.debian.tar.xz
- e6c6be96e96b5316fdb4bdbbcc648529b1990a66 737364 remotecv_2.2.1-1_all.deb
+ 9c3d2d658d7c51d6f87078584b55299d541fa554 3908 remotecv_2.2.1-1.debian.tar.xz
+ fdf7ec539b804f5ec8712a920448de181b9bd325 737534 remotecv_2.2.1-1_all.deb
 Checksums-Sha256:
- ed828f7bcf872813aeeff700bfa5790360a5075bf1620ebb80b9d831c04dde9f 1209 remotecv_2.2.1-1.dsc
+ 5a55baa0cacbee08911b2ef63cfb2fab262251382633f982d0a71ccdf96651ff 1209 remotecv_2.2.1-1.dsc
  74b5162edf42d5b798e09755d60a12b67f7db8ebae96b7a9cd7e72d3e1f5fce3 9978935 remotecv_2.2.1.orig.tar.gz
- b4f81924096e254a54dc49fe85a485586893735b0cf3f060165090d2f66db6e9 3908 remotecv_2.2.1-1.debian.tar.xz
- ab3a519b70f48ef9048320e6d4520321eadf654bec04edc94d227d390d31d12c 737364 remotecv_2.2.1-1_all.deb
+ 84e2a5d57bd387581a4fd4df09880007678b474afa27e8e22f8efd9b89499f29 3908 remotecv_2.2.1-1.debian.tar.xz
+ 7a8ee802ab5d429b8f8c009b92bf8558db7eb1d147f170956670faf2a3136a2a 737534 remotecv_2.2.1-1_all.deb
 Files:
- 4130ac2233123e366936823b18eb7ca8 1209 python optional remotecv_2.2.1-1.dsc
+ d8e40cf0227ed8b99f27c06273159c07 1209 python optional remotecv_2.2.1-1.dsc
  90fe5293e6a8836f2fe9da96f74a88bb 9978935 python optional remotecv_2.2.1.orig.tar.gz
- 1ca4c961e328635cb8d1c0d420c746ef 3908 python optional remotecv_2.2.1-1.debian.tar.xz
- df4fee816e5bacf77f224199f8b67364 737364 python optional remotecv_2.2.1-1_all.deb
+ 8e64a5f0ef9f138ff37ead178ef1a313 3908 python optional remotecv_2.2.1-1.debian.tar.xz
+ eec18e0bfa71d77389dcb7ec5f45c6dc 737534 python optional remotecv_2.2.1-1_all.deb

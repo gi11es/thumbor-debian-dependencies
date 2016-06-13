@@ -1,4 +1,4 @@
-libthumbor (1.3.2-1) unstable; urgency=medium
+libthumbor (1.3.2-1) unstable; urgency=low
 
   * Initial release. (Closes: #783577)
 

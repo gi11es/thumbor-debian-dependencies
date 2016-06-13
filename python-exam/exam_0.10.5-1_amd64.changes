@@ -5,7 +5,7 @@ Binary: python-exam python3-exam
 Architecture: source all
 Version: 0.10.5-1
 Distribution: unstable
-Urgency: medium
+Urgency: low
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
 Description:
@@ -13,24 +13,24 @@ Description:
  python3-exam - Python module to help write better tests
 Closes: 825822
 Changes:
- exam (0.10.5-1) unstable; urgency=medium
+ exam (0.10.5-1) unstable; urgency=low
  .
    * Initial release. (Closes: #825822)
 Checksums-Sha1:
- 0442ae85a5ea777e37239526dcf467448390448d 1301 exam_0.10.5-1.dsc
+ 884650819013122f581bb0fa20cccea88a1d9e4e 1301 exam_0.10.5-1.dsc
  96fed3aedf8f71a760126804947fd8788085cb6d 15945 exam_0.10.5.orig.tar.gz
- c4e17bfd1b72c6b67f93866eee13399e53d08a7b 3504 exam_0.10.5-1.debian.tar.xz
- e58b90686c1202dc6e2c04b908ce38544d397b81 13790 python-exam_0.10.5-1_all.deb
- c335b5ff3986aabcd72f1ba43a2023389c71759c 7976 python3-exam_0.10.5-1_all.deb
+ cd25ece6603989d66d13ba71fc096ea4d815998c 3500 exam_0.10.5-1.debian.tar.xz
+ 9bcdff2917976906e476ac033c8235a8464d96bc 13804 python-exam_0.10.5-1_all.deb
+ 5d50e02e310d465f390fabfbc77fb5df233bfafe 7970 python3-exam_0.10.5-1_all.deb
 Checksums-Sha256:
- ea75c3c679043507fd9ddf9919202a81dd69729860e70c2584cfc3b9ffd19e1b 1301 exam_0.10.5-1.dsc
+ cc2a995311d5e5a76686bae31822a68f910254a0b060386a02c19e8e2aa7ec11 1301 exam_0.10.5-1.dsc
  16ec06d61f72fc2c5511ea0a84fc4bfc09bac3e6341a72c848c7606be0222dca 15945 exam_0.10.5.orig.tar.gz
- e53d2a46e56c47214c2319f472766fdbc08fd2254cedeaa52b2188807fd4b490 3504 exam_0.10.5-1.debian.tar.xz
- 3b4fb032952f311249ba67d7363af751f49a82279a2f9040c80ee2df778a594a 13790 python-exam_0.10.5-1_all.deb
- 999a8c85e89059f12029f015365b5b9c9c155ed3c893df4ebbfb13b208fd59e5 7976 python3-exam_0.10.5-1_all.deb
+ bf31fd961ef8f94160f98e2f6a4c40fccaaeb4b7f78905824e1646ceb47899ac 3500 exam_0.10.5-1.debian.tar.xz
+ 5b71a0d24d67244b0c43c5a45f22415db13ba6122d1f3972cae7c08bc705480b 13804 python-exam_0.10.5-1_all.deb
+ 0952986d0958ae0a24e31c957a02c735815c91764978c73b6e79a1f6751012be 7970 python3-exam_0.10.5-1_all.deb
 Files:
- f7c46776ba65381eb3bece182af89338 1301 python optional exam_0.10.5-1.dsc
+ 05fb72bb4064d3ba4166574e6b3686ac 1301 python optional exam_0.10.5-1.dsc
  a886e4bd77fe5dfcd9eccb736ef5a5e0 15945 python optional exam_0.10.5.orig.tar.gz
- fcb997e049c10f4031b68ba55dd2504f 3504 python optional exam_0.10.5-1.debian.tar.xz
- ee394760cbd01cb18e85e89e5228ed60 13790 python optional python-exam_0.10.5-1_all.deb
- d3d8bed9263c207f1f648d17992115ba 7976 python optional python3-exam_0.10.5-1_all.deb
+ d7864fcaf76f06b6ea68dff691815f9c 3500 python optional exam_0.10.5-1.debian.tar.xz
+ 176fe0fe324a7fc8371e8d2b9d9e8438 13804 python optional python-exam_0.10.5-1_all.deb
+ e301f8b028ab04e6596dc72dbb035177 7970 python optional python3-exam_0.10.5-1_all.deb

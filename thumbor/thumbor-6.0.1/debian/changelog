@@ -1,4 +1,4 @@
-thumbor (6.0.1-1) UNRELEASED; urgency=low
+thumbor (6.0.1-1) unstable; urgency=low
 
   * Initial release. (Closes: #723778)
 

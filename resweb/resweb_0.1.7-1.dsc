@@ -14,10 +14,10 @@ Package-List:
  resweb deb python optional arch=all
 Checksums-Sha1:
  8dad7d2d408660b490e67e811f402a4cb432cc59 34781 resweb_0.1.7.orig.tar.gz
- 5381822271d3f60b20303a0eaed79cf43afcaff7 2260 resweb_0.1.7-1.debian.tar.xz
+ 61bffe091d81fb94de68b5ade5336d066a2dd853 2264 resweb_0.1.7-1.debian.tar.xz
 Checksums-Sha256:
  785c678ed7f0e7b1165be6f68e4ccd6759be6662c05483b4465f7633cc1bb5dd 34781 resweb_0.1.7.orig.tar.gz
- df4d53db65f148eb798adefa18bb25712703554395a253aaf63fd6a5a0081d67 2260 resweb_0.1.7-1.debian.tar.xz
+ 124097d6a22f7623fd7d1d4ce6d2a07effbac95da4b4ffe26cbfe4e12b9d79a7 2264 resweb_0.1.7-1.debian.tar.xz
 Files:
  b4205a99f8f5fa09f2a795cba1ba339a 34781 resweb_0.1.7.orig.tar.gz
- 9c026ee7cc7f2c371f432585663f2705 2260 resweb_0.1.7-1.debian.tar.xz
+ 5f22557431dbee48c3e87fcf988186fc 2264 resweb_0.1.7-1.debian.tar.xz

@@ -14,19 +14,19 @@ Closes: 826606
 Changes:
  resweb (0.1.7-1) UNRELEASED; urgency=low
  .
-   * Initial release. Closes: #826606
+   * Initial release. (Closes: #826606)
 Checksums-Sha1:
- fc94d38d610c4d7a3a75801c5b1dde81e90ca782 1105 resweb_0.1.7-1.dsc
+ acbc934efbe19a4d59b5c4481efd639682954a95 1105 resweb_0.1.7-1.dsc
  8dad7d2d408660b490e67e811f402a4cb432cc59 34781 resweb_0.1.7.orig.tar.gz
- 584efa4a456677dd66ca94dbaadd5c72e4128dc9 2248 resweb_0.1.7-1.debian.tar.xz
- cfb78cf20fdf7a5fc1ac60ffa44ed663531694e7 34720 resweb_0.1.7-1_all.deb
+ 5381822271d3f60b20303a0eaed79cf43afcaff7 2260 resweb_0.1.7-1.debian.tar.xz
+ 419a0ff10681d32e481c2aca5036aec55094d8fe 34742 resweb_0.1.7-1_all.deb
 Checksums-Sha256:
- 9cbf441322adf6b623cb5fab00cfa178906842e07d42249510241db35c1c09a5 1105 resweb_0.1.7-1.dsc
+ af20faddd0da74661927306924db8509da460de829774f801a8ec2f5794b1679 1105 resweb_0.1.7-1.dsc
  785c678ed7f0e7b1165be6f68e4ccd6759be6662c05483b4465f7633cc1bb5dd 34781 resweb_0.1.7.orig.tar.gz
- 07f032d1698f0614126cd1d40e02d385bf77bab60157abc641f404268343869c 2248 resweb_0.1.7-1.debian.tar.xz
- 5be57e9b90d4a10aa15fe5f1cad1caf8951e28e65ccf00d443643abc7a07085e 34720 resweb_0.1.7-1_all.deb
+ df4d53db65f148eb798adefa18bb25712703554395a253aaf63fd6a5a0081d67 2260 resweb_0.1.7-1.debian.tar.xz
+ 4826ce95261e93907099d1cf729eb5643c167fa607c1dc5b6a8a293105f38f1e 34742 resweb_0.1.7-1_all.deb
 Files:
- d6d64472c23e93247327aed691f7979d 1105 python optional resweb_0.1.7-1.dsc
+ 408cbd9b995da899770ed411058e00ad 1105 python optional resweb_0.1.7-1.dsc
  b4205a99f8f5fa09f2a795cba1ba339a 34781 python optional resweb_0.1.7.orig.tar.gz
- 7fbd0a9d1cd878d9bfc8c94dce1f247a 2248 python optional resweb_0.1.7-1.debian.tar.xz
- 3663920912238ce348df3f02e926f5d6 34720 python optional resweb_0.1.7-1_all.deb
+ 9c026ee7cc7f2c371f432585663f2705 2260 python optional resweb_0.1.7-1.debian.tar.xz
+ 5007d7aca36ef20d3565d793b142bee6 34742 python optional resweb_0.1.7-1_all.deb

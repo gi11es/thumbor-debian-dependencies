@@ -4,7 +4,7 @@ Source: raven
 Binary: raven python-raven python3-raven
 Architecture: source all
 Version: 5.18.0-1
-Distribution: UNRELEASED
+Distribution: unstable
 Urgency: medium
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Changed-By: Gilles Dubuc <gilles@wikimedia.org>
@@ -14,27 +14,27 @@ Description:
  raven      - Raven is a Python client for Sentry
 Closes: 791550
 Changes:
- raven (5.18.0-1) UNRELEASED; urgency=medium
+ raven (5.18.0-1) unstable; urgency=medium
  .
    * Initial release. (Closes: #791550)
 Checksums-Sha1:
- af254c6ab77a95606615235b162b7c6b71d3546d 2134 raven_5.18.0-1.dsc
+ 426c1cedeeab10892e60f433f11704c89eb2896c 2134 raven_5.18.0-1.dsc
  89cb35b99f1d7c2d0bd29bb5d0ba4b59c59fccee 309216 raven_5.18.0.orig.tar.gz
- bf47fe62eafa91642d5cb19f243310ec8b6ccdb3 4420 raven_5.18.0-1.debian.tar.xz
- 7cb2def96828af0f357ea8adecb353c3a1a58f1d 10324 raven_5.18.0-1_all.deb
- d3a8e0490287b10a84a2895d2c9ed5c6996364fd 215856 python-raven_5.18.0-1_all.deb
- 5857abe7f57bc3b675a24cef9c4d8035d4e17369 215934 python3-raven_5.18.0-1_all.deb
+ c245b6963b632d0fb00b4b6e8acf4f0a31d31429 4420 raven_5.18.0-1.debian.tar.xz
+ 18d37e5274c3c298d593715301267f91b83441d9 10312 raven_5.18.0-1_all.deb
+ 9289df3761fa5b366d689a40685a61d428ca2c10 215948 python-raven_5.18.0-1_all.deb
+ df7c4ddc2f092e75e5f56e9546a64f998b0bf63c 215988 python3-raven_5.18.0-1_all.deb
 Checksums-Sha256:
- 25071f8b7a5c2a4d6cefda6abdc9269ae8038d9f6f6facb155991171c27f4157 2134 raven_5.18.0-1.dsc
+ 810d920311367032af3e86eb7f57faf6a2a59ecd489b305b421003c38d3ecd82 2134 raven_5.18.0-1.dsc
  062c9adcf001b4cfe29f04c08587e3e4a91eacbf4ca0701921ac421ad08745e7 309216 raven_5.18.0.orig.tar.gz
- 4e78a4ed0d54b5af42f7d0cf84d0e541bdc7ef49e8c5237f2e8408d3f660aafb 4420 raven_5.18.0-1.debian.tar.xz
- 5deaf04a6a4fd8be026e0bc69378c5933c9a504a28bbb8ebda9104579bb24d95 10324 raven_5.18.0-1_all.deb
- 757ec8059bba4fd2a996ef49dfc19a4c9b4fa82a28ed46708286500d5cd87a21 215856 python-raven_5.18.0-1_all.deb
- 98809d6c82c12dc6cf1ad5e7d59d8aa70617b07de4d94408d03b09f3213a8401 215934 python3-raven_5.18.0-1_all.deb
+ 6267dd07780367222fc5cb758b14832abbd2771f23cb4b026e58c1f90621ec7b 4420 raven_5.18.0-1.debian.tar.xz
+ 6133ecad42a881a71996cc2f06feb760dd484cb095f2d253c4fc26febac9ddb2 10312 raven_5.18.0-1_all.deb
+ f85a60ef53b7ca5deb2d990adb9ea78c3b4ada439d921cc9403ec2e8c9dccc58 215948 python-raven_5.18.0-1_all.deb
+ cb41108c3b6df260ed1fc0c2be7040cddb30440effa288bb6faaec0b80986912 215988 python3-raven_5.18.0-1_all.deb
 Files:
- aaab4b0615991c954c20407be15d4ed1 2134 python optional raven_5.18.0-1.dsc
+ be2722959bf9e29f08ba6ab4c384111d 2134 python optional raven_5.18.0-1.dsc
  46a95433e9745b965248956cca7802f5 309216 python optional raven_5.18.0.orig.tar.gz
- d7cf98b053453a72125fb8be1139dc9b 4420 python optional raven_5.18.0-1.debian.tar.xz
- 8f1e96654dd33eb646a95ce69dcd98e0 10324 python optional raven_5.18.0-1_all.deb
- 1eccc3dce45ae0e551277675c5f6e85f 215856 python optional python-raven_5.18.0-1_all.deb
- 03213867d82034c2be563d88c2c0ab5f 215934 python optional python3-raven_5.18.0-1_all.deb
+ cc6d98c8d88150d0789578fd4e367b26 4420 python optional raven_5.18.0-1.debian.tar.xz
+ cc7a5af277c1ca56491b7f49df4d81c6 10312 python optional raven_5.18.0-1_all.deb
+ 79187da38498d2c80e66bb81d81eca33 215948 python optional python-raven_5.18.0-1_all.deb
+ f5ec613d3affbe39730f0ec36e8c41ff 215988 python optional python3-raven_5.18.0-1_all.deb

@@ -1,4 +1,4 @@
-exam (0.10.5-1) UNRELEASED; urgency=medium
+exam (0.10.5-1) unstable; urgency=medium
 
   * Initial release. (Closes: #825822)
 

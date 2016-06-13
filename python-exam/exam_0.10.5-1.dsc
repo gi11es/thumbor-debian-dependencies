@@ -15,10 +15,10 @@ Package-List:
  python3-exam deb python optional arch=all
 Checksums-Sha1:
  96fed3aedf8f71a760126804947fd8788085cb6d 15945 exam_0.10.5.orig.tar.gz
- 4eb7b3b838e129c2d91aa9d330ac872e4b7cb7a1 3496 exam_0.10.5-1.debian.tar.xz
+ c4e17bfd1b72c6b67f93866eee13399e53d08a7b 3504 exam_0.10.5-1.debian.tar.xz
 Checksums-Sha256:
  16ec06d61f72fc2c5511ea0a84fc4bfc09bac3e6341a72c848c7606be0222dca 15945 exam_0.10.5.orig.tar.gz
- 5d90ea07f4156c339d9bb399438a5845296a3e2dc5c17d8dba39bbd40008a9e5 3496 exam_0.10.5-1.debian.tar.xz
+ e53d2a46e56c47214c2319f472766fdbc08fd2254cedeaa52b2188807fd4b490 3504 exam_0.10.5-1.debian.tar.xz
 Files:
  a886e4bd77fe5dfcd9eccb736ef5a5e0 15945 exam_0.10.5.orig.tar.gz
- 8561f4d6e549b7bbd8771a6d5f26a08c 3496 exam_0.10.5-1.debian.tar.xz
+ fcb997e049c10f4031b68ba55dd2504f 3504 exam_0.10.5-1.debian.tar.xz

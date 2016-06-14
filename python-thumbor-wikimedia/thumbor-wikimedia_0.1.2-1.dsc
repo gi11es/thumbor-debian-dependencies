@@ -11,10 +11,10 @@ Package-List:
  python-thumbor-wikimedia deb python optional arch=all
 Checksums-Sha1:
  92e557cf3a9bf28e25786431d207a8f43e80a4bc 17018 thumbor-wikimedia_0.1.2.orig.tar.gz
- 58b6d6b43653c17a1ec0ea5ae275be361183af28 2468 thumbor-wikimedia_0.1.2-1.debian.tar.xz
+ 6b8b568b8ed3d4f02619368b1ec9a3164e86e413 2460 thumbor-wikimedia_0.1.2-1.debian.tar.xz
 Checksums-Sha256:
  1e2c5e0c6b65c491a74d826c430eb2d7030fc8b83a86c4aa2bf991b9bc9d3d71 17018 thumbor-wikimedia_0.1.2.orig.tar.gz
- 71c312bfce9da56759a89d48bac0ac4e58e20212f955aa83f1047f2c03cd9917 2468 thumbor-wikimedia_0.1.2-1.debian.tar.xz
+ 5b9a5e870da482eb6bae3298de675ca3092c51f6d11c7356585bbe71a61f8945 2460 thumbor-wikimedia_0.1.2-1.debian.tar.xz
 Files:
  0cf9baec00deca589a69cd59648959cd 17018 thumbor-wikimedia_0.1.2.orig.tar.gz
- 8309823e55237ca471b86ef8bb8ed4de 2468 thumbor-wikimedia_0.1.2-1.debian.tar.xz
+ 8ba299a963166c3b3debe55b69566797 2460 thumbor-wikimedia_0.1.2-1.debian.tar.xz

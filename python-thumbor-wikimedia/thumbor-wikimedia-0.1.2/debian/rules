@@ -5,7 +5,7 @@ export PYBUILD_NAME=thumbor-wikimedia
 	dh $@ --with python2 --buildsystem=pybuild
 
 override_dh_clean:
-	rm -rf thumbor-wikimedia.egg-info
+	rm -rf wikimedia_thumbor.egg-info
 	dh_clean
 
 override_dh_install:

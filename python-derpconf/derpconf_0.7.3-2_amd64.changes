@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Tue, 14 Jun 2016 09:13:20 +0000
+Source: derpconf
+Binary: python-derpconf
+Architecture: source all
+Version: 0.7.3-2
+Distribution: unstable
+Urgency: low
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Gilles <gilles@thumbor.multimedia.eqiad.wmflabs>
+Description:
+ python-derpconf - Python module to abstract loading configuration files for your ap
+Changes:
+ derpconf (0.7.3-2) unstable; urgency=low
+ .
+   * Add upstream change 99145f17b14bbde3a9eee0a430b21a39eba478f5
+Checksums-Sha1:
+ c6d0d2b32066bc112c142a857a4da52efbe6dd56 1093 derpconf_0.7.3-2.dsc
+ 1f26e273eaf68207be683256efd6bd6f5f0f4c80 3796 derpconf_0.7.3-2.debian.tar.xz
+ b6785acb0e2eee694fa263d9aa8e00c3da733211 8650 python-derpconf_0.7.3-2_all.deb
+Checksums-Sha256:
+ 2ca345492f134e4b173b7c6fcb3fa4b04fb1f75ead4f8012283ec71d2343cfc6 1093 derpconf_0.7.3-2.dsc
+ 7958ba1c9e3bc0648330667e1965ee517995175dee3da7f97189d7db102401c5 3796 derpconf_0.7.3-2.debian.tar.xz
+ 12ec0bbd54891446bdee038bd288ab6b6fe737a20e764e8922976b9e27728623 8650 python-derpconf_0.7.3-2_all.deb
+Files:
+ bbac4d7ba956f69594a3fd6855a7a769 1093 python optional derpconf_0.7.3-2.dsc
+ 6a5685f1b2d0df8435b54f1e76c2f957 3796 python optional derpconf_0.7.3-2.debian.tar.xz
+ 9fbd639e07605685bc7f66783fa043a8 8650 python optional python-derpconf_0.7.3-2_all.deb

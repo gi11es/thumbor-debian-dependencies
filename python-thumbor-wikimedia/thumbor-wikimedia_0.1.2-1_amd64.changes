@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Tue, 14 Jun 2016 10:04:40 +0200
+Source: thumbor-wikimedia
+Binary: python-thumbor-wikimedia
+Architecture: source all
+Version: 0.1.2-1
+Distribution: unstable
+Urgency: low
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-thumbor-wikimedia - Thumbor wikimedia extensions
+Changes:
+ thumbor-wikimedia (0.1.2-1) unstable; urgency=low
+ .
+   * First packaging
+Checksums-Sha1:
+ ea6e0abbb33d63871720da867aabc67c2c96e632 1243 thumbor-wikimedia_0.1.2-1.dsc
+ 92e557cf3a9bf28e25786431d207a8f43e80a4bc 17018 thumbor-wikimedia_0.1.2.orig.tar.gz
+ 58b6d6b43653c17a1ec0ea5ae275be361183af28 2468 thumbor-wikimedia_0.1.2-1.debian.tar.xz
+ ada9a22707af4fc0c1e36091f11cc7b924fd9911 18624 python-thumbor-wikimedia_0.1.2-1_all.deb
+Checksums-Sha256:
+ 246fd975246348f84eb2fa1b2e5f4c836f2ed83c1308e1ced6a66b02e6da53e0 1243 thumbor-wikimedia_0.1.2-1.dsc
+ 1e2c5e0c6b65c491a74d826c430eb2d7030fc8b83a86c4aa2bf991b9bc9d3d71 17018 thumbor-wikimedia_0.1.2.orig.tar.gz
+ 71c312bfce9da56759a89d48bac0ac4e58e20212f955aa83f1047f2c03cd9917 2468 thumbor-wikimedia_0.1.2-1.debian.tar.xz
+ b7d2b011b391144522130f3fe896c703a934f86e4bb975d289ebb26e7e29cc1a 18624 python-thumbor-wikimedia_0.1.2-1_all.deb
+Files:
+ 072975bc97debafe5c2e60a95451f915 1243 python optional thumbor-wikimedia_0.1.2-1.dsc
+ 0cf9baec00deca589a69cd59648959cd 17018 python optional thumbor-wikimedia_0.1.2.orig.tar.gz
+ 8309823e55237ca471b86ef8bb8ed4de 2468 python optional thumbor-wikimedia_0.1.2-1.debian.tar.xz
+ a8f391d9d841a35259d1cd915481242a 18624 python optional python-thumbor-wikimedia_0.1.2-1_all.deb

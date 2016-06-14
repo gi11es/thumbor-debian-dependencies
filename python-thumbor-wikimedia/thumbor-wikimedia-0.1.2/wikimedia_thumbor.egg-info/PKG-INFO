@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: wikimedia-thumbor
+Version: 0.1.2
+Summary: Wikimedia Thumbor plugins
+Home-page: https://phabricator.wikimedia.org/diffusion/THMBREXT/
+Author: Gilles Dubuc, Wikimedia Foundation
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

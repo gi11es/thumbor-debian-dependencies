@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=core
+
+%:
+	dh $@ --with python2 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf tc_core.egg-info
+	dh_clean
+
+override_dh_install:
+	dh_install --list-missing
+	mkdir -p debian/thumbor/etc/thumbor.d
+	install -p -o root -g root -m 644 debian/00-community-core.conf debian/thumbor/etc/thumbor.d

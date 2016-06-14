@@ -1,0 +1,5 @@
+core (0.3.0-1) unstable; urgency=low
+
+  * First packaging
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Tue, 14 Jun 2016 10:04:40 +0200

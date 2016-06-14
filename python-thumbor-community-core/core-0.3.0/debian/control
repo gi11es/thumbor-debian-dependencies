@@ -1,0 +1,24 @@
+Source: core
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-derpconf (>= 0.7.3-2),
+               python-pyvows,
+               python-setuptools,
+               thumbor (>= 6.0.1)
+X-Python-Version: >= 2.6
+Homepage: https://github.com/thumbor-community/core
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/thumbor-community-core.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/thumbor-community-core.git
+
+Package: python-thumbor-community-core
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-derpconf (>= 0.7.3-2), thumbor (>= 6.0.1)
+Provides: ${python:Provides}
+Description: Thumbor core extensions
+ This is the main package of the Thumbor Community.
+ This handles the loading of custom extensions to Thumbor.

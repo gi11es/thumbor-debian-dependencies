@@ -1,0 +1,4 @@
+version=3
+opts=uversionmangle=s/(rc|a|b|c)/~$1/ \
+https://pypi.debian.net/tc_core/tc_core-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+

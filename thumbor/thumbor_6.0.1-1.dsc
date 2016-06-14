@@ -13,11 +13,11 @@ Build-Depends: debhelper (>= 8), dh-python, dh-systemd (>= 1.5), ffmpeg, gifsicl
 Package-List:
  thumbor deb python optional arch=all
 Checksums-Sha1:
- c20ea5d5ef2aaf77dbf5dda38d563ca7f9298c11 15167213 thumbor_6.0.1.orig.tar.gz
- 2c6dfc86715d03818fa7d35103bc61c14f3324b2 264636 thumbor_6.0.1-1.debian.tar.xz
+ e6fe5956101b69921751e8670a8158576c1ae9eb 14502973 thumbor_6.0.1.orig.tar.gz
+ 5d5ea3c608a4515ff6943bfb3b9d4670a32532ec 7108 thumbor_6.0.1-1.debian.tar.xz
 Checksums-Sha256:
- 69ed88847a8848e80c6290c0a7546ce4f0b6066d792635e660e7affd95dacc82 15167213 thumbor_6.0.1.orig.tar.gz
- bf61d82d9f1896261ebdcfffce8a82644cbadbd003764133157e42985241f418 264636 thumbor_6.0.1-1.debian.tar.xz
+ 149d05c923d276782568fad86594230212fd9ce6f0364448eac0ce4251c746b0 14502973 thumbor_6.0.1.orig.tar.gz
+ ae76cfa6768186ba365c368cc66920cd85dc8d072a956700cfb06d547dbd164d 7108 thumbor_6.0.1-1.debian.tar.xz
 Files:
- 36a45e9df48238d367367afd9fc747a0 15167213 thumbor_6.0.1.orig.tar.gz
- 1ab9e727043614b81f73d943dbfa456e 264636 thumbor_6.0.1-1.debian.tar.xz
+ b9b03e3460dd35aa6063f12949c7c160 14502973 thumbor_6.0.1.orig.tar.gz
+ af7a084b4045df814921131b177e79ed 7108 thumbor_6.0.1-1.debian.tar.xz

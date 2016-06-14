@@ -3,7 +3,7 @@ Description=Thumbor image manipulation service
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/thumbor -k /etc/thumbor.key -c /etc/thumbor.conf
+ExecStart=/usr/bin/thumbor -k /etc/thumbor.key -c /etc/thumbor.d/
 User=thumbor
 PrivateTmp=yes
 

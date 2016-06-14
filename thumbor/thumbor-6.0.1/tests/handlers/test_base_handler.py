@@ -290,6 +290,21 @@ class ImagingOperationsTestCase(BaseImagingTestCase):
         engine.load(response.body, '.png')
         expect(engine.size).to_equal((2400, 2400))
 
+    def test_can_read_8bit_tiff_as_png(self):
+        response = self.fetch('/unsafe/gradient_8bit.tif')
+        expect(response.code).to_equal(200)
+        expect(response.body).to_be_png()
+
+    def test_can_read_16bit_lsb_tiff_as_png(self):
+        response = self.fetch('/unsafe/gradient_lsb_16bperchannel.tif')
+        expect(response.code).to_equal(200)
+        expect(response.body).to_be_png()
+
+    def test_can_read_16bit_msb_tiff_as_png(self):
+        response = self.fetch('/unsafe/gradient_msb_16bperchannel.tif')
+        expect(response.code).to_equal(200)
+        expect(response.body).to_be_png()
+
 
 class ImageOperationsWithoutUnsafeTestCase(BaseImagingTestCase):
     def get_context(self):
@@ -791,6 +806,37 @@ class ImageOperationsWithMaxPixels(BaseImagingTestCase):
     def test_should_error(self):
         response = self.fetch('/unsafe/200x200/wellsford.jpg')
         expect(response.code).to_equal(400)
+
+
+class ImageOperationsWithRespectOrientation(BaseImagingTestCase):
+    def get_context(self):
+        cfg = Config(SECURITY_KEY='ACME-SEC')
+        cfg.LOADER = "thumbor.loaders.file_loader"
+        cfg.FILE_LOADER_ROOT_PATH = self.loader_path
+        cfg.STORAGE = "thumbor.storages.no_storage"
+        cfg.RESPECT_ORIENTATION = True
+
+        importer = Importer(cfg)
+        importer.import_modules()
+        server = ServerParameters(8889, 'localhost', 'thumbor.conf', None, 'info', None)
+        server.security_key = 'ACME-SEC'
+        self.context = Context(server, cfg, importer)
+        self.context.server.gifsicle_path = which('gifsicle')
+        return self.context
+
+    def test_should_be_ok_when_orientation_exif(self):
+        response = self.fetch('/unsafe/Landscape_8.jpg')
+        expect(response.code).to_equal(200)
+        engine = Engine(self.context)
+        engine.load(response.body, '.jpg')
+        expect(engine.size).to_equal((600, 450))
+
+    def test_should_be_ok_without_orientation_exif(self):
+        response = self.fetch('/unsafe/crocodile.jpg')
+        expect(response.code).to_equal(200)
+        engine = Engine(self.context)
+        engine.load(response.body, '.jpg')
+        expect(engine.size).to_equal((20, 20))
 
 
 class EngineLoadException(BaseImagingTestCase):

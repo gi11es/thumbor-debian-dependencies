@@ -1,0 +1,27 @@
+Format: 1.8
+Date: Wed, 15 Jun 2016 12:15:20 +0000
+Source: pyssim
+Binary: pyssim python-pyssim python3-pyssim
+Architecture: source
+Version: 0.2-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ pyssim     - Tool computing the Structural Similarity Image Metric (SSIM)
+ python-pyssim - Tool computing the Structural Similarity Image Metric (SSIM)
+ python3-pyssim - Tool computing the Structural Similarity Image Metric (SSIM)
+Changes:
+ pyssim (0.2-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ cec51dcbe7a3278d5c10bf067935ae5f2d1979fe 1357 pyssim_0.2-1~bpo8+1.dsc
+ 712e71228a9985c24ef666115038bc6f17b659c5 2636 pyssim_0.2-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ c27c39fbc87033ee4656987734708ae16e9dd87d09e77aefb6bb4451f342efb0 1357 pyssim_0.2-1~bpo8+1.dsc
+ f0b48af1f83399508008742e48dbaba5996f9aaee835a96e2286307e308c6ee9 2636 pyssim_0.2-1~bpo8+1.debian.tar.xz
+Files:
+ 07be97c69a71e6583191e87e17350812 1357 python optional pyssim_0.2-1~bpo8+1.dsc
+ 95f466e54b60b2e6ae17cad2f5af4a03 2636 python optional pyssim_0.2-1~bpo8+1.debian.tar.xz

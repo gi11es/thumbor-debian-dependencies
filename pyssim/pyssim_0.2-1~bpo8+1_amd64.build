@@ -1,0 +1,4 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc blean
+dpkg-buildpackage: unknown option or argument blean
+
+Use --help for program usage information.

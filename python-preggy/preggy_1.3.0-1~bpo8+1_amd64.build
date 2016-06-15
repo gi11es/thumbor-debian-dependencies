@@ -1,0 +1,155 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package preggy
+dpkg-buildpackage: source version 1.3.0-1~bpo8+1
+dpkg-buildpackage: source distribution jessie-backports
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build preggy-1.3.0
+dpkg-buildpackage: host architecture amd64
+dpkg-source: info: using options from preggy-1.3.0/debian/source/options: --extend-diff-ignore=\.egg-info
+ fakeroot debian/rules clean
+dh clean --with python2 --buildsystem=pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_clean -O--buildsystem=pybuild
+I: pybuild base:184: python2.7 setup.py clean 
+running clean
+removing '/home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+   dh_clean -O--buildsystem=pybuild
+ debian/rules build
+dh build --with python2 --buildsystem=pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_configure -O--buildsystem=pybuild
+I: pybuild base:184: python2.7 setup.py config 
+running config
+   dh_auto_build -O--buildsystem=pybuild
+I: pybuild base:184: /usr/bin/python setup.py build 
+running build
+running build_py
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy
+copying preggy/__init__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy
+copying preggy/utils.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy
+copying preggy/__meta__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy
+copying preggy/core.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy
+copying preggy/__main__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/like.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/emptiness.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/length.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/__init__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/comparison.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/inclusion.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+copying preggy/assertions/equality.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/function.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/__init__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/file.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/numeric.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/classes.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/errors.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/nullable.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/boolean.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+copying preggy/assertions/types/regexp.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types
+   dh_auto_test -O--buildsystem=pybuild
+I: pybuild base:184: cd /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build; python2.7 -m nose tests
+......................................................................................................................................................................................preggy/assertions/equality.py:26: UnicodeWarning: Unicode equal comparison failed to convert both arguments to Unicode - interpreting them as being unequal
+  return expected == topic
+......................................................................................................................................................
+----------------------------------------------------------------------
+Ran 332 tests in 0.202s
+
+OK
+ fakeroot debian/rules binary
+dh binary --with python2 --buildsystem=pybuild
+   dh_testroot -O--buildsystem=pybuild
+   dh_prep -O--buildsystem=pybuild
+   dh_auto_install -O--buildsystem=pybuild
+I: pybuild base:184: /usr/bin/python setup.py install --root /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy 
+running install
+running build
+running build_py
+running install_lib
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/__init__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/utils.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/like.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/emptiness.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/inclusion.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/length.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/__init__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/comparison.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/equality.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+creating /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/file.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/function.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/__init__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/function.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/boolean.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/file.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/__init__.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/numeric.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/errors.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/numeric.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/regexp.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/classes.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/errors.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/classes.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/nullable.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/nullable.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/boolean.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/types/regexp.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions/types
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/comparison.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/__init__.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/emptiness.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/inclusion.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/equality.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/length.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/assertions/like.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/assertions
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/__init__.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/__meta__.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/__meta__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/core.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/utils.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/core.pyc -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+copying /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/.pybuild/pythonX.Y_2.7/build/preggy/__main__.py -> /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy
+byte-compiling /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy/__main__.py to __main__.pyc
+running install_egg_info
+running egg_info
+creating preggy.egg-info
+writing requirements to preggy.egg-info/requires.txt
+writing preggy.egg-info/PKG-INFO
+writing top-level names to preggy.egg-info/top_level.txt
+writing dependency_links to preggy.egg-info/dependency_links.txt
+writing manifest file 'preggy.egg-info/SOURCES.txt'
+reading manifest file 'preggy.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+no previously-included directories found matching 'dist'
+no previously-included directories found matching 'build'
+writing manifest file 'preggy.egg-info/SOURCES.txt'
+Copying preggy.egg-info to /home/gilles/thumbor-debian/python-preggy/preggy-1.3.0/debian/python-preggy/usr/lib/python2.7/dist-packages/preggy-1.3.0.egg-info
+running install_scripts
+   dh_installdocs -O--buildsystem=pybuild
+   dh_installchangelogs -O--buildsystem=pybuild
+   dh_python2 -O--buildsystem=pybuild
+   dh_perl -O--buildsystem=pybuild
+   dh_link -O--buildsystem=pybuild
+   dh_compress -O--buildsystem=pybuild
+   dh_fixperms -O--buildsystem=pybuild
+   dh_installdeb -O--buildsystem=pybuild
+   dh_gencontrol -O--buildsystem=pybuild
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package python-preggy: unused substitution variable ${python:Versions}
+dpkg-gencontrol: warning: package python-preggy: unused substitution variable ${python:Provides}
+   dh_md5sums -O--buildsystem=pybuild
+   dh_builddeb -O--buildsystem=pybuild
+dpkg-deb: building package `python-preggy' in `../python-preggy_1.3.0-1~bpo8+1_all.deb'.
+ dpkg-genchanges -b >../preggy_1.3.0-1~bpo8+1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build preggy-1.3.0
+dpkg-source: info: using options from preggy-1.3.0/debian/source/options: --extend-diff-ignore=\.egg-info
+dpkg-buildpackage: binary-only upload (no source included)

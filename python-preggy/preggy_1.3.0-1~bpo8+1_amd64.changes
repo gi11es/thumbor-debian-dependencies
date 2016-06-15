@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Wed, 15 Jun 2016 12:10:16 +0000
+Source: preggy
+Binary: python-preggy
+Architecture: source all
+Version: 1.3.0-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Marcelo Jorge Vieira <metal@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-preggy - Assertion library for Python
+Changes:
+ preggy (1.3.0-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 29784827c42c4b4dad0538d0d6c041bfacb50985 1119 preggy_1.3.0-1~bpo8+1.dsc
+ b401e445a29330e361a3f05e27799c67719051b2 2204 preggy_1.3.0-1~bpo8+1.debian.tar.xz
+ 7be85db151f71b722795e48a8571452943770e41 15514 python-preggy_1.3.0-1~bpo8+1_all.deb
+Checksums-Sha256:
+ 56092d38da9d747eab64c1f29f5b3498cb0a92d7b4f52b3e216ea87204c51b32 1119 preggy_1.3.0-1~bpo8+1.dsc
+ 44e1fe09892a81bae6757ff2376feaf31665d475eeca7f7830c0884590b07a47 2204 preggy_1.3.0-1~bpo8+1.debian.tar.xz
+ 762e62f324de525cb4344cb41fdea91e9a01a13913e975cc3f4754dce7ae670b 15514 python-preggy_1.3.0-1~bpo8+1_all.deb
+Files:
+ fe0d3cafb39e7c3e46305c2bd96cd9b3 1119 python optional preggy_1.3.0-1~bpo8+1.dsc
+ 010e299a344fbc308dd00baae4decc62 2204 python optional preggy_1.3.0-1~bpo8+1.debian.tar.xz
+ 19f3002a1055bddd01626d0366cbfc14 15514 python optional python-preggy_1.3.0-1~bpo8+1_all.deb

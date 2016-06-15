@@ -1,0 +1,16 @@
+[run]
+omit =
+    *tests.py
+branch = True
+source =
+    preggy
+    preggy.assertions
+    preggy.assertions.types
+
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:

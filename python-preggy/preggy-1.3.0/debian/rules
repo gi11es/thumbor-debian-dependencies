@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=preggy
+export PYBUILD_TEST_NOSE=1
+export PYBUILD_BEFORE_TEST=cp -R {dir}/README.md {build_dir}
+export PYBUILD_AFTER_TEST=rm -fR {build_dir}/README.md
+
+%:
+	dh $@ --with python2 --buildsystem=pybuild

@@ -18,23 +18,23 @@ Changes:
  .
    * Initial release. (Closes: #791550)
 Checksums-Sha1:
- 9fa5e65fc937eb50e07127e98bf92e5a4ca9533c 2134 raven_5.18.0-1.dsc
+ 5448d3cad38b0b20f0ade8b2856500ca1e3627f1 2134 raven_5.18.0-1.dsc
  89cb35b99f1d7c2d0bd29bb5d0ba4b59c59fccee 309216 raven_5.18.0.orig.tar.gz
- 32ecae9fe24db22bd6c284e252330aeec6081f39 4420 raven_5.18.0-1.debian.tar.xz
- 994b30f575cc5fba2fd655aa1ef8a852aa7ebc5d 10316 raven_5.18.0-1_all.deb
- 39003620779fd93e77c54e89495d8c19866b16de 215932 python-raven_5.18.0-1_all.deb
- ed985d25861edcafda7c657054c2448e41f3be7e 215952 python3-raven_5.18.0-1_all.deb
+ 654ef64d3348480eeec572f0264953f8fffd3172 4100 raven_5.18.0-1.debian.tar.xz
+ a6dcf250fefd761ff4006860321b59a68bef6ad6 10320 raven_5.18.0-1_all.deb
+ 0324be7dd27321a9dbbca937612a71142cc74621 215934 python-raven_5.18.0-1_all.deb
+ 3cf2ad8b456fbb2c1108c44bcd1ed8600ff45f56 215974 python3-raven_5.18.0-1_all.deb
 Checksums-Sha256:
- 60dc8d52fd6718a4adeb97fdeb24b8b5fe110d0b10f2236367796be47db86ca8 2134 raven_5.18.0-1.dsc
+ 4bbfe8bc553e7f0802166436a86f8229069d6fe5e464f294dfa7acb1fee923ce 2134 raven_5.18.0-1.dsc
  062c9adcf001b4cfe29f04c08587e3e4a91eacbf4ca0701921ac421ad08745e7 309216 raven_5.18.0.orig.tar.gz
- 67771fa6d7ffddb68d70bcfffc3dbd29930ab0b47399167ca9a31b58d68d452a 4420 raven_5.18.0-1.debian.tar.xz
- 1ec97f639bb7fc42f43377a2b5ab75068417218e5a790a86d707e1355811e73e 10316 raven_5.18.0-1_all.deb
- 0952d989c8489ed8cc08191e54d0e88eb150c2c6646435db0e2aeff7944ef3eb 215932 python-raven_5.18.0-1_all.deb
- 9548d9f15cbc89780a95d61696aad539196388703a25e196781ff4e72d1efd64 215952 python3-raven_5.18.0-1_all.deb
+ dbed18924e211ce55b5b16c22059b210c024b217bf9074dae2459bee0c0e5f91 4100 raven_5.18.0-1.debian.tar.xz
+ c6528e9928770b30e491994d46a74ca149654dc0a1ee54a3d889d4daa2400843 10320 raven_5.18.0-1_all.deb
+ 6438831dfd927271549f607d81742899911bbb94bef46dae405c812d319243bf 215934 python-raven_5.18.0-1_all.deb
+ fd5b6fc47fe958b550dbef5d35f3285c10d6381595d98ffa35f77bbc9d2c1ecf 215974 python3-raven_5.18.0-1_all.deb
 Files:
- 2a90403015e3f8df816a74ab53114c5b 2134 python optional raven_5.18.0-1.dsc
+ 79bd1e974cf5ffbd739aa71f6ef9c3f6 2134 python optional raven_5.18.0-1.dsc
  46a95433e9745b965248956cca7802f5 309216 python optional raven_5.18.0.orig.tar.gz
- b3e52b7b8a8ae8999e0280d35168742c 4420 python optional raven_5.18.0-1.debian.tar.xz
- 908851260901803bfc138a91c60315d0 10316 python optional raven_5.18.0-1_all.deb
- 091029a72282f23e980674334e45a12e 215932 python optional python-raven_5.18.0-1_all.deb
- ac2d122fa01994d5dbb4129c206c5f80 215952 python optional python3-raven_5.18.0-1_all.deb
+ 56e1d3f4fd261695e5c6ad101bf94b9f 4100 python optional raven_5.18.0-1.debian.tar.xz
+ 032e3438753041d39063f3ef8e90eb74 10320 python optional raven_5.18.0-1_all.deb
+ 1a3af48288cce2525b6df68e78881ddc 215934 python optional python-raven_5.18.0-1_all.deb
+ bd933629cb6d1e71a7fb368e6771f681 215974 python optional python3-raven_5.18.0-1_all.deb

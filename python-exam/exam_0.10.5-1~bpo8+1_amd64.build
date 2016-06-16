@@ -1,0 +1,200 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package exam
+dpkg-buildpackage: source version 0.10.5-1~bpo8+1
+dpkg-buildpackage: source distribution jessie-backports
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build exam-0.10.5
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python2,python3 --buildsystem=pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_clean -O--buildsystem=pybuild
+I: pybuild base:184: python2.7 setup.py clean 
+running clean
+removing '/home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+I: pybuild base:184: python3.4 setup.py clean 
+running clean
+removing '/home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.4' does not exist -- can't clean it
+   debian/rules override_dh_clean
+make[1]: Entering directory '/home/gilles/thumbor-debian/python-exam/exam-0.10.5'
+rm -rf exam.egg-info .cache
+dh_clean
+make[1]: Leaving directory '/home/gilles/thumbor-debian/python-exam/exam-0.10.5'
+ debian/rules build
+dh build --with python2,python3 --buildsystem=pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_configure -O--buildsystem=pybuild
+I: pybuild base:184: python2.7 setup.py config 
+running config
+I: pybuild base:184: python3.4 setup.py config 
+running config
+   dh_auto_build -O--buildsystem=pybuild
+I: pybuild base:184: /usr/bin/python setup.py build 
+running build
+running build_py
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/helpers.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/asserts.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/__init__.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/fixtures.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/mock.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/cases.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/objects.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+copying exam/decorators.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam
+I: pybuild base:184: /usr/bin/python3 setup.py build 
+running build
+running build_py
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/helpers.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/asserts.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/__init__.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/fixtures.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/mock.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/cases.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/objects.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+copying exam/decorators.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam
+   dh_auto_test -O--buildsystem=pybuild
+I: pybuild base:184: cd /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build; python2.7 -m pytest tests
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.9, pytest-2.8.5, py-1.4.31, pluggy-0.3.1
+rootdir: /home/gilles/thumbor-debian/python-exam/exam-0.10.5, inifile: 
+plugins: timeout-1.0.0, django-2.9.1
+collected 55 items
+
+tests/test_asserts.py ........
+tests/test_cases.py ................
+tests/test_decorators.py ..........
+tests/test_exam.py ..
+tests/test_helpers.py ...........
+tests/test_mock.py .....
+tests/test_objects.py ...
+
+========================== 55 passed in 0.39 seconds ===========================
+I: pybuild base:184: cd /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build; python3.4 -m pytest tests
+============================= test session starts ==============================
+platform linux -- Python 3.4.2, pytest-2.8.5, py-1.4.31, pluggy-0.3.1
+rootdir: /home/gilles/thumbor-debian/python-exam/exam-0.10.5, inifile: 
+plugins: cov-1.8.0, timeout-1.0.0, django-2.9.1
+collected 55 items
+
+tests/test_asserts.py ........
+tests/test_cases.py ................
+tests/test_decorators.py ..........
+tests/test_exam.py ..
+tests/test_helpers.py ...........
+tests/test_mock.py .s.ss
+tests/test_objects.py ...
+
+===================== 52 passed, 3 skipped in 0.37 seconds =====================
+ fakeroot debian/rules binary
+dh binary --with python2,python3 --buildsystem=pybuild
+   dh_testroot -O--buildsystem=pybuild
+   dh_prep -O--buildsystem=pybuild
+   dh_auto_install -O--buildsystem=pybuild
+I: pybuild base:184: /usr/bin/python setup.py install --root /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam 
+running install
+running build
+running build_py
+running install_lib
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/helpers.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/asserts.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/__init__.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/asserts.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/fixtures.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/__init__.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/mock.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/decorators.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/cases.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/objects.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/objects.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/mock.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/cases.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/helpers.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_2.7/build/exam/decorators.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam
+byte-compiling /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam/fixtures.py to fixtures.pyc
+running install_egg_info
+running egg_info
+creating exam.egg-info
+writing requirements to exam.egg-info/requires.txt
+writing exam.egg-info/PKG-INFO
+writing top-level names to exam.egg-info/top_level.txt
+writing dependency_links to exam.egg-info/dependency_links.txt
+writing manifest file 'exam.egg-info/SOURCES.txt'
+reading manifest file 'exam.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '*' found under directory 'tests'
+writing manifest file 'exam.egg-info/SOURCES.txt'
+Copying exam.egg-info to /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python-exam/usr/lib/python2.7/dist-packages/exam-0.10.5.egg-info
+running install_scripts
+I: pybuild base:184: /usr/bin/python3 setup.py install --root /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam 
+running install
+running build
+running build_py
+running install_lib
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/helpers.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/asserts.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__init__.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/fixtures.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/mock.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/cases.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/objects.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+creating /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/objects.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/mock.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/__init__.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/asserts.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/cases.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/helpers.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/__pycache__/decorators.cpython-34.pyc -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/__pycache__
+copying /home/gilles/thumbor-debian/python-exam/exam-0.10.5/.pybuild/pythonX.Y_3.4/build/exam/decorators.py -> /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam
+byte-compiling /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam/fixtures.py to fixtures.cpython-34.pyc
+running install_egg_info
+running egg_info
+writing requirements to exam.egg-info/requires.txt
+writing top-level names to exam.egg-info/top_level.txt
+writing exam.egg-info/PKG-INFO
+writing dependency_links to exam.egg-info/dependency_links.txt
+reading manifest file 'exam.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files matching '*' found under directory 'tests'
+writing manifest file 'exam.egg-info/SOURCES.txt'
+Copying exam.egg-info to /home/gilles/thumbor-debian/python-exam/exam-0.10.5/debian/python3-exam/usr/lib/python3.4/dist-packages/exam-0.10.5.egg-info
+running install_scripts
+   dh_installdocs -O--buildsystem=pybuild
+   dh_installchangelogs -O--buildsystem=pybuild
+   dh_python2 -O--buildsystem=pybuild
+   dh_python3 -O--buildsystem=pybuild
+   dh_perl -O--buildsystem=pybuild
+   dh_link -O--buildsystem=pybuild
+   dh_compress -O--buildsystem=pybuild
+   dh_fixperms -O--buildsystem=pybuild
+   dh_installdeb -O--buildsystem=pybuild
+   dh_gencontrol -O--buildsystem=pybuild
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package python-exam: unused substitution variable ${python:Versions}
+dpkg-gencontrol: warning: package python-exam: unused substitution variable ${python:Provides}
+dpkg-gencontrol: warning: Depends field of package python3-exam: unknown substitution variable ${python:Depends}
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package python3-exam: unused substitution variable ${python3:Depends}
+   dh_md5sums -O--buildsystem=pybuild
+   dh_builddeb -O--buildsystem=pybuild
+dpkg-deb: building package `python-exam' in `../python-exam_0.10.5-1~bpo8+1_all.deb'.
+dpkg-deb: building package `python3-exam' in `../python3-exam_0.10.5-1~bpo8+1_all.deb'.
+ dpkg-genchanges -b >../exam_0.10.5-1~bpo8+1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build exam-0.10.5
+dpkg-buildpackage: binary-only upload (no source included)

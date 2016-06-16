@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Thu, 16 Jun 2016 16:06:00 +0000
+Source: exam
+Binary: python-exam python3-exam
+Architecture: source
+Version: 0.10.5-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-exam - Python module to help write better tests
+ python3-exam - Python module to help write better tests
+Changes:
+ exam (0.10.5-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ e2185321375fa16d61749d300df8c0fccbb7232c 1329 exam_0.10.5-1~bpo8+1.dsc
+ 5318edafb414f7ffb54500ed2f4a712fc6491ab8 3512 exam_0.10.5-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ 6b36b872c62731976930f4a277fa1f70f342b7a3082f0d11344da21700582902 1329 exam_0.10.5-1~bpo8+1.dsc
+ 5cdfac7039e7bdcb80d521760b6bea9dd79fbdafb9f77b514c23d6cfc2bbcc89 3512 exam_0.10.5-1~bpo8+1.debian.tar.xz
+Files:
+ d03fe677d5cd14af978200f0c36e6a19 1329 python optional exam_0.10.5-1~bpo8+1.dsc
+ f89bce93ea2d8ae5ae7b04987e1647df 3512 python optional exam_0.10.5-1~bpo8+1.debian.tar.xz

@@ -1,0 +1,46 @@
+Format: 1.8
+Date: Thu, 26 May 2016 09:59:48 +0000
+Source: flask-login
+Binary: python-flask-login python3-flask-login
+Architecture: source all
+Version: 0.3.2-1.0
+Distribution: unstable
+Urgency: medium
+Maintainer: Tonnerre LOMBARD <tonnerre@ancient-solutions.com>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-flask-login - user session management for Flask
+ python3-flask-login - user session management for Flask
+Changes:
+ flask-login (0.3.2-1.0) unstable; urgency=medium
+ .
+   * Non-maintainer upload
+   * New upstream release
+   * debian/watch
+    - switched to pypi.debian.net
+   * debian/control
+    - reordered Build-Depends alphabetically
+    - removed minimum versions on python-all and python-setuptools
+    - build depend on python-flask and debhelper (>= 9)
+    - bumped standards version to 3.9.8
+    - added python3 package
+   * debian/rules
+    - switched to pybuild
+Checksums-Sha1:
+ 28de24e7bd51050ce0d1f06057e83f262bc472cb 1006 flask-login_0.3.2-1.0.dsc
+ cc86220a08fc966c1a978c72a8d945c88902f82d 11799 flask-login_0.3.2.orig.tar.gz
+ 35e0c5080783e06f59e0b33093a79e8009076d59 2532 flask-login_0.3.2-1.0.debian.tar.xz
+ 26878ae74ce0806df0b03355ebbe36f4491bbede 11950 python-flask-login_0.3.2-1.0_all.deb
+ 047c1aae57e9105cad79ce1be4b9dbbbfef038c6 11860 python3-flask-login_0.3.2-1.0_all.deb
+Checksums-Sha256:
+ bab78fb987338bf0f15c938ef96a35f07e764d7d619db83b48b415ca690e210f 1006 flask-login_0.3.2-1.0.dsc
+ e72eff5c35e5a31db1aeca1db5d2501be702674ea88e8f223b5d2b11644beee6 11799 flask-login_0.3.2.orig.tar.gz
+ 288735cc83e25297b882ccb2ba6f81c751f5b1229b85dff95138ef14c0213e8a 2532 flask-login_0.3.2-1.0.debian.tar.xz
+ 55db056dab3453e4304e352e29339c438c6313b5d4a60c27e331475fc9a409c0 11950 python-flask-login_0.3.2-1.0_all.deb
+ e9fae4db29740e0c4ce4f6458c2fb427bd170f4ffdb7d04b2219f1a7f9d88427 11860 python3-flask-login_0.3.2-1.0_all.deb
+Files:
+ dab5759943fa54b43fc7f9278b4afe80 1006 python optional flask-login_0.3.2-1.0.dsc
+ d95c2275d3e1c755145910077366dc45 11799 python optional flask-login_0.3.2.orig.tar.gz
+ caa2e4625f280dfded547404f36103ef 2532 python optional flask-login_0.3.2-1.0.debian.tar.xz
+ 01a153e1c3c7afd7415ad88d9b9a836c 11950 python optional python-flask-login_0.3.2-1.0_all.deb
+ f2e352df95f9b337499886682a98b0ed 11860 python optional python3-flask-login_0.3.2-1.0_all.deb

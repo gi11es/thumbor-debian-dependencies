@@ -1,4 +1,4 @@
-Source: core
+Source: thumbor-community-core
 Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional

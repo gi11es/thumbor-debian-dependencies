@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Tue, 14 Jun 2016 10:04:40 +0200
+Source: thumbor-community-core
+Binary: python-thumbor-community-core
+Architecture: source all
+Version: 0.3.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-thumbor-community-core - Thumbor core extensions
+Closes: 827537
+Changes:
+ thumbor-community-core (0.3.0-1) unstable; urgency=low
+ .
+   * First packaging (Closes: #827537)
+Checksums-Sha1:
+ cfaf4f525fe882bc62c37c8b991639d36e335b54 1265 thumbor-community-core_0.3.0-1.dsc
+ 07dc359e545922321eea4a756225c47a16bd691f 12822 thumbor-community-core_0.3.0.orig.tar.gz
+ b7c34ec978a034d177966bd01b9fcface3518e92 2024 thumbor-community-core_0.3.0-1.debian.tar.xz
+ f1241992dc33509c031c95121b6aff27bcb8042d 6350 python-thumbor-community-core_0.3.0-1_all.deb
+Checksums-Sha256:
+ 03f73be81e40f79ede2cb8521aced185a493dccbae2edf53e9542842ae075970 1265 thumbor-community-core_0.3.0-1.dsc
+ 414a0f36732417e73ed28213201d875bb1b5e74aac063df0c8a492a86144ee0a 12822 thumbor-community-core_0.3.0.orig.tar.gz
+ fb3a64499d41444b596a3a7d7ae1b8a2850ad9fa6b5777fe42845b16b85d0870 2024 thumbor-community-core_0.3.0-1.debian.tar.xz
+ c05b640bc1e6af2e9a008ec048952a85450cef3914357e9eac64cd238810d335 6350 python-thumbor-community-core_0.3.0-1_all.deb
+Files:
+ 877238421edf71d2b0fdfe3244305648 1265 python optional thumbor-community-core_0.3.0-1.dsc
+ d0f7665bf2e979fcebe4ced57dcda71a 12822 python optional thumbor-community-core_0.3.0.orig.tar.gz
+ ce228a7f9c624df08b9e9443cb9afd18 2024 python optional thumbor-community-core_0.3.0-1.debian.tar.xz
+ 950816e2b23e0a7e981642d742f05586 6350 python optional python-thumbor-community-core_0.3.0-1_all.deb

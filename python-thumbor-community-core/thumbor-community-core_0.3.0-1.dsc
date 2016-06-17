@@ -13,10 +13,10 @@ Package-List:
  python-thumbor-community-core deb python optional arch=all
 Checksums-Sha1:
  07dc359e545922321eea4a756225c47a16bd691f 12822 thumbor-community-core_0.3.0.orig.tar.gz
- b7c34ec978a034d177966bd01b9fcface3518e92 2024 thumbor-community-core_0.3.0-1.debian.tar.xz
+ fa6973dd706eea20d31e00e9cd25f0097a4e8b42 2028 thumbor-community-core_0.3.0-1.debian.tar.xz
 Checksums-Sha256:
  414a0f36732417e73ed28213201d875bb1b5e74aac063df0c8a492a86144ee0a 12822 thumbor-community-core_0.3.0.orig.tar.gz
- fb3a64499d41444b596a3a7d7ae1b8a2850ad9fa6b5777fe42845b16b85d0870 2024 thumbor-community-core_0.3.0-1.debian.tar.xz
+ e42edac27237f9b2ab09ff502502cf756b6ef16f2213fc72a02da39791582204 2028 thumbor-community-core_0.3.0-1.debian.tar.xz
 Files:
  d0f7665bf2e979fcebe4ced57dcda71a 12822 thumbor-community-core_0.3.0.orig.tar.gz
- ce228a7f9c624df08b9e9443cb9afd18 2024 thumbor-community-core_0.3.0-1.debian.tar.xz
+ d8e72d0509a001440830a5bb611acc5d 2028 thumbor-community-core_0.3.0-1.debian.tar.xz

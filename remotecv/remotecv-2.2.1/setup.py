@@ -42,7 +42,7 @@ remotecv is an OpenCV worker for facial and feature recognition
                  'Programming Language :: Python :: 2.6',
                  'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
                  'Topic :: Multimedia :: Graphics :: Presentation'],
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests', 'tests.*']),
     package_data={
         '': ['*.xml'],
     },
@@ -59,8 +59,7 @@ remotecv is an OpenCV worker for facial and feature recognition
 
     entry_points={
         'console_scripts': [
-            'remotecv = remotecv.worker:main',
-            'remotecv-web = remotecv.web:main'
+            'remotecv = remotecv.worker:main'
         ],
     }
 )

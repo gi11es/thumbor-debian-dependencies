@@ -8,7 +8,7 @@ License: MIT
 
 Files: docs/source/_theme/flask/static/*
 Copyright: 2010 Armin Ronacher
-License: Flask Design License
+License: Flask-Design-License
 
 Files: debian/*
 Copyright: 2009-2013 Matt George,
@@ -36,7 +36,7 @@ License: MIT
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
 
-License: Flask Design License
+License: Flask-Design-License
  Copyright (c) 2010 by Armin Ronacher.
  .
  Some rights reserved.

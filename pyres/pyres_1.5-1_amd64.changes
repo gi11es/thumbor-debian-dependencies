@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. (Closes: #825896)
 Checksums-Sha1:
- ece1d3806a8c84bac89000f95d4b612b8c940c14 1169 pyres_1.5-1.dsc
+ 2af1b0e3e6c4ecfe5a7be50e1fd1167722595b8e 1169 pyres_1.5-1.dsc
  e7e3973b3d05869d3878e933f74c95f596c134ae 269001 pyres_1.5.orig.tar.gz
- dd1fcc582ac2aafbcc1855c8a16757ac3929ef7f 4436 pyres_1.5-1.debian.tar.xz
- 44b373c04fded805549a83445ee92846206145d9 23240 pyres_1.5-1_all.deb
+ bb2abfd23be89f799eaa94a56a3c4ed017d502be 4420 pyres_1.5-1.debian.tar.xz
+ 6f99d19ecfd54f32f6fda973481ed0c61b88310e 23224 pyres_1.5-1_all.deb
 Checksums-Sha256:
- 13f278a3ee074435d33145b1b18a90a88c89cc702bfe98bb7e173e6bef158d6d 1169 pyres_1.5-1.dsc
+ 186b6e3ae48cf4f286bd37c970945fb7f2a278680aa3dbf583f5bc407eeba7e3 1169 pyres_1.5-1.dsc
  417ae7890bb7f860728b48f5dee199712cc675e0e6335febdb8e69696d863391 269001 pyres_1.5.orig.tar.gz
- b57ec6c91ea264c55f7d52c0957315435810813a14564dbabc1ec0c62d5fcb36 4436 pyres_1.5-1.debian.tar.xz
- b99ccb7e3b941f7206a890020d0b7572a3c643480c5153d37d60c85ecf876e90 23240 pyres_1.5-1_all.deb
+ 956c3283a88d4fc006ec38ebc065f4a6462e1908a22077dc6501173b859989e0 4420 pyres_1.5-1.debian.tar.xz
+ 256f4be7de6842aa806e31e8f7b69febba083ada1e2eb29a22534b5353d92dae 23224 pyres_1.5-1_all.deb
 Files:
- e73bf48b386a49baa9c8404cd49ff5a1 1169 python optional pyres_1.5-1.dsc
+ 938b01b05430a41b3a9a9d1ec3acbd83 1169 python optional pyres_1.5-1.dsc
  7437d6661cc4a47cdb9b4dde9cafc165 269001 python optional pyres_1.5.orig.tar.gz
- 3de9abd5fd07d4b930f68b45dfae98d9 4436 python optional pyres_1.5-1.debian.tar.xz
- b9fc747a820538f7327370e1d9946f17 23240 python optional pyres_1.5-1_all.deb
+ 4ed82d69eff4eecfd3433384b20af8ba 4420 python optional pyres_1.5-1.debian.tar.xz
+ b1fbe8425cf39f091d3d25620a178d63 23224 python optional pyres_1.5-1_all.deb

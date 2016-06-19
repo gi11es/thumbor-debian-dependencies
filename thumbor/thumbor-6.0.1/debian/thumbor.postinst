@@ -7,7 +7,6 @@ if [ "$1" = "configure" ] ; then
 		useradd --system --user-group --home /var/lib/thumbor thumbor
 	fi
 
-	chown -R thumbor:thumbor /usr/bin/thumbor*
 	mkdir -p /var/lib/thumbor
 	chown -R thumbor:thumbor /var/lib/thumbor
 

@@ -6,8 +6,6 @@ if [ "$1" = "configure" ] ; then
 	if ! getent passwd remotecv | grep -q remotecv; then
 		useradd --system --user-group --home /var/lib/remotecv remotecv
 	fi
-
-	chown -R remotecv:remotecv /usr/bin/remotecv
 fi
 
 #DEBHELPER#

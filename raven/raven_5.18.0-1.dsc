@@ -16,10 +16,10 @@ Package-List:
  raven deb python optional arch=all
 Checksums-Sha1:
  89cb35b99f1d7c2d0bd29bb5d0ba4b59c59fccee 309216 raven_5.18.0.orig.tar.gz
- ad60af486948994ced41d62f9ce455bd3ecdf810 4112 raven_5.18.0-1.debian.tar.xz
+ c64c047cc44ee48623b5cc20721fd81767ccdbac 4108 raven_5.18.0-1.debian.tar.xz
 Checksums-Sha256:
  062c9adcf001b4cfe29f04c08587e3e4a91eacbf4ca0701921ac421ad08745e7 309216 raven_5.18.0.orig.tar.gz
- f279ecbff30937049049371cb1a24cb38242220b2b6482c5df0b5fcfab9f5a27 4112 raven_5.18.0-1.debian.tar.xz
+ 50929660cdea1c4a3cb26b08786c2e0c5f20c249580065216a720a2444c4acd4 4108 raven_5.18.0-1.debian.tar.xz
 Files:
  46a95433e9745b965248956cca7802f5 309216 raven_5.18.0.orig.tar.gz
- e006c8513a2edc28a18c693d5597d0a1 4112 raven_5.18.0-1.debian.tar.xz
+ 8c89412fbea4b02c17ef2ab9a6ddc44a 4108 raven_5.18.0-1.debian.tar.xz

@@ -14,10 +14,10 @@ Package-List:
  pyres deb python optional arch=all
 Checksums-Sha1:
  e7e3973b3d05869d3878e933f74c95f596c134ae 269001 pyres_1.5.orig.tar.gz
- bb2abfd23be89f799eaa94a56a3c4ed017d502be 4420 pyres_1.5-1.debian.tar.xz
+ 497f99374b8a466aa587ef5e5b3f1a33613cedaa 4416 pyres_1.5-1.debian.tar.xz
 Checksums-Sha256:
  417ae7890bb7f860728b48f5dee199712cc675e0e6335febdb8e69696d863391 269001 pyres_1.5.orig.tar.gz
- 956c3283a88d4fc006ec38ebc065f4a6462e1908a22077dc6501173b859989e0 4420 pyres_1.5-1.debian.tar.xz
+ 981366ede7deb28529a8fa0182f83ee53dec7613e3cb776746a92e37750be88f 4416 pyres_1.5-1.debian.tar.xz
 Files:
  7437d6661cc4a47cdb9b4dde9cafc165 269001 pyres_1.5.orig.tar.gz
- 4ed82d69eff4eecfd3433384b20af8ba 4420 pyres_1.5-1.debian.tar.xz
+ d8a80b90666067a9dbb34edf18b87bfd 4416 pyres_1.5-1.debian.tar.xz

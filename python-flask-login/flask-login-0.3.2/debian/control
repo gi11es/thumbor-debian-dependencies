@@ -1,5 +1,7 @@
 Source: flask-login
-Maintainer: Tonnerre LOMBARD <tonnerre@ancient-solutions.com>
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Tonnerre LOMBARD <tonnerre@ancient-solutions.com>,
+           Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 9),

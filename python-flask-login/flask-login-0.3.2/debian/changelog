@@ -1,6 +1,5 @@
-flask-login (0.3.2-1.0) unstable; urgency=medium
+flask-login (0.3.2-1) unstable; urgency=medium
 
-  * Non-maintainer upload
   * New upstream release
   * debian/watch
    - switched to pypi.debian.net
@@ -10,6 +9,7 @@ flask-login (0.3.2-1.0) unstable; urgency=medium
    - build depend on python-flask and debhelper (>= 9)
    - bumped standards version to 3.9.8
    - added python3 package
+   - switched maintainer to Python Modules Team
   * debian/rules
    - switched to pybuild
 

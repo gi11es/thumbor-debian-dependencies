@@ -17,7 +17,7 @@ if [ "$1" = "configure" ] ; then
 		chown thumbor:thumbor /etc/thumbor.key
 	fi
 
-	/usr/bin/thumbor-config > /etc/thumbor.d/00-default.conf
+	thumbor-config > /etc/thumbor.d/00-default.conf
 fi
 
 #DEBHELPER#

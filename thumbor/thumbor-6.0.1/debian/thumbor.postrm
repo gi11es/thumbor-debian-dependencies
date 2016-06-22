@@ -7,8 +7,6 @@ if [ "$1" = "purge" ] ; then
 		userdel -r thumbor
 	fi
 	[ -f /etc/thumbor.key ] && rm /etc/thumbor.key
-
-	update-rc.d -f thumbor remove
 fi
 
 #DEBHELPER#

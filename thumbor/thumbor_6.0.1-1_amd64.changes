@@ -2,7 +2,7 @@ Format: 1.8
 Date: Wed, 18 May 2016 16:16:36 +0000
 Source: thumbor
 Binary: thumbor
-Architecture: source all
+Architecture: source amd64
 Version: 6.0.1-1
 Distribution: unstable
 Urgency: low
@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. (Closes: #723778)
 Checksums-Sha1:
- eac1eecddf8c76456f966ccc01fd4d02ffd09fc6 1711 thumbor_6.0.1-1.dsc
+ 8678f5a6a83015df9015a73044d934f4d657edd0 1711 thumbor_6.0.1-1.dsc
  e6fe5956101b69921751e8670a8158576c1ae9eb 14502973 thumbor_6.0.1.orig.tar.gz
- 8357d15c948ad958945bb8f30f5c3701e68ed006 7104 thumbor_6.0.1-1.debian.tar.xz
- 4f78de09cc60dc299b3913a42d6b08d9fe1367a5 3213846 thumbor_6.0.1-1_all.deb
+ 4240b82ff8074dbd93921db7ab209130d9c14592 5544 thumbor_6.0.1-1.debian.tar.xz
+ 67cf5a3fdb5ef3539b157c58e5a8c2338d626694 3165038 thumbor_6.0.1-1_amd64.deb
 Checksums-Sha256:
- 6beb2093116a352bd25647dcb2f2b49639af484ae1677cebb047c0aae0d9059e 1711 thumbor_6.0.1-1.dsc
+ 16f45599197dce38d22078bb1934b9170c37a4d1bc4bd92809cb4fa513b0c6c7 1711 thumbor_6.0.1-1.dsc
  149d05c923d276782568fad86594230212fd9ce6f0364448eac0ce4251c746b0 14502973 thumbor_6.0.1.orig.tar.gz
- 5d02d11350a6d7a3a9896044b123903388ca6be9b6f9ebb6af1b0054b0382a1d 7104 thumbor_6.0.1-1.debian.tar.xz
- b376b645af41845abd18802dd2fd2b33479302547088d7573c8f1b5b681d7791 3213846 thumbor_6.0.1-1_all.deb
+ 949b2dde28b12f370ea6ab3b68151bccd8bb2a4be694ea6b6cb930315407aac7 5544 thumbor_6.0.1-1.debian.tar.xz
+ e8b69f65b1804d9f86f3b9dbd85d22f09639fbf31161676232dc7c5a9004cc51 3165038 thumbor_6.0.1-1_amd64.deb
 Files:
- 6a24ca4893fbf6b14147c0f92cb09111 1711 python optional thumbor_6.0.1-1.dsc
+ e023f01f87246641d3339a8955379f4a 1711 python optional thumbor_6.0.1-1.dsc
  b9b03e3460dd35aa6063f12949c7c160 14502973 python optional thumbor_6.0.1.orig.tar.gz
- 8d6934301fd79b72a24d507b06e69bc4 7104 python optional thumbor_6.0.1-1.debian.tar.xz
- ff664678d3bd579a43d042706c0c708b 3213846 python optional thumbor_6.0.1-1_all.deb
+ 7f83c531437316a41cbdcfa3438a50b4 5544 python optional thumbor_6.0.1-1.debian.tar.xz
+ 1a94dc860784dfe578368477520b5abf 3165038 python optional thumbor_6.0.1-1_amd64.deb

@@ -4,30 +4,30 @@ Source: https://github.com/thumbor/thumbor
 
 Files: *
 Copyright: 2014 Globo.com
-License: MIT License
+License: MIT
 
 Files: thumbor/detectors/*/*.xml
 Copyright: 2000 Intel Corporation
-License: Intel Open Source License
+License: Intel-Open-Source-License
 
 Files: tests/fixtures/haarcascade_eye_tree_eyeglasses.xml
 Copyright: 2000 Intel Corporation
-License: Intel Open Source License
+License: Intel-Open-Source-License
 
 Files: thumbor/filters/haarcascade_eye.xml
 Copyright: 2000 Intel Corporation
-License: Intel Open Source License
+License: Intel-Open-Source-License
 
 Files: thumbor/engines/extensions/pil.py
 Copyright: 2012 Almar Klein, Ant1, Marius van Voorden
-License: BSD License
+License: BSD-3-clause
 
 Files: debian/*
 Copyright: 2014 Globo.com,
            2016 Gilles Dubuc <gilles@wikimedia.org>
-License: MIT License
+License: MIT
 
-License: MIT License
+License: MIT
  Copyright (c) 2014 Globo.com
  .
  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -47,7 +47,7 @@ License: MIT License
  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-License: Intel Open Source License
+License: Intel-Open-Source-License
  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.
  .
  By downloading, copying, installing or using the software you agree to this license.
@@ -85,9 +85,9 @@ License: Intel Open Source License
  or tort (including negligence or otherwise) arising in any way out of
  the use of this software, even if advised of the possibility of such damage.
 
-License: BSD License
+License: BSD-3-clause
  This code is subject to the (new) BSD license:
-.
+ .
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
      * Redistributions of source code must retain the above copyright

@@ -7,8 +7,3 @@ export PYBUILD_NAME=thumbor-wikimedia
 override_dh_clean:
 	rm -rf wikimedia_thumbor.egg-info
 	dh_clean
-
-override_dh_install:
-	dh_install --list-missing
-	mkdir -p debian/python-thumbor-wikimedia/etc/thumbor.d
-	install -p -o root -g root -m 644 debian/01-wikimedia.conf debian/python-thumbor-wikimedia/etc/thumbor.d

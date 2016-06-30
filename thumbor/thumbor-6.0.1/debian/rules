@@ -16,3 +16,9 @@ override_dh_clean:
 
 override_dh_installinit:
 	dh_installinit --name=thumbor --noscripts
+
+override_dh_auto_install:
+	dh_auto_install $@
+	PYTHONPATH=$(CURDIR)/debian/thumbor/usr/lib/python2.7/dist-packages/ \
+	    $(CURDIR)/debian/thumbor/usr/bin/thumbor-config > \
+	    $(CURDIR)/debian/thumbor/etc/thumbor.d/00-default.conf

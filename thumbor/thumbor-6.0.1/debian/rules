@@ -1,9 +1,10 @@
 #!/usr/bin/make -f
-export PYBUILD_NAME=pyres
+export PYBUILD_NAME=thumbor
 export PYBUILD_TEST_NOSE=1
 export PYBUILD_BEFORE_TEST=redis-server --port 6668 --requirepass hey_you > /dev/null &
 export PYBUILD_AFTER_TEST=redis-cli -p 6668 -a hey_you shutdown
 export PYBUILD_TEST_ARGS=-s
+export PYBUILD_AFTER_INSTALL=mkdir -p {destdir}/etc/thumbor.d; PYTHONPATH={destdir}/usr/lib/python{version}/dist-packages/ python{version} {destdir}/usr/bin/thumbor-config > {destdir}/etc/thumbor.d/00-default.conf
 export LC_ALL=C.UTF-8
 
 %:
@@ -16,9 +17,3 @@ override_dh_clean:
 
 override_dh_installinit:
 	dh_installinit --name=thumbor --noscripts
-
-override_dh_auto_install:
-	dh_auto_install $@
-	PYTHONPATH=$(CURDIR)/debian/thumbor/usr/lib/python2.7/dist-packages/ \
-	    $(CURDIR)/debian/thumbor/usr/bin/thumbor-config > \
-	    $(CURDIR)/debian/thumbor/etc/thumbor.d/00-default.conf

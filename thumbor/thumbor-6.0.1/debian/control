@@ -30,8 +30,8 @@ Build-Depends: debhelper (>= 9),
                python-pyexiv2,
                python-pyssim,
                python-raven,
-               python-redis (>=2.4.9),
-               python-scipy (>=0.16.1),
+               python-redis (>= 2.4.9),
+               python-scipy (>= 0.16.1),
                python-setuptools,
                python-statsd (>= 3.0.1),
                python-tornado (>= 4.1.0),
@@ -46,7 +46,7 @@ Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/thumbor.git
 
 Package: thumbor
 Architecture: any
-Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}, python-argparse, python-crypto (>= 2.1.0), python-derpconf (>= 0.2.0), python-concurrent.futures, python-libthumbor, python-pexif (>=0.15), python-pil (>= 3.0.0), python-statsd (>= 3.0.1), python-tornado (>= 4.1.0), python-tz
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}, python-argparse, python-crypto (>= 2.1.0), python-derpconf (>= 0.2.0), python-concurrent.futures, python-libthumbor, python-pexif (>= 0.15), python-pil (>= 3.0.0), python-statsd (>= 3.0.1), python-tornado (>= 4.1.0), python-tz
 Description: Photo thumbnail service
  Thumbor is a smart imaging service. It enables on-demand crop, resizing
  and flipping of images.

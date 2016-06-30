@@ -14,10 +14,10 @@ Package-List:
  thumbor deb python optional arch=any
 Checksums-Sha1:
  e6fe5956101b69921751e8670a8158576c1ae9eb 14502973 thumbor_6.0.1.orig.tar.gz
- 95e9c1d4e21d491b007749b6faf39d9b6e19c91d 5528 thumbor_6.0.1-1.debian.tar.xz
+ db6db3091176ac834e95ba3697c560c1095171e7 5548 thumbor_6.0.1-1.debian.tar.xz
 Checksums-Sha256:
  149d05c923d276782568fad86594230212fd9ce6f0364448eac0ce4251c746b0 14502973 thumbor_6.0.1.orig.tar.gz
- 8eaa3c97c14d93916589e290efb924266b86487a98d7937ecf0057d335f1a873 5528 thumbor_6.0.1-1.debian.tar.xz
+ 2f90b54e7b9abe8b897ed1f866efb4dcdbaaf470e035ecb25f66e32428cf9b70 5548 thumbor_6.0.1-1.debian.tar.xz
 Files:
  b9b03e3460dd35aa6063f12949c7c160 14502973 thumbor_6.0.1.orig.tar.gz
- be3d46647cf5aa42609b5dd04e6b4006 5528 thumbor_6.0.1-1.debian.tar.xz
+ ca9765695f727facb8c400e5418a7cc5 5548 thumbor_6.0.1-1.debian.tar.xz

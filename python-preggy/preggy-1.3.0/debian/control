@@ -4,7 +4,7 @@ Uploaders: Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional
 Build-Depends: debhelper (>= 9),
-               dh-python,
+               dh-python (>= 2),
                python-all,
                python-nose,
                python-setuptools,

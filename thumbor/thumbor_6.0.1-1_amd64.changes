@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. (Closes: #723778)
 Checksums-Sha1:
- e6989443ce67c4f4ab4d66b0cd829b1f95d6cf39 1711 thumbor_6.0.1-1.dsc
- e6fe5956101b69921751e8670a8158576c1ae9eb 14502973 thumbor_6.0.1.orig.tar.gz
- db6db3091176ac834e95ba3697c560c1095171e7 5548 thumbor_6.0.1-1.debian.tar.xz
- a3cda18f77f4f6cd3c0d81bdb9db0157dae05730 3158146 thumbor_6.0.1-1_amd64.deb
+ 9c840d70a34ec343db597521dd2b11da1d1cba25 1651 thumbor_6.0.1-1.dsc
+ d84592d5e5b73c1cc9e1a6de1ce8762a9d6bd812 13467096 thumbor_6.0.1.orig.tar.gz
+ fa7f58576afa89cde3f38845e53e47f867b84fd7 9768 thumbor_6.0.1-1.debian.tar.xz
+ 5d4f5974d132828f3c8312c0a9a35c16d5f3670a 3158434 thumbor_6.0.1-1_amd64.deb
 Checksums-Sha256:
- 203043ea9e3e2842e535a10620ced27b9574268473946e6d8c22850aa7e8bf3c 1711 thumbor_6.0.1-1.dsc
- 149d05c923d276782568fad86594230212fd9ce6f0364448eac0ce4251c746b0 14502973 thumbor_6.0.1.orig.tar.gz
- 2f90b54e7b9abe8b897ed1f866efb4dcdbaaf470e035ecb25f66e32428cf9b70 5548 thumbor_6.0.1-1.debian.tar.xz
- 51b5a55a8e99d6b582e267275a8798fa023c163183a9ac2fe94928fca1bcba13 3158146 thumbor_6.0.1-1_amd64.deb
+ f79be8a7bef0062298995f6fe7dc6bfe3bf2306a5a4a3c7724b759b279f38f25 1651 thumbor_6.0.1-1.dsc
+ bc168d20fb6c3dc0fe4a8a5708bad3b8814cbdb91cba9eb28953ccda535c06b9 13467096 thumbor_6.0.1.orig.tar.gz
+ b08e6fbb616501bd303f5da385561fda782a67c9cb72314c52beb1bb685fc66e 9768 thumbor_6.0.1-1.debian.tar.xz
+ 413ccf160234e333418e930d675595ca539324a9bcfc104e187e50953a1e7a76 3158434 thumbor_6.0.1-1_amd64.deb
 Files:
- 3270132a0ae7393e51867322a962dd38 1711 python optional thumbor_6.0.1-1.dsc
- b9b03e3460dd35aa6063f12949c7c160 14502973 python optional thumbor_6.0.1.orig.tar.gz
- ca9765695f727facb8c400e5418a7cc5 5548 python optional thumbor_6.0.1-1.debian.tar.xz
- 30d272c5548e74c98b6972f6a69e0232 3158146 python optional thumbor_6.0.1-1_amd64.deb
+ e57b824f0505599b01050a5bd745673c 1651 python optional thumbor_6.0.1-1.dsc
+ 7b12af175880e9ba48f3ca4ab2c323d6 13467096 python optional thumbor_6.0.1.orig.tar.gz
+ 37dc90ff2a1f92a9fd611b98c8e9e43b 9768 python optional thumbor_6.0.1-1.debian.tar.xz
+ c93db73ed685864c9b149438f70fbb99 3158434 python optional thumbor_6.0.1-1_amd64.deb

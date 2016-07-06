@@ -4,7 +4,7 @@ export PYBUILD_TEST_NOSE=1
 export PYBUILD_BEFORE_TEST=redis-server --port 6668 --requirepass hey_you > /dev/null &
 export PYBUILD_AFTER_TEST=redis-cli -p 6668 -a hey_you shutdown
 export PYBUILD_TEST_ARGS=-s --ignore-files=test_statsd_metrics.py
-export PYBUILD_AFTER_INSTALL=rm -rf {destdir}/usr/lib/python{version}/dist-packages/thumbor/integration_tests; mkdir -p {destdir}/etc/thumbor.d; HOME=/var/lib/thumbor PYTHONPATH={destdir}/usr/lib/python{version}/dist-packages/ python{version} {destdir}/usr/bin/thumbor-config > {destdir}/etc/thumbor.d/00-default.conf; find {destdir}/usr/lib/python{version}/dist-packages/ -name '*.c' -delete
+export PYBUILD_AFTER_INSTALL=mkdir -p {destdir}/etc/thumbor.d; HOME=/var/lib/thumbor PYTHONPATH={destdir}/usr/lib/python{version}/dist-packages/ python{version} {destdir}/usr/bin/thumbor-config > {destdir}/etc/thumbor.d/00-default.conf; find {destdir}/usr/lib/python{version}/dist-packages/ -name '*.c' -delete
 export LC_ALL=C.UTF-8
 
 %:

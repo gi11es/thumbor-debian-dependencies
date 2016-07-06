@@ -34,12 +34,15 @@ class Storage(BaseStorage):
     def uri(self):
         return (
             self.context.config.SWIFT_HOST +
-            self.context.config.SWIFT_THUMBNAIL_CONTAINER +
+            self.context.wikimedia_thumbnail_container +
             '/' +
             self.context.wikimedia_path
         )
 
     def put(self, bytes):
+        if not hasattr(self.context, 'wikimedia_thumbnail_container'):
+            return
+
         # We store the xkey alongside the object if it's set.
         # This way when an thumbnail falls our of Varnish and is picked
         # up from Swift again, it will have an xkey. Which lets us avoid
@@ -51,7 +54,7 @@ class Storage(BaseStorage):
             headers = {'xkey': xkey[0]}
 
         self.swift.put_object(
-            self.context.config.SWIFT_THUMBNAIL_CONTAINER,
+            self.context.wikimedia_thumbnail_container,
             self.context.wikimedia_path,
             bytes,
             headers=headers
@@ -67,7 +70,7 @@ class Storage(BaseStorage):
             start = datetime.datetime.now()
 
             headers, data = self.swift.get_object(
-                self.context.config.SWIFT_THUMBNAIL_CONTAINER,
+                self.context.wikimedia_thumbnail_container,
                 self.context.wikimedia_path
             )
 

@@ -1,4 +1,4 @@
-Source: thumbor-community-core
+Source: python-thumbor-community-core
 Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional
@@ -12,8 +12,8 @@ Build-Depends: debhelper (>= 9),
                thumbor (>= 6.0.1)
 X-Python-Version: >= 2.6
 Homepage: https://github.com/thumbor-community/core
-Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/thumbor-community-core.git
-Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/thumbor-community-core.git
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-thumbor-community-core.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-thumbor-community-core.git
 
 Package: python-thumbor-community-core
 Architecture: all

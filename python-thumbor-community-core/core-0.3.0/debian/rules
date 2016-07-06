@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-export PYBUILD_NAME=core
+export PYBUILD_NAME=tc_core
 
 %:
 	dh $@ --with python2 --buildsystem=pybuild

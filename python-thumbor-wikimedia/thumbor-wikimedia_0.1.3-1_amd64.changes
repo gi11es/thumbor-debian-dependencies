@@ -15,17 +15,17 @@ Changes:
  .
    * First packaging
 Checksums-Sha1:
- 1921b9f36aaad034587e35f72a56ca746666c581 1232 thumbor-wikimedia_0.1.3-1.dsc
+ fe07209eded542a415bfa66d18dcbf9ba171deac 1232 thumbor-wikimedia_0.1.3-1.dsc
  006ef7ae775d90c851e7d4abbf8ead7bf55e65e3 17385 thumbor-wikimedia_0.1.3.orig.tar.gz
- fd6faeff87c4c0190eabe8b101bdfa7725f8491f 2412 thumbor-wikimedia_0.1.3-1.debian.tar.xz
- e888bdf9ded774c051a8ea46d2f542c98d486eb2 18924 python-thumbor-wikimedia_0.1.3-1_all.deb
+ 7691623fb3acadf938ffc99021cce91c7b4a37ab 2424 thumbor-wikimedia_0.1.3-1.debian.tar.xz
+ e4a952cc8a66b74d3123af59cb0604798ad077af 18904 python-thumbor-wikimedia_0.1.3-1_all.deb
 Checksums-Sha256:
- 3dd7d45ead8289dc88a2f46d9d716129ade94e6a69c21aa49310807d010e5252 1232 thumbor-wikimedia_0.1.3-1.dsc
+ 19e6b63b745427e0bdad021dfc3764a420d308f2590398365a46ad45d3429317 1232 thumbor-wikimedia_0.1.3-1.dsc
  a0336414abc3d8d7c569967d4cc42ff3b3a77c88fd9009b87054f78dad734b3e 17385 thumbor-wikimedia_0.1.3.orig.tar.gz
- b0fe6a82bffe528f4f9ec5f5e6b977e4f0a4555a4ea6fa8bdba8e7bd1773b1ac 2412 thumbor-wikimedia_0.1.3-1.debian.tar.xz
- 00dc3381b52af3e40914b53c08bebbc7367329383bdcc4f315d61d032fecfd55 18924 python-thumbor-wikimedia_0.1.3-1_all.deb
+ 1818e04b63a5811d5a4cfbc1bc16695d525788a52c0975571bcd550844522b44 2424 thumbor-wikimedia_0.1.3-1.debian.tar.xz
+ a8fda65d7dbc4f0083be0bffced82cdf67063a06956a41937ca9be345aa9d627 18904 python-thumbor-wikimedia_0.1.3-1_all.deb
 Files:
- f32ba95d0f7452b3f4428ff9d5cbcc86 1232 python optional thumbor-wikimedia_0.1.3-1.dsc
+ 0f11546f922fc7eef43007b7f31a1d00 1232 python optional thumbor-wikimedia_0.1.3-1.dsc
  5914530903c45abce191e8bfab4d2ca9 17385 python optional thumbor-wikimedia_0.1.3.orig.tar.gz
- f72b8db7fad025d662360290e693608f 2412 python optional thumbor-wikimedia_0.1.3-1.debian.tar.xz
- 20319ddcfad09efc17be794580521d0f 18924 python optional python-thumbor-wikimedia_0.1.3-1_all.deb
+ 446480ed512f20d93603113586e6b011 2424 python optional thumbor-wikimedia_0.1.3-1.debian.tar.xz
+ b77d630e628fce0ddb59353c16d4ee22 18904 python optional python-thumbor-wikimedia_0.1.3-1_all.deb

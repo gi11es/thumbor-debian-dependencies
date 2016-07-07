@@ -16,17 +16,17 @@ Changes:
  .
    * Initial release. (Closes: #783577)
 Checksums-Sha1:
- 20f44bd4560aba4b293c647835e8f119e4c7b4a8 1204 libthumbor_1.3.2-1.dsc
+ 6c754a15dce0e222fb6b6d58269856814ec70b84 1204 libthumbor_1.3.2-1.dsc
  09d1e3dce56ff8a2318cf0af8cde995f59cfd0fc 14651 libthumbor_1.3.2.orig.tar.gz
- 6ea2ad7f9536d54e6ae2e5d70d1907ba40e042d4 2464 libthumbor_1.3.2-1.debian.tar.xz
- ab06e937176edfb21db9e1e17c3ae7b56bfdc342 7870 python-libthumbor_1.3.2-1_all.deb
+ a4ea312fa5755cc163cd2d45ebade2a8a888f4b5 2476 libthumbor_1.3.2-1.debian.tar.xz
+ 227357abcad88c7b480632b6fbfa469b7265cd83 7876 python-libthumbor_1.3.2-1_all.deb
 Checksums-Sha256:
- 821b706b77f226fd2fc09f6119457562efb1eab87388f8fcdef7d125ecd6e91a 1204 libthumbor_1.3.2-1.dsc
+ b48be904d1397e18edd233e983beb1e7e7fbe42d26b9089d06eb119eaa64583d 1204 libthumbor_1.3.2-1.dsc
  b8a51583c86d74695a1d740db57412ab5f1edd2eb356a4b9da044f9f44aec71d 14651 libthumbor_1.3.2.orig.tar.gz
- 6bbeea7e4cc00f7493d118bd0783bc756d43550f29a72ce6d584ecc65ca320a6 2464 libthumbor_1.3.2-1.debian.tar.xz
- cdc4760adf724b84b2321c4665d0d75395ab753ad62fb12e4bf6955a87b279c2 7870 python-libthumbor_1.3.2-1_all.deb
+ 4155174eed40a5bebee764d7364467547697773ff9350075a323d51c888bfc81 2476 libthumbor_1.3.2-1.debian.tar.xz
+ 4b37fe17e6ec9ccc73eee68964804c6bf501a11721f61172f0ba67d8b92536ab 7876 python-libthumbor_1.3.2-1_all.deb
 Files:
- 019371b18a4e664cffc0be3ada6ae691 1204 python optional libthumbor_1.3.2-1.dsc
+ d4319bb3c49d3b7e66ceaf16c4dd64cd 1204 python optional libthumbor_1.3.2-1.dsc
  3ec0f75199f81ca421994010595bc181 14651 python optional libthumbor_1.3.2.orig.tar.gz
- d171794d6f4a5325a11050490ce4fe3d 2464 python optional libthumbor_1.3.2-1.debian.tar.xz
- 22ac077c8a6c2d2688a9f31afcf4c24a 7870 python optional python-libthumbor_1.3.2-1_all.deb
+ ffad8a27b143bae9f7da7c90a5e3bd59 2476 python optional libthumbor_1.3.2-1.debian.tar.xz
+ 455b35c5e6e0bfc98e323823b288c985 7876 python optional python-libthumbor_1.3.2-1_all.deb

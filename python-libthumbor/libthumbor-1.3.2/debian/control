@@ -19,6 +19,7 @@ Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/libthumbor.
 Package: python-libthumbor
 Architecture: all
 Depends: python-pkg-resources, ${misc:Depends}, ${python:Depends}, python-six
+Suggests: python-django
 Description: Python module to make usage of Thumbor easy in Python
  Allows easy usage of Thumbor in Python, by facilitating the generation
  of signed URLs to thumbor-generated assets.

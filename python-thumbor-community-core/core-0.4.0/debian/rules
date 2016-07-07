@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+export PYBUILD_NAME=tc_core
+#export PYBUILD_SYSTEM=custom 
+#export PYBUILD_TEST_ARGS=pyvows -vvv vows/
+
+%:
+	dh $@ --with python2 --buildsystem=pybuild
+
+override_dh_clean:
+	rm -rf tc_core.egg-info
+	dh_clean
+
+override_dh_auto_test:
+	env PYTHONPATH=$$PYTHONPATH:$(CURDIR)/build/tc_core/ pyvows vows/
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/python-thumbor-community-core/usr/share/python-thumbor-community-core/postinstall
+	# 30-community-core.conf isn't treated like a regular config file because we want it removed on package uninstall
+	install -p -o root -g root -m 644 debian/30-community-core.conf debian/python-thumbor-community-core/usr/share/python-thumbor-community-core/postinstall/30-community-core.conf

@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='tc_core',
-    version='0.3.0',
+    version='0.4.0',
     url='http://github.com/thumbor_community/core',
     license='MIT',
     author='Thumbor Community',
@@ -15,6 +15,7 @@ setup(
     zip_safe=False,
     platforms='any',
     install_requires=[
+        'libthumbor>=1.3.2',
         'thumbor>=5.0.6',
     ],
     extras_require={

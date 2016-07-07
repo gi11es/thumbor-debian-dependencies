@@ -1,9 +1,0 @@
-#!/usr/bin/make -f
-export PYBUILD_NAME=core
-
-%:
-	dh $@ --with python2 --buildsystem=pybuild
-
-override_dh_clean:
-	rm -rf tc_core.egg-info
-	dh_clean

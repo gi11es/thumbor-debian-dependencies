@@ -16,17 +16,17 @@ Changes:
  .
    * First packaging (Closes: #827537)
 Checksums-Sha1:
- e428cbeb1ea46f6356a75c35b1eef38e41e6a6ca 1328 python-thumbor-community-core_0.4.0-1.dsc
+ 9bc260101ea14f6148c6b154213b50f2d9bef27e 1358 python-thumbor-community-core_0.4.0-1.dsc
  b020dffde1603c0724dcd349000ac3bf381bbdd9 12635 python-thumbor-community-core_0.4.0.orig.tar.gz
- ac01437710e2bb51468351c1488e310e5137ddcc 2684 python-thumbor-community-core_0.4.0-1.debian.tar.xz
- 939d42fe5f1d1af582d1cd44c2435d1808ce3169 13552 python-thumbor-community-core_0.4.0-1_all.deb
+ dc605c0d1e5120e91aa56bc101c01123f26a7c94 2700 python-thumbor-community-core_0.4.0-1.debian.tar.xz
+ a426d596b5d43ff9058f61e409def5ce36f34bd1 13564 python-thumbor-community-core_0.4.0-1_all.deb
 Checksums-Sha256:
- 7bc16b5046b8d38a1fd0f95cebb1eafa8807085bc9bec18f84f719e4578acb17 1328 python-thumbor-community-core_0.4.0-1.dsc
+ f86b796f5a44100b7225b1d8d90c886544f76a51115fa404534aed2c76500e86 1358 python-thumbor-community-core_0.4.0-1.dsc
  b6e2c1a6048c451fb5535802673c7e342499d2fa53220c50670e54003aa2bb5f 12635 python-thumbor-community-core_0.4.0.orig.tar.gz
- 68564fd5824af5d0531352e3f8636a7691b3e1cfc0431beb76530a52e6598378 2684 python-thumbor-community-core_0.4.0-1.debian.tar.xz
- 52f1f9da2adc936093966382da21b0682b2d57ecdad523e3638ad25508e3c92d 13552 python-thumbor-community-core_0.4.0-1_all.deb
+ ba10a462b13584ab67bc4dfdea374b32c48bd760137acd22f137cb27f833f79e 2700 python-thumbor-community-core_0.4.0-1.debian.tar.xz
+ 34d6f026088fcb04c10866d097da4bf0b7464fbc38cf2856cefc1c2ce2edac5e 13564 python-thumbor-community-core_0.4.0-1_all.deb
 Files:
- db2f4d983da6477e06ec5b52261f22ec 1328 python optional python-thumbor-community-core_0.4.0-1.dsc
+ 4e4e68341c7207a1218d5c552f9bb384 1358 python optional python-thumbor-community-core_0.4.0-1.dsc
  f4bf4c45016f09eb6599dab4f53b89ce 12635 python optional python-thumbor-community-core_0.4.0.orig.tar.gz
- 3f7055dc2ae1df7ce83e952a41115a7d 2684 python optional python-thumbor-community-core_0.4.0-1.debian.tar.xz
- 78ea430cbf5de5743d1c9e5b2f29b747 13552 python optional python-thumbor-community-core_0.4.0-1_all.deb
+ 179c2a3df9ce8cf3a6a8623e4fc52eb0 2700 python optional python-thumbor-community-core_0.4.0-1.debian.tar.xz
+ 78e9e1a6f344b73b77bb9766e071a604 13564 python optional python-thumbor-community-core_0.4.0-1_all.deb

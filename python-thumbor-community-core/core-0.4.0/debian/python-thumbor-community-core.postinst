@@ -3,7 +3,10 @@
 set -e
 
 if [ "$1" = "configure" ] ; then
-	/bin/cp /usr/share/python-thumbor-community-core/postinstall/30-community-core.conf /etc/thumbor.d/
+	# On remove + install without purge the python-thumbor-community-core.install definition won't install the config file
+	if [ ! -f /etc/thumbor.d/30-community-core.conf ]; then
+		/bin/cp /usr/share/python-thumbor-community-core/postinstall/30-community-core.conf /etc/thumbor.d/
+	fi
 	invoke-rc.d thumbor restart || true
 fi
 

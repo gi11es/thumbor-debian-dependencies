@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-export PYBUILD_NAME=thumbor-wikimedia
+export PYBUILD_NAME=python-thumbor-wikimedia
 
 %:
 	dh $@ --with python2 --buildsystem=pybuild

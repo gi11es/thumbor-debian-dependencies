@@ -1,4 +1,4 @@
-Source: thumbor-wikimedia
+Source: python-thumbor-wikimedia
 Maintainer: Gilles Dubuc <gilles@wikimedia.org>
 Section: python
 Priority: optional

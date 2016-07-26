@@ -1,6 +1,7 @@
 openexr (2.2.0-11~bpo8+1) jessie-backports; urgency=medium
 
   * Rebuild for jessie-backports.
+  * Lower dpkg-dev minimum requirement for build to Jessie version
 
  -- Gilles Dubuc <gilles@wikimedia.org>  Tue, 26 Jul 2016 06:57:45 +0000
 

@@ -1,0 +1,48 @@
+Format: 1.8
+Date: Tue, 26 Jul 2016 06:44:11 +0000
+Source: vips
+Binary: libvips42 libvips-dev libvips-tools python-vipscc libvips-doc gir1.2-vips-8.0
+Architecture: source all amd64
+Version: 8.3.1-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ gir1.2-vips-8.0 - GObject introspection data for VIPS
+ libvips-dev - image processing system good for very large ones (dev)
+ libvips-doc - image processing system good for very large ones (doc)
+ libvips-tools - image processing system good for very large ones (tools)
+ libvips42  - image processing system good for very large ones
+ python-vipscc - image processing system good for very large ones (tools)
+Changes:
+ vips (8.3.1-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ b2c240d65c59310124ce7d13425cb4d60add9bf0 1810 vips_8.3.1-1~bpo8+1.dsc
+ 523a2becec82913b25f4245bf44bee818c392c22 9056 vips_8.3.1-1~bpo8+1.debian.tar.xz
+ 49ac4fb894f6ae57d28c3bb773558963e306c148 289628 libvips-doc_8.3.1-1~bpo8+1_all.deb
+ 8fe7322ca3892ab7d14ce33df2aedc4665737f18 730576 libvips42_8.3.1-1~bpo8+1_amd64.deb
+ 89a767bdca13a02d1cde0fb7270151d6b291836f 915204 libvips-dev_8.3.1-1~bpo8+1_amd64.deb
+ 937bcaadfcbb0d9aef04b3f817362f2c67dcf0dc 100530 libvips-tools_8.3.1-1~bpo8+1_amd64.deb
+ 02d53f3e79d600a2eddbe8cae940d68257da10f9 292110 python-vipscc_8.3.1-1~bpo8+1_amd64.deb
+ aff1e86c1c9b054135a16a10bf1c7c42cd41fcc9 82106 gir1.2-vips-8.0_8.3.1-1~bpo8+1_amd64.deb
+Checksums-Sha256:
+ 69b331439daba94088992817eac5211a1d36e6a6bb36a8bec798dfe70d9cefa4 1810 vips_8.3.1-1~bpo8+1.dsc
+ d8cfdc775aa1b62dd879b7741edb119ce9cccc4883947604e8d14ba165696134 9056 vips_8.3.1-1~bpo8+1.debian.tar.xz
+ 391e9da5516aa2fc5fba3133d5e81ade1e53dd047d1de988c0425687ac89eea8 289628 libvips-doc_8.3.1-1~bpo8+1_all.deb
+ 752bf3cdb374355c3a2f944c615a3b82c1717c0d97576b4e5e8887bf883e5112 730576 libvips42_8.3.1-1~bpo8+1_amd64.deb
+ b79dd553cbc2530431789b0a66e551ac8f2adeebf8601319e5faa5a8dd71dcf5 915204 libvips-dev_8.3.1-1~bpo8+1_amd64.deb
+ 0ca06777ab78fa2df9f9f55e64519bd9b5619d94009b355a52af90fcf05cfebe 100530 libvips-tools_8.3.1-1~bpo8+1_amd64.deb
+ 741383aa817b8ae5ceb80c8f4bca1924a66e43f8e38e294832ab05c18690986f 292110 python-vipscc_8.3.1-1~bpo8+1_amd64.deb
+ c2e015fda1417a48f1197ebed8790219a831cd59ce766674efb810c5f10450ee 82106 gir1.2-vips-8.0_8.3.1-1~bpo8+1_amd64.deb
+Files:
+ c4b86670a57d3cba51a16dd06b394850 1810 libs optional vips_8.3.1-1~bpo8+1.dsc
+ d8b387ba7be5d45b664b98969bd56de4 9056 libs optional vips_8.3.1-1~bpo8+1.debian.tar.xz
+ 7c7c893595d61993acf0a5b999f2da4a 289628 doc optional libvips-doc_8.3.1-1~bpo8+1_all.deb
+ f388b30034275ef4a26a92699032481b 730576 libs optional libvips42_8.3.1-1~bpo8+1_amd64.deb
+ 8a1879499491e66dad549d41d474012c 915204 libdevel optional libvips-dev_8.3.1-1~bpo8+1_amd64.deb
+ fe9b67041a0d897e2991ba5ee436e3d4 100530 graphics optional libvips-tools_8.3.1-1~bpo8+1_amd64.deb
+ 1ff8c6ff719e4c03974bb1fa28f0a817 292110 python optional python-vipscc_8.3.1-1~bpo8+1_amd64.deb
+ 6db936e9c2a6f7e23793199f3692eebd 82106 introspection optional gir1.2-vips-8.0_8.3.1-1~bpo8+1_amd64.deb

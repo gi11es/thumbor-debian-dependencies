@@ -18,23 +18,23 @@ Changes:
  .
    * Rebuild for jessie-backports.
 Checksums-Sha1:
- bc0cbf9e49656b8937cd7d28b833d2bdb8deb87f 1213 giflib_5.1.4-0.3~bpo8+1.dsc
- a36b94599413837d303868da4e2ab26da367d7ff 12988 giflib_5.1.4-0.3~bpo8+1.debian.tar.xz
- c83bc1b77a416c76e1e4f6aef3e21468701e2432 162522 giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb
- 7af9e937d295d695e7eb2287ddcc2ba95b83b92c 121778 giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb
- a7b8723f21a364b06f010e8ccf57ebd74afbcb8d 43156 libgif7_5.1.4-0.3~bpo8+1_amd64.deb
- ec86511cd6c641882272388b96637d05a83a59ac 45558 libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb
+ a0eb9ad8e108c3ffcd7f360f7d07cce61aa0d277 1213 giflib_5.1.4-0.3~bpo8+1.dsc
+ ad0f393391917b9505709388756a7eaa457c88a2 12892 giflib_5.1.4-0.3~bpo8+1.debian.tar.xz
+ 0beb1d05c28edddd0685f57472c72976719f5e87 162544 giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb
+ 63ca29e8cb9ba9e8e72c4bf04f4e565e369498ae 121768 giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb
+ 9b44ef9d5a014c9f86d9a03146a104adce0b4fae 43040 libgif7_5.1.4-0.3~bpo8+1_amd64.deb
+ 8662397d970694f3622c1f376cb4ebc25e5549ed 45326 libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb
 Checksums-Sha256:
- 09f8ddb813db13831ec7da1c2899c07ff5843d93c10a36bc5eb4313457d9a36c 1213 giflib_5.1.4-0.3~bpo8+1.dsc
- 2607455c1d6c767a6efc50beca360e66a636638a6ea99823bc6e741530f9b34d 12988 giflib_5.1.4-0.3~bpo8+1.debian.tar.xz
- bafbe076d999a498a5771a1d27873d2fabf3cff7eb0665e0690c5ffe148923ca 162522 giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb
- 2d7438eb9d6ad70f567d46fa26d220f2b0102c59fb2171206b5fbd779002c8fb 121778 giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb
- a8dbcab8690eef8002fd1625a0703fa2fee871ba4a1285837aa306b20a1f74bb 43156 libgif7_5.1.4-0.3~bpo8+1_amd64.deb
- 0ce82e58589d9063f8b25427b2d6cdfdbed418b4ce638869557b31324fc40948 45558 libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb
+ 888ef1ae49db1043a2c02003507c914e5b999a94ea7de439b3a5ac3f8efc9c89 1213 giflib_5.1.4-0.3~bpo8+1.dsc
+ aa5a52ee4d2ab9918fa9ed06686d443876d1c30926c52800eefe497772c9daae 12892 giflib_5.1.4-0.3~bpo8+1.debian.tar.xz
+ 8ad51c177ab80aaf6b1a9c4530e1eb98efa06c5a4a62074938606e99f64c2eb8 162544 giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb
+ 570e5025b319b861e768fd8f7e5e0438c43a32f9b0d9bc4dff9e337e5340b361 121768 giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb
+ 1bdac98e9e6db10df0db058d5d271137c175fa57b80e167f551d1618142c2d7c 43040 libgif7_5.1.4-0.3~bpo8+1_amd64.deb
+ 29a283d76cfa94e422a65a022825dd31f234f5bafc3cbba9c3e962caef079aee 45326 libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb
 Files:
- 1d1cc7f1c6ff34d052ac722662001073 1213 libs optional giflib_5.1.4-0.3~bpo8+1.dsc
- 8118abb187c2f6b55cb2389cad587198 12988 libs optional giflib_5.1.4-0.3~bpo8+1.debian.tar.xz
- 327a1bb7bd70b776aa344893039004a1 162522 debug extra giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb
- d949724370e128c12e2f64df30a4dc03 121778 utils optional giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb
- 7dbc02bd2ac0d8716347de1ea3ab8284 43156 libs optional libgif7_5.1.4-0.3~bpo8+1_amd64.deb
- b714966c49231aa3e8daaa448ea01cc5 45558 libdevel optional libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb
+ d1ef649be92b513806487cbb13b84a70 1213 libs optional giflib_5.1.4-0.3~bpo8+1.dsc
+ a79858b4fbea433f9503f1236dc7cf30 12892 libs optional giflib_5.1.4-0.3~bpo8+1.debian.tar.xz
+ 61d0716712bc14ca05ee74d8940f7f61 162544 debug extra giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb
+ 290d11d64dd7234c726b9e856fd1ca8c 121768 utils optional giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb
+ 5411f29d885c7169881f6399d48fe4ea 43040 libs optional libgif7_5.1.4-0.3~bpo8+1_amd64.deb
+ dabe233a5b1a5ae40434a1b1f38a21f3 45326 libdevel optional libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb

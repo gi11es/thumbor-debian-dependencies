@@ -1,0 +1,40 @@
+Format: 1.8
+Date: Tue, 26 Jul 2016 06:57:45 +0000
+Source: openexr
+Binary: openexr openexr-doc libopenexr-dev libopenexr22
+Architecture: source amd64 all
+Version: 2.2.0-11~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ libopenexr-dev - development files for the OpenEXR image library
+ libopenexr22 - runtime files for the OpenEXR image library
+ openexr    - command-line tools for the OpenEXR image format
+ openexr-doc - documentation and examples for the OpenEXR image format
+Changes:
+ openexr (2.2.0-11~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 35ef38e095aa434e447035b7b279180a88b92009 1425 openexr_2.2.0-11~bpo8+1.dsc
+ bc0e58f5ea09cadb91d03d1c9d017fd44145c8fc 16360 openexr_2.2.0-11~bpo8+1.debian.tar.xz
+ 6245329547c11bd0e5c32d21452855845580ca27 80844 openexr_2.2.0-11~bpo8+1_amd64.deb
+ 627e0c8629de6f4bb9a589f92f17a256d4f5022e 2324228 openexr-doc_2.2.0-11~bpo8+1_all.deb
+ c597f9cd82355fc4e00127ef48a391def2d153fe 719580 libopenexr-dev_2.2.0-11~bpo8+1_amd64.deb
+ a889158154edc325269c00feaaad1ee810f9db0b 591452 libopenexr22_2.2.0-11~bpo8+1_amd64.deb
+Checksums-Sha256:
+ 0f01db0b6de8732a2b050955093c37300eb6183ffbbcb87486e60b39d8f0bcb8 1425 openexr_2.2.0-11~bpo8+1.dsc
+ 7020a96a8606c9210a5783d444198180b37e4ed422276f23214c92c65b921411 16360 openexr_2.2.0-11~bpo8+1.debian.tar.xz
+ 51107ddf1e741f26e850aba52dfb55dffd0ffb7af1a97646a3d7ee737210d50e 80844 openexr_2.2.0-11~bpo8+1_amd64.deb
+ 544d915ec5042376b8787f40d36bf1fd017c339ac43ea55f47612b7d2306699a 2324228 openexr-doc_2.2.0-11~bpo8+1_all.deb
+ 724dec1c005d7bf1e69f5188102060f4c134ac5b77ede067a6b6e5cb92e56002 719580 libopenexr-dev_2.2.0-11~bpo8+1_amd64.deb
+ d4f8f699f9ab209e1bb3b220f6cc0b95f19a5dcdc98a43d2ec8bba9290188fab 591452 libopenexr22_2.2.0-11~bpo8+1_amd64.deb
+Files:
+ 4bc22f439f3eaca97e465bc7bb6e37bd 1425 graphics optional openexr_2.2.0-11~bpo8+1.dsc
+ 38176f5ac8ac3fe47adf3789d6704117 16360 graphics optional openexr_2.2.0-11~bpo8+1.debian.tar.xz
+ eb5c94483d1d6ff4aa2d9eec94db4730 80844 graphics optional openexr_2.2.0-11~bpo8+1_amd64.deb
+ af6d48f43fbc0b97cbeac558ca354340 2324228 doc optional openexr-doc_2.2.0-11~bpo8+1_all.deb
+ 66cc8e71f1ba0c549a389254fe6592c8 719580 libdevel optional libopenexr-dev_2.2.0-11~bpo8+1_amd64.deb
+ bae4bc4f01a493c30c84218c20277857 591452 libs optional libopenexr22_2.2.0-11~bpo8+1_amd64.deb

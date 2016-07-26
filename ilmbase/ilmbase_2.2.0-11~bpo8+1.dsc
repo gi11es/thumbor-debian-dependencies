@@ -15,10 +15,10 @@ Package-List:
  libilmbase12 deb libs optional arch=any
 Checksums-Sha1:
  70d864bc704f276942cb10479f2cb98646ce6ad4 525289 ilmbase_2.2.0.orig.tar.gz
- 395907098e7073c23c7ac74e62757a7897a6628b 9820 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
+ 542b7e08baaf68271461970c640043a9d7002358 9776 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
 Checksums-Sha256:
  ecf815b60695555c1fbc73679e84c7c9902f4e8faa6e8000d2f905b8b86cedc7 525289 ilmbase_2.2.0.orig.tar.gz
- c3e9ac60a75b5f6e0972fb42046110a041ebd22f3f9ff3925a9d19bef783e1a0 9820 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
+ 023d5f3ff7b2c8496e82f5adf7bff0a56fbeb6df3f15af4b3efe49a9e6005a2d 9776 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
 Files:
  b540db502c5fa42078249f43d18a4652 525289 ilmbase_2.2.0.orig.tar.gz
- ce22407ab15b0c212977b9fc49d3d91a 9820 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
+ 951dcc5cfc1dba86e2b264887827a2f4 9776 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz

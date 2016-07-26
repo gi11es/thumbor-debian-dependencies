@@ -1,0 +1,2 @@
+usr/lib/*/lib*.so.*
+debian/overrides/libilmbase12 usr/share/lintian/overrides

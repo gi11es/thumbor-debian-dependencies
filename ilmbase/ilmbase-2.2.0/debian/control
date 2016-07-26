@@ -1,0 +1,55 @@
+Source: ilmbase
+Section: libs
+Priority: optional
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Uploaders:
+ Mathieu Malaterre <malat@debian.org>,
+ Matteo F. Vescovi <mfv@debian.org>
+Build-Depends:
+ autotools-dev (>= 20100122.1),
+ debhelper (>= 9),
+ dpkg-dev (>= 1.16.1)
+Standards-Version: 3.9.7
+Homepage: http://www.openexr.com
+Vcs-Git: https://anonscm.debian.org/git/pkg-phototools/ilmbase.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-phototools/ilmbase.git
+
+Package: libilmbase12
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends}
+Description: several utility libraries from ILM used by OpenEXR
+ IlmBase are a set of utility libraries released by ILM, and used in
+ their OpenEXR implementation. Included in this package you can find:
+ .
+  * libHalf: a class (Half) for manipulating "half" values (16-bit
+    floating point format) as if they were a built-in C++ data type.
+ .
+  * libIlmThread: a thread abstraction library on top of pthreads.
+ .
+  * libImath: a math library with support for matrices, 2d- and
+    3d-transformations, solvers for linear/quadratic/cubic equations,
+    and more.
+ .
+  * libIex: an exception handling library.
+
+Package: libilmbase-dev
+Architecture: any
+Section: libdevel
+Depends:
+ libilmbase12 (= ${binary:Version}),
+ ${misc:Depends},
+ ${shlibs:Depends}
+Pre-Depends:
+ ${misc:Pre-Depends}
+Replaces: libopenexr-dev (<< 1.6)
+Breaks: libopenexr-dev (<< 1.6)
+Description: development files for IlmBase
+ This package provides the development files for IlmBase, a set of
+ utility libraries released by ILM and used by OpenEXR. Install this
+ package if you want to compile a program that makes use of these
+ libraries.

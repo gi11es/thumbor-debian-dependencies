@@ -1,0 +1,10 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package vips
+dpkg-buildpackage: source version 8.3.1-1~bpo8+1
+dpkg-buildpackage: source distribution jessie-backports
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build vips-8.3.1
+dpkg-buildpackage: host architecture amd64
+dpkg-checkbuilddeps: Unmet build dependencies: libopenexr-dev (>= 1.6.1-8.1)
+dpkg-buildpackage: warning: build dependencies/conflicts unsatisfied; aborting
+dpkg-buildpackage: warning: (Use -d flag to override.)

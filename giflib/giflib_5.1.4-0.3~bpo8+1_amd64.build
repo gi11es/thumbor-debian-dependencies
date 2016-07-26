@@ -1,0 +1,398 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package giflib
+dpkg-buildpackage: source version 5.1.4-0.3~bpo8+1
+dpkg-buildpackage: source distribution jessie-backports
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build giflib-5.1.4
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --parallel --with autoreconf
+   dh_testdir -O--parallel
+   dh_auto_clean -O--parallel
+   dh_autoreconf_clean -O--parallel
+   dh_clean -O--parallel
+ debian/rules build
+dh build --parallel --with autoreconf
+   dh_testdir -O--parallel
+   dh_autoreconf -O--parallel
+libtoolize: putting auxiliary files in `.'.
+libtoolize: copying file `./ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIR, `m4'.
+libtoolize: copying file `m4/libtool.m4'
+libtoolize: copying file `m4/ltoptions.m4'
+libtoolize: copying file `m4/ltsugar.m4'
+libtoolize: copying file `m4/ltversion.m4'
+libtoolize: copying file `m4/lt~obsolete.m4'
+   dh_auto_configure -O--parallel
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... none
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) none
+checking how to run the C preprocessor... gcc -E
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for xmlto... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for stdint.h... (cached) yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating util/Makefile
+config.status: creating lib/Makefile
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating pic/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+   dh_auto_build -O--parallel
+make[1]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make  all-recursive
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+Making all in lib
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+  CC       dgif_lib.lo
+  CC       egif_lib.lo
+  CC       gif_font.lo
+  CC       gif_hash.lo
+  CC       gifalloc.lo
+  CC       openbsd-reallocarray.lo
+  CC       gif_err.lo
+  CC       quantize.lo
+  CCLD     libgif.la
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+Making all in util
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+  CC       getarg.o
+  CC       qprintf.o
+  AR       libgetarg.a
+  CC       gif2rgb.o
+  CCLD     gif2rgb
+  CC       gifbuild.o
+  CCLD     gifbuild
+  CC       gifecho.o
+  CCLD     gifecho
+  CC       giffix.o
+  CCLD     giffix
+  CC       gifinto.o
+  CCLD     gifinto
+  CC       giftext.o
+  CCLD     giftext
+  CC       giftool.o
+  CCLD     giftool
+  CC       gifclrmp.o
+  CCLD     gifclrmp
+  CC       gifbg.o
+  CCLD     gifbg
+  CC       gifcolor.o
+  CCLD     gifcolor
+  CC       giffilter.o
+  CCLD     giffilter
+  CC       gifhisto.o
+  CCLD     gifhisto
+  CC       gifsponge.o
+  CCLD     gifsponge
+  CC       gifwedge.o
+  CCLD     gifwedge
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+Making all in pic
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+Making all in doc
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+xmlto xhtml-nochunks gif2rgb.xml
+xmlto xhtml-nochunks gifbuild.xml
+xmlto xhtml-nochunks gifclrmp.xml
+xmlto xhtml-nochunks gifecho.xml
+xmlto xhtml-nochunks giffix.xml
+xmlto xhtml-nochunks gifinto.xml
+xmlto xhtml-nochunks giflib.xml
+xmlto xhtml-nochunks giftext.xml
+xmlto xhtml-nochunks giftool.xml
+xmlto xhtml-nochunks gifbg.xml
+xmlto xhtml-nochunks gifcolor.xml
+xmlto xhtml-nochunks gifhisto.xml
+xmlto xhtml-nochunks gifwedge.xml
+xmlto xhtml-nochunks intro.xml
+xmlto xhtml-nochunks gif_lib.xml
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[1]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+   dh_auto_test -O--parallel
+make[1]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+Making check in lib
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+Making check in util
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+Making check in pic
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+Making check in doc
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make  check-TESTS
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[4]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+PASS: test.sh
+make[5]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make  all-recursive
+make[6]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+Making all in lib
+make[7]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+Making all in util
+make[7]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+Making all in pic
+make[7]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+Making all in doc
+make[7]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[7]: Nothing to be done for 'all'.
+make[7]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[7]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[7]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[6]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[5]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+============================================================================
+Testsuite summary for giflib 5.1.4
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[1]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+ fakeroot debian/rules binary
+dh binary --parallel --with autoreconf
+   dh_testroot -O--parallel
+   dh_prep -O--parallel
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+dh_auto_install
+make[2]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+Making install in lib
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+make[4]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+ /bin/mkdir -p '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libgif.la '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/libgif.so.7.0.0 /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu/libgif.so.7.0.0
+libtool: install: (cd /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libgif.so.7.0.0 libgif.so.7 || { rm -f libgif.so.7 && ln -s libgif.so.7.0.0 libgif.so.7; }; })
+libtool: install: (cd /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libgif.so.7.0.0 libgif.so || { rm -f libgif.so && ln -s libgif.so.7.0.0 libgif.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgif.lai /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu/libgif.la
+libtool: install: /usr/bin/install -c .libs/libgif.a /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu/libgif.a
+libtool: install: chmod 644 /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu/libgif.a
+libtool: install: ranlib /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/lib/x86_64-linux-gnu/libgif.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+ /bin/mkdir -p '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/include'
+ /usr/bin/install -c -m 644 gif_lib.h '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/include'
+make[4]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/lib'
+Making install in util
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+make[4]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+ /bin/mkdir -p '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c gif2rgb gifbuild gifecho giffix gifinto giftext giftool gifclrmp '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin'
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/gif2rgb /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/gif2rgb
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/gifbuild /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/gifbuild
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/gifecho /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/gifecho
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/giffix /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/giffix
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/gifinto /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/gifinto
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/giftext /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/giftext
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/giftool /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/giftool
+libtool: install: warning: `../lib/libgif.la' has not been installed in `/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/gifclrmp /home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/bin/gifclrmp
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/util'
+Making install in pic
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+make[4]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/pic'
+Making install in doc
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[4]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/share/man/man1'
+ /usr/bin/install -c -m 644 gif2rgb.1 gifbuild.1 gifclrmp.1 gifecho.1 giffix.1 gifinto.1 giflib.1 giftext.1 giftool.1 '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/debian/tmp/usr/share/man/man1'
+make[4]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4/doc'
+make[3]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[4]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+# Installing additional documentation
+mkdir -p debian/giflib-tools/usr/share/doc/giflib-tools/html
+cp -a doc/*.txt debian/giflib-tools/usr/share/doc/giflib-tools/
+cp -a doc/*.html debian/giflib-tools/usr/share/doc/giflib-tools/html
+# Creating manpages "on the fly"
+for i in `ls debian/tmp/usr/bin`; do \
+  if [ ! -e debian/$i.1 ]; then \
+    sed -f debian/htmltoman.sed doc/$i.html > debian/$i.1 && \
+    echo debian/$i.1 >> debian/giflib-tools.manpages; \
+  fi \
+done
+make[1]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+   dh_install -O--parallel
+   dh_installdocs -O--parallel
+   dh_installchangelogs -O--parallel
+   dh_installman -O--parallel
+   dh_perl -O--parallel
+   dh_link -O--parallel
+   dh_compress -O--parallel
+   dh_fixperms -O--parallel
+   debian/rules override_dh_strip
+make[1]: Entering directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+dh_strip --dbg-package=giflib-dbg
+make[1]: Leaving directory '/home/gilles/thumbor-debian/giflib/giflib-5.1.4'
+   dh_makeshlibs -O--parallel
+   dh_shlibdeps -O--parallel
+   dh_installdeb -O--parallel
+   dh_gencontrol -O--parallel
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+   dh_md5sums -O--parallel
+   dh_builddeb -O--parallel
+dpkg-deb: building package `giflib-dbg' in `../giflib-dbg_5.1.4-0.3~bpo8+1_amd64.deb'.
+dpkg-deb: building package `giflib-tools' in `../giflib-tools_5.1.4-0.3~bpo8+1_amd64.deb'.
+dpkg-deb: building package `libgif7' in `../libgif7_5.1.4-0.3~bpo8+1_amd64.deb'.
+dpkg-deb: building package `libgif-dev' in `../libgif-dev_5.1.4-0.3~bpo8+1_amd64.deb'.
+ dpkg-genchanges -b >../giflib_5.1.4-0.3~bpo8+1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build giflib-5.1.4
+dpkg-buildpackage: binary-only upload (no source included)
+Now running lintian...
+E: giflib changes: backports-changes-missing
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/gif2rgb.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/gifbuild.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/gifclrmp.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/gifecho.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/giffix.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/gifinto.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/giftext.1.gz
+W: giflib-tools: manpage-has-bad-whatis-entry usr/share/man/man1/giftool.1.gz
+W: giflib-tools: manpage-has-errors-from-man usr/share/man/man1/giftool.1.gz 14: normal or special character expected (got a space)
+Finished running lintian.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF\-8"?>
+<!DOCTYPE html PUBLIC "\-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1\-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http\-equiv="Content\-Type" content="text/html; charset=UTF\-8" /><title>gifintoA program to save stdin into a file with given name, iff the
+result file has size bigger than specified (see below).  This can be
+used to save a result under the same filename we started with in a
+chain of pipes.Verbose mode (show progress).  
+Enables printout of running scan lines.If file is less than MinFileSize, it is deleted and not renamed
+to the given name.  This will prevent killing the file we started with if
+the result is an empty file, or the pipeline did not
+complete.The default file threshold size is 14 bytes, which is 1 bigger
+than GIF file stamp (6 bytes) plus a GIF file screen descriptor (7
+bytes), so a GIF file with only GIF stamp and screen descriptor will
+not be renamed.

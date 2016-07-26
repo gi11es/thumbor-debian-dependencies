@@ -1,0 +1,2222 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package ilmbase
+dpkg-buildpackage: source version 2.2.0-11~bpo8+1
+dpkg-buildpackage: source distribution jessie-backports
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build ilmbase-2.2.0
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with autotools_dev
+   dh_testdir
+   dh_auto_clean
+   dh_autotools-dev_restoreconfig
+   debian/rules override_dh_clean
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+dh_clean */Makefile
+dh_clean IlmBase.pc
+dh_clean Makefile
+dh_clean config.log
+dh_clean config.status
+dh_clean config/stamp-h1
+dh_clean libtool
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+ debian/rules build
+dh build --with autotools_dev
+   dh_testdir
+   dh_autotools-dev_updateconfig
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+PTHREAD_LIBS=-lpthread \
+	CFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall" CPPFLAGS="-D_FORTIFY_SOURCE=2" CXXFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall" FCFLAGS="-g -O2 -fstack-protector-strong" FFLAGS="-g -O2 -fstack-protector-strong" GCJFLAGS="-g -O2 -fstack-protector-strong" LDFLAGS="-Wl,-z,relro" OBJCFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security" OBJCXXFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security"  \
+	dh_auto_configure -v
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for g++... g++
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... none
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... none
+checking whether ln -s works... yes
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for ar... ar
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ accepts -g... (cached) yes
+checking dependency style of g++... (cached) none
+checking how to run the C++ preprocessor... g++ -E
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether make sets $(MAKE)... (cached) yes
+checking for pthread_join in LIBS=-lpthread with CFLAGS=... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for cc_r... gcc
+checking semaphore.h usability... yes
+checking semaphore.h presence... yes
+checking for semaphore.h... yes
+checking for library containing sem_init... none required
+checking whether to use POSIX unnamed semaphores... yes
+configure: multithread true, LIBS = -lpthread , CC = gcc, CXXFLAGS = -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall 
+checking for ANSI C header files... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for unistd.h... (cached) yes
+checking ucontext.h usability... yes
+checking ucontext.h presence... yes
+checking for ucontext.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for size_t... yes
+checking for strerror... yes
+checking for complete iomanip support in C++ standard library... yes
+checking for fpe support handling... yes
+checking for gcc optimization flags... -pipe
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating IlmBase.pc
+config.status: creating config/Makefile
+config.status: creating Half/Makefile
+config.status: creating HalfTest/Makefile
+config.status: creating Iex/Makefile
+config.status: creating IexMath/Makefile
+config.status: creating IexTest/Makefile
+config.status: creating IlmThread/Makefile
+config.status: creating Imath/Makefile
+config.status: creating ImathTest/Makefile
+config.status: creating config/IlmBaseConfig.h
+config.status: config/IlmBaseConfig.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+---------------------------------------------
+Summary for IlmBase features:
+enable large stack optimizations             yes
+
+internal library namespaces                  Imath_2_2
+                                             Iex_2_2
+                                             IlmThread_2_2
+
+public namespaces                            Imath Iex IlmThread
+
+---------------------------------------------
+
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+   dh_auto_build
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+Making all in Half
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+g++ -DHAVE_CONFIG_H -I. -I../config -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o eLut.o eLut.cpp
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall   -Wl,-z,relro -o eLut eLut.o  -lpthread 
+libtool: link: g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -Wl,-z -Wl,relro -o eLut eLut.o  -lpthread
+./eLut > eLut.h
+g++ -DHAVE_CONFIG_H -I. -I../config -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o toFloat.o toFloat.cpp
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall   -Wl,-z,relro -o toFloat toFloat.o  -lpthread 
+libtool: link: g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -Wl,-z -Wl,relro -o toFloat toFloat.o  -lpthread
+./toFloat > toFloat.h
+make  all-am
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o half.lo half.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c half.cpp  -fPIC -DPIC -o .libs/half.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c half.cpp -o half.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -version-info 12:0:0 -no-undefined -Wl,-z,relro -o libHalf.la -rpath /usr/lib/x86_64-linux-gnu half.lo  -lpthread 
+libtool: link: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/half.o   -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libHalf.so.12 -o .libs/libHalf.so.12.0.0
+libtool: link: (cd ".libs" && rm -f "libHalf.so.12" && ln -s "libHalf.so.12.0.0" "libHalf.so.12")
+libtool: link: (cd ".libs" && rm -f "libHalf.so" && ln -s "libHalf.so.12.0.0" "libHalf.so")
+libtool: link: ar cru .libs/libHalf.a  half.o
+libtool: link: ranlib .libs/libHalf.a
+libtool: link: ( cd ".libs" && rm -f "libHalf.la" && ln -s "../libHalf.la" "libHalf.la" )
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+Making all in HalfTest
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+Making all in Iex
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IexThrowErrnoExc.lo IexThrowErrnoExc.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexThrowErrnoExc.cpp  -fPIC -DPIC -o .libs/IexThrowErrnoExc.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexThrowErrnoExc.cpp -o IexThrowErrnoExc.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IexBaseExc.lo IexBaseExc.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexBaseExc.cpp  -fPIC -DPIC -o .libs/IexBaseExc.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexBaseExc.cpp -o IexBaseExc.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libIex.la -rpath /usr/lib/x86_64-linux-gnu IexThrowErrnoExc.lo IexBaseExc.lo  -lpthread 
+libtool: link: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/IexThrowErrnoExc.o .libs/IexBaseExc.o   -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libIex-2_2.so.12 -o .libs/libIex-2_2.so.12.0.0
+libtool: link: (cd ".libs" && rm -f "libIex-2_2.so.12" && ln -s "libIex-2_2.so.12.0.0" "libIex-2_2.so.12")
+libtool: link: (cd ".libs" && rm -f "libIex.so" && ln -s "libIex-2_2.so.12.0.0" "libIex.so")
+libtool: link: ar cru .libs/libIex.a  IexThrowErrnoExc.o IexBaseExc.o
+libtool: link: ranlib .libs/libIex.a
+libtool: link: ( cd ".libs" && rm -f "libIex.la" && ln -s "../libIex.la" "libIex.la" )
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+Making all in IexMath
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IexMathFloatExc.lo IexMathFloatExc.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexMathFloatExc.cpp  -fPIC -DPIC -o .libs/IexMathFloatExc.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexMathFloatExc.cpp -o IexMathFloatExc.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IexMathFpu.lo IexMathFpu.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexMathFpu.cpp  -fPIC -DPIC -o .libs/IexMathFpu.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IexMathFpu.cpp -o IexMathFpu.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libIexMath.la -rpath /usr/lib/x86_64-linux-gnu IexMathFloatExc.lo IexMathFpu.lo ../Iex/libIex.la -lpthread 
+libtool: link: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/IexMathFloatExc.o .libs/IexMathFpu.o   -Wl,-rpath -Wl,/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex/.libs ../Iex/.libs/libIex.so -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libIexMath-2_2.so.12 -o .libs/libIexMath-2_2.so.12.0.0
+libtool: link: (cd ".libs" && rm -f "libIexMath-2_2.so.12" && ln -s "libIexMath-2_2.so.12.0.0" "libIexMath-2_2.so.12")
+libtool: link: (cd ".libs" && rm -f "libIexMath.so" && ln -s "libIexMath-2_2.so.12.0.0" "libIexMath.so")
+libtool: link: ar cru .libs/libIexMath.a  IexMathFloatExc.o IexMathFpu.o
+libtool: link: ranlib .libs/libIexMath.a
+libtool: link: ( cd ".libs" && rm -f "libIexMath.la" && ln -s "../libIexMath.la" "libIexMath.la" )
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+Making all in IexTest
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+Making all in Imath
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathShear.lo ImathShear.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathShear.cpp  -fPIC -DPIC -o .libs/ImathShear.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathShear.cpp -o ImathShear.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathMatrixAlgo.lo ImathMatrixAlgo.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathMatrixAlgo.cpp  -fPIC -DPIC -o .libs/ImathMatrixAlgo.o
+ImathMatrixAlgo.cpp: In instantiation of ‘Imath_2_2::M44d Imath_2_2::procrustesRotationAndTranslation(const Imath_2_2::Vec3<T>*, const Imath_2_2::Vec3<T>*, const T*, size_t, bool) [with T = double; Imath_2_2::M44d = Imath_2_2::Matrix44<double>; size_t = long unsigned int]’:
+ImathMatrixAlgo.cpp:254:159:   required from here
+ImathMatrixAlgo.cpp:118:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:127:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:155:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:160:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:200:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < numPoints; ++i)
+                               ^
+ImathMatrixAlgo.cpp:205:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < numPoints; ++i)
+                               ^
+ImathMatrixAlgo.cpp: In instantiation of ‘Imath_2_2::M44d Imath_2_2::procrustesRotationAndTranslation(const Imath_2_2::Vec3<T>*, const Imath_2_2::Vec3<T>*, const T*, size_t, bool) [with T = float; Imath_2_2::M44d = Imath_2_2::Matrix44<double>; size_t = long unsigned int]’:
+ImathMatrixAlgo.cpp:255:158:   required from here
+ImathMatrixAlgo.cpp:118:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:127:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:155:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:160:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < numPoints; ++i)
+                           ^
+ImathMatrixAlgo.cpp:200:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < numPoints; ++i)
+                               ^
+ImathMatrixAlgo.cpp:205:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < numPoints; ++i)
+                               ^
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathMatrixAlgo.cpp -o ImathMatrixAlgo.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathVec.lo ImathVec.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathVec.cpp  -fPIC -DPIC -o .libs/ImathVec.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathVec.cpp -o ImathVec.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathColorAlgo.lo ImathColorAlgo.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathColorAlgo.cpp  -fPIC -DPIC -o .libs/ImathColorAlgo.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathColorAlgo.cpp -o ImathColorAlgo.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathFun.lo ImathFun.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathFun.cpp  -fPIC -DPIC -o .libs/ImathFun.o
+ImathFun.cpp: In function ‘float Imath_2_2::succf(float)’:
+ImathFun.cpp:51:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     else if (u.i == 0x00000000 || u.i == 0x80000000)
+                                       ^
+ImathFun.cpp: In function ‘float Imath_2_2::predf(float)’:
+ImathFun.cpp:86:39: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     else if (u.i == 0x00000000 || u.i == 0x80000000)
+                                       ^
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathFun.cpp -o ImathFun.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathBox.lo ImathBox.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathBox.cpp  -fPIC -DPIC -o .libs/ImathBox.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathBox.cpp -o ImathBox.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o ImathRandom.lo ImathRandom.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathRandom.cpp  -fPIC -DPIC -o .libs/ImathRandom.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../Half -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c ImathRandom.cpp -o ImathRandom.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libImath.la -rpath /usr/lib/x86_64-linux-gnu ImathShear.lo ImathMatrixAlgo.lo ImathVec.lo ImathColorAlgo.lo ImathFun.lo ImathBox.lo ImathRandom.lo ../Iex/libIex.la -lpthread 
+libtool: link: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/ImathShear.o .libs/ImathMatrixAlgo.o .libs/ImathVec.o .libs/ImathColorAlgo.o .libs/ImathFun.o .libs/ImathBox.o .libs/ImathRandom.o   -Wl,-rpath -Wl,/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex/.libs ../Iex/.libs/libIex.so -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libImath-2_2.so.12 -o .libs/libImath-2_2.so.12.0.0
+libtool: link: (cd ".libs" && rm -f "libImath-2_2.so.12" && ln -s "libImath-2_2.so.12.0.0" "libImath-2_2.so.12")
+libtool: link: (cd ".libs" && rm -f "libImath.so" && ln -s "libImath-2_2.so.12.0.0" "libImath.so")
+libtool: link: ar cru .libs/libImath.a  ImathShear.o ImathMatrixAlgo.o ImathVec.o ImathColorAlgo.o ImathFun.o ImathBox.o ImathRandom.o
+libtool: link: ranlib .libs/libImath.a
+libtool: link: ( cd ".libs" && rm -f "libImath.la" && ln -s "../libImath.la" "libImath.la" )
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+Making all in ImathTest
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+Making all in IlmThread
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadPool.lo IlmThreadPool.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadPool.cpp  -fPIC -DPIC -o .libs/IlmThreadPool.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadPool.cpp -o IlmThreadPool.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThread.lo IlmThread.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThread.cpp  -fPIC -DPIC -o .libs/IlmThread.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThread.cpp -o IlmThread.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadSemaphore.lo IlmThreadSemaphore.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadSemaphore.cpp  -fPIC -DPIC -o .libs/IlmThreadSemaphore.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadSemaphore.cpp -o IlmThreadSemaphore.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadMutex.lo IlmThreadMutex.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadMutex.cpp  -fPIC -DPIC -o .libs/IlmThreadMutex.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadMutex.cpp -o IlmThreadMutex.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadPosix.lo IlmThreadPosix.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadPosix.cpp  -fPIC -DPIC -o .libs/IlmThreadPosix.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadPosix.cpp -o IlmThreadPosix.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadSemaphorePosix.lo IlmThreadSemaphorePosix.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadSemaphorePosix.cpp  -fPIC -DPIC -o .libs/IlmThreadSemaphorePosix.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadSemaphorePosix.cpp -o IlmThreadSemaphorePosix.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadSemaphorePosixCompat.lo IlmThreadSemaphorePosixCompat.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadSemaphorePosixCompat.cpp  -fPIC -DPIC -o .libs/IlmThreadSemaphorePosixCompat.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadSemaphorePosixCompat.cpp -o IlmThreadSemaphorePosixCompat.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o IlmThreadMutexPosix.lo IlmThreadMutexPosix.cpp
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadMutexPosix.cpp  -fPIC -DPIC -o .libs/IlmThreadMutexPosix.o
+libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -c IlmThreadMutexPosix.cpp -o IlmThreadMutexPosix.o >/dev/null 2>&1
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libIlmThread.la -rpath /usr/lib/x86_64-linux-gnu IlmThreadPool.lo IlmThread.lo IlmThreadSemaphore.lo IlmThreadMutex.lo IlmThreadPosix.lo IlmThreadSemaphorePosix.lo IlmThreadSemaphorePosixCompat.lo IlmThreadMutexPosix.lo ../Iex/libIex.la -lpthread 
+libtool: link: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/IlmThreadPool.o .libs/IlmThread.o .libs/IlmThreadSemaphore.o .libs/IlmThreadMutex.o .libs/IlmThreadPosix.o .libs/IlmThreadSemaphorePosix.o .libs/IlmThreadSemaphorePosixCompat.o .libs/IlmThreadMutexPosix.o   -Wl,-rpath -Wl,/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex/.libs ../Iex/.libs/libIex.so -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libIlmThread-2_2.so.12 -o .libs/libIlmThread-2_2.so.12.0.0
+libtool: link: (cd ".libs" && rm -f "libIlmThread-2_2.so.12" && ln -s "libIlmThread-2_2.so.12.0.0" "libIlmThread-2_2.so.12")
+libtool: link: (cd ".libs" && rm -f "libIlmThread.so" && ln -s "libIlmThread-2_2.so.12.0.0" "libIlmThread.so")
+libtool: link: ar cru .libs/libIlmThread.a  IlmThreadPool.o IlmThread.o IlmThreadSemaphore.o IlmThreadMutex.o IlmThreadPosix.o IlmThreadSemaphorePosix.o IlmThreadSemaphorePosixCompat.o IlmThreadMutexPosix.o
+libtool: link: ranlib .libs/libIlmThread.a
+libtool: link: ( cd ".libs" && rm -f "libIlmThread.la" && ln -s "../libIlmThread.la" "libIlmThread.la" )
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+Making all in config
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make  all-am
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+   debian/rules override_dh_auto_test
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+dh_auto_test -v
+	make -j1 check
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+Making check in Half
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make  check-am
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make[4]: Nothing to be done for 'check-am'.
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+Making check in HalfTest
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make  HalfTest
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o main.o main.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testArithmetic.o testArithmetic.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testBitPatterns.o testBitPatterns.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testClassification.o testClassification.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testError.o testError.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testFunction.o testFunction.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testLimits.o testLimits.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testSize.o testSize.cpp
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall   -Wl,-z,relro -o HalfTest main.o testArithmetic.o testBitPatterns.o testClassification.o testError.o testFunction.o testLimits.o testSize.o -L../Half -lHalf -lpthread 
+libtool: link: g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -Wl,-z -Wl,relro -o .libs/HalfTest main.o testArithmetic.o testBitPatterns.o testClassification.o testError.o testFunction.o testLimits.o testSize.o  -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half/.libs/libHalf.so -lpthread
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make  check-TESTS
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+
+testing type half:
+
+size and alignment
+sizeof  (half) = 2
+alignof (half) = 2
+ok
+
+basic arithmetic operations:
+f1 = 1, f2 = 2, h1 = 3, h2 = 4
+h1 = f1 + f2: 3
+h2 += f1: 5
+h2 = h1 + h2: 8
+h2 += h1: 11
+h1 = h2: 11
+h2 = -h1: -11
+ok
+
+float-to-half conversion error for normalized half numbers
+max error          = 0.000488043
+max expected error = 0.00048828
+ok
+
+float-to-half conversion error for denormalized half numbers
+max error          = 2.98023e-08
+max expected error = 2.98023e-08
+ok
+
+rounding normalized numbers to 10-bit precision
+max error          = 0
+max expected error = 0
+ok
+
+rounding denormalized numbers to 10-bit precision
+max error          = 0
+max expected error = 0
+ok
+
+rounding normalized numbers to 9-bit precision
+max error          = 0.000975609
+max expected error = 0.00097656
+ok
+
+rounding denormalized numbers to 9-bit precision
+max error          = 5.96046e-08
+max expected error = 5.96046e-08
+ok
+
+rounding normalized numbers to 1-bit precision
+max error          = 0.249634
+max expected error = 0.249999
+ok
+
+rounding denormalized numbers to 1-bit precision
+max error          = 1.52588e-05
+max expected error = 1.52588e-05
+ok
+
+rounding normalized numbers to 0-bit precision
+max error          = 0.499756
+max expected error = 0.499999
+ok
+
+rounding denormalized numbers to 0-bit precision
+max error          = 3.05176e-05
+max expected error = 3.05176e-05
+ok
+
+specific bit patterns
+
+              1    0 01111111 00000000000000000000000    0 01111 0000000000
+              1    0 01111111 00000000000000000000000
+
+      1.0009766    0 01111111 00000000010000000000000    0 01111 0000000001
+      1.0009766    0 01111111 00000000010000000000000
+
+      1.0004883    0 01111111 00000000001000000000000    0 01111 0000000000
+              1    0 01111111 00000000000000000000000
+
+      1.0004882    0 01111111 00000000000111111111111    0 01111 0000000000
+              1    0 01111111 00000000000000000000000
+
+      1.0004884    0 01111111 00000000001000000000001    0 01111 0000000001
+      1.0009766    0 01111111 00000000010000000000000
+
+      1.0019531    0 01111111 00000000100000000000000    0 01111 0000000010
+      1.0019531    0 01111111 00000000100000000000000
+
+      1.0014648    0 01111111 00000000011000000000000    0 01111 0000000010
+      1.0019531    0 01111111 00000000100000000000000
+
+      1.0014647    0 01111111 00000000010111111111111    0 01111 0000000001
+      1.0009766    0 01111111 00000000010000000000000
+
+       1.001465    0 01111111 00000000011000000000001    0 01111 0000000010
+      1.0019531    0 01111111 00000000100000000000000
+
+     0.99951172    0 01111110 11111111110000000000000    0 01110 1111111111
+     0.99951172    0 01111110 11111111110000000000000
+
+     0.99975586    0 01111110 11111111111000000000000    0 01111 0000000000
+              1    0 01111111 00000000000000000000000
+
+     0.99975592    0 01111110 11111111111000000000001    0 01111 0000000000
+              1    0 01111111 00000000000000000000000
+
+      0.9997558    0 01111110 11111111110111111111111    0 01110 1111111111
+     0.99951172    0 01111110 11111111110000000000000
+
+  5.9604645e-08    0 01100111 00000000000000000000000    0 00000 0000000001
+  5.9604645e-08    0 01100111 00000000000000000000000
+
+  1.1920929e-07    0 01101000 00000000000000000000000    0 00000 0000000010
+  1.1920929e-07    0 01101000 00000000000000000000000
+
+  8.9406967e-08    0 01100111 10000000000000000000000    0 00000 0000000010
+  1.1920929e-07    0 01101000 00000000000000000000000
+
+  8.9401006e-08    0 01100111 01111111111110010111001    0 00000 0000000001
+  5.9604645e-08    0 01100111 00000000000000000000000
+
+  8.9412929e-08    0 01100111 10000000000001101000111    0 00000 0000000010
+  1.1920929e-07    0 01101000 00000000000000000000000
+
+              0    0 00000000 00000000000000000000000    0 00000 0000000000
+              0    0 00000000 00000000000000000000000
+
+  2.9802322e-08    0 01100110 00000000000000000000000    0 00000 0000000000
+              0    0 00000000 00000000000000000000000
+
+  2.9808284e-08    0 01100110 00000000000011010001110    0 00000 0000000001
+  5.9604645e-08    0 01100111 00000000000000000000000
+
+  2.9796361e-08    0 01100101 11111111111001011100100    0 00000 0000000000
+              0    0 00000000 00000000000000000000000
+
+  6.1035156e-05    0 01110001 00000000000000000000000    0 00001 0000000000
+  6.1035156e-05    0 01110001 00000000000000000000000
+
+  6.1094761e-05    0 01110001 00000000010000000000000    0 00001 0000000001
+  6.1094761e-05    0 01110001 00000000010000000000000
+
+  6.1064959e-05    0 01110001 00000000001000000000000    0 00001 0000000000
+  6.1035156e-05    0 01110001 00000000000000000000000
+
+  6.1064951e-05    0 01110001 00000000000111111111111    0 00001 0000000000
+  6.1035156e-05    0 01110001 00000000000000000000000
+
+  6.1064966e-05    0 01110001 00000000001000000000001    0 00001 0000000001
+  6.1094761e-05    0 01110001 00000000010000000000000
+
+  6.0975552e-05    0 01110000 11111111100000000000000    0 00000 1111111111
+  6.0975552e-05    0 01110000 11111111100000000000000
+
+  6.1005354e-05    0 01110000 11111111110000000000000    0 00001 0000000000
+  6.1035156e-05    0 01110001 00000000000000000000000
+
+  6.1005358e-05    0 01110000 11111111110000000000001    0 00001 0000000000
+  6.1035156e-05    0 01110001 00000000000000000000000
+
+   6.100535e-05    0 01110000 11111111101111111111111    0 00000 1111111111
+  6.0975552e-05    0 01110000 11111111100000000000000
+
+              2    0 10000000 00000000000000000000000    0 10000 0000000000
+              2    0 10000000 00000000000000000000000
+
+              3    0 10000000 10000000000000000000000    0 10000 1000000000
+              3    0 10000000 10000000000000000000000
+
+             10    0 10000010 01000000000000000000000    0 10010 0100000000
+             10    0 10000010 01000000000000000000000
+
+            0.1    0 01111011 10011001100110011001101    0 01011 1001100110
+    0.099975586    0 01111011 10011001100000000000000
+
+            0.2    0 01111100 10011001100110011001101    0 01100 1001100110
+     0.19995117    0 01111100 10011001100000000000000
+
+     0.30000001    0 01111101 00110011001100110011010    0 01101 0011001101
+     0.30004883    0 01111101 00110011010000000000000
+
+          65504    0 10001110 11111111110000000000000    0 11110 1111111111
+          65504    0 10001110 11111111110000000000000
+
+          65536    0 10001111 00000000000000000000000    0 11111 0000000000
+            inf    0 11111111 00000000000000000000000
+
+          65520    0 10001110 11111111111000000000000    0 11111 0000000000
+            inf    0 11111111 00000000000000000000000
+
+      65519.996    0 10001110 11111111110111111111111    0 11110 1111111111
+          65504    0 10001110 11111111110000000000000
+
+      65520.004    0 10001110 11111111111000000000001    0 11111 0000000000
+            inf    0 11111111 00000000000000000000000
+
+   4.290774e+09    0 10011110 11111111100000000000100    0 11111 0000000000
+            inf    0 11111111 00000000000000000000000
+
+  3.4028235e+38    0 11111110 11111111111111111111111    0 11111 0000000000
+            inf    0 11111111 00000000000000000000000
+
+            inf    0 11111111 00000000000000000000000    0 11111 0000000000
+            inf    0 11111111 00000000000000000000000
+
+            nan    0 11111111 11111111111111111111111    0 11111 1111111111
+            nan    0 11111111 11111111110000000000000
+
+            nan    0 11111111 10101010101010101010101    0 11111 1010101010
+            nan    0 11111111 10101010100000000000000
+
+             -1    1 01111111 00000000000000000000000    1 01111 0000000000
+             -1    1 01111111 00000000000000000000000
+
+     -1.0009766    1 01111111 00000000010000000000000    1 01111 0000000001
+     -1.0009766    1 01111111 00000000010000000000000
+
+     -1.0004883    1 01111111 00000000001000000000000    1 01111 0000000000
+             -1    1 01111111 00000000000000000000000
+
+     -1.0004882    1 01111111 00000000000111111111111    1 01111 0000000000
+             -1    1 01111111 00000000000000000000000
+
+     -1.0004884    1 01111111 00000000001000000000001    1 01111 0000000001
+     -1.0009766    1 01111111 00000000010000000000000
+
+     -1.0019531    1 01111111 00000000100000000000000    1 01111 0000000010
+     -1.0019531    1 01111111 00000000100000000000000
+
+     -1.0014648    1 01111111 00000000011000000000000    1 01111 0000000010
+     -1.0019531    1 01111111 00000000100000000000000
+
+     -1.0014647    1 01111111 00000000010111111111111    1 01111 0000000001
+     -1.0009766    1 01111111 00000000010000000000000
+
+      -1.001465    1 01111111 00000000011000000000001    1 01111 0000000010
+     -1.0019531    1 01111111 00000000100000000000000
+
+    -0.99951172    1 01111110 11111111110000000000000    1 01110 1111111111
+    -0.99951172    1 01111110 11111111110000000000000
+
+    -0.99975586    1 01111110 11111111111000000000000    1 01111 0000000000
+             -1    1 01111111 00000000000000000000000
+
+    -0.99975592    1 01111110 11111111111000000000001    1 01111 0000000000
+             -1    1 01111111 00000000000000000000000
+
+     -0.9997558    1 01111110 11111111110111111111111    1 01110 1111111111
+    -0.99951172    1 01111110 11111111110000000000000
+
+ -5.9604645e-08    1 01100111 00000000000000000000000    1 00000 0000000001
+ -5.9604645e-08    1 01100111 00000000000000000000000
+
+ -1.1920929e-07    1 01101000 00000000000000000000000    1 00000 0000000010
+ -1.1920929e-07    1 01101000 00000000000000000000000
+
+ -8.9406967e-08    1 01100111 10000000000000000000000    1 00000 0000000010
+ -1.1920929e-07    1 01101000 00000000000000000000000
+
+ -8.9401006e-08    1 01100111 01111111111110010111001    1 00000 0000000001
+ -5.9604645e-08    1 01100111 00000000000000000000000
+
+ -8.9412929e-08    1 01100111 10000000000001101000111    1 00000 0000000010
+ -1.1920929e-07    1 01101000 00000000000000000000000
+
+             -0    1 00000000 00000000000000000000000    1 00000 0000000000
+             -0    1 00000000 00000000000000000000000
+
+ -2.9802322e-08    1 01100110 00000000000000000000000    1 00000 0000000000
+             -0    1 00000000 00000000000000000000000
+
+ -2.9808284e-08    1 01100110 00000000000011010001110    1 00000 0000000001
+ -5.9604645e-08    1 01100111 00000000000000000000000
+
+ -2.9796361e-08    1 01100101 11111111111001011100100    1 00000 0000000000
+             -0    1 00000000 00000000000000000000000
+
+ -6.1035156e-05    1 01110001 00000000000000000000000    1 00001 0000000000
+ -6.1035156e-05    1 01110001 00000000000000000000000
+
+ -6.1094761e-05    1 01110001 00000000010000000000000    1 00001 0000000001
+ -6.1094761e-05    1 01110001 00000000010000000000000
+
+ -6.1064959e-05    1 01110001 00000000001000000000000    1 00001 0000000000
+ -6.1035156e-05    1 01110001 00000000000000000000000
+
+ -6.1064951e-05    1 01110001 00000000000111111111111    1 00001 0000000000
+ -6.1035156e-05    1 01110001 00000000000000000000000
+
+ -6.1064966e-05    1 01110001 00000000001000000000001    1 00001 0000000001
+ -6.1094761e-05    1 01110001 00000000010000000000000
+
+ -6.0975552e-05    1 01110000 11111111100000000000000    1 00000 1111111111
+ -6.0975552e-05    1 01110000 11111111100000000000000
+
+ -6.1005354e-05    1 01110000 11111111110000000000000    1 00001 0000000000
+ -6.1035156e-05    1 01110001 00000000000000000000000
+
+ -6.1005358e-05    1 01110000 11111111110000000000001    1 00001 0000000000
+ -6.1035156e-05    1 01110001 00000000000000000000000
+
+  -6.100535e-05    1 01110000 11111111101111111111111    1 00000 1111111111
+ -6.0975552e-05    1 01110000 11111111100000000000000
+
+             -2    1 10000000 00000000000000000000000    1 10000 0000000000
+             -2    1 10000000 00000000000000000000000
+
+             -3    1 10000000 10000000000000000000000    1 10000 1000000000
+             -3    1 10000000 10000000000000000000000
+
+            -10    1 10000010 01000000000000000000000    1 10010 0100000000
+            -10    1 10000010 01000000000000000000000
+
+           -0.1    1 01111011 10011001100110011001101    1 01011 1001100110
+   -0.099975586    1 01111011 10011001100000000000000
+
+           -0.2    1 01111100 10011001100110011001101    1 01100 1001100110
+    -0.19995117    1 01111100 10011001100000000000000
+
+    -0.30000001    1 01111101 00110011001100110011010    1 01101 0011001101
+    -0.30004883    1 01111101 00110011010000000000000
+
+         -65504    1 10001110 11111111110000000000000    1 11110 1111111111
+         -65504    1 10001110 11111111110000000000000
+
+         -65536    1 10001111 00000000000000000000000    1 11111 0000000000
+           -inf    1 11111111 00000000000000000000000
+
+         -65520    1 10001110 11111111111000000000000    1 11111 0000000000
+           -inf    1 11111111 00000000000000000000000
+
+     -65519.996    1 10001110 11111111110111111111111    1 11110 1111111111
+         -65504    1 10001110 11111111110000000000000
+
+     -65520.004    1 10001110 11111111111000000000001    1 11111 0000000000
+           -inf    1 11111111 00000000000000000000000
+
+  -4.290774e+09    1 10011110 11111111100000000000100    1 11111 0000000000
+           -inf    1 11111111 00000000000000000000000
+
+ -3.4028235e+38    1 11111110 11111111111111111111111    1 11111 0000000000
+           -inf    1 11111111 00000000000000000000000
+
+           -inf    1 11111111 00000000000000000000000    1 11111 0000000000
+           -inf    1 11111111 00000000000000000000000
+
+           -nan    1 11111111 11111111111111111111111    1 11111 1111111111
+           -nan    1 11111111 11111111110000000000000
+
+           -nan    1 11111111 10101010101010101010101    1 11111 1010101010
+           -nan    1 11111111 10101010100000000000000
+
+ok
+
+classification of bit patterns
+
+              0    0 00000 0000000000    finite zero 
+              1    0 01111 0000000000    finite normalized 
+      1.0009766    0 01111 0000000001    finite normalized 
+  5.9604645e-08    0 00000 0000000001    finite denormalized 
+  1.1920929e-07    0 00000 0000000010    finite denormalized 
+  6.1035156e-05    0 00001 0000000000    finite normalized 
+  6.1094761e-05    0 00001 0000000001    finite normalized 
+  6.0975552e-05    0 00000 1111111111    finite denormalized 
+              2    0 10000 0000000000    finite normalized 
+              3    0 10000 1000000000    finite normalized 
+    0.099975586    0 01011 1001100110    finite normalized 
+     0.19995117    0 01100 1001100110    finite normalized 
+     0.30004883    0 01101 0011001101    finite normalized 
+          65504    0 11110 1111111111    finite normalized 
+            inf    0 11111 0000000000    infinity 
+            nan    0 11111 1111111111    nan 
+            nan    0 11111 1010101010    nan 
+             -1    1 01111 0000000000    finite normalized negative 
+     -1.0009766    1 01111 0000000001    finite normalized negative 
+ -5.9604645e-08    1 00000 0000000001    finite denormalized negative 
+ -1.1920929e-07    1 00000 0000000010    finite denormalized negative 
+ -6.1035156e-05    1 00001 0000000000    finite normalized negative 
+ -6.1094761e-05    1 00001 0000000001    finite normalized negative 
+ -6.0975552e-05    1 00000 1111111111    finite denormalized negative 
+             -2    1 10000 0000000000    finite normalized negative 
+             -3    1 10000 1000000000    finite normalized negative 
+   -0.099975586    1 01011 1001100110    finite normalized negative 
+    -0.19995117    1 01100 1001100110    finite normalized negative 
+    -0.30004883    1 01101 0011001101    finite normalized negative 
+         -65504    1 11110 1111111111    finite normalized negative 
+           -inf    1 11111 0000000000    infinity negative 
+           -nan    1 11111 1111111111    nan negative 
+           -nan    1 11111 1010101010    nan negative 
+
+            inf    0 11111 0000000000    infinity 
+           -inf    1 11111 0000000000    infinity negative 
+            nan    0 11111 1111111111    nan 
+            nan    0 11111 0111111111    nan 
+ok
+
+values in std::numeric_limits<half>
+min_exponent
+max_exponent
+min_exponent10
+max_exponent10
+ok
+
+halfFunction<T>
+ok
+
+PASS: HalfTest
+=============
+1 test passed
+=============
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+Making check in Iex
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+Making check in IexMath
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+Making check in IexTest
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make  IexTest
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o main.o main.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Iex -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testBaseExc.o testBaseExc.cpp
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall   -Wl,-z,relro -o IexTest main.o testBaseExc.o -L../Iex -lIex -lpthread 
+libtool: link: g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -Wl,-z -Wl,relro -o .libs/IexTest main.o testBaseExc.o  -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex/.libs/libIex.so -lpthread
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make  check-TESTS
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+See if throw and catch work:
+1
+2
+3
+4
+5
+ok
+
+PASS: IexTest
+=============
+1 test passed
+=============
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+Making check in Imath
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+Making check in ImathTest
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make  ImathTest
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o main.o main.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testExtractEuler.o testExtractEuler.cpp
+testExtractEuler.cpp:51:7: warning: ‘float {anonymous}::deg(float)’ defined but not used [-Wunused-function]
+ float deg (float rad) {return rad * (180 / M_PI);}
+       ^
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testExtractSHRT.o testExtractSHRT.cpp
+In file included from ../Imath/ImathMatrixAlgo.h:52:0,
+                 from testExtractSHRT.cpp:37:
+../Imath/ImathMatrix.h: In function ‘void {anonymous}::testMatrix(Imath_2_2::M33f)’:
+../Imath/ImathMatrix.h:1780:5: warning: ‘t.Imath_2_2::Vec2<float>::y’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     x[2][1] = t[1];
+     ^
+testExtractSHRT.cpp:71:12: note: ‘t.Imath_2_2::Vec2<float>::y’ was declared here
+     V2f s, t;
+            ^
+In file included from ../Imath/ImathMatrixAlgo.h:52:0,
+                 from testExtractSHRT.cpp:37:
+../Imath/ImathMatrix.h:1779:5: warning: ‘t.Imath_2_2::Vec2<float>::x’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     x[2][0] = t[0];
+     ^
+testExtractSHRT.cpp:71:12: note: ‘t.Imath_2_2::Vec2<float>::x’ was declared here
+     V2f s, t;
+            ^
+testExtractSHRT.cpp:80:31: warning: ‘r’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     N *= M33f().setRotation (r);
+                               ^
+testExtractSHRT.cpp: At global scope:
+testExtractSHRT.cpp:60:7: warning: ‘float {anonymous}::deg(float)’ defined but not used [-Wunused-function]
+ float deg (float rad) {return rad * (180 / M_PI);}
+       ^
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testFrustum.o testFrustum.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testFun.o testFun.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testInvert.o testInvert.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testMatrix.o testMatrix.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testRandom.o testRandom.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testRoots.o testRoots.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testShear.o testShear.cpp
+testShear.cpp: In function ‘void testShear()’:
+testShear.cpp:57:23: warning: unused variable ‘array’ [-Wunused-variable]
+     float             array[6] = { 1.0F, 2.0F, 3.0F, 4.0F, 5.0F, 6.0F };
+                       ^
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testColor.o testColor.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testQuatSetRotation.o testQuatSetRotation.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testLineAlgo.o testLineAlgo.cpp
+testLineAlgo.cpp: In function ‘void {anonymous}::testIntersect()’:
+testLineAlgo.cpp:402:10: warning: unused variable ‘j’ [-Wunused-variable]
+      int j = 0;
+          ^
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testQuatSlerp.o testQuatSlerp.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testQuat.o testQuat.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testBoxAlgo.o testBoxAlgo.cpp
+testBoxAlgo.cpp: In function ‘void {anonymous}::entryAndExitPoints1()’:
+testBoxAlgo.cpp:359:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < sizeof (boxes) / sizeof (boxes[0]); ++i)
+                       ^
+testBoxAlgo.cpp: In function ‘void {anonymous}::rayBoxIntersection1()’:
+testBoxAlgo.cpp:741:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < sizeof (boxes) / sizeof (boxes[0]); ++i)
+                       ^
+testBoxAlgo.cpp: At global scope:
+testBoxAlgo.cpp:915:1: warning: ‘void {anonymous}::pointInBox()’ defined but not used [-Wunused-function]
+ pointInBox ()
+ ^
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testVec.o testVec.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testBox.o testBox.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testMiscMatrixAlgo.o testMiscMatrixAlgo.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testProcrustes.o testProcrustes.cpp
+testProcrustes.cpp: In function ‘void verifyProcrustes(const std::vector<Imath_2_2::Vec3<T> >&, const std::vector<Imath_2_2::Vec3<T> >&)’:
+testProcrustes.cpp:154:47: warning: typedef ‘V3’ locally defined but not used [-Wunused-local-typedefs]
+     typedef IMATH_INTERNAL_NAMESPACE::Vec3<T> V3;
+                                               ^
+testProcrustes.cpp: In instantiation of ‘void verifyProcrustes(const std::vector<Imath_2_2::Vec3<T> >&, const std::vector<Imath_2_2::Vec3<T> >&) [with T = float]’:
+testProcrustes.cpp:351:43:   required from ‘void testProcrustesImp() [with T = float]’
+testProcrustes.cpp:398:30:   required from here
+testProcrustes.cpp:245:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int iPoint = 0; iPoint < n; ++iPoint)
+                                     ^
+testProcrustes.cpp: In instantiation of ‘void verifyProcrustes(const std::vector<Imath_2_2::Vec3<T> >&, const std::vector<Imath_2_2::Vec3<T> >&) [with T = double]’:
+testProcrustes.cpp:351:43:   required from ‘void testProcrustesImp() [with T = double]’
+testProcrustes.cpp:401:31:   required from here
+testProcrustes.cpp:245:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testTinySVD.o testTinySVD.cpp
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testJacobiEigenSolver.o testJacobiEigenSolver.cpp
+testJacobiEigenSolver.cpp: In instantiation of ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix33<float>]’:
+testJacobiEigenSolver.cpp:252:45:   required from ‘void testJacobiEigenSolverImp() [with T = float]’
+testJacobiEigenSolver.cpp:289:37:   required from here
+testJacobiEigenSolver.cpp:138:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:139:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp:151:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i) 
+                       ^
+testJacobiEigenSolver.cpp:152:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j =0; j < TM::dimensions(); ++j) 
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix44<float>]’:
+testJacobiEigenSolver.cpp:261:45:   required from ‘void testJacobiEigenSolverImp() [with T = float]’
+testJacobiEigenSolver.cpp:289:37:   required from here
+testJacobiEigenSolver.cpp:138:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:139:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp:151:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i) 
+                       ^
+testJacobiEigenSolver.cpp:152:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j =0; j < TM::dimensions(); ++j) 
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix33<double>]’:
+testJacobiEigenSolver.cpp:252:45:   required from ‘void testJacobiEigenSolverImp() [with T = double]’
+testJacobiEigenSolver.cpp:293:38:   required from here
+testJacobiEigenSolver.cpp:138:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:139:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp:151:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i) 
+                       ^
+testJacobiEigenSolver.cpp:152:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j =0; j < TM::dimensions(); ++j) 
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix44<double>]’:
+testJacobiEigenSolver.cpp:261:45:   required from ‘void testJacobiEigenSolverImp() [with T = double]’
+testJacobiEigenSolver.cpp:293:38:   required from here
+testJacobiEigenSolver.cpp:138:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:139:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp:151:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i) 
+                       ^
+testJacobiEigenSolver.cpp:152:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j =0; j < TM::dimensions(); ++j) 
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘typename TM::BaseType computeThreshold(const TM&) [with TM = Imath_2_2::Matrix33<float>; typename TM::BaseType = float]’:
+testJacobiEigenSolver.cpp:122:43:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix33<float>]’
+testJacobiEigenSolver.cpp:252:45:   required from ‘void testJacobiEigenSolverImp() [with T = float]’
+testJacobiEigenSolver.cpp:289:37:   required from here
+testJacobiEigenSolver.cpp:103:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < TM::dimensions(); ++i)
+                      ^
+testJacobiEigenSolver.cpp:104:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int j = 0; j < TM::dimensions(); ++j)
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void verifyOrthonormal(const TM&, typename TM::BaseType) [with TM = Imath_2_2::Matrix33<float>; typename TM::BaseType = float]’:
+testJacobiEigenSolver.cpp:131:35:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix33<float>]’
+testJacobiEigenSolver.cpp:252:45:   required from ‘void testJacobiEigenSolverImp() [with T = float]’
+testJacobiEigenSolver.cpp:289:37:   required from here
+testJacobiEigenSolver.cpp:88:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:89:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp: In instantiation of ‘typename TM::BaseType computeThreshold(const TM&) [with TM = Imath_2_2::Matrix44<float>; typename TM::BaseType = float]’:
+testJacobiEigenSolver.cpp:122:43:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix44<float>]’
+testJacobiEigenSolver.cpp:261:45:   required from ‘void testJacobiEigenSolverImp() [with T = float]’
+testJacobiEigenSolver.cpp:289:37:   required from here
+testJacobiEigenSolver.cpp:103:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < TM::dimensions(); ++i)
+                      ^
+testJacobiEigenSolver.cpp:104:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int j = 0; j < TM::dimensions(); ++j)
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void verifyOrthonormal(const TM&, typename TM::BaseType) [with TM = Imath_2_2::Matrix44<float>; typename TM::BaseType = float]’:
+testJacobiEigenSolver.cpp:131:35:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix44<float>]’
+testJacobiEigenSolver.cpp:261:45:   required from ‘void testJacobiEigenSolverImp() [with T = float]’
+testJacobiEigenSolver.cpp:289:37:   required from here
+testJacobiEigenSolver.cpp:88:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:89:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp: In instantiation of ‘typename TM::BaseType computeThreshold(const TM&) [with TM = Imath_2_2::Matrix33<double>; typename TM::BaseType = double]’:
+testJacobiEigenSolver.cpp:122:43:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix33<double>]’
+testJacobiEigenSolver.cpp:252:45:   required from ‘void testJacobiEigenSolverImp() [with T = double]’
+testJacobiEigenSolver.cpp:293:38:   required from here
+testJacobiEigenSolver.cpp:103:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < TM::dimensions(); ++i)
+                      ^
+testJacobiEigenSolver.cpp:104:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int j = 0; j < TM::dimensions(); ++j)
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void verifyOrthonormal(const TM&, typename TM::BaseType) [with TM = Imath_2_2::Matrix33<double>; typename TM::BaseType = double]’:
+testJacobiEigenSolver.cpp:131:35:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix33<double>]’
+testJacobiEigenSolver.cpp:252:45:   required from ‘void testJacobiEigenSolverImp() [with T = double]’
+testJacobiEigenSolver.cpp:293:38:   required from here
+testJacobiEigenSolver.cpp:88:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:89:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+testJacobiEigenSolver.cpp: In instantiation of ‘typename TM::BaseType computeThreshold(const TM&) [with TM = Imath_2_2::Matrix44<double>; typename TM::BaseType = double]’:
+testJacobiEigenSolver.cpp:122:43:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix44<double>]’
+testJacobiEigenSolver.cpp:261:45:   required from ‘void testJacobiEigenSolverImp() [with T = double]’
+testJacobiEigenSolver.cpp:293:38:   required from here
+testJacobiEigenSolver.cpp:103:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (int i = 0; i < TM::dimensions(); ++i)
+                      ^
+testJacobiEigenSolver.cpp:104:26: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for (int j = 0; j < TM::dimensions(); ++j)
+                          ^
+testJacobiEigenSolver.cpp: In instantiation of ‘void verifyOrthonormal(const TM&, typename TM::BaseType) [with TM = Imath_2_2::Matrix44<double>; typename TM::BaseType = double]’:
+testJacobiEigenSolver.cpp:131:35:   required from ‘void testJacobiEigenSolver(const TM&) [with TM = Imath_2_2::Matrix44<double>]’
+testJacobiEigenSolver.cpp:261:45:   required from ‘void testJacobiEigenSolverImp() [with T = double]’
+testJacobiEigenSolver.cpp:293:38:   required from here
+testJacobiEigenSolver.cpp:88:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < TM::dimensions(); ++i)
+                       ^
+testJacobiEigenSolver.cpp:89:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < TM::dimensions(); ++j)
+                           ^
+g++ -DHAVE_CONFIG_H -I. -I../config -I.. -I../Imath -I../Iex -I../Half -I../config  -D_FORTIFY_SOURCE=2 -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall  -c -o testFrustumTest.o testFrustumTest.cpp
+/bin/bash ../libtool --tag=CXX   --mode=link g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall   -Wl,-z,relro -o ImathTest main.o testExtractEuler.o testExtractSHRT.o testFrustum.o testFun.o testInvert.o testMatrix.o testRandom.o testRoots.o testShear.o testColor.o testQuatSetRotation.o testLineAlgo.o testQuatSlerp.o testQuat.o testBoxAlgo.o testVec.o testBox.o testMiscMatrixAlgo.o testProcrustes.o testTinySVD.o testJacobiEigenSolver.o testFrustumTest.o -L../Imath -L../Iex -L../Half -lImath -lIex -lHalf -lpthread 
+libtool: link: g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -Wl,-z -Wl,relro -o .libs/ImathTest main.o testExtractEuler.o testExtractSHRT.o testFrustum.o testFun.o testInvert.o testMatrix.o testRandom.o testRoots.o testShear.o testColor.o testQuatSetRotation.o testLineAlgo.o testQuatSlerp.o testQuat.o testBoxAlgo.o testVec.o testBox.o testMiscMatrixAlgo.o testProcrustes.o testTinySVD.o testJacobiEigenSolver.o testFrustumTest.o  -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath/.libs/libImath.so /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex/.libs/libIex.so /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half/.libs/libHalf.so -lpthread
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make  check-TESTS
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+Testing some basic vector operations
+ok
+
+Testing functions in ImathColor.h & ImathColorAlgo.h
+rgb2packed -> packed2rgb
+Imath::Color4 * f
+Imath::Color4 / f
+Assignment and comparison
+ok
+
+Testing functions in ImathShear.h
+Imath::Shear6 constructors
+Imath::Shear6 * f
+Imath::Shear6 / f
+Assignment and comparison
+ok
+
+Testing functions in ImathMatrix.h
+Imath::M33f shear functions
+M33f constructors and equality operators
+M33d constructors and equality operators
+M44f constructors and equality operators
+M44d constructors and equality operators
+Converting between M33 and M44
+3x3 Matrix minors
+3x3 determinant
+Outer product of two 3D vectors
+4x4 determinants
+4x4 matrix minors
+M44 multiplicaftion test
+ok
+
+Testing misc functions in ImathMatrixAlgo.h
+Testing the building of an orthonormal direct frame from : a position, an x axis direction and a normal to the y axis
+IMATH_INTERNAL_NAMESPACE::computeLocalFrame()
+ok
+
+Add a translate/rotate/scale offset to an input frame and put it in another frame of reference
+IMATH_INTERNAL_NAMESPACE::addOffset()
+ok
+
+Compute Translate/Rotate/Scale matrix from matrix A 
+with the Rotate/Scale of Matrix B
+IMATH_INTERNAL_NAMESPACE::computeRSMatrix()
+ok
+
+Testing functions in ImathRoots.h
+
+solveCubic
+coefficients:   1   6  11   6  solutions: -3 -2 -1
+coefficients:   2   2 -20  16  solutions: -4 1 2
+coefficients:   3  -3   1  -1  solutions: 1
+coefficients:   2   0 -24 -32  solutions: -2 4
+coefficients:   1   0   0   0  solutions: -0
+coefficients:   8 -24  24  -8  solutions: 1
+coefficients:   0   2 -10  12  solutions: 2 3
+coefficients:   0   1  -1 -20  solutions: -4 5
+coefficients:   0   3 -12  12  solutions: 2
+coefficients:   0   1   0   0  solutions: -0
+coefficients:   0   1   0   1  solutions: none
+coefficients:   0   0   3  -6  solutions: 2
+coefficients:   0   0   5  15  solutions: -3
+coefficients:   0   0   1   0  solutions: -0
+coefficients:   0   0   0   1  solutions: none
+coefficients:   0   0   0   0  solutions: [-inf, inf]
+
+solveQuadratic
+coefficients:   1   3   2  solutions: -2 -1
+coefficients:   1   0  -9  solutions: -3 3
+coefficients:   1  -4   0  solutions: 0 4
+coefficients:   2  -4   2  solutions: 1
+coefficients:   0  -4   8  solutions: 2
+coefficients:   0   7   0  solutions: -0
+coefficients:  10   0   0  solutions: -0
+coefficients:   0   0   0  solutions: [-inf, inf]
+coefficients:   0   0   1  solutions: none
+coefficients:   3  -6  30  solutions: none
+ok
+
+Testing functions in ImathFun.h
+floor
+ceil
+trunc
+divs / mods
+divp / modp
+successor, predecessor
+
+f 0
+sf 1.40129846e-45
+pf -1.40129846e-45
+spf -0
+psf 0
+
+f -0
+sf 1.40129846e-45
+pf -1.40129846e-45
+spf -0
+psf 0
+
+f 1
+sf 1.00000012
+pf 0.99999994
+spf 1
+psf 1
+
+f -1
+sf -0.99999994
+pf -1.00000012
+spf -1
+psf -1
+
+f 16
+sf 16.0000019
+pf 15.999999
+spf 16
+psf 16
+
+f 7
+sf 7.00000048
+pf 6.99999952
+spf 7
+psf 7
+
+f 0.699999988
+sf 0.700000048
+pf 0.699999928
+spf 0.699999988
+psf 0.699999988
+
+f inf
+sf inf
+pf inf
+spf inf
+psf inf
+
+f nan
+sf nan
+pf nan
+spf nan
+psf nan
+
+f 3.40282347e+38
+sf inf
+pf 3.40282326e+38
+spf 3.40282347e+38
+psf inf
+
+f -3.40282347e+38
+sf -3.40282326e+38
+pf -inf
+spf -inf
+psf -3.40282347e+38
+
+d 0
+sd 4.94065645841246544e-324
+pd -4.94065645841246544e-324
+spd -0
+psd 0
+
+d -0
+sd 4.94065645841246544e-324
+pd -4.94065645841246544e-324
+spd -0
+psd 0
+
+d 1
+sd 1.00000000000000022
+pd 0.999999999999999889
+spd 1
+psd 1
+
+d -1
+sd -0.999999999999999889
+pd -1.00000000000000022
+spd -1
+psd -1
+
+d 16
+sd 16.0000000000000036
+pd 15.9999999999999982
+spd 16
+psd 16
+
+d 7
+sd 7.00000000000000089
+pd 6.99999999999999911
+spd 7
+psd 7
+
+d 0.699999999999999956
+sd 0.700000000000000067
+pd 0.699999999999999845
+spd 0.699999999999999956
+psd 0.699999999999999956
+
+d inf
+sd inf
+pd inf
+spd inf
+psd inf
+
+d nan
+sd nan
+pd nan
+spd nan
+psd nan
+
+d 1.79769313486231571e+308
+sd inf
+pd 1.79769313486231551e+308
+spd 1.79769313486231571e+308
+psd inf
+
+d -1.79769313486231571e+308
+sd -1.79769313486231551e+308
+pd -inf
+spd -inf
+psd -1.79769313486231571e+308
+ok
+
+Testing 4x4 and 3x3 matrix inversion:
+M44f
+M33f
+ok
+
+Testing functions in ImathFrustum.h
+perspective 123
+planes 
+exceptions 123
+orthographic 1
+planes 
+passed inequality test
+passed equality test
+ok
+
+Testing random number generators
+erand48(), nrand48()
+Rand32
+  values
+  differences between successive values
+  range
+Rand48
+  values
+  differences between successive values
+  range
+solidSphereRand()
+hollowSphereRand()
+ok
+
+Testing extraction of rotation angle from 3x3 matrices
+Testing extraction of Euler angles from matrices
+extractEulerXYZ()
+order = 101
+extractEulerZYX()
+order = 2001
+Eulerf::extract()
+order = 101
+order = 1
+order = 1101
+order = 1001
+order = 2101
+order = 2001
+order = 11
+order = 111
+order = 1011
+order = 1111
+order = 2011
+order = 2111
+order = 2000
+order = 2100
+order = 1000
+order = 1100
+order = 0
+order = 100
+order = 2110
+order = 2010
+order = 1110
+order = 1010
+order = 110
+order = 10
+ok
+
+Testing extraction of scale, shear, rotation, translation from matrices
+Imath::extractSHRT()
+  random angles
+    3x3
+    4x4
+  special angles
+    3x3
+    4x4
+ok
+
+Testing basic quaternion operations
+ok
+
+Testing quaternion rotations
+  exact 90-degree rotations
+  exact zero-degree rotations
+  exact 180-degree rotations
+  other angles
+  random from and to vectors
+  nearly equal from and to vectors
+  nearly opposite from and to vectors
+ok
+
+Testing quaternion spherical linear interpolation
+  combinations of 90-degree rotations around x, y and z
+  random rotations
+ok
+
+Testing line algorithms
+closest points on two lines
+  non-intersecting, non-parallel lines
+  intersecting, non-parallel lines
+  parallel lines
+  coincident lines
+  random lines
+line-triangle intersection
+  line-plane intersection inside triangle
+  line-plane intersection outside triangle
+  line parallel to triangle
+  zero-area triangle
+  random lines and triangles
+ok
+
+Testing box algorithms
+  ray-box entry and exit, random rays
+    box = ((-1 -1 -1) (1 1 1))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((10 20 30) (1010 21 31))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((10 20 30) (11 1020 31))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((10 20 30) (11 21 1030))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((-1e+10 -2e+10 -3e+10) (5e+15 6e+15 7e+15))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (2 1 1))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (1 2 1))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (1 1 2))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (1 2 3))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (2 3 1))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (2 1 3))
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((-1 -2 1) (-1 -2 1))
+    single-point box, ray intersects
+    single-point box, ray does not intersect
+    box = ((1 1 1) (1 1 1))
+    single-point box, ray intersects
+    single-point box, ray does not intersect
+    box = ((0 0 0) (0 0 0))
+    single-point box, ray intersects
+    single-point box, ray does not intersect
+    empty box, no rays intersect
+  ray-box entry and exit, nearly axis-parallel rays
+    dir ~ (1 0 0), result = 1
+    dir ~ (-1 0 0), result = 1
+    dir ~ (1 0 0), result = 0
+    dir ~ (-1 0 0), result = 0
+    dir ~ (0 1 0), result = 1
+    dir ~ (0 -1 0), result = 1
+    dir ~ (0 1 0), result = 0
+    dir ~ (0 -1 0), result = 0
+    dir ~ (0 0 1), result = 1
+    dir ~ (0 0 -1), result = 1
+    dir ~ (0 0 1), result = 0
+    dir ~ (0 0 -1), result = 0
+  ray-box intersection, random rays
+    box = ((-1 -1 -1) (1 1 1))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((10 20 30) (1010 21 31))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((10 20 30) (11 1020 31))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((10 20 30) (11 21 1030))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((-1e+10 -2e+10 -3e+10) (5e+15 6e+15 7e+15))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (2 1 1))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (1 2 1))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (1 1 2))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (1 2 3))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (2 3 1))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((1 1 1) (2 1 3))
+    ray starts inside box
+    ray starts outside box, intersects
+    ray starts outside box, does not intersect
+    box = ((-1 -2 1) (-1 -2 1))
+    single-point box, ray intersects
+    single-point box, ray does not intersect
+    box = ((1 1 1) (1 1 1))
+    single-point box, ray intersects
+    single-point box, ray does not intersect
+    box = ((0 0 0) (0 0 0))
+    single-point box, ray intersects
+    single-point box, ray does not intersect
+    empty box, no rays intersect
+  ray-box intersection, nearly axis-parallel rays
+    dir ~ (1 0 0), result = 1
+    dir ~ (-1 0 0), result = 1
+    dir ~ (1 0 0), result = 0
+    dir ~ (-1 0 0), result = 0
+    dir ~ (0 1 0), result = 1
+    dir ~ (0 -1 0), result = 1
+    dir ~ (0 1 0), result = 0
+    dir ~ (0 -1 0), result = 0
+    dir ~ (0 0 1), result = 1
+    dir ~ (0 0 -1), result = 1
+    dir ~ (0 0 1), result = 0
+    dir ~ (0 0 -1), result = 0
+  transform box by matrix
+  closest points in and on box
+ok
+
+Testing box methods
+    constructors for type V2s
+    constructors for type V2i
+    constructors for type V2f
+    constructors for type V2d
+    constructors for type V3s
+    constructors for type V3i
+    constructors for type V3f
+    constructors for type V3d
+    constructors for type V4s
+    constructors for type V4i
+    constructors for type V4f
+    constructors for type V4d
+    makeEmpty() for type V2s
+    makeEmpty() for type V2i
+    makeEmpty() for type V2f
+    makeEmpty() for type V2d
+    makeEmpty() for type V3s
+    makeEmpty() for type V3i
+    makeEmpty() for type V3f
+    makeEmpty() for type V3d
+    makeEmpty() for type V4s
+    makeEmpty() for type V4i
+    makeEmpty() for type V4f
+    makeEmpty() for type V4d
+    makeInfinite() for type V2s
+    makeInfinite() for type V2i
+    makeInfinite() for type V2f
+    makeInfinite() for type V2d
+    makeInfinite() for type V3s
+    makeInfinite() for type V3i
+    makeInfinite() for type V3f
+    makeInfinite() for type V3d
+    makeInfinite() for type V4s
+    makeInfinite() for type V4i
+    makeInfinite() for type V4f
+    makeInfinite() for type V4d
+    extendBy() point for type V2s
+    extendBy() point for type V2i
+    extendBy() point for type V2f
+    extendBy() point for type V2d
+    extendBy() point for type V3s
+    extendBy() point for type V3i
+    extendBy() point for type V3f
+    extendBy() point for type V3d
+    extendBy() point for type V4s
+    extendBy() point for type V4i
+    extendBy() point for type V4f
+    extendBy() point for type V4d
+    extendBy() box for type V2s
+    extendBy() box for type V2i
+    extendBy() box for type V2f
+    extendBy() box for type V2d
+    extendBy() box for type V3s
+    extendBy() box for type V3i
+    extendBy() box for type V3f
+    extendBy() box for type V3d
+    extendBy() box for type V4s
+    extendBy() box for type V4i
+    extendBy() box for type V4f
+    extendBy() box for type V4d
+    comparators for type V2s
+    comparators for type V2i
+    comparators for type V2f
+    comparators for type V2d
+    comparators for type V3s
+    comparators for type V3i
+    comparators for type V3f
+    comparators for type V3d
+    comparators for type V4s
+    comparators for type V4i
+    comparators for type V4f
+    comparators for type V4d
+    size() for type V2s
+    size() for type V2i
+    size() for type V2f
+    size() for type V2d
+    size() for type V3s
+    size() for type V3i
+    size() for type V3f
+    size() for type V3d
+    size() for type V4s
+    size() for type V4i
+    size() for type V4f
+    size() for type V4d
+    center() for type V2s
+    center() for type V2i
+    center() for type V2f
+    center() for type V2d
+    center() for type V3s
+    center() for type V3i
+    center() for type V3f
+    center() for type V3d
+    center() for type V4s
+    center() for type V4i
+    center() for type V4f
+    center() for type V4d
+    isEmpty() for type V2s
+    isEmpty() for type V2i
+    isEmpty() for type V2f
+    isEmpty() for type V2d
+    isEmpty() for type V3s
+    isEmpty() for type V3i
+    isEmpty() for type V3f
+    isEmpty() for type V3d
+    isEmpty() for type V4s
+    isEmpty() for type V4i
+    isEmpty() for type V4f
+    isEmpty() for type V4d
+    isInfinite() for type V2s
+    isInfinite() for type V2i
+    isInfinite() for type V2f
+    isInfinite() for type V2d
+    isInfinite() for type V3s
+    isInfinite() for type V3i
+    isInfinite() for type V3f
+    isInfinite() for type V3d
+    isInfinite() for type V4s
+    isInfinite() for type V4i
+    isInfinite() for type V4f
+    isInfinite() for type V4d
+    hasVolume() for type V2s
+    hasVolume() for type V2i
+    hasVolume() for type V2f
+    hasVolume() for type V2d
+    hasVolume() for type V3s
+    hasVolume() for type V3i
+    hasVolume() for type V3f
+    hasVolume() for type V3d
+    hasVolume() for type V4s
+    hasVolume() for type V4i
+    hasVolume() for type V4f
+    hasVolume() for type V4d
+    majorAxis() for type V2s
+    majorAxis() for type V2i
+    majorAxis() for type V2f
+    majorAxis() for type V2d
+    majorAxis() for type V3s
+    majorAxis() for type V3i
+    majorAxis() for type V3f
+    majorAxis() for type V3d
+    majorAxis() for type V4s
+    majorAxis() for type V4i
+    majorAxis() for type V4f
+    majorAxis() for type V4d
+ok
+
+Testing Procrustes algorithms in single precision...
+Testing known translate/rotate matrix:
+ (  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   0.000000e+00   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ (  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ (  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   0.000000e+00  -1.224647e-16  -1.000000e+00   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ (  7.071068e-01   8.659561e-17   7.071068e-01   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ ( -5.000000e-01   7.071068e-01  -5.000000e-01  -0.000000e+00
+   5.000000e-01   7.071068e-01   5.000000e-01   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing with known translate/rotate/scale matrix
+(  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   0.000000e+00   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+(  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+(  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   0.000000e+00  -1.224647e-16  -1.000000e+00   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+(  7.071068e-01   8.659561e-17   7.071068e-01   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+( -5.000000e-01   7.071068e-01  -5.000000e-01  -0.000000e+00
+   5.000000e-01   7.071068e-01   5.000000e-01   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+( -1.000000e+00   1.414214e+00  -1.000000e+00  -0.000000e+00
+   1.000000e+00   1.414214e+00   1.000000e+00   0.000000e+00
+   1.414214e+00  -1.731912e-16  -1.414214e+00   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   4.241421e-01   6.098995e+00   9.995858e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   5.582843e-01   5.985858e+00   1.010172e+01   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+(  1.219579e-02   1.573132e-02   1.946348e-03   0.000000e+00
+   5.124720e-03  -1.589186e-03  -1.926686e-02   0.000000e+00
+  -1.500000e-02   1.224745e-02  -5.000000e-03   0.000000e+00
+   6.842304e+00  -5.755414e+00  -7.631837e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+(  1.829368e-02   2.359698e-02   2.919522e-03   0.000000e+00
+   3.279821e-02  -1.017079e-02  -1.233079e-01   0.000000e+00
+  -3.000000e-02   2.449490e-02  -1.000000e-02   0.000000e+00
+   6.842304e+00  -5.755414e+00  -7.631837e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -2.546762e-03  -9.270112e-03   2.841794e-02  -0.000000e+00
+  -7.301607e-02   1.017024e-01   2.663240e-02   0.000000e+00
+   3.267767e-02   2.090770e-02   9.748737e-03   0.000000e+00
+  -1.106096e+01   3.731658e+00   1.384479e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -2.546762e-03  -9.270112e-03   2.841794e-02  -0.000000e+00
+  -7.301607e-05   1.017024e-04   2.663240e-05   0.000000e+00
+   3.267767e-02   2.090770e-02   9.748737e-03   0.000000e+00
+  -1.106096e+01   3.731658e+00   1.384479e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -2.546762e-03  -9.270112e-03   2.841794e-02  -0.000000e+00
+  -7.301607e-05   1.017024e-04   2.663240e-05   0.000000e+00
+   0.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+  -1.106096e+01   3.731658e+00   1.384479e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithms in double precision...
+Testing known translate/rotate matrix:
+ (  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   0.000000e+00   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ (  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ (  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   0.000000e+00  -1.224647e-16  -1.000000e+00   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ (  7.071068e-01   8.659561e-17   7.071068e-01   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing known translate/rotate matrix:
+ ( -5.000000e-01   7.071068e-01  -5.000000e-01  -0.000000e+00
+   5.000000e-01   7.071068e-01   5.000000e-01   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   3.000000e+00   5.000000e+00  -2.000000e-01   1.000000e+00)
+  OK
+Testing with known translate/rotate/scale matrix
+(  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   0.000000e+00   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+(  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   1.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00   0.000000e+00   1.000000e+00   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+(  1.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   0.000000e+00  -1.224647e-16  -1.000000e+00   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+(  7.071068e-01   8.659561e-17   7.071068e-01   0.000000e+00
+   0.000000e+00  -1.000000e+00   1.224647e-16   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+( -5.000000e-01   7.071068e-01  -5.000000e-01  -0.000000e+00
+   5.000000e-01   7.071068e-01   5.000000e-01   0.000000e+00
+   7.071068e-01  -8.659561e-17  -7.071068e-01   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+( -1.000000e+00   1.414214e+00  -1.000000e+00  -0.000000e+00
+   1.000000e+00   1.414214e+00   1.000000e+00   0.000000e+00
+   1.414214e+00  -1.731912e-16  -1.414214e+00   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing with known translate/rotate/scale matrix
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+numPoints: 1 2 3 4 5 6 7 8 9   OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   4.000000e-01   6.000000e+00   1.000000e+01   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   4.241421e-01   6.098995e+00   9.995858e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -1.000000e-02   1.414214e-02  -1.000000e-02  -0.000000e+00
+   1.000000e-02   1.414214e-02   1.000000e-02   0.000000e+00
+   1.414214e-02  -1.731912e-18  -1.414214e-02   0.000000e+00
+   5.582843e-01   5.985858e+00   1.010172e+01   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+(  1.219579e-02   1.573132e-02   1.946348e-03   0.000000e+00
+   5.124720e-03  -1.589186e-03  -1.926686e-02   0.000000e+00
+  -1.500000e-02   1.224745e-02  -5.000000e-03   0.000000e+00
+   6.842304e+00  -5.755414e+00  -7.631837e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+(  1.829368e-02   2.359698e-02   2.919522e-03   0.000000e+00
+   3.279821e-02  -1.017079e-02  -1.233079e-01   0.000000e+00
+  -3.000000e-02   2.449490e-02  -1.000000e-02   0.000000e+00
+   6.842304e+00  -5.755414e+00  -7.631837e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -2.546762e-03  -9.270112e-03   2.841794e-02  -0.000000e+00
+  -7.301607e-02   1.017024e-01   2.663239e-02   0.000000e+00
+   3.267767e-02   2.090770e-02   9.748737e-03   0.000000e+00
+  -1.106096e+01   3.731658e+00   1.384479e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -2.546762e-03  -9.270112e-03   2.841794e-02  -0.000000e+00
+  -7.301607e-05   1.017024e-04   2.663239e-05   0.000000e+00
+   3.267767e-02   2.090770e-02   9.748737e-03   0.000000e+00
+  -1.106096e+01   3.731658e+00   1.384479e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing Procrustes algorithm with arbitrary matrix: 
+( -2.546762e-03  -9.270112e-03   2.841794e-02  -0.000000e+00
+  -7.301607e-05   1.017024e-04   2.663239e-05   0.000000e+00
+   0.000000e+00   0.000000e+00   0.000000e+00   0.000000e+00
+  -1.106096e+01   3.731658e+00   1.384479e+00   1.000000e+00)
+   numPoints: 1 2 3 4 5 6 7 8 9 OK
+Testing TinySVD algorithms in single precision...
+Verifying SVD for [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+Verifying SVD for [[1, 0, 0], [0, -1, 0], [0, 0, 1]]
+Verifying SVD for [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+Verifying SVD for [[0, 0, 0], [0, 0, 0], [0, 0, 1]]
+Verifying SVD for [[1, 0, 0], [0, 1, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [0, 0, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [1e-10, 0, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [1e-10, 0, 0], [0, 0, 100000]]
+Verifying SVD for [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+Verifying SVD for [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+Verifying SVD for [[10000, 0.001, 0], [0.001, 1e-10, 0], [0, 0, 0]]
+Verifying SVD for [[62720, 73500, 4900], [5120, 6000, 400], [256, 300, 20]]
+Verifying SVD for [[60026, 4902, 248], [4902, 404, 26], [248, 26, 10]]
+Verifying SVD for [[0.00235883, -0.00965581, 0.00109599], [0.00886718, 0.00167718, -0.00430815], [0.00397605, 0.00198805, 0.0089576]]
+Verifying SVD for [[2.35883e-09, -9.65581e-09, 1.09599e-09], [8.86718e-09, 1.67718e-09, -4.30815e-09], [3.97605e-09, 1.98805e-09, 8.9576e-09]]
+Verifying SVD for [[-0.466739, 0.674663, 0.97647], [-0.0324608, 0.0465845, 0.0674312], [-0.0888851, 0.128039, 0.185326]]
+Verifying SVD for [[1e-08, 0, 0], [0, 1e-08, 0], [0, 0, 1e-08]]
+Verifying SVD for [[1, 0, 0], [0, 0.00036, 0], [1e-18, 0, 0.00018]]
+Verifying SVD for [[1.3, 0, 0], [0, 0.0003, 0], [1e-17, 0, 0]]
+Verifying SVD for [[1, 0, 0], [0, 0.01, 0], [0, 0, 0.01]]
+Verifying SVD for [[1, 0, 0], [0, 1, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [0, 0.001, 0], [0, 0, 1e-06]]
+Verifying SVD for [[0.595886, -0.797612, -1], [0.391945, 0.917631, -0.341818], [-0.450561, -0.712591, 0.47125]]
+Verifying SVD for [[4.38805e-09, -2.5319e-09, -4.65679e-09], [-3.23e-10, 1.8637e-10, 3.42781e-10], [-4.61573e-09, 2.66326e-09, 4.8984e-09]]
+Verifying SVD for [[0, -1e-22, 0], [1e-07, 0, 0], [0, 0, 0]]
+Verifying SVD for [[0, -1e-22, 0], [1e-07, 0, 0], [0, 0, 1]]
+Verifying SVD for [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Verifying SVD for [[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Verifying SVD for [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]]
+Verifying SVD for [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+Verifying SVD for [[0, -1e-22, 0, 0], [1e-07, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Verifying SVD for [[10000, 0.001, 0, 0], [0.001, 1e-10, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[62720, 73500, 4900, 2450], [5120, 6000, 400, 2450], [256, 300, 20, 2450], [128, 150, 10, 5]]
+Verifying SVD for [[62750, 73560, 4990, 2540], [5130, 6020, 430, 2540], [266, 320, 50, 2540], [138, 170, 40, 35]]
+Testing TinySVD algorithms in double precision...
+Verifying SVD for [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+Verifying SVD for [[1, 0, 0], [0, -1, 0], [0, 0, 1]]
+Verifying SVD for [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+Verifying SVD for [[0, 0, 0], [0, 0, 0], [0, 0, 1]]
+Verifying SVD for [[1, 0, 0], [0, 1, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [0, 0, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [1e-10, 0, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [1e-10, 0, 0], [0, 0, 100000]]
+Verifying SVD for [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+Verifying SVD for [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+Verifying SVD for [[10000, 0.001, 0], [0.001, 1e-10, 0], [0, 0, 0]]
+Verifying SVD for [[62720, 73500, 4900], [5120, 6000, 400], [256, 300, 20]]
+Verifying SVD for [[60026, 4902, 248], [4902, 404, 26], [248, 26, 10]]
+Verifying SVD for [[0.00235883, -0.00965581, 0.00109599], [0.00886718, 0.00167718, -0.00430815], [0.00397605, 0.00198805, 0.0089576]]
+Verifying SVD for [[2.35883e-09, -9.65581e-09, 1.09599e-09], [8.86718e-09, 1.67718e-09, -4.30815e-09], [3.97605e-09, 1.98805e-09, 8.9576e-09]]
+Verifying SVD for [[-0.466739, 0.674663, 0.97647], [-0.0324608, 0.0465845, 0.0674312], [-0.0888851, 0.128039, 0.185326]]
+Verifying SVD for [[1e-08, 0, 0], [0, 1e-08, 0], [0, 0, 1e-08]]
+Verifying SVD for [[1, 0, 0], [0, 0.00036, 0], [1e-18, 0, 0.00018]]
+Verifying SVD for [[1.3, 0, 0], [0, 0.0003, 0], [1e-17, 0, 0]]
+Verifying SVD for [[1, 0, 0], [0, 0.01, 0], [0, 0, 0.01]]
+Verifying SVD for [[1, 0, 0], [0, 1, 0], [0, 0, 0]]
+Verifying SVD for [[1, 0, 0], [0, 0.001, 0], [0, 0, 1e-06]]
+Verifying SVD for [[0.595886, -0.797612, -1], [0.391945, 0.917631, -0.341818], [-0.450561, -0.712591, 0.47125]]
+Verifying SVD for [[4.38805e-09, -2.5319e-09, -4.65679e-09], [-3.23e-10, 1.8637e-10, 3.42781e-10], [-4.61573e-09, 2.66326e-09, 4.8984e-09]]
+Verifying SVD for [[0, -1e-22, 0], [1e-07, 0, 0], [0, 0, 0]]
+Verifying SVD for [[0, -1e-22, 0], [1e-07, 0, 0], [0, 0, 1]]
+Verifying SVD for [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Verifying SVD for [[1, 0, 0, 0], [0, -1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Verifying SVD for [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 0]]
+Verifying SVD for [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+Verifying SVD for [[0, -1e-22, 0, 0], [1e-07, 0, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+Verifying SVD for [[10000, 0.001, 0, 0], [0.001, 1e-10, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+Verifying SVD for [[62720, 73500, 4900, 2450], [5120, 6000, 400, 2450], [256, 300, 20, 2450], [128, 150, 10, 5]]
+Verifying SVD for [[62750, 73560, 4990, 2540], [5130, 6020, 430, 2540], [266, 320, 50, 2540], [138, 170, 40, 35]]
+
+************ Testing IMATH_INTERNAL_NAMESPACE::ImathJacobiEigenSolver ************
+Jacobi EigenSolver in single precision...PASS
+Jacobi EigenSolver in double precision...PASS
+Min/Max EigenValue in single precision...PASS
+Min/Max EigenValue in double precision...PASS
+Timing Jacobi EigenSolver in single precision...
+Jacobi EigenSolver of 3x3 matrices took 69026 clocks.
+TinySVD            of 3x3 matrices took 90620 clocks.
+23.8292% speed up.
+Jacobi EigenSolver of 4x4 matrices took 173888 clocks
+TinySVD            of 4x4 matrices took 326922 clocks
+46.8106% speed up.
+Timing Jacobi EigenSolver in double precision...
+Jacobi EigenSolver of 3x3 matrices took 85765 clocks.
+TinySVD            of 3x3 matrices took 117611 clocks.
+27.0774% speed up.
+Jacobi EigenSolver of 4x4 matrices took 267008 clocks
+TinySVD            of 4x4 matrices took 451352 clocks
+40.8426% speed up.
+************      ALL PASS          ************
+Testing functions in ImathFrustumTest.h
+isVisible(Vec3) passed Vec3
+passed Box
+passed Sphere
+
+ok
+
+PASS: ImathTest
+=============
+1 test passed
+=============
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+Making check in IlmThread
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+Making check in config
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+ fakeroot debian/rules binary
+dh binary --with autotools_dev
+   dh_testroot
+   dh_prep
+   dh_auto_install
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+Making install in Half
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make  install-am
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make[4]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+test -z "/usr/lib/x86_64-linux-gnu" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libHalf.la '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/libHalf.so.12.0.0 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libHalf.so.12.0.0
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libHalf.so.12.0.0 libHalf.so.12 || { rm -f libHalf.so.12 && ln -s libHalf.so.12.0.0 libHalf.so.12; }; })
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libHalf.so.12.0.0 libHalf.so || { rm -f libHalf.so && ln -s libHalf.so.12.0.0 libHalf.so; }; })
+libtool: install: /usr/bin/install -c .libs/libHalf.lai /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libHalf.la
+libtool: install: /usr/bin/install -c .libs/libHalf.a /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libHalf.a
+libtool: install: chmod 644 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libHalf.a
+libtool: install: ranlib /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libHalf.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+test -z "/usr/include/OpenEXR" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR"
+ /usr/bin/install -c -m 644 half.h halfFunction.h halfLimits.h halfExport.h '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR'
+make[4]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Half'
+Making install in HalfTest
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/HalfTest'
+Making install in Iex
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+test -z "/usr/lib/x86_64-linux-gnu" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libIex.la '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/libIex-2_2.so.12.0.0 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIex-2_2.so.12.0.0
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libIex-2_2.so.12.0.0 libIex-2_2.so.12 || { rm -f libIex-2_2.so.12 && ln -s libIex-2_2.so.12.0.0 libIex-2_2.so.12; }; })
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libIex-2_2.so.12.0.0 libIex.so || { rm -f libIex.so && ln -s libIex-2_2.so.12.0.0 libIex.so; }; })
+libtool: install: /usr/bin/install -c .libs/libIex.lai /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIex.la
+libtool: install: /usr/bin/install -c .libs/libIex.a /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIex.a
+libtool: install: chmod 644 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIex.a
+libtool: install: ranlib /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIex.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+test -z "/usr/include/OpenEXR" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR"
+ /usr/bin/install -c -m 644 IexBaseExc.h IexMathExc.h IexThrowErrnoExc.h IexErrnoExc.h IexMacros.h Iex.h IexForward.h IexNamespace.h IexExport.h '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Iex'
+Making install in IexMath
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+test -z "/usr/lib/x86_64-linux-gnu" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libIexMath.la '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: warning: relinking `libIexMath.la'
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath; /bin/bash /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/libtool  --tag CXX --mode=relink g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libIexMath.la -rpath /usr/lib/x86_64-linux-gnu IexMathFloatExc.lo IexMathFpu.lo ../Iex/libIex.la -lpthread -inst-prefix-dir /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp)
+libtool: relink: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/IexMathFloatExc.o .libs/IexMathFpu.o   -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -lIex -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libIexMath-2_2.so.12 -o .libs/libIexMath-2_2.so.12.0.0
+libtool: install: /usr/bin/install -c .libs/libIexMath-2_2.so.12.0.0T /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIexMath-2_2.so.12.0.0
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libIexMath-2_2.so.12.0.0 libIexMath-2_2.so.12 || { rm -f libIexMath-2_2.so.12 && ln -s libIexMath-2_2.so.12.0.0 libIexMath-2_2.so.12; }; })
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libIexMath-2_2.so.12.0.0 libIexMath.so || { rm -f libIexMath.so && ln -s libIexMath-2_2.so.12.0.0 libIexMath.so; }; })
+libtool: install: /usr/bin/install -c .libs/libIexMath.lai /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIexMath.la
+libtool: install: /usr/bin/install -c .libs/libIexMath.a /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIexMath.a
+libtool: install: chmod 644 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIexMath.a
+libtool: install: ranlib /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIexMath.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+test -z "/usr/include/OpenEXR" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR"
+ /usr/bin/install -c -m 644 IexMathFloatExc.h IexMathFpu.h IexMathIeeeExc.h '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexMath'
+Making install in IexTest
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IexTest'
+Making install in Imath
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+test -z "/usr/lib/x86_64-linux-gnu" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libImath.la '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: warning: relinking `libImath.la'
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath; /bin/bash /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/libtool  --tag CXX --mode=relink g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libImath.la -rpath /usr/lib/x86_64-linux-gnu ImathShear.lo ImathMatrixAlgo.lo ImathVec.lo ImathColorAlgo.lo ImathFun.lo ImathBox.lo ImathRandom.lo ../Iex/libIex.la -lpthread -inst-prefix-dir /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp)
+libtool: relink: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/ImathShear.o .libs/ImathMatrixAlgo.o .libs/ImathVec.o .libs/ImathColorAlgo.o .libs/ImathFun.o .libs/ImathBox.o .libs/ImathRandom.o   -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -lIex -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libImath-2_2.so.12 -o .libs/libImath-2_2.so.12.0.0
+libtool: install: /usr/bin/install -c .libs/libImath-2_2.so.12.0.0T /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libImath-2_2.so.12.0.0
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libImath-2_2.so.12.0.0 libImath-2_2.so.12 || { rm -f libImath-2_2.so.12 && ln -s libImath-2_2.so.12.0.0 libImath-2_2.so.12; }; })
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libImath-2_2.so.12.0.0 libImath.so || { rm -f libImath.so && ln -s libImath-2_2.so.12.0.0 libImath.so; }; })
+libtool: install: /usr/bin/install -c .libs/libImath.lai /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libImath.la
+libtool: install: /usr/bin/install -c .libs/libImath.a /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libImath.a
+libtool: install: chmod 644 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libImath.a
+libtool: install: ranlib /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libImath.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+test -z "/usr/include/OpenEXR" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR"
+ /usr/bin/install -c -m 644 ImathColorAlgo.h ImathMatrixAlgo.h ImathVec.h ImathShear.h ImathFun.h ImathBox.h ImathBoxAlgo.h ImathEuler.h ImathExc.h ImathLimits.h ImathLine.h ImathLineAlgo.h ImathMatrix.h ImathPlane.h ImathSphere.h ImathVecAlgo.h ImathQuat.h ImathFrustum.h ImathMath.h ImathGL.h ImathColor.h ImathRandom.h ImathRoots.h ImathHalfLimits.h ImathInterval.h ImathGLU.h ImathFrame.h ImathPlatform.h ImathInt64.h ImathNamespace.h ImathForward.h ImathExport.h ImathFrustumTest.h '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/Imath'
+Making install in ImathTest
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/ImathTest'
+Making install in IlmThread
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+test -z "/usr/lib/x86_64-linux-gnu" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu"
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libIlmThread.la '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: warning: relinking `libIlmThread.la'
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread; /bin/bash /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/libtool  --tag CXX --mode=relink g++ -pipe -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wall -version-info 12:0:0 -no-undefined -release 2_2 -Wl,-z,relro -o libIlmThread.la -rpath /usr/lib/x86_64-linux-gnu IlmThreadPool.lo IlmThread.lo IlmThreadSemaphore.lo IlmThreadMutex.lo IlmThreadPosix.lo IlmThreadSemaphorePosix.lo IlmThreadSemaphorePosixCompat.lo IlmThreadMutexPosix.lo ../Iex/libIex.la -lpthread -inst-prefix-dir /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp)
+libtool: relink: g++ -shared -nostdlib /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o  .libs/IlmThreadPool.o .libs/IlmThread.o .libs/IlmThreadSemaphore.o .libs/IlmThreadMutex.o .libs/IlmThreadPosix.o .libs/IlmThreadSemaphorePosix.o .libs/IlmThreadSemaphorePosixCompat.o .libs/IlmThreadMutexPosix.o   -L/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu -lIex -lpthread -L/usr/lib/gcc/x86_64-linux-gnu/4.9 -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.9/../../.. -lstdc++ -lm -lc -lgcc_s /usr/lib/gcc/x86_64-linux-gnu/4.9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/../../../x86_64-linux-gnu/crtn.o  -Wl,-z -Wl,relro   -Wl,-soname -Wl,libIlmThread-2_2.so.12 -o .libs/libIlmThread-2_2.so.12.0.0
+libtool: install: /usr/bin/install -c .libs/libIlmThread-2_2.so.12.0.0T /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIlmThread-2_2.so.12.0.0
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libIlmThread-2_2.so.12.0.0 libIlmThread-2_2.so.12 || { rm -f libIlmThread-2_2.so.12 && ln -s libIlmThread-2_2.so.12.0.0 libIlmThread-2_2.so.12; }; })
+libtool: install: (cd /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libIlmThread-2_2.so.12.0.0 libIlmThread.so || { rm -f libIlmThread.so && ln -s libIlmThread-2_2.so.12.0.0 libIlmThread.so; }; })
+libtool: install: /usr/bin/install -c .libs/libIlmThread.lai /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIlmThread.la
+libtool: install: /usr/bin/install -c .libs/libIlmThread.a /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIlmThread.a
+libtool: install: chmod 644 /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIlmThread.a
+libtool: install: ranlib /home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/libIlmThread.a
+libtool: install: warning: remember to run `libtool --finish /usr/lib/x86_64-linux-gnu'
+test -z "/usr/include/OpenEXR" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR"
+ /usr/bin/install -c -m 644 IlmThreadPool.h IlmThread.h IlmThreadSemaphore.h IlmThreadMutex.h IlmThreadNamespace.h IlmThreadForward.h IlmThreadExport.h '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/IlmThread'
+Making install in config
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[3]: Nothing to be done for 'install-exec-am'.
+test -z "/usr/include/OpenEXR" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR"
+ /usr/bin/install -c -m 644 IlmBaseConfig.h '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/include/OpenEXR'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/config'
+make[2]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[3]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[3]: Nothing to be done for 'install-exec-am'.
+test -z "/usr/lib/x86_64-linux-gnu/pkgconfig" || /bin/mkdir -p "/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig"
+ /usr/bin/install -c -m 644 IlmBase.pc '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+make[3]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[2]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+   dh_install
+   debian/rules override_dh_installdocs
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+dh_installdocs AUTHORS NEWS README
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   debian/rules override_dh_makeshlibs
+make[1]: Entering directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+dh_makeshlibs -V
+make[1]: Leaving directory '/home/gilles/thumbor-debian/ilmbase/ilmbase-2.2.0'
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: Pre-Depends field of package libilmbase-dev: unknown substitution variable ${misc:Pre-Depends}
+dpkg-gencontrol: warning: Depends field of package libilmbase-dev: unknown substitution variable ${shlibs:Depends}
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `libilmbase12' in `../libilmbase12_2.2.0-11~bpo8+1_amd64.deb'.
+dpkg-deb: building package `libilmbase-dev' in `../libilmbase-dev_2.2.0-11~bpo8+1_amd64.deb'.
+ dpkg-genchanges -b >../ilmbase_2.2.0-11~bpo8+1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build ilmbase-2.2.0
+dpkg-buildpackage: binary-only upload (no source included)
+Now running lintian...
+E: ilmbase changes: backports-changes-missing
+W: libilmbase12: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libIex-2_2.so.12.0.0 usr/lib/x86_64-linux-gnu/libIex-2_2.so
+W: libilmbase12: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libIlmThread-2_2.so.12.0.0 usr/lib/x86_64-linux-gnu/libIlmThread-2_2.so
+W: libilmbase12: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libIexMath-2_2.so.12.0.0 usr/lib/x86_64-linux-gnu/libIexMath-2_2.so
+W: libilmbase12: dev-pkg-without-shlib-symlink usr/lib/x86_64-linux-gnu/libImath-2_2.so.12.0.0 usr/lib/x86_64-linux-gnu/libImath-2_2.so
+N: 1 tag overridden (1 warning)
+Finished running lintian.

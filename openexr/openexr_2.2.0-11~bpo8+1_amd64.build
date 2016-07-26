@@ -1,0 +1,11 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package openexr
+dpkg-buildpackage: source version 2.2.0-11~bpo8+1
+dpkg-buildpackage: source distribution jessie-backports
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build openexr-2.2.0
+dpkg-buildpackage: host architecture amd64
+dpkg-checkbuilddeps: Unmet build dependencies: dpkg-dev (>= 1.18.0)
+dpkg-checkbuilddeps: Build conflicts: libopenexr-dev (<< 2.2.0-1)
+dpkg-buildpackage: warning: build dependencies/conflicts unsatisfied; aborting
+dpkg-buildpackage: warning: (Use -d flag to override.)

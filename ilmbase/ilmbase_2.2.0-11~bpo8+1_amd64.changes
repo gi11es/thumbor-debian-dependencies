@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Tue, 26 Jul 2016 07:00:05 +0000
+Source: ilmbase
+Binary: libilmbase12 libilmbase-dev
+Architecture: source amd64
+Version: 2.2.0-11~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ libilmbase-dev - development files for IlmBase
+ libilmbase12 - several utility libraries from ILM used by OpenEXR
+Changes:
+ ilmbase (2.2.0-11~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ 91db5c66353dfef1bf2de700d214950640f8f0ce 1227 ilmbase_2.2.0-11~bpo8+1.dsc
+ 395907098e7073c23c7ac74e62757a7897a6628b 9820 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
+ 2d0240e7527d522aa96c97698b0dad55de78c546 86118 libilmbase12_2.2.0-11~bpo8+1_amd64.deb
+ f035b166596a274d0c3a6f85650cfcccb3aab647 76934 libilmbase-dev_2.2.0-11~bpo8+1_amd64.deb
+Checksums-Sha256:
+ 037eebc9b7fa9e1621ccff35e315fef46f4b4cb584da74acd15f489bef26db27 1227 ilmbase_2.2.0-11~bpo8+1.dsc
+ c3e9ac60a75b5f6e0972fb42046110a041ebd22f3f9ff3925a9d19bef783e1a0 9820 ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
+ 3617b55aec1c86beefe5d35118e3a4f6af9758dd8c067dd650c3ac0820942ea5 86118 libilmbase12_2.2.0-11~bpo8+1_amd64.deb
+ 85243a2a15f9c5df47d1531e90cba7b5bd4736cbe8246358ecf15188a6aa49fe 76934 libilmbase-dev_2.2.0-11~bpo8+1_amd64.deb
+Files:
+ afc2c520f23f45d4939f6ff597bab55f 1227 libs optional ilmbase_2.2.0-11~bpo8+1.dsc
+ ce22407ab15b0c212977b9fc49d3d91a 9820 libs optional ilmbase_2.2.0-11~bpo8+1.debian.tar.xz
+ 48621791a156d38b5ac51e3bc1859acf 86118 libs optional libilmbase12_2.2.0-11~bpo8+1_amd64.deb
+ 4d424b0dda46bb64a9d6a302b75d8aa8 76934 libdevel optional libilmbase-dev_2.2.0-11~bpo8+1_amd64.deb

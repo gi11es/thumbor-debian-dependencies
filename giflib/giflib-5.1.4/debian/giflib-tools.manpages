@@ -1,0 +1,9 @@
+debian/gifinfo.1
+debian/gif2rgb.1
+debian/gifbuild.1
+debian/gifclrmp.1
+debian/gifecho.1
+debian/giffix.1
+debian/gifinto.1
+debian/giftext.1
+debian/giftool.1

@@ -1,2 +1,0 @@
-thumbor
-python-swiftclient

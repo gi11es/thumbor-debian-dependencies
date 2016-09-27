@@ -1,0 +1,68 @@
+Source: manhole
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-setuptools,
+               python3-all,
+               python3-setuptools
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+Homepage: https://github.com/ionelmc/python-manhole
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-manhole.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-manhole.git
+
+Package: manhole-cli
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-manhole
+Description: Debugging manhole for python applications
+ Manhole is in-process service that will accept unix domain socket connections
+ and present the stacktraces for all threads and an interactive prompt. It can
+ either work as a python daemon thread waiting for connections at all times or
+ a signal handler (stopping your application and waiting for a connection).
+ .
+ Access to the socket is restricted to the application's effective user id or root.
+ .
+ This is just like Twisted's manhole. It's simpler (no dependencies), it only
+ runs on Unix domain sockets (in contrast to Twisted's manhole which can run on
+ telnet or ssh) and it integrates well with various types of applications.
+ .
+ This is the command line client to connect to manhole.
+
+Package: python-manhole
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Debugging manhole for python applications
+ Manhole is in-process service that will accept unix domain socket connections
+ and present the stacktraces for all threads and an interactive prompt. It can
+ either work as a python daemon thread waiting for connections at all times or
+ a signal handler (stopping your application and waiting for a connection).
+ .
+ Access to the socket is restricted to the application's effective user id or root.
+ .
+ This is just like Twisted's manhole. It's simpler (no dependencies), it only
+ runs on Unix domain sockets (in contrast to Twisted's manhole which can run on
+ telnet or ssh) and it integrates well with various types of applications.
+ .
+ This is the python2 library.
+
+Package: python3-manhole
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Debugging manhole for python applications
+ Manhole is in-process service that will accept unix domain socket connections
+ and present the stacktraces for all threads and an interactive prompt. It can
+ either work as a python daemon thread waiting for connections at all times or
+ a signal handler (stopping your application and waiting for a connection).
+ .
+ Access to the socket is restricted to the application's effective user id or root.
+ .
+ This is just like Twisted's manhole. It's simpler (no dependencies), it only
+ runs on Unix domain sockets (in contrast to Twisted's manhole which can run on
+ telnet or ssh) and it integrates well with various types of applications.
+ .
+ This is the python3 library.

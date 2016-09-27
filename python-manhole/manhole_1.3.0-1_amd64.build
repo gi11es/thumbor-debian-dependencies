@@ -1,0 +1,205 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc -b
+dpkg-buildpackage: source package manhole
+dpkg-buildpackage: source version 1.3.0-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Gilles Dubuc <gilles@wikimedia.org>
+ dpkg-source --before-build manhole-1.3.0
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python2,python3 --buildsystem=pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_clean -O--buildsystem=pybuild
+I: pybuild base:170: python2.7 setup.py clean 
+running clean
+removing '/home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_2.7/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+I: pybuild base:170: python3.4 setup.py clean 
+running clean
+removing '/home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_3.4/build' (and everything under it)
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-3.4' does not exist -- can't clean it
+   debian/rules override_dh_clean
+make[1]: Entering directory '/home/gilles/thumbor-debian/python-manhole/manhole-1.3.0'
+rm -rf manhole.egg-info .cache
+dh_clean
+make[1]: Leaving directory '/home/gilles/thumbor-debian/python-manhole/manhole-1.3.0'
+ debian/rules build
+dh build --with python2,python3 --buildsystem=pybuild
+   dh_testdir -O--buildsystem=pybuild
+   dh_auto_configure -O--buildsystem=pybuild
+I: pybuild base:170: python2.7 setup.py config 
+running config
+I: pybuild base:170: python3.4 setup.py config 
+running config
+   dh_auto_build -O--buildsystem=pybuild
+I: pybuild base:170: /usr/bin/python setup.py build 
+running build
+running build_py
+copying src/manhole.py -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_2.7/build
+running egg_info
+writing requirements to src/manhole.egg-info/requires.txt
+writing src/manhole.egg-info/PKG-INFO
+writing top-level names to src/manhole.egg-info/top_level.txt
+writing dependency_links to src/manhole.egg-info/dependency_links.txt
+reading manifest file 'src/manhole.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no directories found matching 'examples'
+warning: no files found matching '.isort.cfg'
+warning: no files found matching '.pylintrc'
+warning: no files found matching 'appveyor.yml'
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.so' found anywhere in distribution
+warning: no previously-included files matching '*.dylib' found anywhere in distribution
+writing manifest file 'src/manhole.egg-info/SOURCES.txt'
+running build_scripts
+creating build
+creating build/scripts-2.7
+copying and adjusting scripts/manhole-cli -> build/scripts-2.7
+changing mode of build/scripts-2.7/manhole-cli from 644 to 755
+copying src/manhole.pth -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_2.7/build
+I: pybuild base:170: /usr/bin/python3 setup.py build 
+running build
+running build_py
+copying src/manhole.py -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_3.4/build
+running egg_info
+writing dependency_links to src/manhole.egg-info/dependency_links.txt
+writing requirements to src/manhole.egg-info/requires.txt
+writing src/manhole.egg-info/PKG-INFO
+writing top-level names to src/manhole.egg-info/top_level.txt
+reading manifest file 'src/manhole.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no directories found matching 'examples'
+warning: no files found matching '.isort.cfg'
+warning: no files found matching '.pylintrc'
+warning: no files found matching 'appveyor.yml'
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.so' found anywhere in distribution
+warning: no previously-included files matching '*.dylib' found anywhere in distribution
+writing manifest file 'src/manhole.egg-info/SOURCES.txt'
+running build_scripts
+creating build/scripts-3.4
+copying and adjusting scripts/manhole-cli -> build/scripts-3.4
+changing mode of build/scripts-3.4/manhole-cli from 644 to 755
+copying src/manhole.pth -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_3.4/build
+   dh_auto_test -O--buildsystem=pybuild
+I: pybuild base:170: cd /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_2.7/build; python2.7 -m unittest discover -v 
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+I: pybuild base:170: cd /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_3.4/build; python3.4 -m unittest discover -v 
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+ fakeroot debian/rules binary
+dh binary --with python2,python3 --buildsystem=pybuild
+   dh_testroot -O--buildsystem=pybuild
+   dh_prep -O--buildsystem=pybuild
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/gilles/thumbor-debian/python-manhole/manhole-1.3.0'
+dh_auto_install
+I: pybuild base:170: /usr/bin/python setup.py install --root /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole 
+running install
+running build
+running build_py
+running egg_info
+writing requirements to src/manhole.egg-info/requires.txt
+writing src/manhole.egg-info/PKG-INFO
+writing top-level names to src/manhole.egg-info/top_level.txt
+writing dependency_links to src/manhole.egg-info/dependency_links.txt
+reading manifest file 'src/manhole.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no directories found matching 'examples'
+warning: no files found matching '.isort.cfg'
+warning: no files found matching '.pylintrc'
+warning: no files found matching 'appveyor.yml'
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.so' found anywhere in distribution
+warning: no previously-included files matching '*.dylib' found anywhere in distribution
+writing manifest file 'src/manhole.egg-info/SOURCES.txt'
+running build_scripts
+running install_lib
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib/python2.7
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib/python2.7/dist-packages
+copying /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_2.7/build/manhole.py -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib/python2.7/dist-packages
+copying /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_2.7/build/manhole.pth -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib/python2.7/dist-packages
+byte-compiling /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib/python2.7/dist-packages/manhole.py to manhole.pyc
+running install_egg_info
+Copying src/manhole.egg-info to /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/lib/python2.7/dist-packages/manhole-1.3.0.egg-info
+running install_scripts
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/bin
+copying build/scripts-2.7/manhole-cli -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/bin
+changing mode of /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/bin/manhole-cli to 755
+I: pybuild base:170: /usr/bin/python3 setup.py install --root /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole 
+running install
+running build
+running build_py
+running egg_info
+writing src/manhole.egg-info/PKG-INFO
+writing top-level names to src/manhole.egg-info/top_level.txt
+writing dependency_links to src/manhole.egg-info/dependency_links.txt
+writing requirements to src/manhole.egg-info/requires.txt
+reading manifest file 'src/manhole.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no directories found matching 'examples'
+warning: no files found matching '.isort.cfg'
+warning: no files found matching '.pylintrc'
+warning: no files found matching 'appveyor.yml'
+warning: no previously-included files matching '*.py[cod]' found anywhere in distribution
+warning: no previously-included files matching '__pycache__' found anywhere in distribution
+warning: no previously-included files matching '*.so' found anywhere in distribution
+warning: no previously-included files matching '*.dylib' found anywhere in distribution
+writing manifest file 'src/manhole.egg-info/SOURCES.txt'
+running build_scripts
+running install_lib
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib/python3.4
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib/python3.4/dist-packages
+copying /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_3.4/build/manhole.py -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib/python3.4/dist-packages
+copying /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/.pybuild/pythonX.Y_3.4/build/manhole.pth -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib/python3.4/dist-packages
+byte-compiling /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib/python3.4/dist-packages/manhole.py to manhole.cpython-34.pyc
+running install_egg_info
+Copying src/manhole.egg-info to /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/lib/python3.4/dist-packages/manhole-1.3.0.egg-info
+running install_scripts
+creating /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/bin
+copying build/scripts-3.4/manhole-cli -> /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/bin
+changing mode of /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python3-manhole/usr/bin/manhole-cli to 755
+rm -rf debian/python3-manhole/usr/bin
+mkdir -p debian/manhole-cli/usr
+mv /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/python-manhole/usr/bin /home/gilles/thumbor-debian/python-manhole/manhole-1.3.0/debian/manhole-cli/usr/
+make[1]: Leaving directory '/home/gilles/thumbor-debian/python-manhole/manhole-1.3.0'
+   dh_installdocs -O--buildsystem=pybuild
+   dh_installchangelogs -O--buildsystem=pybuild
+   dh_python2 -O--buildsystem=pybuild
+   dh_python3 -O--buildsystem=pybuild
+   dh_perl -O--buildsystem=pybuild
+   dh_link -O--buildsystem=pybuild
+   dh_compress -O--buildsystem=pybuild
+   dh_fixperms -O--buildsystem=pybuild
+   dh_installdeb -O--buildsystem=pybuild
+   dh_gencontrol -O--buildsystem=pybuild
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package manhole-cli: unused substitution variable ${python3:Depends}
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package python-manhole: unused substitution variable ${python:Provides}
+dpkg-gencontrol: warning: package python-manhole: unused substitution variable ${python:Versions}
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+   dh_md5sums -O--buildsystem=pybuild
+   dh_builddeb -O--buildsystem=pybuild
+dpkg-deb: building package `manhole-cli' in `../manhole-cli_1.3.0-1_all.deb'.
+dpkg-deb: building package `python-manhole' in `../python-manhole_1.3.0-1_all.deb'.
+dpkg-deb: building package `python3-manhole' in `../python3-manhole_1.3.0-1_all.deb'.
+ dpkg-genchanges -b >../manhole_1.3.0-1_amd64.changes
+dpkg-genchanges: binary-only upload (no source code included)
+ dpkg-source --after-build manhole-1.3.0
+dpkg-buildpackage: binary-only upload (no source included)

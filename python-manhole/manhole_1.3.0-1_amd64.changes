@@ -1,0 +1,30 @@
+Format: 1.8
+Date: Tue, 27 Sep 2016 11:13:00 +0000
+Source: manhole
+Binary: manhole-cli python-manhole python3-manhole
+Architecture: all
+Version: 1.3.0-1
+Distribution: unstable
+Urgency: low
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ manhole-cli - Debugging manhole for python applications
+ python-manhole - Debugging manhole for python applications
+ python3-manhole - Debugging manhole for python applications
+Changes:
+ manhole (1.3.0-1) unstable; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1:
+ decd23a8ae6ff502bd47a9dae19cf466047d599f 8832 manhole-cli_1.3.0-1_all.deb
+ 250d12c220f6906337b5f7b5ab7ca49b18cceb86 13646 python-manhole_1.3.0-1_all.deb
+ f24380a1e09c8c0c3f1077a0e90c800151308651 13720 python3-manhole_1.3.0-1_all.deb
+Checksums-Sha256:
+ 145d23095f1a10bab4c15398a4870f135c9f3409e4e58646781a345e9f18a752 8832 manhole-cli_1.3.0-1_all.deb
+ 985de05b124b36c5569760a9a8a3e341f06f26afdfd053372f47e7b8178bcd63 13646 python-manhole_1.3.0-1_all.deb
+ 5c8dcbeda0a69895414befc0620eb5a8678c37b67e6f378611c6ceabea38de6c 13720 python3-manhole_1.3.0-1_all.deb
+Files:
+ c1455975bf602908b5922932f14cfe8b 8832 python optional manhole-cli_1.3.0-1_all.deb
+ 0a949d250b5a529501ad6ca42d8c83d2 13646 python optional python-manhole_1.3.0-1_all.deb
+ cb85b9b842eed9c2eeb860741c73ca50 13720 python optional python3-manhole_1.3.0-1_all.deb

@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Tue, 21 Mar 2017 09:58:00 +0000
+Source: python-logstash
+Binary: python-logstash
+Architecture: source all
+Version: 0.4.6-1
+Distribution: unstable
+Urgency: low
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-logstash - Python logging handler for Logstash
+Changes:
+ python-logstash (0.4.6-1) unstable; urgency=low
+ .
+   * Initial release.
+Checksums-Sha1:
+ d722806b00d4b9b9ad060cac55e7f77e64216385 1108 python-logstash_0.4.6-1.dsc
+ baccca9ff4104f0f2a0ce8b39c1eedb835769a0c 6450 python-logstash_0.4.6.orig.tar.gz
+ 18fc9bfb0acf92777bf442f79372686a05df1b86 1772 python-logstash_0.4.6-1.debian.tar.xz
+ 218ef5a6ccc302fc5a95d80b46d3b49d66040da9 7412 python-logstash_0.4.6-1_all.deb
+Checksums-Sha256:
+ c53597ab5e1a89d2ad84729b69b8cdb023a521f7af58ce5f3bbe18294699c216 1108 python-logstash_0.4.6-1.dsc
+ 10943e5df83f592b4d61b63ad1afff855ccc8c9467f78718f0a59809ba1fe68c 6450 python-logstash_0.4.6.orig.tar.gz
+ e7114d07556d16300d86a60f3965922537ad87f395a87bca4ff5a83b984507e3 1772 python-logstash_0.4.6-1.debian.tar.xz
+ 8c26653494a2d93aec0afcd8a85d24c4e34f8348ef77c72c46adc84d8ac8a186 7412 python-logstash_0.4.6-1_all.deb
+Files:
+ f3125148c8e8ffb11bdda7970fba218b 1108 python optional python-logstash_0.4.6-1.dsc
+ 26fafa0ea306025fb7644d70cb38982a 6450 python optional python-logstash_0.4.6.orig.tar.gz
+ 1d8bcd3a3def8977bbf93421848fab89 1772 python optional python-logstash_0.4.6-1.debian.tar.xz
+ c3f1e7151f458db3f9ad350d3f24dab0 7412 python optional python-logstash_0.4.6-1_all.deb

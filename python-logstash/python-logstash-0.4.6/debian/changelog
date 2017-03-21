@@ -1,0 +1,5 @@
+python-logstash (0.4.6-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Tue, 21 Mar 2017 09:58:00 +0000

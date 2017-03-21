@@ -1,0 +1,20 @@
+Source: python-logstash
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Section: python
+Priority: optional
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-setuptools
+X-Python-Version: >= 2.6
+Homepage: https://github.com/vklochan/python-logstash
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-logstash.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-logstash.git
+
+Package: python-logstash
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Provides: ${python:Provides}
+Description: Python logging handler for Logstash
+ Allows standard Python logging to log to Logstash via UDP.

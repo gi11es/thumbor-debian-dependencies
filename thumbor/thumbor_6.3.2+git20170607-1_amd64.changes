@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Wed, 07 Jun 2017 11:21:16 +0000
+Source: thumbor
+Binary: thumbor
+Architecture: source amd64
+Version: 6.3.2+git20170607-1
+Distribution: jessie-wikimedia
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ thumbor    - Photo thumbnail service
+Changes:
+ thumbor (6.3.2+git20170607-1) jessie-wikimedia; urgency=medium
+ .
+   * Internal upload, use thumbor from git fork afb1c0e
+   * debian/control
+     - add python-schedule dependency
+     - add python-webcolors dependency
+   * debian/rules
+     - exclude broken distributed collage filter test
+     - exclude broken upstream SVG tests: https://github.com/thumbor/thumbor/issues/933
+Checksums-Sha1:
+ 88ecd654b75da6a89b3fa060e128f5410e6fde8d 1761 thumbor_6.3.2+git20170607-1.dsc
+ 2b577257adbc89cb7bddde5e011eaa3ac550c4c9 23966989 thumbor_6.3.2+git20170607.orig.tar.gz
+ 7962aadb36cd4ba31463ea61d04b423e3b03f6a3 6432 thumbor_6.3.2+git20170607-1.debian.tar.xz
+ e8403294414bba84c8b7b17c44b6408fd5538583 869596 thumbor_6.3.2+git20170607-1_amd64.deb
+Checksums-Sha256:
+ df278f74a2007763b5689d0ca896769f3a1d0fbbef3ae037e73a30cdc1eed87b 1761 thumbor_6.3.2+git20170607-1.dsc
+ ad0855c8858f32a9705d8fdac1a41f52d0b6d8a254016c48bc434948c6938fbf 23966989 thumbor_6.3.2+git20170607.orig.tar.gz
+ 0c7cbd507cc77477c68c38c30c02ecb623d96ea83dc4644a30b95f984de133e2 6432 thumbor_6.3.2+git20170607-1.debian.tar.xz
+ a715072eafacf383035da2b2c7914fef6d4bf167813491c25080457191c0f524 869596 thumbor_6.3.2+git20170607-1_amd64.deb
+Files:
+ fca4788820c34d57b9c6a5e38ec9a55a 1761 python optional thumbor_6.3.2+git20170607-1.dsc
+ 7f8e746a3aca8c22efb573a2c9fae8d8 23966989 python optional thumbor_6.3.2+git20170607.orig.tar.gz
+ 651edcd647c1784cf15dff5ab934fa55 6432 python optional thumbor_6.3.2+git20170607-1.debian.tar.xz
+ 4249474974621b5f13356280036bc46e 869596 python optional thumbor_6.3.2+git20170607-1_amd64.deb

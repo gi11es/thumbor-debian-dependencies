@@ -1,0 +1,12 @@
+schedule (0.3.2-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Gilles Dubuc <gilles@wikimedia.org>  Wed, 07 Jun 2017 11:39:14 +0000
+
+schedule (0.3.2-1) unstable; urgency=low
+
+  [ Donncha O'Cearbhaill ]
+  * Inital release (Closes: #806134).
+
+ -- Federico Ceratto <federico@debian.org>  Sat, 12 Dec 2015 13:11:13 +0000

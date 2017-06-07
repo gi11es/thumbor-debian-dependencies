@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Wed, 07 Jun 2017 11:39:14 +0000
+Source: schedule
+Binary: python-schedule python3-schedule
+Architecture: source
+Version: 0.3.2-1~bpo8+1
+Distribution: jessie-backports
+Urgency: medium
+Maintainer: Donncha O'Cearbhaill <donncha@donncha.is>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-schedule - Job scheduling for humans (Python 2)
+ python3-schedule - Job scheduling for humans (Python 3)
+Changes:
+ schedule (0.3.2-1~bpo8+1) jessie-backports; urgency=medium
+ .
+   * Rebuild for jessie-backports.
+Checksums-Sha1:
+ be78ad40c6c0b31cd006c55a9a89eda987c7b73b 1249 schedule_0.3.2-1~bpo8+1.dsc
+ f27bfe27334386caef8ddd589cce09d91fd7f693 2256 schedule_0.3.2-1~bpo8+1.debian.tar.xz
+Checksums-Sha256:
+ 4d98cc9e0f5a5d9e649b0c4504e642c86f9c1ff014a688efacd20cb9769dbb04 1249 schedule_0.3.2-1~bpo8+1.dsc
+ c4671fda39313ca1070e3890efaffb1911549c14bdafaadadf4229b1d9fe6e0e 2256 schedule_0.3.2-1~bpo8+1.debian.tar.xz
+Files:
+ f82cff58ed48821ef850936930e42268 1249 python optional schedule_0.3.2-1~bpo8+1.dsc
+ 770edabdb9d991779c7a6bd246a3f269 2256 python optional schedule_0.3.2-1~bpo8+1.debian.tar.xz

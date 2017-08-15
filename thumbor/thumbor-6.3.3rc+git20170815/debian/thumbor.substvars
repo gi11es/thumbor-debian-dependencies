@@ -1,0 +1,4 @@
+python:Versions=2.7
+python:Depends=python, python (<< 2.8), python (>= 2.7) | python-argparse, python (>= 2.7~), python-concurrent.futures, python-crypto (>= 2.1.0), python-derpconf, python-imaging, python-libthumbor, python-pexif, python-pycurl, python-schedule, python-statsd, python-tornado, python-tz, python-webcolors, python:any (<< 2.8), python:any (>= 2.7.5-5~), python:any (>= 2.7~)
+misc:Depends=init-system-helpers (>= 1.18~)
+shlibs:Depends=libc6 (>= 2.14)

@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Tue, 15 Aug 2017 15:37:00 +0000
+Source: thumbor
+Binary: thumbor
+Architecture: source amd64
+Version: 6.3.3rc+git20170815-1
+Distribution: jessie-wikimedia
+Urgency: medium
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ thumbor    - Photo thumbnail service
+Changes:
+ thumbor (6.3.3rc+git20170815-1) jessie-wikimedia; urgency=medium
+ .
+   * Internal upload, use thumbor from git 6c3bc3f
+Checksums-Sha1:
+ 15559a022ea4e273312d23b5a8ff421b933e00b6 1775 thumbor_6.3.3rc+git20170815-1.dsc
+ 6001a9a06c98020d82d8fd3522d0138c989dcd7e 23971465 thumbor_6.3.3rc+git20170815.orig.tar.gz
+ 50d19d6f98b7d200b7f9b7a01a7206ae68674d9f 6444 thumbor_6.3.3rc+git20170815-1.debian.tar.xz
+ 024102e1ba68725ef7a2162cd972887547065471 869532 thumbor_6.3.3rc+git20170815-1_amd64.deb
+Checksums-Sha256:
+ 451a6be2dfcc1fadbd7c96dbd15d8bff69ae7c84168dc640c56dc386094c25a3 1775 thumbor_6.3.3rc+git20170815-1.dsc
+ 8b7060e4ca95e8bea73500c2182dba3324ffd5d00a17e234b0a745a9bf17d90d 23971465 thumbor_6.3.3rc+git20170815.orig.tar.gz
+ 1d1dcc47d9b93833dfabd8f7d22e3cc460274e2dbc49da05e2bd0b012de551b1 6444 thumbor_6.3.3rc+git20170815-1.debian.tar.xz
+ b5c5fec486e211e0ba4626dfda98e25303eeee2e102aed7deaa647b4ae155430 869532 thumbor_6.3.3rc+git20170815-1_amd64.deb
+Files:
+ fb0721e803f1c4b7145daf8df1d27139 1775 python optional thumbor_6.3.3rc+git20170815-1.dsc
+ 87e60d45a18424d09003cf62b4b2896e 23971465 python optional thumbor_6.3.3rc+git20170815.orig.tar.gz
+ 7dd7dada95d349c4b6100f8da81ef4d9 6444 python optional thumbor_6.3.3rc+git20170815-1.debian.tar.xz
+ 85faa49c72487c002ac3cfe28808b77b 869532 python optional thumbor_6.3.3rc+git20170815-1_amd64.deb

@@ -1,0 +1,26 @@
+Format: 1.8
+Date: Tue, 1 May 2018 09:58:00 +0000
+Source: python-logstash
+Binary: python-logstash python3-logstash
+Architecture: all
+Version: 0.4.6-2
+Distribution: unstable
+Urgency: low
+Maintainer: Gilles Dubuc <gilles@wikimedia.org>
+Changed-By: Gilles Dubuc <gilles@wikimedia.org>
+Description:
+ python-logstash - Python logging handler for Logstash
+ python3-logstash - Python logging handler for Logstash
+Changes:
+ python-logstash (0.4.6-2) unstable; urgency=low
+ .
+   * Fix python 3 support
+Checksums-Sha1:
+ 6a53c882363fb71c4e5a6ea44d0cd018151fe6ce 7482 python-logstash_0.4.6-2_all.deb
+ b38c76f40b9509fb3bd258ba177e203b20520a2f 7136 python3-logstash_0.4.6-2_all.deb
+Checksums-Sha256:
+ 96223e011928df3d6acf1b95c60bbfccdb5fc22df161671efd6ce5223fa66758 7482 python-logstash_0.4.6-2_all.deb
+ 42bd303e3270c223f8251fbd53c8b30d1c86b0b1041edf342e0b49aeb8248403 7136 python3-logstash_0.4.6-2_all.deb
+Files:
+ e67f1ec6a2deed434e819dc6b41c260a 7482 python optional python-logstash_0.4.6-2_all.deb
+ 963e6065a443cd761d4b99bb31a8382d 7136 python optional python3-logstash_0.4.6-2_all.deb

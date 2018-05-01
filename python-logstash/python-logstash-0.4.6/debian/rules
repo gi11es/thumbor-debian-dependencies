@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-export PYBUILD_NAME=python-logstash
+export PYBUILD_NAME=logstash
 
 %:
 	dh $@ --with python2,python3 --buildsystem=pybuild

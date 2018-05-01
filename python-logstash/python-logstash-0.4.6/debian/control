@@ -6,8 +6,11 @@ Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9),
                dh-python,
                python-all,
-               python-setuptools
+               python-setuptools,
+               python3-all,
+               python3-setuptools
 X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
 Homepage: https://github.com/vklochan/python-logstash
 Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-logstash.git
 Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-logstash.git
@@ -18,3 +21,14 @@ Depends: ${misc:Depends}, ${python:Depends}
 Provides: ${python:Provides}
 Description: Python logging handler for Logstash
  Allows standard Python logging to log to Logstash via UDP.
+ .
+ This package installs the library for Python 2.
+
+Package: python3-logstash
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Provides: ${python3:Provides}
+Description: Python logging handler for Logstash
+ Allows standard Python logging to log to Logstash via UDP.
+ .
+ This package installs the library for Python 3.
